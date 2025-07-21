@@ -7,7 +7,7 @@ GET http://localhost:8080/hello
         client.log(response.body);
         client.log(JSON.stringify(response.body));
         client.assert(response.status === 200, "not 200");
-        client.assert(response.body === "hello world", "failed");
+        client.assert(response.body === "hello worldhello", "failed");
     });
 %}
 
