@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="README.md instead of HELP.md">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/WikiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/WikiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Matt/wiki/WikiApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Matt/wiki/WikiApplication.class" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="更改控制台输出格式">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/controller/TestController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,23 +35,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.WikiApplication.executor": "Run",
-    "Maven.wiki [clean].executor": "Run",
-    "Maven.wiki [install].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.WikiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.wiki [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.wiki [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -68,11 +60,11 @@
   </component>
   <component name="RunManager">
     <configuration name="WikiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Matt.wiki.WikiApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.Matt.wiki.config.WikiApplication" />
       <module name="wiki" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.Matt.wiki.*" />
+          <option name="PATTERN" value="com.Matt.wiki.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753005174467</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="更改控制台输出格式">
+      <option name="closed" value="true" />
+      <created>1753067427276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1753067427276</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +183,7 @@
     </ignored-roots>
     <MESSAGE value="2-2 init" />
     <MESSAGE value="README.md instead of HELP.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md instead of HELP.md" />
+    <MESSAGE value="更改控制台输出格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改控制台输出格式" />
   </component>
 </project>

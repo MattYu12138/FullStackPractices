@@ -1,11 +1,13 @@
-package com.Matt.wiki;
+package com.Matt.wiki.config;
 
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
+@ComponentScan("com.Matt")
 @SpringBootApplication
 public class WikiApplication {
 	private static final Log LOG = LogFactory.getLog(WikiApplication.class);
