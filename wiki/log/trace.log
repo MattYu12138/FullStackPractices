@@ -607,3 +607,7 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-07-23 04:12:05.796 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
 2025-07-23 04:12:08.306 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31cc2e50
 2025-07-23 04:12:08.309 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-07-23 05:06:03.538 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-23 05:06:03.542 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-23 05:06:03.545 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-07-23 05:06:03.546 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
