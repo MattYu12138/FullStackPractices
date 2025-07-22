@@ -1,14 +1,16 @@
-package com.Matt.wiki.config;
+package com.matt.wiki.config;
 
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
-@ComponentScan("com.Matt")
+@ComponentScan("com.matt")
 @SpringBootApplication
+@MapperScan("com.matt.wiki.mapper")
 public class WikiApplication {
 	private static final Log LOG = LogFactory.getLog(WikiApplication.class);
 
