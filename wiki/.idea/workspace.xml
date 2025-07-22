@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="集成mybatis">
-      <change afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/domain/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper/TestMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/TestService.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="集成mybatis，成功返回数据">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TestMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/test.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/config/WikiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WikiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/Matt/wiki/WikiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/WikiApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +69,7 @@
     "HTTP Request.test | #1.executor": "Run",
     "HTTP Request.test | #2.executor": "Run",
     "HTTP Request.test | #3.executor": "Run",
+    "Maven.mybatis-generator.executor": "Run",
     "Maven.wiki [clean].executor": "Run",
     "Maven.wiki [compile].executor": "Run",
     "Maven.wiki [install].executor": "Run",
@@ -90,7 +84,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/resources",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/resources/generator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,6 +107,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/generator" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
       <recent name="$PROJECT_DIR$/src/main/resources/config" />
@@ -127,7 +122,7 @@
       <recent name="com.Matt.wiki" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WikiApplication">
+  <component name="RunManager" selected="Maven.mybatis-generator">
     <configuration name="WikiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.config.WikiApplication" />
       <module name="wiki" />
@@ -150,6 +145,37 @@
     <configuration name="test | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/test.http" executionIdentifier="#3" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="WikiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="wiki" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.matt.wiki.config.WikiApplication" />
@@ -163,6 +189,7 @@
       <item itemvalue="HTTP Request.test | #3" />
       <item itemvalue="HTTP Request.test | #1" />
       <item itemvalue="HTTP Request.test | #2" />
+      <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="Spring Boot.WikiApplication" />
     </list>
     <recent_temporary>
@@ -190,7 +217,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752997075515</updated>
-      <workItem from="1753069641478" duration="23541000" />
+      <workItem from="1753069641478" duration="26109000" />
     </task>
     <task id="LOCAL-00001" summary="2-2 init">
       <option name="closed" value="true" />
@@ -296,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753171961594</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="集成mybatis，成功返回数据">
+      <option name="closed" value="true" />
+      <created>1753183049672</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753183049672</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +381,8 @@
     <MESSAGE value="增加热部署" />
     <MESSAGE value="增加sql" />
     <MESSAGE value="集成mybatis" />
-    <option name="LAST_COMMIT_MESSAGE" value="集成mybatis" />
+    <MESSAGE value="集成mybatis，成功返回数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成mybatis，成功返回数据" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

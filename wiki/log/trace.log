@@ -3659,3 +3659,33 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'wiki'@'%' to database 
 2025-07-22 21:15:29.567 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
 2025-07-22 21:15:32.206 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75f532ac
 2025-07-22 21:15:32.210 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-07-22 21:24:04.619 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-22 21:24:04.624 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-22 21:24:04.626 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-07-22 21:24:04.629 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-07-22 21:24:06.017 INFO  com.matt.wiki.config.WikiApplication              :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 77022 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-22 21:24:06.019 INFO  com.matt.wiki.config.WikiApplication              :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-22 21:24:06.061 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-22 21:24:06.061 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-22 21:24:06.462 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-22 21:24:06.467 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-22 21:24:06.467 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-22 21:24:06.467 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-22 21:24:06.480 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-22 21:24:06.480 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 418 ms
+2025-07-22 21:24:06.711 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-22 21:24:06.720 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-22 21:24:06.729 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-22 21:24:06.736 INFO  com.matt.wiki.config.WikiApplication              :59   [32m                  [0;39m Started WikiApplication in 1.07 seconds (process running for 1.439)
+2025-07-22 21:24:06.737 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m Start Successful
+2025-07-22 21:24:06.738 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-22 21:24:10.961 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-22 21:24:10.961 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-22 21:24:10.961 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 0 ms
+2025-07-22 21:24:10.982 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
+2025-07-22 21:24:13.325 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cc47892
+2025-07-22 21:24:13.327 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-07-22 21:36:45.486 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-22 21:36:45.490 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-22 21:36:45.493 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-07-22 21:36:45.497 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
