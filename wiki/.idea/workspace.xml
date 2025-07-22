@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加demo代码查询">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加ebook代码查询">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,21 +123,11 @@
       <recent name="com.matt.wiki.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.mybatis-generator">
-    <configuration name="WikiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.config.WikiApplication" />
-      <module name="wiki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.matt.wiki.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.WikiApplication">
     <configuration name="demo | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/demo.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ebook | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/ebook.http" executionIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/test.http" executionIdentifier="#1" runType="Run single request">
@@ -190,7 +179,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WikiApplication" />
+      <item itemvalue="HTTP Request.ebook | #1" />
       <item itemvalue="HTTP Request.demo | #1" />
       <item itemvalue="HTTP Request.test | #3" />
       <item itemvalue="HTTP Request.test | #1" />
@@ -200,11 +189,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.ebook | #1" />
         <item itemvalue="HTTP Request.demo | #1" />
         <item itemvalue="HTTP Request.test | #3" />
         <item itemvalue="HTTP Request.test | #2" />
         <item itemvalue="HTTP Request.test | #1" />
-        <item itemvalue="Application.WikiApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
-      <workItem from="1753204587938" duration="317000" />
+      <workItem from="1753204587938" duration="628000" />
     </task>
     <task id="LOCAL-00001" summary="2-2 init">
       <option name="closed" value="true" />
@@ -355,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753187014598</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="增加ebook代码查询">
+      <option name="closed" value="true" />
+      <created>1753205068671</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753205068671</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +405,8 @@
     <MESSAGE value="集成mybatis，成功返回数据" />
     <MESSAGE value="集成mybatis generator，生成demo表代码" />
     <MESSAGE value="增加demo代码查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加demo代码查询" />
+    <MESSAGE value="增加ebook代码查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加ebook代码查询" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
