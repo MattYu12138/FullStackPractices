@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加ebook代码查询">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加ebook代码查询接口">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp/CommonResp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,57 +60,58 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.WikiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.demo | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #3.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mybatis-generator.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WikiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/http&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.WikiApplication.executor": "Run",
+    "HTTP Request.demo | #1.executor": "Run",
+    "HTTP Request.ebook | #1.executor": "Run",
+    "HTTP Request.test | #1.executor": "Run",
+    "HTTP Request.test | #2.executor": "Run",
+    "HTTP Request.test | #3.executor": "Run",
+    "Maven.mybatis-generator.executor": "Run",
+    "Maven.wiki [clean].executor": "Run",
+    "Maven.wiki [compile].executor": "Run",
+    "Maven.wiki [install].executor": "Run",
+    "Maven.wiki [verify].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WikiApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/resp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
       <recent name="$PROJECT_DIR$/http" />
       <recent name="$PROJECT_DIR$/src/main/resources/generator" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/resources/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -214,7 +217,7 @@
       <option name="presentableId" value="Default" />
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
-      <workItem from="1753204587938" duration="628000" />
+      <workItem from="1753204587938" duration="1020000" />
     </task>
     <task id="LOCAL-00001" summary="2-2 init">
       <option name="closed" value="true" />
@@ -352,7 +355,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753205068671</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="增加ebook代码查询接口">
+      <option name="closed" value="true" />
+      <created>1753205301416</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1753205301416</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +417,8 @@
     <MESSAGE value="集成mybatis generator，生成demo表代码" />
     <MESSAGE value="增加demo代码查询" />
     <MESSAGE value="增加ebook代码查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加ebook代码查询" />
+    <MESSAGE value="增加ebook代码查询接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加ebook代码查询接口" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

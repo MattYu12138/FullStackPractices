@@ -20,3 +20,91 @@
 2025-07-23 03:27:35.848 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
 2025-07-23 03:27:38.655 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69ecf39b
 2025-07-23 03:27:38.658 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-07-23 03:29:08.357 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-23 03:29:08.361 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-23 03:29:08.362 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:29:08.368 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-23 03:29:08.368 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:29:08.372 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-07-23 03:29:08.377 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-07-23 03:29:08.422 INFO  com.matt.wiki.config.WikiApplication              :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 79654 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-23 03:29:08.422 INFO  com.matt.wiki.config.WikiApplication              :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-23 03:29:08.509 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-23 03:29:08.510 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:29:08.510 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-23 03:29:08.510 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23 03:29:08.513 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-23 03:29:08.513 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 90 ms
+2025-07-23 03:29:08.581 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-23 03:29:08.586 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:29:08.587 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-23 03:29:08.591 INFO  com.matt.wiki.config.WikiApplication              :59   [32m                  [0;39m Started WikiApplication in 0.184 seconds (process running for 95.607)
+2025-07-23 03:29:08.592 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-23 03:29:08.592 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m Start Successful
+2025-07-23 03:29:08.592 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-23 03:30:18.073 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-23 03:30:18.074 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-23 03:30:18.075 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:30:18.078 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-23 03:30:18.078 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:30:18.124 INFO  com.matt.wiki.config.WikiApplication              :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 79654 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-23 03:30:18.124 INFO  com.matt.wiki.config.WikiApplication              :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-23 03:30:18.203 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-23 03:30:18.203 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:30:18.203 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-23 03:30:18.203 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23 03:30:18.206 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-23 03:30:18.206 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 81 ms
+2025-07-23 03:30:18.266 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-23 03:30:18.270 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:30:18.270 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-23 03:30:18.273 INFO  com.matt.wiki.config.WikiApplication              :59   [32m                  [0;39m Started WikiApplication in 0.164 seconds (process running for 165.289)
+2025-07-23 03:30:18.273 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-23 03:30:18.273 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m Start Successful
+2025-07-23 03:30:18.274 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-23 03:31:31.298 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-07-23 03:31:31.300 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-23 03:31:31.300 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:31:31.303 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-23 03:31:31.304 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:31:31.350 INFO  com.matt.wiki.config.WikiApplication              :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 79654 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-23 03:31:31.350 INFO  com.matt.wiki.config.WikiApplication              :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-23 03:31:31.426 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-23 03:31:31.427 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:31:31.427 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-23 03:31:31.427 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23 03:31:31.430 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-23 03:31:31.430 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 79 ms
+2025-07-23 03:31:31.489 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-23 03:31:31.493 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:31:31.494 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-23 03:31:31.496 INFO  com.matt.wiki.config.WikiApplication              :59   [32m                  [0;39m Started WikiApplication in 0.159 seconds (process running for 238.513)
+2025-07-23 03:31:31.497 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-23 03:31:31.497 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m Start Successful
+2025-07-23 03:31:31.497 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-23 03:33:33.044 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-23 03:33:33.046 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-23 03:33:33.046 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:33:33.049 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-23 03:33:33.050 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:33:33.092 INFO  com.matt.wiki.config.WikiApplication              :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 79654 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-23 03:33:33.092 INFO  com.matt.wiki.config.WikiApplication              :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-23 03:33:33.166 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-23 03:33:33.167 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:33:33.167 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-23 03:33:33.167 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23 03:33:33.170 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-23 03:33:33.170 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 77 ms
+2025-07-23 03:33:33.229 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-23 03:33:33.234 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-23 03:33:33.234 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-23 03:33:33.236 INFO  com.matt.wiki.config.WikiApplication              :59   [32m                  [0;39m Started WikiApplication in 0.156 seconds (process running for 360.253)
+2025-07-23 03:33:33.237 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-23 03:33:33.237 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m Start Successful
+2025-07-23 03:33:33.237 INFO  com.matt.wiki.config.WikiApplication              :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-23 03:33:37.851 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-23 03:33:37.851 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-23 03:33:37.852 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-07-23 03:33:37.854 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-2 - Starting...
+2025-07-23 03:33:40.841 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17bd555b
+2025-07-23 03:33:40.842 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-2 - Start completed.
