@@ -1,4 +1,4 @@
-package com.matt.wiki.config;
+package com.matt.wiki;
 
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
