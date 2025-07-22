@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加自定义配置项事例。&#10;&#10;springcloud优先考虑bootstrap.properties和yml文件. springboot会自动识别application.properties">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加sql">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http/test.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/test.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Matt/wiki/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,9 @@
 }]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Security Analysis" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -88,8 +93,13 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -97,6 +107,9 @@
       <recent name="$PROJECT_DIR$/src/main/resources/config" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.Matt.wiki" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WikiApplication">
@@ -157,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752997075515</updated>
-      <workItem from="1753069641478" duration="10172000" />
+      <workItem from="1753069641478" duration="17550000" />
     </task>
     <task id="LOCAL-00001" summary="2-2 init">
       <option name="closed" value="true" />
@@ -239,7 +252,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753089163087</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="增加热部署">
+      <option name="closed" value="true" />
+      <created>1753092517918</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753092517918</updated>
+    </task>
+    <task id="LOCAL-00012" summary="增加sql">
+      <option name="closed" value="true" />
+      <created>1753171884760</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753171884760</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +315,9 @@
     <MESSAGE value="移动WikiApplication到config, 添加@componentScan用作包扫描" />
     <MESSAGE value="增加hello测试接口，使用http" />
     <MESSAGE value="增加自定义配置项事例。&#10;&#10;springcloud优先考虑bootstrap.properties和yml文件. springboot会自动识别application.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加自定义配置项事例。&#10;&#10;springcloud优先考虑bootstrap.properties和yml文件. springboot会自动识别application.properties" />
+    <MESSAGE value="增加热部署" />
+    <MESSAGE value="增加sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加sql" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

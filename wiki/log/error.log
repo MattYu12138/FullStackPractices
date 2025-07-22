@@ -1,4 +1,4 @@
-2025-07-21 19:03:12.623 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+2025-07-22 18:10:48.714 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testController': Injection of autowired dependencies failed
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
@@ -18,7 +18,10 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at com.Matt.wiki.config.WikiApplication.main(WikiApplication.java:19)
-Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'test.hello' in value "${test.hello}"
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'hello.test' in value "${hello.test}"
 	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
 	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
 	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
@@ -34,46 +37,4 @@ Caused by: org.springframework.util.PlaceholderResolutionException: Could not re
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
-	... 17 common frames omitted
-2025-07-21 19:41:05.367 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2025-07-21 19:42:41.513 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2025-07-21 19:52:16.294 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
+	... 20 common frames omitted
