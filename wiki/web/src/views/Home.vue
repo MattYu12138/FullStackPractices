@@ -93,15 +93,12 @@ for (let i = 0; i < 23; i++) {
 export default defineComponent({
   name: 'Home',
   setup() {
-    console.log("setup");
     const ebooksTmp = reactive({books: []});
-
     // 一个生命周期函数，初始化写在onMounted里面
     onMounted(() => {
       axios.get("/ebook/list").then((response) => {
         const data = response.data;
         ebooksTmp.books = data.content;
-        console.log(response);
       })
     })
 
