@@ -9,7 +9,7 @@
         <a-sub-menu key="sub1">
           <template #title>
               <span>
-                <user-outlined />
+                <user-outlined/>
                 subnav 11111111
               </span>
           </template>
@@ -21,7 +21,7 @@
         <a-sub-menu key="sub2">
           <template #title>
               <span>
-                <laptop-outlined />
+                <laptop-outlined/>
                 subnav 2
               </span>
           </template>
@@ -33,7 +33,7 @@
         <a-sub-menu key="sub3">
           <template #title>
               <span>
-                <notification-outlined />
+                <notification-outlined/>
                 subnav 3
               </span>
           </template>
@@ -52,7 +52,7 @@
           <a-list-item key="item.name">
             <template #actions>
           <span v-for="{ icon, text } in actions" :key="icon">
-            <component :is="icon" style="margin-right: 8px" />
+            <component :is="icon" style="margin-right: 8px"/>
             {{ text }}
           </span>
             </template>
@@ -61,7 +61,9 @@
               <template #title>
                 <a :href="item.href">{{ item.title }}</a>
               </template>
-              <template #avatar><a-avatar :src="item.cover" /></template>
+              <template #avatar>
+                <a-avatar :src="item.cover"/>
+              </template>
             </a-list-item-meta>
           </a-list-item>
         </template>
@@ -90,13 +92,13 @@ for (let i = 0; i < 23; i++) {
 
 export default defineComponent({
   name: 'Home',
-  setup(){
+  setup() {
     console.log("setup");
     const ebooksTmp = reactive({books: []});
 
     // 一个生命周期函数，初始化写在onMounted里面
-    onMounted(()=>{
-      axios.get("http://localhost:8080/ebook/list?name=Spring").then((response)=>{
+    onMounted(() => {
+      axios.get("http://localhost:8080/ebook/list").then((response) => {
         const data = response.data;
         ebooksTmp.books = data.content;
         console.log(response);
@@ -104,7 +106,7 @@ export default defineComponent({
     })
 
     return {
-      ebooks : toRef(ebooksTmp, "books"),
+      ebooks: toRef(ebooksTmp, "books"),
       listData,
       pagination: {
         onChange: (page: any) => {
@@ -130,3 +132,13 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+  .ant-avatar {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 8%;
+    margin: 5px 0;
+}
+</style>

@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="使用axios调用后端接口，成功返回数据到前端">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="布局调整，一行三本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/Home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -491,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753248067387</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="布局调整，一行三本">
+      <option name="closed" value="true" />
+      <created>1753260469316</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1753260469316</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +539,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="更改控制台输出格式" />
     <MESSAGE value="移动WikiApplication到config, 添加@componentScan用作包扫描" />
     <MESSAGE value="增加hello测试接口，使用http" />
     <MESSAGE value="增加自定义配置项事例。&#10;&#10;springcloud优先考虑bootstrap.properties和yml文件. springboot会自动识别application.properties" />
@@ -557,7 +563,8 @@
     <MESSAGE value="去掉helloworld.vue相关组件" />
     <MESSAGE value="集成axios&#10;npm install axios --save" />
     <MESSAGE value="使用axios调用后端接口，成功返回数据到前端" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用axios调用后端接口，成功返回数据到前端" />
+    <MESSAGE value="布局调整，一行三本" />
+    <option name="LAST_COMMIT_MESSAGE" value="布局调整，一行三本" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
