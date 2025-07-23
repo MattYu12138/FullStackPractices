@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加aop请求和返回，去掉过滤器，拦截器">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue">
+      <change afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/the-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/aspect",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/views/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,11 +112,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/views/admin" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/filter" />
-      <recent name="$PROJECT_DIR$/web/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -595,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753268359536</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue">
+      <option name="closed" value="true" />
+      <created>1753268901212</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1753268901212</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -636,7 +643,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="增加demo代码查询" />
     <MESSAGE value="增加ebook代码查询" />
     <MESSAGE value="增加ebook代码查询接口" />
     <MESSAGE value="增加通用的返回类，所有返回值通过CommonResp" />
@@ -661,7 +667,8 @@
     <MESSAGE value="配置axios拦截器打印请求和返回参数" />
     <MESSAGE value="增加打印过滤耗时的过滤器" />
     <MESSAGE value="增加aop请求和返回，去掉过滤器，拦截器" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加aop请求和返回，去掉过滤器，拦截器" />
+    <MESSAGE value="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
