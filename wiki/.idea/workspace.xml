@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加打印过滤耗时的过滤器">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加aop请求和返回，去掉过滤器，拦截器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -578,7 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753264956620</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="增加aop请求和返回，去掉过滤器，拦截器">
+      <option name="closed" value="true" />
+      <created>1753265805195</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1753265805195</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +623,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="集成mybatis generator，生成demo表代码" />
     <MESSAGE value="增加demo代码查询" />
     <MESSAGE value="增加ebook代码查询" />
     <MESSAGE value="增加ebook代码查询接口" />
@@ -644,7 +647,8 @@
     <MESSAGE value="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中" />
     <MESSAGE value="配置axios拦截器打印请求和返回参数" />
     <MESSAGE value="增加打印过滤耗时的过滤器" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加打印过滤耗时的过滤器" />
+    <MESSAGE value="增加aop请求和返回，去掉过滤器，拦截器" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加aop请求和返回，去掉过滤器，拦截器" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
