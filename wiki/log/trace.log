@@ -1420,3 +1420,33 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.do
 2025-07-23 21:07:19.277 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.083 seconds (process running for 1.44)
 2025-07-23 21:07:19.278 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
 2025-07-23 21:07:19.278 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-23 22:04:17.944 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 95532 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-23 22:04:17.945 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-23 22:04:17.963 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-23 22:04:17.963 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-23 22:04:18.448 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-23 22:04:18.453 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-23 22:04:18.453 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-23 22:04:18.454 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-23 22:04:18.466 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-23 22:04:18.467 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 504 ms
+2025-07-23 22:04:18.814 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :62   [32m                  [0;39m Unable to start LiveReload server
+2025-07-23 22:04:18.823 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-23 22:04:18.825 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-07-23 22:04:18.832 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-23 22:04:18.839 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

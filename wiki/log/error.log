@@ -269,3 +269,17 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.do
 	at org.apache.ibatis.io.Resources.classForName(Resources.java:322)
 	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
 	... 39 common frames omitted
+2025-07-23 22:04:18.839 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
