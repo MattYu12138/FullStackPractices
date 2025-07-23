@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加打印过滤耗时的过滤器">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,10 +114,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/filter" />
       <recent name="$PROJECT_DIR$/web/src/components" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
-      <recent name="$PROJECT_DIR$/http" />
-      <recent name="$PROJECT_DIR$/src/main/resources/generator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -226,11 +228,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.ebook | #1" />
         <item itemvalue="npm.build-dev" />
         <item itemvalue="npm.serve-dev" />
         <item itemvalue="npm.serve" />
         <item itemvalue="npm.build" />
-        <item itemvalue="HTTP Request.ebook | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -552,7 +554,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753262350817</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="配置axios拦截器打印请求和返回参数">
+      <option name="closed" value="true" />
+      <created>1753263009369</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1753263009369</updated>
+    </task>
+    <task id="LOCAL-00039" summary="增加打印过滤耗时的过滤器">
+      <option name="closed" value="true" />
+      <created>1753263460289</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1753263460289</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,8 +611,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="集成mybatis" />
-    <MESSAGE value="集成mybatis，成功返回数据" />
     <MESSAGE value="集成mybatis generator，生成demo表代码" />
     <MESSAGE value="增加demo代码查询" />
     <MESSAGE value="增加ebook代码查询" />
@@ -618,7 +634,9 @@
     <MESSAGE value="增加 --port 添加启动端口" />
     <MESSAGE value="axios请求域更改为读取配置文件" />
     <MESSAGE value="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中" />
-    <option name="LAST_COMMIT_MESSAGE" value="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中" />
+    <MESSAGE value="配置axios拦截器打印请求和返回参数" />
+    <MESSAGE value="增加打印过滤耗时的过滤器" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加打印过滤耗时的过滤器" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
