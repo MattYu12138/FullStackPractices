@@ -98,7 +98,7 @@ export default defineComponent({
 
     // 一个生命周期函数，初始化写在onMounted里面
     onMounted(() => {
-      axios.get("http://localhost:8080/ebook/list").then((response) => {
+      axios.get(process.env.VUE_APP_SERVER + "/ebook/list").then((response) => {
         const data = response.data;
         ebooksTmp.books = data.content;
         console.log(response);
@@ -121,7 +121,7 @@ export default defineComponent({
         },
         {
           icon: 'LikeOutlined',
-          text: '156',
+          text: '15611',
         },
         {
           icon: 'MessageOutlined',
