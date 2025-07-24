@@ -8,6 +8,7 @@ import com.matt.wiki.domain.EbookExample;
 import com.matt.wiki.mapper.EbookMapper;
 import com.matt.wiki.req.EbookReq;
 import com.matt.wiki.resp.EbookResp;
+import com.matt.wiki.resp.PageResp;
 import com.matt.wiki.util.CopyUtil;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
@@ -25,7 +26,7 @@ public class EbookService {
 
     private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
 
-    public List<EbookResp> list(EbookReq ebookReq){
+    public PageResp<EbookResp> list(EbookReq ebookReq){
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
 
@@ -34,7 +35,7 @@ public class EbookService {
         }
 
 
-        PageHelper.startPage(1,5);
+        PageHelper.startPage(ebookReq.getPage(),ebookReq.getSize());
         List<Ebook> ebookList =  ebookMapper.selectByExample(ebookExample);
         PageInfo<Ebook> pageInfo = new PageInfo<>(ebookList);
         LOG.info("总行数: {}", pageInfo.getTotal());
@@ -52,9 +53,14 @@ public class EbookService {
 //            respList.add(ebookREsp);
 //        }
 
+
         var respList = CopyUtil.copyList(ebookList, EbookResp.class);
 
-        return respList;
+        PageResp<EbookResp> pageResp = new PageResp();
+        pageResp.setTotal(pageInfo.getTotal());
+        pageResp.setList(respList);
+
+        return pageResp;
     }
 
 }

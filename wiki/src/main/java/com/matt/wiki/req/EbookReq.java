@@ -1,8 +1,9 @@
 package com.matt.wiki.req;
 
-public class EbookReq {
+public class EbookReq extends PageReq{
 
     private Long id;
+    private String name;
 
     public Long getId() {
         return id;
@@ -20,7 +21,6 @@ public class EbookReq {
         this.name = name;
     }
 
-    private String name;
 
     @Override
     public String toString() {

@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="实现页面实时更新，可以往后面翻页浏览">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="集成PageHelper">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/PageReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp/PageResp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http/ebook.http" beforeDir="false" afterPath="$PROJECT_DIR$/http/ebook.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/EbookReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/EbookReq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +135,7 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.matt.wiki.resp" />
+      <recent name="com.matt.wiki.req" />
       <recent name="com.matt.wiki.controller" />
       <recent name="com.matt.wiki.service" />
     </key>
@@ -630,7 +632,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753379402682</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="集成PageHelper">
+      <option name="closed" value="true" />
+      <created>1753382604367</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1753382604367</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +681,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="增加通用的返回类，所有返回值通过CommonResp" />
     <MESSAGE value="封装请求参数和返回参数" />
     <MESSAGE value="封装复制列表功能到copyUtil" />
     <MESSAGE value="安装vue" />
@@ -696,7 +705,8 @@
     <MESSAGE value="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue" />
     <MESSAGE value="修改电子书管理页面布局" />
     <MESSAGE value="实现页面实时更新，可以往后面翻页浏览" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现页面实时更新，可以往后面翻页浏览" />
+    <MESSAGE value="集成PageHelper" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成PageHelper" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
