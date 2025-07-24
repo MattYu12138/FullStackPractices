@@ -47,8 +47,13 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-table :columns="columns"
-               :data-source="ebooks">
+      <a-table
+        :columns="columns"
+        :data-source="ebooks.books"
+        :pagination="ebooks.pagination"
+        :loading="ebooks.loading"
+        @change="handleTableChange"
+    >
 
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'cover'">
@@ -80,130 +85,85 @@
             </a-space>
           </template>
         </template>
-
-      </a-table>
+        </a-table>
     </a-layout-content>
   </a-layout>
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive, toRef, ref} from 'vue';
+import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
+import {message} from "ant-design-vue";
 
 const listData: any = [];
 
 export default defineComponent({
   name: 'Home',
   setup() {
-    const ebooksTmp = reactive({books: []});
-    const pagination = ref({
-      current: 1,
-      pageSize: 10,
-      total: 0
-    });
-    const loading = ref(false);
+    const ebooks = reactive({books: [], loading: false,
+      pagination:{current :1 , pageSize: 5, total: 0}});
 
 
 
     // 一个生命周期函数，初始化写在onMounted里面
-    onMounted(() => {
-      axios.get("/ebook/list").then((response) => {
-        const data = response.data;
-        ebooksTmp.books = data.content;
-      })
-    })
-
-
-
-
-    // /**
-    //  * 数据查询
-    //  **/
-    // const handleQuery = (params: any) => {
-    //   loading.value = true;
-    //   // 如果不清空现有数据，则编辑保存重新加载数据后，再点编辑，则列表显示的还是编辑前的数据
-    //   ebooks.value = [];
-    //   axios.get("/ebook/list", {
-    //     params: {
-    //       page: params.page,
-    //       size: params.size,
-    //       name: param.value.name
-    //     }
-    //   }).then((response) => {
-    //     loading.value = false;
+    // onMounted(() => {
+    //   axios.get("/ebook/list").then((response) => {
     //     const data = response.data;
-    //     if (data.success) {
-    //       ebooks.value = data.content.list;
-    //
-    //       // 重置分页按钮
-    //       pagination.value.current = params.page;
-    //       pagination.value.total = data.content.total;
-    //     } else {
-    //       message.error(data.message);
-    //     }
-    //   });
-    // };
+    //     ebooks.books = data.content;
+    //   })
+    // })
+
+    const handleQuery = (params:any) => {
+      ebooks.loading = true;
+      axios.get("ebook/list",
+          {params: {
+              page: params.page,
+              size: params.size,
+            }}).then((response)=>{
+        ebooks.loading = false;
+        const data = response.data;
+          ebooks.books = data.content;
+
+          ebooks.pagination.current = params.page;
+          ebooks.pagination.pageSize = params.size;
+          ebooks.pagination.total = params.total || 100;
+      })
+    }
 
     /**
      * 表格点击页码时触发
      */
-    // const handleTableChange = (pagination: any) => {
-    //   console.log("看看自带的分页参数都有啥：" + pagination);
-    //   handleQuery({
-    //     page: pagination.current,
-    //     size: pagination.pageSize
-    //   });
-    // };
+    const handleTableChange = (pagination: any) => {
+      console.log("分页参数是：", JSON.stringify(pagination, null, 2));
+      handleQuery({
+        page: pagination.current,
+        size: pagination.pageSize
+      });
+    };
 
     const columns = [
-      {
-        title: '封面',
-        dataIndex: 'cover',
-        key: 'cover'
-      },
-      {
-        title: '名称',
-        dataIndex: 'name'
-      },
-      {
-        title: '分类1',
-        dataIndex: 'category1Id',
-        key: 'category1Id'
-      },
-          {
-           title: '分类2',
-            dataIndex: 'category2Id',
-            key: ' category2Id'
-          },
-      {
-        title: '文档数',
-        dataIndex: 'docCount',
-        key:'docCount'
-      },
-      {
-        title: '阅读数',
-        dataIndex: 'viewCount',
-        key:'viewCount'
-      },
-      {
-        title: '点赞数',
-        dataIndex: 'voteCount',
-        key:'voteCount'
-      },
-      {
-        title: 'Action',
-        key: 'action',
-      }
+      {title: '封面', dataIndex: 'cover', key: 'cover'},
+      {title: '名称', dataIndex: 'name'},
+      {title: '分类1', dataIndex: 'category1Id', key: 'category1Id'},
+      {title: '分类2', dataIndex: 'category2Id', key: ' category2Id'},
+      {title: '文档数', dataIndex: 'docCount', key:'docCount'},
+      {title: '阅读数', dataIndex: 'viewCount', key:'viewCount'},
+      {title: '点赞数', dataIndex: 'voteCount', key:'voteCount'},
+      {title: 'Action', key: 'action',}
     ];
 
+    onMounted(() => {
+      handleQuery({
+        page: ebooks.pagination.current,  // 当前页
+        size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
+      });
+    });
+
     return {
-      ebooks: toRef(ebooksTmp, "books"),
+      ebooks,
       columns,
       listData,
-      pagination,
-      loading
-      // handleQuery,
-      // handleTableChange,
+      handleTableChange,
     }
   }
 });
