@@ -80,7 +80,7 @@
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
-              <a-button type="primary" @click="edit">编辑</a-button>
+              <a-button type="primary" @click="edit(record)">编辑</a-button>
               <a-button type="default" danger>删除</a-button>
             </a-space>
           </template>
@@ -94,12 +94,28 @@
       :confirm-loading="modal.loading"
       @ok="handleModalOk"
   >
-    <p>test</p>
+    <a-form :model="ebooks.ebook" :label-col="{span :6 }" >
+      <a-form-item label="封面">
+        <a-input v-model:value="ebooks.ebook.cover" />
+      </a-form-item>
+      <a-form-item label="名称">
+        <a-input v-model:value="ebooks.ebook.name" />
+      </a-form-item>
+      <a-form-item label="分类一">
+        <a-input v-model:value="ebooks.ebook.category1Id" />
+      </a-form-item>
+      <a-form-item label="分类二">
+        <a-input v-model:value="ebooks.ebook.category2Id" />
+      </a-form-item>
+      <a-form-item label="描述">
+        <a-input v-model:value="ebooks.ebook.description" />
+      </a-form-item>
+    </a-form>
   </a-modal>
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive} from 'vue';
+import {defineComponent, onMounted, ref, reactive} from 'vue';
 import axios from 'axios';
 
 
@@ -107,7 +123,9 @@ export default defineComponent({
   name: 'Home',
   setup() {
     const ebooks = reactive({
-      books: [], loading: false,
+      books: [],
+      ebook: {},
+      loading: false,
       pagination: {current: 1, pageSize: 3, total: 0}
     });
 
@@ -126,8 +144,9 @@ export default defineComponent({
       }, 2000);
     }
 
-    const edit = ()=>{
+    const edit = (record : any)=>{
       modal.visible = true;
+      ebooks.ebook = record;
     }
 
     const handleQuery = (params:any) => {
