@@ -120,11 +120,11 @@ export default defineComponent({
             }}).then((response)=>{
         ebooks.loading = false;
         const data = response.data;
-          ebooks.books = data.content;
+          ebooks.books = data.content.list;
 
           ebooks.pagination.current = params.page;
           ebooks.pagination.pageSize = params.size;
-          ebooks.pagination.total = params.total || 100;
+          ebooks.pagination.total = data.content.total || 100;
       })
     }
 
