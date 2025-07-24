@@ -84,9 +84,14 @@ export default defineComponent({
     const ebooksTmp = reactive({books: []});
     // 一个生命周期函数，初始化写在onMounted里面
     onMounted(() => {
-      axios.get("/ebook/list").then((response) => {
+      axios.get("/ebook/list",{
+        params:{
+          page:1,
+          size:1000
+        }
+      }).then((response) => {
         const data = response.data;
-        ebooksTmp.books = data.content;
+        ebooksTmp.books = data.content.list;
       })
     })
 
