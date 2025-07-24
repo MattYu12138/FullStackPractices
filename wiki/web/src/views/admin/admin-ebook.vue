@@ -80,7 +80,7 @@
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
-              <a-button type="primary">编辑</a-button>
+              <a-button type="primary" @click="edit">编辑</a-button>
               <a-button type="default" danger>删除</a-button>
             </a-space>
           </template>
@@ -88,28 +88,47 @@
         </a-table>
     </a-layout-content>
   </a-layout>
+  <a-modal
+      title="电子书表单"
+      v-model:visible="modal.visible"
+      :confirm-loading="modal.loading"
+      @ok="handleModalOk"
+  >
+    <p>test</p>
+  </a-modal>
 </template>
 
 <script lang="ts">
 import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
-import {message} from "ant-design-vue";
+
 
 export default defineComponent({
   name: 'Home',
   setup() {
-    const ebooks = reactive({books: [], loading: false,
-      pagination:{current :1 , pageSize: 3, total: 0}});
+    const ebooks = reactive({
+      books: [], loading: false,
+      pagination: {current: 1, pageSize: 3, total: 0}
+    });
 
+    const modal = reactive({
+      text: "",
+      visible: false,
+      loading: false
+    })
 
+    const handleModalOk = () => {
+      modal.text = 'The modal will be closed after two seconds';
+      modal.loading = true;
+      setTimeout(() => {
+        modal.visible = false;
+        modal.loading = false;
+      }, 2000);
+    }
 
-    // 一个生命周期函数，初始化写在onMounted里面
-    // onMounted(() => {
-    //   axios.get("/ebook/list").then((response) => {
-    //     const data = response.data;
-    //     ebooks.books = data.content;
-    //   })
-    // })
+    const edit = ()=>{
+      modal.visible = true;
+    }
 
     const handleQuery = (params:any) => {
       ebooks.loading = true;
@@ -161,6 +180,11 @@ export default defineComponent({
       ebooks,
       columns,
       handleTableChange,
+
+
+      modal,
+      handleModalOk,
+      edit,
     }
   }
 });
