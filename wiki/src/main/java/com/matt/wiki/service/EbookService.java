@@ -1,6 +1,8 @@
 package com.matt.wiki.service;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.matt.wiki.domain.Ebook;
 import com.matt.wiki.domain.EbookExample;
 import com.matt.wiki.mapper.EbookMapper;
@@ -8,6 +10,8 @@ import com.matt.wiki.req.EbookReq;
 import com.matt.wiki.resp.EbookResp;
 import com.matt.wiki.util.CopyUtil;
 import jakarta.annotation.Resource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -19,8 +23,9 @@ public class EbookService {
     @Resource
     private EbookMapper ebookMapper;
 
-    public List<EbookResp> list(EbookReq ebookReq){
+    private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
 
+    public List<EbookResp> list(EbookReq ebookReq){
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
 
@@ -29,7 +34,11 @@ public class EbookService {
         }
 
 
+        PageHelper.startPage(1,5);
         List<Ebook> ebookList =  ebookMapper.selectByExample(ebookExample);
+        PageInfo<Ebook> pageInfo = new PageInfo<>(ebookList);
+        LOG.info("总行数: {}", pageInfo.getTotal());
+        LOG.info("总页数:{}", pageInfo.getPages());
 
 //        List<EbookResp> respList = new ArrayList<>();
 //

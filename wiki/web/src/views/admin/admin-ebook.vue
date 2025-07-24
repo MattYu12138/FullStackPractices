@@ -95,13 +95,11 @@ import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
 import {message} from "ant-design-vue";
 
-const listData: any = [];
-
 export default defineComponent({
   name: 'Home',
   setup() {
     const ebooks = reactive({books: [], loading: false,
-      pagination:{current :1 , pageSize: 5, total: 0}});
+      pagination:{current :1 , pageSize: 3, total: 0}});
 
 
 
@@ -162,7 +160,6 @@ export default defineComponent({
     return {
       ebooks,
       columns,
-      listData,
       handleTableChange,
     }
   }
