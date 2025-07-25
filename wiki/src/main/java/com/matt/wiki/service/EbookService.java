@@ -11,6 +11,7 @@ import com.matt.wiki.req.EbookSaveReq;
 import com.matt.wiki.resp.EbookQueryResp;
 import com.matt.wiki.resp.PageResp;
 import com.matt.wiki.util.CopyUtil;
+import com.matt.wiki.util.SnowFlake;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,9 @@ public class EbookService {
 
     @Resource
     private EbookMapper ebookMapper;
+
+    @Resource
+    private SnowFlake snowFlake;
 
     private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
 
@@ -70,6 +74,7 @@ public class EbookService {
     public void save(EbookSaveReq ebookSaveReq) {
         Ebook ebookSave = CopyUtil.copy(ebookSaveReq, Ebook.class);
         if(ObjectUtils.isEmpty(ebookSave.getId())){
+            ebookSave.setId(snowFlake.nextId());
             ebookMapper.insert(ebookSave);
         }else{
             ebookMapper.updateByPrimaryKey(ebookSave);

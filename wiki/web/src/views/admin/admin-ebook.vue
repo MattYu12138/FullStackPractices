@@ -47,6 +47,11 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
+      <p>
+        <a-button type="primary" @click="add()" size="large">
+          新增
+        </a-button>
+      </p>
       <a-table
         :columns="columns"
         :data-source="ebooks.books"
@@ -158,6 +163,14 @@ export default defineComponent({
       ebooks.ebook = record;
     }
 
+    /*
+    * add
+    * */
+    const add = ()=>{
+      modal.visible = true;
+      ebooks.ebook = {};
+    }
+
     const handleQuery = (params:any) => {
       ebooks.loading = true;
       axios.get("ebook/list",
@@ -213,6 +226,7 @@ export default defineComponent({
       modal,
       handleModalOk,
       edit,
+      add,
     }
   }
 });
