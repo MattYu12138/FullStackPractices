@@ -48,3 +48,37 @@ insert into `ebook` (id, name, description) values
                                                 (10, 'Spring Cloud 微服务实战', '构建企业级微服务架构的完整解决方案'),
                                                 (11, 'Kubernetes 容器编排教程', '使用 Kubernetes 实现容器集群的管理与部署'),
                                                 (12, 'TypeScript 全面指南', '从 JavaScript 升级到 TypeScript，提升代码可维护性');
+
+
+drop table if exists `category`;
+
+create table `category` (
+                            `id` bigint not null comment 'id',
+                            `parent` bigint not null default 0 comment '父id',
+                            `name` varchar(50) not null comment '名称',
+                            `sort` int comment '顺序',
+                            primary key (`id`)
+) engine=innodb default charset=utf8mb4 comment='分类';
+
+insert into `category` (id, parent, name, sort) values (100, 000, '前端开发', 100);
+insert into `category` (id, parent, name, sort) values (101, 100, 'Vue', 101);
+insert into `category` (id, parent, name, sort) values (102, 100, 'HTML & CSS', 102);
+insert into `category` (id, parent, name, sort) values (200, 000, 'Java', 200);
+insert into `category` (id, parent, name, sort) values (201, 200, '基础应用', 201);
+insert into `category` (id, parent, name, sort) values (202, 200, '框架应用', 202);
+-- 新一级分类：后端开发
+insert into `category` (id, parent, name, sort) values (300, 000, '后端开发', 300);
+insert into `category` (id, parent, name, sort) values (301, 300, 'Node.js', 301);
+insert into `category` (id, parent, name, sort) values (302, 300, 'Go', 302);
+
+-- 新一级分类：数据库
+insert into `category` (id, parent, name, sort) values (400, 000, '数据库', 400);
+insert into `category` (id, parent, name, sort) values (401, 400, 'MySQL', 401);
+insert into `category` (id, parent, name, sort) values (402, 400, 'PostgreSQL', 402);
+
+-- 新一级分类：运维与部署
+insert into `category` (id, parent, name, sort) values (500, 000, '运维与部署', 500);
+insert into `category` (id, parent, name, sort) values (501, 500, 'Docker', 501);
+insert into `category` (id, parent, name, sort) values (502, 500, 'Kubernetes', 502);
+insert into `category` (id, parent, name, sort) values (503, 500, 'CI/CD', 503);
+

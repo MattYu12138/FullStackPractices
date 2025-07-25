@@ -54,7 +54,7 @@
           style="width: 30vw"
           enter-button="Search"
           size="large"
-          @search="handleQuery({page:1, size: ebooks.pagination.pageSize})"
+          @search="handleQuery({page:1, size: wiki.pagination.pageSize})"
       />
         <a-button type="primary" @click="add()" size="large">
           新增
@@ -62,9 +62,9 @@
       </div>
       <a-table
           :columns="columns"
-          :data-source="ebooks.books"
-          :pagination="ebooks.pagination"
-          :loading="ebooks.loading"
+          :data-source="wiki.categorys"
+          :pagination="wiki.pagination"
+          :loading="wiki.loading"
           @change="handleTableChange"
       >
 
@@ -96,23 +96,20 @@
       :confirm-loading="modal.loading"
       @ok="handleModalOk"
   >
-    <a-form :model="ebooks.ebook" :label-col="{span :6 }">
-      <a-form-item label="封面">
-        <a-input v-model:value="ebooks.ebook.cover"/>
-      </a-form-item>
+    <a-form :model="wiki.category" :label-col="{ span: 6 }">
       <a-form-item label="名称">
-        <a-input v-model:value="ebooks.ebook.name"/>
+        <a-input v-model:value="wiki.category.name" />
       </a-form-item>
-      <a-form-item label="分类一">
-        <a-input v-model:value="ebooks.ebook.category1Id"/>
+
+      <a-form-item label="父ID">
+        <a-input-number v-model:value="wiki.category.parent" :min="0" style="width: 100%" />
       </a-form-item>
-      <a-form-item label="分类二">
-        <a-input v-model:value="ebooks.ebook.category2Id"/>
-      </a-form-item>
-      <a-form-item label="描述">
-        <a-input v-model:value="ebooks.ebook.description"/>
+
+      <a-form-item label="顺序">
+        <a-input-number v-model:value="wiki.category.sort" :min="0" style="width: 100%" />
       </a-form-item>
     </a-form>
+
   </a-modal>
 </template>
 
@@ -128,9 +125,9 @@ export default defineComponent({
   setup() {
 
 
-    const ebooks = reactive({
-      books: [],
-      ebook: {},
+    const wiki = reactive({
+      categorys: [],
+      category: {},
       loading: false,
       pagination: {current: 1, pageSize: 5, total: 0}
     });
@@ -145,21 +142,21 @@ export default defineComponent({
     * */
     const edit = (record: any) => {
       modal.visible = true;
-      ebooks.ebook = Tool.copy(record);
+      wiki.category = Tool.copy(record);
     }
     /*
     * add
     * */
     const add = () => {
       modal.visible = true;
-      ebooks.ebook = {};
+      wiki.category = {};
     }
 
 
 
     const handleQuery = (params: any) => {
-      ebooks.loading = true;
-      axios.get("ebook/list",
+      wiki.loading = true;
+      axios.get("category/list",
           {
             params: {
               page: params.page,
@@ -167,14 +164,14 @@ export default defineComponent({
               name: modal.searchText,
             }
           }).then((response) => {
-        ebooks.loading = false;
+        wiki.loading = false;
         const data = response.data;
         if(data.success){
-          ebooks.books = data.content.list;
+          wiki.categorys = data.content.list;
 
-          ebooks.pagination.current = params.page;
-          ebooks.pagination.pageSize = params.size;
-          ebooks.pagination.total = data.content.total || 100;
+          wiki.pagination.current = params.page;
+          wiki.pagination.pageSize = params.size;
+          wiki.pagination.total = data.content.total || 100;
         }else{
           message.error(data.message);
         }
@@ -185,12 +182,12 @@ export default defineComponent({
 
 
     const handleDelete = (id: number) => {
-      axios.delete("ebook/delete/" + id).then((response) => {
+      axios.delete("category/delete/" + id).then((response) => {
         const data = response.data
         if (data.success) {
           handleQuery({
-            page: ebooks.pagination.current,  // 当前页
-            size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
+            page: wiki.pagination.current,  // 当前页
+            size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
           });
         }
       });
@@ -199,15 +196,15 @@ export default defineComponent({
 
     const handleModalOk = () => {
       modal.loading = true;
-      axios.post("ebook/save", ebooks.ebook).then((response) => {
+      axios.post("category/save", wiki.category).then((response) => {
         modal.loading = false;
         const data = response.data
         if (data.success) {
           modal.visible = false;
 
           handleQuery({
-            page: ebooks.pagination.current,  // 当前页
-            size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
+            page: wiki.pagination.current,  // 当前页
+            size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
           });
         }else{
           message.error(data.message);
@@ -227,26 +224,22 @@ export default defineComponent({
     };
 
     const columns = [
-      {title: '封面', dataIndex: 'cover', key: 'cover'},
-      {title: '名称', dataIndex: 'name'},
-      {title: '分类1', dataIndex: 'category1Id', key: 'category1Id'},
-      {title: '分类2', dataIndex: 'category2Id', key: ' category2Id'},
-      {title: '描述', dataIndex:'description', key:'description'},
-      {title: '文档数', dataIndex: 'docCount', key: 'docCount'},
-      {title: '阅读数', dataIndex: 'viewCount', key: 'viewCount'},
-      {title: '点赞数', dataIndex: 'voteCount', key: 'voteCount'},
-      {title: 'Action', key: 'action',}
+      { title: '名称', dataIndex: 'name', key: 'name' },
+      { title: '父ID', dataIndex: 'parent', key: 'parent' },
+      { title: '顺序', dataIndex: 'sort', key: 'sort' },
+      {title: '操作', key: 'action',},
     ];
+
 
     onMounted(() => {
       handleQuery({
-        page: ebooks.pagination.current,  // 当前页
-        size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
+        page: wiki.pagination.current,  // 当前页
+        size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
       });
     });
 
     return {
-      ebooks,
+      wiki,
       columns,
       handleQuery,
       handleTableChange,

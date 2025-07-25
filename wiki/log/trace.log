@@ -5411,3 +5411,518 @@ Caused by: java.lang.ClassNotFoundException: com.matt.wiki.req.EbookQueryReq
 2025-07-25 20:42:02.256 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：3044 ms -------------
 2025-07-25 20:42:04.423 WARN  c.matt.wiki.controller.ControllerExceptionHandler :28   [32m                  [0;39m 参数校验失败：name can not be null
 2025-07-25 20:42:04.425 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.EbookController.save(com.matt.wiki.req.EbookSaveReq): [Field error in object 'ebookSaveReq' on field 'name': rejected value [null]; codes [NotNull.ebookSaveReq.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [ebookSaveReq.name,name]; arguments []; default message [name]]; default message [name can not be null]] ]
+2025-07-25 22:18:55.781 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:18:55.782 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:18:55.905 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:18:55.906 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:18:55.906 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:18:55.906 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:18:55.910 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:18:55.910 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 127 ms
+2025-07-25 22:18:56.087 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-25 22:18:56.093 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:18:56.094 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-25 22:18:56.096 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.335 seconds (process running for 5821.68)
+2025-07-25 22:18:56.097 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-25 22:18:56.097 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-25 22:18:56.097 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-25 22:18:59.927 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 14 class path changes (7 additions, 0 deletions, 7 modifications)
+2025-07-25 22:18:59.928 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 22:18:59.928 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:18:59.929 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-25 22:18:59.930 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:18:59.975 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:18:59.975 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:19:00.070 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:19:00.070 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:19:00.070 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:19:00.070 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:19:00.073 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:19:00.073 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 97 ms
+2025-07-25 22:19:00.224 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-25 22:19:00.229 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:19:00.230 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-25 22:19:00.232 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.269 seconds (process running for 5825.816)
+2025-07-25 22:19:00.232 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-25 22:19:00.233 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-25 22:19:00.233 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-25 22:21:16.952 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-25 22:21:16.953 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 22:21:16.953 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:21:16.954 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-25 22:21:16.954 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:21:16.993 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:21:16.993 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:21:17.088 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:21:17.088 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:21:17.088 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:21:17.089 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:21:17.091 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:21:17.092 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 98 ms
+2025-07-25 22:21:17.206 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'ebookController' method 
+com.matt.wiki.controller.EbookController#list(EbookQueryReq)
+to {GET [/ebook/list]}: There is already 'categoryController' bean method
+com.matt.wiki.controller.CategoryController#list(EbookQueryReq) mapped.
+2025-07-25 22:21:17.206 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-07-25 22:21:17.209 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-25 22:21:17.217 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'ebookController' method 
+com.matt.wiki.controller.EbookController#list(EbookQueryReq)
+to {GET [/ebook/list]}: There is already 'categoryController' bean method
+com.matt.wiki.controller.CategoryController#list(EbookQueryReq) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at com.matt.wiki.WikiApplication.main(WikiApplication.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'ebookController' method 
+com.matt.wiki.controller.EbookController#list(EbookQueryReq)
+to {GET [/ebook/list]}: There is already 'categoryController' bean method
+com.matt.wiki.controller.CategoryController#list(EbookQueryReq) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:507)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:729)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 19 common frames omitted
+2025-07-25 22:24:01.197 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:24:01.197 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:24:01.347 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:24:01.349 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:24:01.349 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:24:01.349 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:24:01.356 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:24:01.356 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 157 ms
+2025-07-25 22:24:01.525 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-25 22:24:01.530 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:24:01.531 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-25 22:24:01.533 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.351 seconds (process running for 6127.121)
+2025-07-25 22:24:01.534 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-25 22:24:01.534 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-25 22:24:01.534 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-25 22:24:12.021 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-07-25 22:24:12.023 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 22:24:12.023 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:24:12.026 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-25 22:24:12.027 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:24:12.082 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:24:12.083 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:24:12.170 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:24:12.170 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:24:12.170 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:24:12.170 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:24:12.173 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:24:12.173 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 89 ms
+2025-07-25 22:24:12.417 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-25 22:24:12.423 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:24:12.425 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-25 22:24:12.428 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.36 seconds (process running for 6138.016)
+2025-07-25 22:24:12.428 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-25 22:24:12.428 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-25 22:24:12.429 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-25 22:28:38.365 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-25 22:28:38.368 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-25 22:28:38.369 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:28:38.373 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-25 22:28:38.376 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:28:38.428 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:28:38.429 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:28:38.534 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:28:38.534 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:28:38.534 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:28:38.534 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:28:38.537 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:28:38.537 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 107 ms
+2025-07-25 22:28:38.549 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Lookup method resolution failed
+2025-07-25 22:28:38.550 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-07-25 22:28:38.552 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-25 22:28:38.553 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:498)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:368)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at com.matt.wiki.WikiApplication.main(WikiApplication.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.matt.wiki.controller.CategoryController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2dc33720]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
+	... 22 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/matt/wiki/req/CategoryQueryReq
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3502)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2601)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465)
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.matt.wiki.req.CategoryQueryReq
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:496)
+	at java.base/java.lang.Class.forName(Class.java:475)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 28 common frames omitted
+2025-07-25 22:28:50.478 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 38746 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-25 22:28:50.478 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-25 22:28:50.578 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-25 22:28:50.578 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:28:50.578 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-25 22:28:50.578 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-25 22:28:50.581 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-25 22:28:50.581 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 102 ms
+2025-07-25 22:28:50.741 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-25 22:28:50.746 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-25 22:28:50.749 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-25 22:28:50.751 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.283 seconds (process running for 6416.343)
+2025-07-25 22:28:50.752 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-25 22:28:50.752 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-25 22:28:50.752 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-25 22:41:06.276 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 22:41:06.281 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-25 22:41:06.288 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 6 ms
+2025-07-25 22:41:06.313 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:41:06.315 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:41:06.315 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:41:06.316 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:41:06.322 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:41:06.341 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-2 - Starting...
+2025-07-25 22:41:09.261 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7cd24b1f
+2025-07-25 22:41:09.261 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-2 - Start completed.
+2025-07-25 22:41:09.261 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:41:09.261 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:41:09.514 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:41:09.514 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:41:09.514 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:41:09.515 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:41:09.515 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:41:09.768 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:41:09.768 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:41:09.768 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:41:09.768 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:41:09.769 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:41:09.769 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:41:09.769 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:41:09.769 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:41:09.769 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:41:09.772 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:41:09.772 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：3459 ms -------------
+2025-07-25 22:41:36.404 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:41:36.404 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:41:36.404 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:41:36.405 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:41:36.405 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:41:36.759 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:41:36.759 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:41:37.012 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:41:37.013 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:41:37.013 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:41:37.014 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:41:37.014 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:41:37.268 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:41:37.268 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:41:37.268 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:41:37.268 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:41:37.268 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:41:37.268 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:41:37.269 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:41:37.269 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:41:37.269 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:41:37.269 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:41:37.269 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：865 ms -------------
+2025-07-25 22:45:10.075 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:45:10.077 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:45:10.077 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:45:10.077 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:45:10.078 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:45:10.370 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:45:10.371 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:45:10.677 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:45:10.678 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:45:10.678 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:45:10.678 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:45:10.678 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:45:10.986 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:45:10.986 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:45:10.986 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:45:10.986 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:45:10.986 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:45:10.987 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:45:10.987 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:45:10.987 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:45:10.987 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:45:10.987 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:45:10.987 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：912 ms -------------
+2025-07-25 22:47:35.462 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:47:35.462 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:47:35.462 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:47:35.462 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:47:35.463 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:47:35.716 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:47:35.716 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:47:35.989 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:47:35.989 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:47:35.989 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:47:35.990 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:47:35.990 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:47:36.294 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:47:36.295 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:47:36.295 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:47:36.295 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:47:36.296 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:47:36.296 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:47:36.296 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:47:36.296 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:47:36.296 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:47:36.297 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:47:36.297 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：835 ms -------------
+2025-07-25 22:47:42.055 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:47:42.055 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:47:42.056 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:47:42.056 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:47:42.056 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:47:42.336 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:47:42.336 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:47:42.617 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:47:42.617 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:47:42.617 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:47:42.617 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:47:42.618 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:47:42.870 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:47:42.870 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:47:42.871 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:47:42.871 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:47:42.871 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:47:42.871 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:47:42.871 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:47:42.871 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:47:42.871 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:47:42.871 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:47:42.872 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：817 ms -------------
+2025-07-25 22:48:25.589 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:48:25.589 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:48:25.589 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:48:25.589 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:48:25.589 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:48:25.846 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:48:25.846 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:48:26.099 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:48:26.099 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:48:26.099 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:48:26.099 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:48:26.100 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:48:26.368 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:48:26.369 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:48:26.369 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:48:26.369 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:48:26.369 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:48:26.369 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:48:26.370 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:48:26.370 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:48:26.370 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:48:26.370 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:48:26.370 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：781 ms -------------
+2025-07-25 22:50:29.401 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:50:29.402 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:50:29.402 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:50:29.402 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:50:29.403 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:50:29.782 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:50:29.782 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:50:30.038 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:50:30.038 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:50:30.039 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:50:30.040 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:50:30.040 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:50:30.378 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:50:30.378 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:50:30.379 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:50:30.379 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:50:30.379 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:50:30.379 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:50:30.379 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:50:30.379 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:50:30.379 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:50:30.380 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:50:30.380 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：979 ms -------------
+2025-07-25 22:51:11.329 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:51:11.330 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:51:11.330 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:51:11.330 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:51:11.331 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:51:11.646 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:51:11.647 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:51:11.899 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:51:11.900 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:51:11.900 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:51:11.900 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:51:11.900 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:51:12.156 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:51:12.156 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:51:12.156 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:51:12.157 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:51:12.157 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:51:12.157 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:51:12.157 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:51:12.157 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:51:12.157 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:51:12.158 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:51:12.158 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：829 ms -------------
+2025-07-25 22:52:36.973 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:52:36.974 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:52:36.974 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:52:36.974 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:52:36.976 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2025-07-25 22:52:37.255 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:52:37.255 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:52:37.562 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:52:37.562 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:52:37.562 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:52:37.562 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?
+2025-07-25 22:52:37.563 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:52:37.815 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:52:37.816 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-07-25 22:52:37.816 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-07-25 22:52:37.817 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-07-25 22:52:37.817 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-07-25 22:52:37.817 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-07-25 22:52:37.817 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:52:37.818 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:52:37.818 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:52:37.821 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201}],"total":16},"success":true}
+2025-07-25 22:52:37.821 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：848 ms -------------
+2025-07-25 22:53:36.889 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:53:36.890 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:53:36.890 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:53:36.890 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:53:36.890 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":2,"size":5}]
+2025-07-25 22:53:37.160 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:53:37.160 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:53:37.468 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:53:37.468 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:53:37.468 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:53:37.469 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?, ?
+2025-07-25 22:53:37.469 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 5(Long), 5(Integer)
+2025-07-25 22:53:37.774 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:53:37.774 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-07-25 22:53:37.775 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-07-25 22:53:37.775 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-07-25 22:53:37.775 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-07-25 22:53:37.775 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-07-25 22:53:37.775 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:53:37.775 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:53:37.775 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:53:37.775 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400}],"total":16},"success":true}
+2025-07-25 22:53:37.775 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：886 ms -------------
+2025-07-25 22:53:38.400 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:53:38.401 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:53:38.401 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:53:38.401 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:53:38.401 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":3,"size":5}]
+2025-07-25 22:53:38.696 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:53:38.697 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:53:39.003 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:53:39.003 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:53:39.004 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:53:39.004 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?, ?
+2025-07-25 22:53:39.005 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 10(Long), 5(Integer)
+2025-07-25 22:53:39.311 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:53:39.312 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-07-25 22:53:39.312 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-07-25 22:53:39.312 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-07-25 22:53:39.312 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-07-25 22:53:39.312 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-07-25 22:53:39.312 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:53:39.313 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:53:39.313 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:53:39.313 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502}],"total":16},"success":true}
+2025-07-25 22:53:39.313 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：913 ms -------------
+2025-07-25 22:53:39.848 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:53:39.848 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:53:39.848 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:53:39.848 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:53:39.848 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":4,"size":5}]
+2025-07-25 22:53:40.102 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:53:40.103 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:53:40.354 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:53:40.355 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:53:40.355 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:53:40.355 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?, ?
+2025-07-25 22:53:40.356 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 15(Long), 5(Integer)
+2025-07-25 22:53:40.642 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:53:40.643 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-07-25 22:53:40.643 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:53:40.644 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:53:40.644 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:53:40.644 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":503,"name":"CI/CD","parent":500,"sort":503}],"total":16},"success":true}
+2025-07-25 22:53:40.644 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：796 ms -------------
+2025-07-25 22:55:32.185 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:55:32.185 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:55:32.185 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:55:32.186 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:55:32.186 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2025-07-25 22:55:32.465 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:55:32.466 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:55:32.772 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:55:32.773 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:55:32.773 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:55:32.773 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?
+2025-07-25 22:55:32.774 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:55:33.026 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:55:33.027 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-07-25 22:55:33.027 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-07-25 22:55:33.027 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-07-25 22:55:33.027 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-07-25 22:55:33.027 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-07-25 22:55:33.027 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:55:33.027 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:55:33.027 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:55:33.028 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201}],"total":16},"success":true}
+2025-07-25 22:55:33.028 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：843 ms -------------
