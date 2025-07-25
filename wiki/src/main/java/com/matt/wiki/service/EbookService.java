@@ -82,4 +82,13 @@ public class EbookService {
 
     }
 
+
+    /*
+    * delete
+    * */
+    public void delete(Long id){
+        System.out.println("正在删除id： " + id);
+        ebookMapper.deleteByPrimaryKey(id);
+    }
+
 }

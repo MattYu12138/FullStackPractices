@@ -53,44 +53,51 @@
         </a-button>
       </p>
       <a-table
-        :columns="columns"
-        :data-source="ebooks.books"
-        :pagination="ebooks.pagination"
-        :loading="ebooks.loading"
-        @change="handleTableChange"
-    >
+          :columns="columns"
+          :data-source="ebooks.books"
+          :pagination="ebooks.pagination"
+          :loading="ebooks.loading"
+          @change="handleTableChange"
+      >
 
         <template #bodyCell="{ column, record }">
           <template v-if="column.key === 'cover'">
-            <img :src="record.cover" alt="cover" style="width: 60px" />
+            <img :src="record.cover" alt="cover" style="width: 60px"/>
           </template>
 
           <!-- 分类 -->
-<!--          <template v-else-if="column.key === 'category1d'">-->
-<!--            <a-tag color="blue">{{ record.category1Id }}</a-tag>-->
-<!--          </template>-->
+          <!--          <template v-else-if="column.key === 'category1d'">-->
+          <!--            <a-tag color="blue">{{ record.category1Id }}</a-tag>-->
+          <!--          </template>-->
 
-<!--          <template v-else-if="column.key === 'category2d'">-->
-<!--            <a-tag color="blue">{{ record.category2Id }}</a-tag>-->
-<!--          </template>-->
+          <!--          <template v-else-if="column.key === 'category2d'">-->
+          <!--            <a-tag color="blue">{{ record.category2Id }}</a-tag>-->
+          <!--          </template>-->
 
-<!--          <template v-else-if="column.key === 'docCount'">-->
-<!--            <a-tag color="blue">{{ record.docCount }}</a-tag>-->
-<!--          </template>-->
+          <!--          <template v-else-if="column.key === 'docCount'">-->
+          <!--            <a-tag color="blue">{{ record.docCount }}</a-tag>-->
+          <!--          </template>-->
 
-<!--          <template v-else-if="column.key === 'viewCount'">-->
-<!--            <a-tag color="blue">{{ record.viewCount }}</a-tag>-->
-<!--          </template>-->
+          <!--          <template v-else-if="column.key === 'viewCount'">-->
+          <!--            <a-tag color="blue">{{ record.viewCount }}</a-tag>-->
+          <!--          </template>-->
 
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
               <a-button type="primary" @click="edit(record)">编辑</a-button>
-              <a-button type="default" danger>删除</a-button>
+              <a-popconfirm
+                  title="Are you sure delete this task?"
+                  ok-text="Yes"
+                  cancel-text="No"
+                  @confirm="handleDelete(record.id)"
+              >
+              <a-button type="default">删除</a-button>
+              </a-popconfirm>
             </a-space>
           </template>
         </template>
-        </a-table>
+      </a-table>
     </a-layout-content>
   </a-layout>
   <a-modal
@@ -99,21 +106,21 @@
       :confirm-loading="modal.loading"
       @ok="handleModalOk"
   >
-    <a-form :model="ebooks.ebook" :label-col="{span :6 }" >
+    <a-form :model="ebooks.ebook" :label-col="{span :6 }">
       <a-form-item label="封面">
-        <a-input v-model:value="ebooks.ebook.cover" />
+        <a-input v-model:value="ebooks.ebook.cover"/>
       </a-form-item>
       <a-form-item label="名称">
-        <a-input v-model:value="ebooks.ebook.name" />
+        <a-input v-model:value="ebooks.ebook.name"/>
       </a-form-item>
       <a-form-item label="分类一">
-        <a-input v-model:value="ebooks.ebook.category1Id" />
+        <a-input v-model:value="ebooks.ebook.category1Id"/>
       </a-form-item>
       <a-form-item label="分类二">
-        <a-input v-model:value="ebooks.ebook.category2Id" />
+        <a-input v-model:value="ebooks.ebook.category2Id"/>
       </a-form-item>
       <a-form-item label="描述">
-        <a-input v-model:value="ebooks.ebook.description" />
+        <a-input v-model:value="ebooks.ebook.description"/>
       </a-form-item>
     </a-form>
   </a-modal>
@@ -133,20 +140,67 @@ export default defineComponent({
       loading: false,
       pagination: {current: 1, pageSize: 3, total: 0}
     });
-
     const modal = reactive({
       text: "",
       visible: false,
       loading: false
     })
 
+    /*
+    * edit
+    * */
+    const edit = (record: any) => {
+      modal.visible = true;
+      ebooks.ebook = record;
+    }
+    /*
+    * add
+    * */
+    const add = () => {
+      modal.visible = true;
+      ebooks.ebook = {};
+    }
+
+    const handleQuery = (params: any) => {
+      ebooks.loading = true;
+      axios.get("ebook/list",
+          {
+            params: {
+              page: params.page,
+              size: params.size,
+            }
+          }).then((response) => {
+        ebooks.loading = false;
+        const data = response.data;
+        ebooks.books = data.content.list;
+
+        ebooks.pagination.current = params.page;
+        ebooks.pagination.pageSize = params.size;
+        ebooks.pagination.total = data.content.total || 100;
+      })
+    }
+
+
+    const handleDelete = (id: number) => {
+      axios.delete("ebook/delete/" + id).then((response) => {
+        const data = response.data
+        if (data.success) {
+          handleQuery({
+            page: ebooks.pagination.current,  // 当前页
+            size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
+          });
+        }
+      });
+    };
+
+
     const handleModalOk = () => {
       modal.text = 'The modal will be closed after two seconds';
       modal.loading = true;
-      axios.post("ebook/save", ebooks.ebook).then((response)=>{
+      axios.post("ebook/save", ebooks.ebook).then((response) => {
 
         const data = response.data
-        if(data.success){
+        if (data.success) {
           modal.visible = false;
           modal.loading = false;
 
@@ -155,36 +209,6 @@ export default defineComponent({
             size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
           });
         }
-      })
-    }
-
-    const edit = (record : any)=>{
-      modal.visible = true;
-      ebooks.ebook = record;
-    }
-
-    /*
-    * add
-    * */
-    const add = ()=>{
-      modal.visible = true;
-      ebooks.ebook = {};
-    }
-
-    const handleQuery = (params:any) => {
-      ebooks.loading = true;
-      axios.get("ebook/list",
-          {params: {
-              page: params.page,
-              size: params.size,
-            }}).then((response)=>{
-        ebooks.loading = false;
-        const data = response.data;
-          ebooks.books = data.content.list;
-
-          ebooks.pagination.current = params.page;
-          ebooks.pagination.pageSize = params.size;
-          ebooks.pagination.total = data.content.total || 100;
       })
     }
 
@@ -204,9 +228,10 @@ export default defineComponent({
       {title: '名称', dataIndex: 'name'},
       {title: '分类1', dataIndex: 'category1Id', key: 'category1Id'},
       {title: '分类2', dataIndex: 'category2Id', key: ' category2Id'},
-      {title: '文档数', dataIndex: 'docCount', key:'docCount'},
-      {title: '阅读数', dataIndex: 'viewCount', key:'viewCount'},
-      {title: '点赞数', dataIndex: 'voteCount', key:'voteCount'},
+      {title: '描述', dataIndex:'description', key:'description'},
+      {title: '文档数', dataIndex: 'docCount', key: 'docCount'},
+      {title: '阅读数', dataIndex: 'viewCount', key: 'viewCount'},
+      {title: '点赞数', dataIndex: 'voteCount', key: 'voteCount'},
       {title: 'Action', key: 'action',}
     ];
 
@@ -227,6 +252,7 @@ export default defineComponent({
       handleModalOk,
       edit,
       add,
+      handleDelete,
     }
   }
 });

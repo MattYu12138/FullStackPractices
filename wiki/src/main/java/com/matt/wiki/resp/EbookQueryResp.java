@@ -1,6 +1,7 @@
 package com.matt.wiki.resp;
 
 public class EbookQueryResp {
+
     private Long id;
 
     private String name;

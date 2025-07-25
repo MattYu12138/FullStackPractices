@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="完成编辑功能，编辑成功后刷新列表&#10;查询接口参数改为EbookQueryReq和Resp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/SnowFlake.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加snowflake功能">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/JacksonConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp/EbookQueryResp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp/EbookQueryResp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
@@ -87,7 +88,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/util",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -115,11 +116,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/util" />
       <recent name="$PROJECT_DIR$/web/public" />
       <recent name="$PROJECT_DIR$/web/src/views/admin" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -264,14 +265,6 @@
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
-    </task>
-    <task id="LOCAL-00004" summary="README.md instead of HELP.md">
-      <option name="closed" value="true" />
-      <created>1753004541967</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1753004541967</updated>
     </task>
     <task id="LOCAL-00005" summary="README.md instead of HELP.md">
       <option name="closed" value="true" />
@@ -657,7 +650,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753433382632</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="增加snowflake功能">
+      <option name="closed" value="true" />
+      <created>1753435635670</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1753435635670</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,7 +699,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="网站配置router view，并且关闭vue/no-unused-components警告" />
     <MESSAGE value="制作the-header组件" />
     <MESSAGE value="制作the-footer组件" />
     <MESSAGE value="制作the-footer组件,并删除helloworld.vue" />
@@ -723,7 +723,8 @@
     <MESSAGE value="点击编辑按钮时候，弹出确认画面" />
     <MESSAGE value="模态框显示电子书表单，编辑某一行时可以将该行数据显示到表单" />
     <MESSAGE value="完成编辑功能，编辑成功后刷新列表&#10;查询接口参数改为EbookQueryReq和Resp" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成编辑功能，编辑成功后刷新列表&#10;查询接口参数改为EbookQueryReq和Resp" />
+    <MESSAGE value="增加snowflake功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加snowflake功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
