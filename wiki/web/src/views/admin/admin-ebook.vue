@@ -47,11 +47,19 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <p>
+      <div style="display: flex; align-items: center; gap: 2vw; margin-bottom: 2vw;">
+      <a-input-search
+          v-model:value="modal.searchText"
+          placeholder="input search text"
+          style="width: 30vw"
+          enter-button="Search"
+          size="large"
+          @search="handleQuery({page:1, size: ebooks.pagination.pageSize})"
+      />
         <a-button type="primary" @click="add()" size="large">
           新增
         </a-button>
-      </p>
+      </div>
       <a-table
           :columns="columns"
           :data-source="ebooks.books"
@@ -135,6 +143,8 @@ import {message} from 'ant-design-vue';
 export default defineComponent({
   name: 'Home',
   setup() {
+
+
     const ebooks = reactive({
       books: [],
       ebook: {},
@@ -142,7 +152,7 @@ export default defineComponent({
       pagination: {current: 1, pageSize: 5, total: 0}
     });
     const modal = reactive({
-      text: "",
+      searchText: "",
       visible: false,
       loading: false
     })
@@ -162,6 +172,8 @@ export default defineComponent({
       ebooks.ebook = {};
     }
 
+
+
     const handleQuery = (params: any) => {
       ebooks.loading = true;
       axios.get("ebook/list",
@@ -169,6 +181,7 @@ export default defineComponent({
             params: {
               page: params.page,
               size: params.size,
+              name: modal.searchText,
             }
           }).then((response) => {
         ebooks.loading = false;
@@ -187,6 +200,7 @@ export default defineComponent({
     }
 
 
+
     const handleDelete = (id: number) => {
       axios.delete("ebook/delete/" + id).then((response) => {
         const data = response.data
@@ -201,7 +215,6 @@ export default defineComponent({
 
 
     const handleModalOk = () => {
-      modal.text = 'The modal will be closed after two seconds';
       modal.loading = true;
       axios.post("ebook/save", ebooks.ebook).then((response) => {
         modal.loading = false;
@@ -252,6 +265,7 @@ export default defineComponent({
     return {
       ebooks,
       columns,
+      handleQuery,
       handleTableChange,
 
 
