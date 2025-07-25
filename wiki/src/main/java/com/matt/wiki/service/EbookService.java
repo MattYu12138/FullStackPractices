@@ -6,8 +6,9 @@ import com.github.pagehelper.PageInfo;
 import com.matt.wiki.domain.Ebook;
 import com.matt.wiki.domain.EbookExample;
 import com.matt.wiki.mapper.EbookMapper;
-import com.matt.wiki.req.EbookReq;
-import com.matt.wiki.resp.EbookResp;
+import com.matt.wiki.req.EbookQueryReq;
+import com.matt.wiki.req.EbookSaveReq;
+import com.matt.wiki.resp.EbookQueryResp;
 import com.matt.wiki.resp.PageResp;
 import com.matt.wiki.util.CopyUtil;
 import jakarta.annotation.Resource;
@@ -26,41 +27,54 @@ public class EbookService {
 
     private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
 
-    public PageResp<EbookResp> list(EbookReq ebookReq){
+    public PageResp<EbookQueryResp> list(EbookQueryReq ebookQueryReq) {
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
 
-        if(!ObjectUtils.isEmpty(ebookReq.getName())){
-            criteria.andNameLike("%" + ebookReq.getName() + "%");
+        if (!ObjectUtils.isEmpty(ebookQueryReq.getName())) {
+            criteria.andNameLike("%" + ebookQueryReq.getName() + "%");
         }
 
 
-        PageHelper.startPage(ebookReq.getPage(),ebookReq.getSize());
-        List<Ebook> ebookList =  ebookMapper.selectByExample(ebookExample);
+        PageHelper.startPage(ebookQueryReq.getPage(), ebookQueryReq.getSize());
+        List<Ebook> ebookList = ebookMapper.selectByExample(ebookExample);
         PageInfo<Ebook> pageInfo = new PageInfo<>(ebookList);
         LOG.info("总行数: {}", pageInfo.getTotal());
         LOG.info("总页数:{}", pageInfo.getPages());
 
-//        List<EbookResp> respList = new ArrayList<>();
+//        List<EbookQueryResp> respList = new ArrayList<>();
 //
 //        for (Ebook ebook : ebookList) {
-//            EbookResp ebookResp = new EbookResp();
+//            EbookQueryResp ebookResp = new EbookQueryResp();
 ////            BeanUtils.copyProperties(ebook, ebookResp);
 ////            respList.add(ebookResp);
 //
-//            EbookResp ebookREsp = CopyUtil.copy(ebook, EbookResp.class);
+//            EbookQueryResp ebookREsp = CopyUtil.copy(ebook, EbookQueryResp.class);
 //
 //            respList.add(ebookREsp);
 //        }
 
 
-        var respList = CopyUtil.copyList(ebookList, EbookResp.class);
+        var respList = CopyUtil.copyList(ebookList, EbookQueryResp.class);
 
-        PageResp<EbookResp> pageResp = new PageResp();
+        PageResp<EbookQueryResp> pageResp = new PageResp();
         pageResp.setTotal(pageInfo.getTotal());
         pageResp.setList(respList);
 
         return pageResp;
+    }
+
+    /*
+    * save
+    * */
+    public void save(EbookSaveReq ebookSaveReq) {
+        Ebook ebookSave = CopyUtil.copy(ebookSaveReq, Ebook.class);
+        if(ObjectUtils.isEmpty(ebookSave.getId())){
+            ebookMapper.insert(ebookSave);
+        }else{
+            ebookMapper.updateByPrimaryKey(ebookSave);
+        }
+
     }
 
 }
