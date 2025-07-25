@@ -1,9 +1,15 @@
 package com.matt.wiki.req;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotNull;
+
 public class PageReq {
 
+    @NotNull(message = "can not be null")
     private int page;
 
+    @NotNull(message = "can not be null")
+    @Max(value = 1000, message = "max value is 1000")
     private int size;
 
     public int getPage() {

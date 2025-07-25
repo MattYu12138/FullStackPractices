@@ -127,8 +127,9 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, ref, reactive} from 'vue';
+import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
+import {message} from 'ant-design-vue';
 
 
 export default defineComponent({
@@ -138,7 +139,7 @@ export default defineComponent({
       books: [],
       ebook: {},
       loading: false,
-      pagination: {current: 1, pageSize: 3, total: 0}
+      pagination: {current: 1, pageSize: 5, total: 0}
     });
     const modal = reactive({
       text: "",
@@ -172,11 +173,16 @@ export default defineComponent({
           }).then((response) => {
         ebooks.loading = false;
         const data = response.data;
-        ebooks.books = data.content.list;
+        if(data.success){
+          ebooks.books = data.content.list;
 
-        ebooks.pagination.current = params.page;
-        ebooks.pagination.pageSize = params.size;
-        ebooks.pagination.total = data.content.total || 100;
+          ebooks.pagination.current = params.page;
+          ebooks.pagination.pageSize = params.size;
+          ebooks.pagination.total = data.content.total || 100;
+        }else{
+          message.error(data.message);
+        }
+
       })
     }
 
