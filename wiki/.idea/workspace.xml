@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加category表的前后端">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="ebooks替换为wiki">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/CategoryQueryReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/CategoryQueryReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,22 +263,6 @@
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
-    </task>
-    <task id="LOCAL-00010" summary="增加自定义配置项事例。&#10;&#10;springcloud优先考虑bootstrap.properties和yml文件. springboot会自动识别application.properties">
-      <option name="closed" value="true" />
-      <created>1753089163087</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1753089163087</updated>
-    </task>
-    <task id="LOCAL-00011" summary="增加热部署">
-      <option name="closed" value="true" />
-      <created>1753092517918</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1753092517918</updated>
     </task>
     <task id="LOCAL-00012" summary="增加sql">
       <option name="closed" value="true" />
@@ -653,7 +640,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753448182890</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="添加category表的前后端">
+      <option name="closed" value="true" />
+      <created>1753448224263</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1753448224263</updated>
+    </task>
+    <task id="LOCAL-00060" summary="ebooks替换为wiki">
+      <option name="closed" value="true" />
+      <created>1753448326190</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1753448326190</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -694,7 +697,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="使用axios调用后端接口，成功返回数据到前端" />
     <MESSAGE value="布局调整，一行三本" />
     <MESSAGE value="列表查询接口，适合动态查询sql" />
     <MESSAGE value="vue多环境配置，增加dev和prod配置文件&#10;编译和启动命令增加多环境" />
@@ -719,7 +721,8 @@
     <MESSAGE value="为保存接口添加参数校验 ， name不能为空" />
     <MESSAGE value="编辑时复制对象，不会影响页面。" />
     <MESSAGE value="添加category表的前后端" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加category表的前后端" />
+    <MESSAGE value="ebooks替换为wiki" />
+    <option name="LAST_COMMIT_MESSAGE" value="ebooks替换为wiki" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

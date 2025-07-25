@@ -72,6 +72,7 @@
           <template v-if="column.key === 'cover'">
             <img :src="record.cover" alt="cover" style="width: 60px"/>
           </template>
+
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>

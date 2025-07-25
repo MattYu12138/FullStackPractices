@@ -35,9 +35,9 @@ public class CategoryService {
         CategoryExample categoryExample = new CategoryExample();
         CategoryExample.Criteria criteria = categoryExample.createCriteria();
 
-//        if (!ObjectUtils.isEmpty(categoryQueryReq.getName())) {
-//            criteria.andNameLike("%" + categoryQueryReq.getName() + "%");
-//        }
+        if (!ObjectUtils.isEmpty(categoryQueryReq.getName())) {
+            criteria.andNameLike("%" + categoryQueryReq.getName() + "%");
+        }
 
 
         PageHelper.startPage(categoryQueryReq.getPage(), categoryQueryReq.getSize());
