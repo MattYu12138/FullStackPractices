@@ -5926,3 +5926,95 @@ Caused by: java.lang.ClassNotFoundException: com.matt.wiki.req.CategoryQueryReq
 2025-07-25 22:55:33.027 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
 2025-07-25 22:55:33.028 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201}],"total":16},"success":true}
 2025-07-25 22:55:33.028 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：843 ms -------------
+2025-07-25 22:57:08.590 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:57:08.591 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:57:08.593 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:57:08.594 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:57:08.594 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:57:08.850 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:57:08.851 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:57:09.103 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:57:09.104 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:57:09.104 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:57:09.105 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:57:09.105 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:57:09.440 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:57:09.440 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:57:09.440 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:57:09.440 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:57:09.440 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:57:09.440 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:57:09.440 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:57:09.441 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:57:09.441 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:57:09.441 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:57:09.441 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：851 ms -------------
+2025-07-25 22:57:10.797 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:57:10.797 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:57:10.797 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:57:10.798 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:57:10.798 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2025-07-25 22:57:11.079 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:57:11.079 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:57:11.387 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:57:11.388 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:57:11.388 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:57:11.388 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?
+2025-07-25 22:57:11.389 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:57:11.693 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:57:11.694 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-07-25 22:57:11.694 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-07-25 22:57:11.694 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-07-25 22:57:11.694 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-07-25 22:57:11.695 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-07-25 22:57:11.695 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:57:11.695 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:57:11.695 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:57:11.696 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201}],"total":16},"success":true}
+2025-07-25 22:57:11.696 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：899 ms -------------
+2025-07-25 22:57:14.950 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:57:14.951 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-07-25 22:57:14.951 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-07-25 22:57:14.951 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:57:14.951 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"name":"","page":1,"size":5}]
+2025-07-25 22:57:15.277 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2025-07-25 22:57:15.277 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:57:15.584 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:57:15.584 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 12
+2025-07-25 22:57:15.584 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:57:15.585 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2025-07-25 22:57:15.585 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:57:15.891 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-07-25 22:57:15.892 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, 2, 4, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 2234, 55, 1111
+2025-07-25 22:57:15.892 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 1, 2, 零基础入门 Vue 开发，企业级应用开发前端框架, /image/cover1.png, 111, 424, 233
+2025-07-25 22:57:15.892 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 3, MySQL 数据库教程, 1, 4, 系统学习 MySQL 数据库基础与进阶操作, null, null, null, null
+2025-07-25 22:57:15.892 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 4, Python 编程入门, 2, 2, 面向初学者的 Python 编程实战教程, null, null, null, null
+2025-07-25 22:57:15.892 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 5, JavaScript 高级编程, 1, 1, 深入理解 JavaScript 核心机制与高级应用, none, null, null, null
+2025-07-25 22:57:15.893 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:57:15.893 INFO  com.matt.wiki.service.EbookService                :46   [32m                  [0;39m 总行数: 12
+2025-07-25 22:57:15.893 INFO  com.matt.wiki.service.EbookService                :47   [32m                  [0;39m 总页数:3
+2025-07-25 22:57:15.893 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":2,"category2Id":4,"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":2234,"id":1,"name":"Spring Boot 入门教程","viewCount":55,"voteCount":1111},{"category1Id":1,"category2Id":2,"cover":"/image/cover1.png","description":"零基础入门 Vue 开发，企业级应用开发前端框架","docCount":111,"id":2,"name":"Vue 入门教程","viewCount":424,"voteCount":233},{"category1Id":1,"category2Id":4,"description":"系统学习 MySQL 数据库基础与进阶操作","id":3,"name":"MySQL 数据库教程"},{"category1Id":2,"category2Id":2,"description":"面向初学者的 Python 编程实战教程","id":4,"name":"Python 编程入门"},{"category1Id":1,"category2Id":1,"cover":"none","description":"深入理解 JavaScript 核心机制与高级应用","id":5,"name":"JavaScript 高级编程"}],"total":12},"success":true}
+2025-07-25 22:57:15.893 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：943 ms -------------
+2025-07-25 22:57:16.829 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-25 22:57:16.829 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/list GET
+2025-07-25 22:57:16.830 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.list
+2025-07-25 22:57:16.830 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-25 22:57:16.830 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"page":1,"size":5}]
+2025-07-25 22:57:17.120 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM category
+2025-07-25 22:57:17.120 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 
+2025-07-25 22:57:17.427 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-25 22:57:17.427 TRACE c.m.w.mapper.CategoryMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 16
+2025-07-25 22:57:17.428 DEBUG c.m.w.mapper.CategoryMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-07-25 22:57:17.428 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category LIMIT ?
+2025-07-25 22:57:17.428 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-25 22:57:17.734 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-07-25 22:57:17.734 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-07-25 22:57:17.735 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-07-25 22:57:17.735 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-07-25 22:57:17.735 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-07-25 22:57:17.735 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-07-25 22:57:17.735 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 5
+2025-07-25 22:57:17.735 INFO  com.matt.wiki.service.CategoryService             :46   [32m                  [0;39m 总行数: 16
+2025-07-25 22:57:17.735 INFO  com.matt.wiki.service.CategoryService             :47   [32m                  [0;39m 总页数:4
+2025-07-25 22:57:17.735 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201}],"total":16},"success":true}
+2025-07-25 22:57:17.735 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：906 ms -------------
