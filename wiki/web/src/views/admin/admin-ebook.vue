@@ -204,16 +204,17 @@ export default defineComponent({
       modal.text = 'The modal will be closed after two seconds';
       modal.loading = true;
       axios.post("ebook/save", ebooks.ebook).then((response) => {
-
+        modal.loading = false;
         const data = response.data
         if (data.success) {
           modal.visible = false;
-          modal.loading = false;
 
           handleQuery({
             page: ebooks.pagination.current,  // 当前页
             size: ebooks.pagination.pageSize, // 每页条数（默认配置的值）
           });
+        }else{
+          message.error(data.message);
         }
       })
     }
