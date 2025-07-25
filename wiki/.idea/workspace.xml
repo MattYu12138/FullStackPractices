@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="为保存接口添加参数校验 ， name不能为空">
+      <change afterPath="$PROJECT_DIR$/web/src/util/tool.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
@@ -83,7 +84,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/controller",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/util",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,11 +112,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/src/util" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/util" />
       <recent name="$PROJECT_DIR$/web/public" />
-      <recent name="$PROJECT_DIR$/web/src/views/admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />

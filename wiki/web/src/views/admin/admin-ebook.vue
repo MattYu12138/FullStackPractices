@@ -138,6 +138,7 @@
 import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
+import {Tool} from '@/util/tool'
 
 
 export default defineComponent({
@@ -162,7 +163,7 @@ export default defineComponent({
     * */
     const edit = (record: any) => {
       modal.visible = true;
-      ebooks.ebook = record;
+      ebooks.ebook = Tool.copy(record);
     }
     /*
     * add
