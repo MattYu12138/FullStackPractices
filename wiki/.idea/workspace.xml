@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="成功实现”分类“的文字转换">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="删除侧边栏">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,22 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00022" summary="安装vue">
-      <option name="closed" value="true" />
-      <created>1753209631224</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1753209631224</updated>
-    </task>
-    <task id="LOCAL-00023" summary="集成ant design vue， 并加入按钮示例">
-      <option name="closed" value="true" />
-      <created>1753211075689</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1753211075690</updated>
     </task>
     <task id="LOCAL-00024" summary="网站首页开发">
       <option name="closed" value="true" />
@@ -654,7 +638,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753557589026</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="修复bug，防止更改后，在表单还是显示原来数值">
+      <option name="closed" value="true" />
+      <created>1753557922512</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1753557922512</updated>
+    </task>
+    <task id="LOCAL-00072" summary="删除侧边栏">
+      <option name="closed" value="true" />
+      <created>1753559344331</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1753559344331</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,8 +695,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue" />
-    <MESSAGE value="修改电子书管理页面布局" />
     <MESSAGE value="实现页面实时更新，可以往后面翻页浏览" />
     <MESSAGE value="集成PageHelper" />
     <MESSAGE value="封装分页请求参数和返回参数" />
@@ -720,7 +718,9 @@
     <MESSAGE value="分类选择改为级联选择组件" />
     <MESSAGE value="暂时显示不出分类" />
     <MESSAGE value="成功实现”分类“的文字转换" />
-    <option name="LAST_COMMIT_MESSAGE" value="成功实现”分类“的文字转换" />
+    <MESSAGE value="修复bug，防止更改后，在表单还是显示原来数值" />
+    <MESSAGE value="删除侧边栏" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除侧边栏" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
