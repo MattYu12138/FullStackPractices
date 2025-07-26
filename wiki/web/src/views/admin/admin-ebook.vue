@@ -77,6 +77,9 @@
           <template v-if="column.key === 'cover'">
             <img :src="record.cover" alt="cover" style="width: 60px"/>
           </template>
+          <template v-else-if="column.key === 'category'">
+            <span>{{getCategoryName(record.category1Id)}} / {{getCategoryName(record.category2Id)}}</span>
+          </template>
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
@@ -147,6 +150,8 @@ export default defineComponent({
       category2Id?: number;
     }
 
+    let categorys: any;
+
     const gettingEbooks = reactive({
       ebook: [],
       loading: false,
@@ -197,8 +202,6 @@ export default defineComponent({
       postingEbooks.ebook = {};
     }
 
-
-
     const handleQuery = (params: any) => {
       gettingEbooks.loading = true;
       axios.get("ebook/list",
@@ -224,13 +227,15 @@ export default defineComponent({
       })
     }
 
+
+
     const handleQueryCategory = () => {
       model.loading = true;
       axios.get("category/all").then((response) => {
         model.loading = false;
         const data = response.data;
         if(data.success){
-          const categorys = data.content;
+          categorys = data.content;
           console.log("original: " , categorys);
 
           array2Tree.level1 = [];
@@ -245,7 +250,6 @@ export default defineComponent({
     }
 
 
-
     const handleDelete = (id: number) => {
       axios.delete("ebook/delete/" + id).then((response) => {
         const data = response.data
@@ -257,6 +261,16 @@ export default defineComponent({
         }
       });
     };
+
+    const getCategoryName = (cid: number) =>{
+      let result = "";
+      categorys.forEach((item: any) =>{
+        if(item.id === cid){
+          result = item.name;
+        }
+      });
+      return result;
+    }
 
     // 点击保存
     const handleModelOk = () => {
@@ -293,8 +307,7 @@ export default defineComponent({
     const columns = [
       {title: '封面', dataIndex: 'cover', key: 'cover'},
       {title: '名称', dataIndex: 'name'},
-      {title: '分类1', dataIndex: 'category1Id', key: 'category1Id'},
-      {title: '分类2', dataIndex: 'category2Id', key: ' category2Id'},
+      {title: '分类', dataIndex:'category', key: ' category'},
       {title: '描述', dataIndex:'description', key:'description'},
       {title: '文档数', dataIndex: 'docCount', key: 'docCount'},
       {title: '阅读数', dataIndex: 'viewCount', key: 'viewCount'},
@@ -316,6 +329,7 @@ export default defineComponent({
       postingEbooks,
       Categorys,
       array2Tree,
+      getCategoryName,
       handleQuery,
 
       handleTableChange,
