@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="用表格替换搜索框">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="优化代码，分类管理不显示分页">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/util/tool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/util/tool.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,15 +262,7 @@
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
-      <workItem from="1753519990944" duration="3818000" />
-    </task>
-    <task id="LOCAL-00016" summary="增加demo代码查询">
-      <option name="closed" value="true" />
-      <created>1753187014598</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1753187014598</updated>
+      <workItem from="1753519990944" duration="6913000" />
     </task>
     <task id="LOCAL-00017" summary="增加ebook代码查询">
       <option name="closed" value="true" />
@@ -659,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753522099965</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="优化代码，分类管理不显示分页">
+      <option name="closed" value="true" />
+      <created>1753523860237</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1753523860237</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,7 +697,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="增加 --port 添加启动端口" />
     <MESSAGE value="axios请求域更改为读取配置文件" />
     <MESSAGE value="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中" />
     <MESSAGE value="配置axios拦截器打印请求和返回参数" />
@@ -725,7 +721,8 @@
     <MESSAGE value="成功可以根据名称查询" />
     <MESSAGE value="更改wiki为gettingEbooks，并新增查询postingEbooks" />
     <MESSAGE value="用表格替换搜索框" />
-    <option name="LAST_COMMIT_MESSAGE" value="用表格替换搜索框" />
+    <MESSAGE value="优化代码，分类管理不显示分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化代码，分类管理不显示分页" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

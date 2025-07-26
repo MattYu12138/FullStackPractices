@@ -61,9 +61,12 @@
       </a-form>
       <a-table
           :columns="columns"
-          :data-source="gettingCategorys.category"
+          :data-source="array2Tree.level1"
           :loading="gettingCategorys.loading"
           :pagination="false"
+          :row-key="record => record.id"
+          :expandedRowKeys="array2Tree.expandedRowKeys"
+          @expand="onExpand"
       >
 
         <template #bodyCell="{ column, record }">
@@ -130,8 +133,14 @@ export default defineComponent({
       pagination: {current: 1, pageSize: 5, total: 0}
     });
     const model = reactive({
+      expandedRowKeys:[] as number[],
       visible: false,
       loading: false
+    })
+
+    const array2Tree = reactive({
+      level1: [] as any[],
+
     })
 
     const postingCategorys = reactive({
@@ -164,6 +173,11 @@ export default defineComponent({
         const data = response.data;
         if(data.success){
           gettingCategorys.category = data.content;
+          console.log("original: " , gettingCategorys.category);
+
+          array2Tree.level1 = [];
+          array2Tree.level1 = Tool.array2Tree(gettingCategorys.category, 0);
+          console.log("树形结构: " , array2Tree.level1);
 
         }else{
           message.error(data.message);
@@ -199,6 +213,17 @@ export default defineComponent({
       })
     }
 
+    const onExpand = (expanded: boolean, record: any) => {
+      if (expanded) {
+        if (!model.expandedRowKeys.includes(record.id)) {
+          model.expandedRowKeys.push(record.id);
+        }
+      } else {
+        model.expandedRowKeys = model.expandedRowKeys.filter(id => id !== record.id);
+      }
+    };
+
+
     const columns = [
       { title: '名称', dataIndex: 'name', key: 'name' },
       { title: '父ID', dataIndex: 'parent', key: 'parent' },
@@ -213,6 +238,8 @@ export default defineComponent({
     return {
       gettingCategorys,
       postingCategorys,
+      onExpand,
+      array2Tree,
       columns,
       handleQuery,
 
