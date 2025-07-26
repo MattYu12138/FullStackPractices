@@ -49,12 +49,12 @@
     >
       <div style="display: flex; align-items: center; gap: 2vw; margin-bottom: 2vw;">
       <a-input-search
-          v-model:value="modal.searchText"
+          v-model:value="postingEbooks.name"
           placeholder="input search text"
           style="width: 30vw"
           enter-button="Search"
           size="large"
-          @search="handleQuery({page:1, size: wiki.pagination.pageSize})"
+          @search="handleQuery({page:1, size: gettingEbooks.pagination.pageSize})"
       />
         <a-button type="primary" @click="add()" size="large">
           新增
@@ -62,9 +62,9 @@
       </div>
       <a-table
           :columns="columns"
-          :data-source="wiki.books"
-          :pagination="wiki.pagination"
-          :loading="wiki.loading"
+          :data-source="gettingEbooks.ebook"
+          :pagination="gettingEbooks.pagination"
+          :loading="gettingEbooks.loading"
           @change="handleTableChange"
       >
 
@@ -92,25 +92,25 @@
   </a-layout>
   <a-modal
       title="电子书表单"
-      v-model:visible="modal.visible"
-      :confirm-loading="modal.loading"
-      @ok="handleModalOk"
+      v-model:visible="model.visible"
+      :confirm-loading="model.loading"
+      @ok="handleModelOk"
   >
-    <a-form :model="wiki.ebook" :label-col="{span :6 }">
+    <a-form :model="postingEbooks.ebook" :label-col="{span :6 }">
       <a-form-item label="封面">
-        <a-input v-model:value="wiki.ebook.cover"/>
+        <a-input v-model:value="postingEbooks.ebook.cover"/>
       </a-form-item>
       <a-form-item label="名称">
-        <a-input v-model:value="wiki.ebook.name"/>
+        <a-input v-model:value="postingEbooks.ebook.name"/>
       </a-form-item>
       <a-form-item label="分类一">
-        <a-input v-model:value="wiki.ebook.category1Id"/>
+        <a-input v-model:value="postingEbooks.ebook.category1Id"/>
       </a-form-item>
       <a-form-item label="分类二">
-        <a-input v-model:value="wiki.ebook.category2Id"/>
+        <a-input v-model:value="postingEbooks.ebook.category2Id"/>
       </a-form-item>
       <a-form-item label="描述">
-        <a-input v-model:value="wiki.ebook.description"/>
+        <a-input v-model:value="postingEbooks.ebook.description"/>
       </a-form-item>
     </a-form>
   </a-modal>
@@ -128,53 +128,58 @@ export default defineComponent({
   setup() {
 
 
-    const wiki = reactive({
-      books: [],
-      ebook: {},
+    const gettingEbooks = reactive({
+      ebook: [],
+
       loading: false,
       pagination: {current: 1, pageSize: 5, total: 0}
     });
-    const modal = reactive({
-      searchText: "",
+    const model = reactive({
       visible: false,
       loading: false
+    })
+
+    const postingEbooks = reactive({
+      ebook: {},
+      name : "",
+      id: 0,
     })
 
     /*
     * edit
     * */
     const edit = (record: any) => {
-      modal.visible = true;
-      wiki.ebook = Tool.copy(record);
+      model.visible = true;
+      postingEbooks.ebook = Tool.copy(record);
     }
     /*
     * add
     * */
     const add = () => {
-      modal.visible = true;
-      wiki.ebook = {};
+      model.visible = true;
+      postingEbooks.ebook = {};
     }
 
 
 
     const handleQuery = (params: any) => {
-      wiki.loading = true;
+      gettingEbooks.loading = true;
       axios.get("ebook/list",
           {
             params: {
               page: params.page,
               size: params.size,
-              name: modal.searchText,
+              name: postingEbooks.name,
             }
           }).then((response) => {
-        wiki.loading = false;
+        gettingEbooks.loading = false;
         const data = response.data;
         if(data.success){
-          wiki.books = data.content.list;
+          gettingEbooks.ebook = data.content.list;
 
-          wiki.pagination.current = params.page;
-          wiki.pagination.pageSize = params.size;
-          wiki.pagination.total = data.content.total || 100;
+          gettingEbooks.pagination.current = params.page;
+          gettingEbooks.pagination.pageSize = params.size;
+          gettingEbooks.pagination.total = data.content.total;
         }else{
           message.error(data.message);
         }
@@ -189,25 +194,25 @@ export default defineComponent({
         const data = response.data
         if (data.success) {
           handleQuery({
-            page: wiki.pagination.current,  // 当前页
-            size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
+            page: gettingEbooks.pagination.current,  // 当前页
+            size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
           });
         }
       });
     };
 
 
-    const handleModalOk = () => {
-      modal.loading = true;
-      axios.post("ebook/save", wiki.ebook).then((response) => {
-        modal.loading = false;
+    const handleModelOk = () => {
+      model.loading = true;
+      axios.post("ebook/save", postingEbooks.ebook).then((response) => {
+        model.loading = false;
         const data = response.data
         if (data.success) {
-          modal.visible = false;
+          model.visible = false;
 
           handleQuery({
-            page: wiki.pagination.current,  // 当前页
-            size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
+            page: gettingEbooks.pagination.current,  // 当前页
+            size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
           });
         }else{
           message.error(data.message);
@@ -240,20 +245,21 @@ export default defineComponent({
 
     onMounted(() => {
       handleQuery({
-        page: wiki.pagination.current,  // 当前页
-        size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
+        page: gettingEbooks.pagination.current,  // 当前页
+        size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
       });
     });
 
     return {
-      wiki,
+      gettingEbooks,
       columns,
+      postingEbooks,
       handleQuery,
       handleTableChange,
 
 
-      modal,
-      handleModalOk,
+      model,
+      handleModelOk,
       edit,
       add,
       handleDelete,
