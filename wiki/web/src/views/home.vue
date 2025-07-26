@@ -7,12 +7,10 @@
           @click="handleClick"
       >
         <a-menu-item key="welcome">
-          <router-link to="/">
             <MailOutlined />
             <span>Welcome</span>
-          </router-link>
         </a-menu-item>
-        <a-sub-menu v-for="item in level1" :key="item.id">
+        <a-sub-menu v-for="item in array2Tree.level1" :key="item.id">
           <template v-slot:title>
             <span>{{ item.name }}</span>
           </template>
@@ -25,7 +23,10 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-list item-layout="vertical" size="large" :grid="{ gutter :20, column : 3}" :data-source="ebooks">
+      <div class="welcome" v-show="Home.showWelcome">
+        <h1>欢迎使用</h1>
+      </div>
+      <a-list v-show="!Home.showWelcome" item-layout="vertical" size="large" :grid="{ gutter :20, column : 3}" :data-source="ebooks">
         <template #renderItem="{ item }">
           <a-list-item key="item.name">
             <template #actions>
@@ -88,13 +89,18 @@ export default defineComponent({
       })
     }
 
-    const handleClick = () =>{
-      console.log("click from menu");
+    const handleClick = (value: any) =>{
+      // console.log("click from menu");
+      Home.showWelcome = value.key === 'welcome';
     }
+
+    const Home = reactive({
+      showWelcome: true,
+    })
 
     // 一个生命周期函数，初始化写在onMounted里面
     onMounted(() => {
-      handleQueryCategory;
+      handleQueryCategory();
       axios.get("/ebook/list",{
         params:{
           page:1,
@@ -107,6 +113,8 @@ export default defineComponent({
     })
 
     return {
+
+      Home,
       handleClick,
       array2Tree,
       ebooks: toRef(ebooksTmp, "books"),
