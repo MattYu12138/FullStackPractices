@@ -47,19 +47,23 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <div style="display: flex; align-items: center; gap: 2vw; margin-bottom: 2vw;">
-      <a-input-search
-          v-model:value="postingEbooks.name"
-          placeholder="input search text"
-          style="width: 30vw"
-          enter-button="Search"
-          size="large"
-          @search="handleQuery({page:1, size: gettingEbooks.pagination.pageSize})"
-      />
-        <a-button type="primary" @click="add()" size="large">
-          新增
-        </a-button>
-      </div>
+      <a-form layout="inline" :model="postingEbooks" style="margin-bottom: 2vw">
+        <a-form-item>
+          <a-input v-model:value="postingEbooks.name" aria-placeholder="名称">
+          </a-input>
+        </a-form-item>
+        <a-form-item>
+          <a-button type="primary" @click="handleQuery({page:1, size: gettingEbooks.pagination.pageSize})">
+            查询
+          </a-button>
+        </a-form-item>
+        <a-form-item>
+          <a-button type="primary" @click="add()">
+            新增
+          </a-button>
+        </a-form-item>
+      </a-form>
+
       <a-table
           :columns="columns"
           :data-source="gettingEbooks.ebook"
