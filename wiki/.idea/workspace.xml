@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复bug //加载完分类之后再加载电子书，防止异步导致错误">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/EbookQueryReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/EbookQueryReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -261,14 +265,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00027" summary="制作the-footer组件">
-      <option name="closed" value="true" />
-      <created>1753213843938</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1753213843938</updated>
     </task>
     <task id="LOCAL-00028" summary="制作the-footer组件,并删除helloworld.vue">
       <option name="closed" value="true" />
@@ -654,7 +650,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753560308833</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件">
+      <option name="closed" value="true" />
+      <created>1753561359777</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1753561359777</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +699,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="封装分页请求参数和返回参数" />
     <MESSAGE value="前后端整合成功" />
     <MESSAGE value="点击编辑按钮时候，弹出确认画面" />
     <MESSAGE value="模态框显示电子书表单，编辑某一行时可以将该行数据显示到表单" />
@@ -720,7 +723,8 @@
     <MESSAGE value="删除侧边栏" />
     <MESSAGE value="首页显示分类菜单" />
     <MESSAGE value="修复bug //加载完分类之后再加载电子书，防止异步导致错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug //加载完分类之后再加载电子书，防止异步导致错误" />
+    <MESSAGE value="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件" />
+    <option name="LAST_COMMIT_MESSAGE" value="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

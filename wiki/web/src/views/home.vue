@@ -71,6 +71,11 @@ export default defineComponent({
       level1: [] as any[]
     });
 
+    const Home = reactive({
+      showWelcome: true,
+      category2Id: 0,
+    })
+
     let category: any[];
 
 
@@ -89,27 +94,39 @@ export default defineComponent({
       })
     }
 
-    const handleClick = (value: any) =>{
-      // console.log("click from menu");
-      Home.showWelcome = value.key === 'welcome';
-    }
 
-    const Home = reactive({
-      showWelcome: true,
-    })
-
-    // 一个生命周期函数，初始化写在onMounted里面
-    onMounted(() => {
-      handleQueryCategory();
+    const handleQueryEbook = () => {
       axios.get("/ebook/list",{
         params:{
           page:1,
-          size:1000
+          size:1000,
+          category2Id: Home.category2Id,
         }
       }).then((response) => {
         const data = response.data;
         ebooksTmp.books = data.content.list;
       })
+    }
+
+    const handleClick = (value: any) =>{
+      // console.log("click from menu");
+      // Home.showWelcome = value.key === 'welcome';
+      if(value.key === 'welcome'){
+        Home.showWelcome = true;
+      }else{
+        Home.category2Id = value.key;
+        Home.showWelcome = false;
+        handleQueryEbook();
+      }
+    }
+
+
+
+
+    // 一个生命周期函数，初始化写在onMounted里面
+    onMounted(() => {
+      handleQueryCategory();
+      // handleQueryEbook();
     })
 
     return {
@@ -117,6 +134,7 @@ export default defineComponent({
       Home,
       handleClick,
       array2Tree,
+      handleQueryEbook,
       ebooks: toRef(ebooksTmp, "books"),
       listData,
       pagination: {
