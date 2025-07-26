@@ -104,7 +104,17 @@
       </a-form-item>
 
       <a-form-item label="父ID">
-        <a-input-number v-model:value="postingCategorys.category.parent" :min="0" style="width: 100%" />
+        <a-select
+            ref="select"
+            v-model:value="postingCategorys.category.parent"
+        >
+          <a-select-option value="0">
+            无
+          </a-select-option>
+          <a-select-option v-for="c in array2Tree.level1" :key="c.id" :value="c.id" :disabled="postingCategorys.category.id === c.id">
+            {{c.name}}
+          </a-select-option>
+        </a-select>
       </a-form-item>
 
       <a-form-item label="顺序">
