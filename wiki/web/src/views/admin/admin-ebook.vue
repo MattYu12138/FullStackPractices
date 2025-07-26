@@ -204,6 +204,8 @@ export default defineComponent({
 
     const handleQuery = (params: any) => {
       gettingEbooks.loading = true;
+      //防止更改后，在表单还是显示原来数值
+      gettingEbooks.ebook = [];
       axios.get("ebook/list",
           {
             params: {
