@@ -47,25 +47,23 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <div style="display: flex; align-items: center; gap: 2vw; margin-bottom: 2vw;">
-      <a-input-search
-          v-model:value="modal.searchText"
-          placeholder="input search text"
-          style="width: 30vw"
-          enter-button="Search"
-          size="large"
-          @search="handleQuery({page:1, size: wiki.pagination.pageSize})"
-      />
-        <a-button type="primary" @click="add()" size="large">
-          新增
-        </a-button>
-      </div>
+      <a-form layout="inline" :model="postingCategorys" style="margin-bottom: 2vw">
+        <a-form-item>
+          <a-button type="primary" @click="handleQuery()">
+            查询
+          </a-button>
+        </a-form-item>
+        <a-form-item>
+          <a-button type="primary" @click="add()">
+            新增
+          </a-button>
+        </a-form-item>
+      </a-form>
       <a-table
           :columns="columns"
-          :data-source="wiki.categorys"
-          :pagination="wiki.pagination"
-          :loading="wiki.loading"
-          @change="handleTableChange"
+          :data-source="gettingCategorys.category"
+          :loading="gettingCategorys.loading"
+          :pagination="false"
       >
 
         <template #bodyCell="{ column, record }">
@@ -93,21 +91,21 @@
   </a-layout>
   <a-modal
       title="电子书表单"
-      v-model:visible="modal.visible"
-      :confirm-loading="modal.loading"
-      @ok="handleModalOk"
+      v-model:open="model.visible"
+      :confirm-loading="model.loading"
+      @ok="handleModelOk"
   >
-    <a-form :model="wiki.category" :label-col="{ span: 6 }">
+    <a-form :model="postingCategorys.category" :label-col="{ span: 6 }">
       <a-form-item label="名称">
-        <a-input v-model:value="wiki.category.name" />
+        <a-input v-model:value="postingCategorys.category.name" />
       </a-form-item>
 
       <a-form-item label="父ID">
-        <a-input-number v-model:value="wiki.category.parent" :min="0" style="width: 100%" />
+        <a-input-number v-model:value="postingCategorys.category.parent" :min="0" style="width: 100%" />
       </a-form-item>
 
       <a-form-item label="顺序">
-        <a-input-number v-model:value="wiki.category.sort" :min="0" style="width: 100%" />
+        <a-input-number v-model:value="postingCategorys.category.sort" :min="0" style="width: 100%" />
       </a-form-item>
     </a-form>
 
@@ -126,53 +124,47 @@ export default defineComponent({
   setup() {
 
 
-    const wiki = reactive({
-      categorys: [],
-      category: {},
+    const gettingCategorys = reactive({
+      category: [],
       loading: false,
       pagination: {current: 1, pageSize: 5, total: 0}
     });
-    const modal = reactive({
-      searchText: "",
+    const model = reactive({
       visible: false,
       loading: false
+    })
+
+    const postingCategorys = reactive({
+      category: {},
+      name : "",
+      id: 0,
     })
 
     /*
     * edit
     * */
     const edit = (record: any) => {
-      modal.visible = true;
-      wiki.category = Tool.copy(record);
+      model.visible = true;
+      postingCategorys.category = Tool.copy(record);
     }
     /*
     * add
     * */
     const add = () => {
-      modal.visible = true;
-      wiki.category = {};
+      model.visible = true;
+      postingCategorys.category = {};
     }
 
 
 
-    const handleQuery = (params: any) => {
-      wiki.loading = true;
-      axios.get("category/list",
-          {
-            params: {
-              page: params.page,
-              size: params.size,
-              name: modal.searchText,
-            }
-          }).then((response) => {
-        wiki.loading = false;
+    const handleQuery = () => {
+      gettingCategorys.loading = true;
+      axios.get("category/all").then((response) => {
+        gettingCategorys.loading = false;
         const data = response.data;
         if(data.success){
-          wiki.categorys = data.content.list;
+          gettingCategorys.category = data.content;
 
-          wiki.pagination.current = params.page;
-          wiki.pagination.pageSize = params.size;
-          wiki.pagination.total = data.content.total || 100;
         }else{
           message.error(data.message);
         }
@@ -186,43 +178,26 @@ export default defineComponent({
       axios.delete("category/delete/" + id).then((response) => {
         const data = response.data
         if (data.success) {
-          handleQuery({
-            page: wiki.pagination.current,  // 当前页
-            size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
-          });
+          handleQuery();
         }
       });
     };
 
 
-    const handleModalOk = () => {
-      modal.loading = true;
-      axios.post("category/save", wiki.category).then((response) => {
-        modal.loading = false;
+    const handleModelOk = () => {
+      model.loading = true;
+      axios.post("category/save", postingCategorys.category).then((response) => {
+        model.loading = false;
         const data = response.data
         if (data.success) {
-          modal.visible = false;
+          model.visible = false;
 
-          handleQuery({
-            page: wiki.pagination.current,  // 当前页
-            size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
-          });
+          handleQuery();
         }else{
           message.error(data.message);
         }
       })
     }
-
-    /**
-     * 表格点击页码时触发
-     */
-    const handleTableChange = (pagination: any) => {
-      console.log("分页参数是：", JSON.stringify(pagination, null, 2));
-      handleQuery({
-        page: pagination.current,
-        size: pagination.pageSize
-      });
-    };
 
     const columns = [
       { title: '名称', dataIndex: 'name', key: 'name' },
@@ -231,23 +206,19 @@ export default defineComponent({
       {title: '操作', key: 'action',},
     ];
 
-
     onMounted(() => {
-      handleQuery({
-        page: wiki.pagination.current,  // 当前页
-        size: wiki.pagination.pageSize, // 每页条数（默认配置的值）
-      });
+      handleQuery();
     });
 
     return {
-      wiki,
+      gettingCategorys,
+      postingCategorys,
       columns,
       handleQuery,
-      handleTableChange,
 
 
-      modal,
-      handleModalOk,
+      model,
+      handleModelOk,
       edit,
       add,
       handleDelete,
@@ -255,6 +226,7 @@ export default defineComponent({
   }
 });
 </script>
+
 
 <style scoped>
 .ant-avatar {

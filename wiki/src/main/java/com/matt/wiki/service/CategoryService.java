@@ -2,7 +2,6 @@ package com.matt.wiki.service;
 
 
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.matt.wiki.domain.Category;
 import com.matt.wiki.domain.CategoryExample;
 import com.matt.wiki.mapper.CategoryMapper;
@@ -33,6 +32,7 @@ public class CategoryService {
 
     public PageResp<CategoryQueryResp> list(CategoryQueryReq categoryQueryReq) {
         CategoryExample categoryExample = new CategoryExample();
+        categoryExample.setOrderByClause("sort asc");
         CategoryExample.Criteria criteria = categoryExample.createCriteria();
 
         if (!ObjectUtils.isEmpty(categoryQueryReq.getName())) {
@@ -42,31 +42,24 @@ public class CategoryService {
 
         PageHelper.startPage(categoryQueryReq.getPage(), categoryQueryReq.getSize());
         List<Category> categoryList = categoryMapper.selectByExample(categoryExample);
-        PageInfo<Category> pageInfo = new PageInfo<>(categoryList);
-        LOG.info("总行数: {}", pageInfo.getTotal());
-        LOG.info("总页数:{}", pageInfo.getPages());
-
-//        List<CategoryQueryResp> respList = new ArrayList<>();
-//
-//        for (Category category : categoryList) {
-//            CategoryQueryResp categoryResp = new CategoryQueryResp();
-////            BeanUtils.copyProperties(category, categoryResp);
-////            respList.add(categoryResp);
-//
-//            CategoryQueryResp categoryREsp = CopyUtil.copy(category, CategoryQueryResp.class);
-//
-//            respList.add(categoryREsp);
-//        }
-
 
         var respList = CopyUtil.copyList(categoryList, CategoryQueryResp.class);
 
         PageResp<CategoryQueryResp> pageResp = new PageResp();
-        pageResp.setTotal(pageInfo.getTotal());
         pageResp.setList(respList);
 
         return pageResp;
     }
+
+    public List<CategoryQueryResp> all() {
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.setOrderByClause("sort asc");
+        List<Category> categoryList = categoryMapper.selectByExample(categoryExample);
+
+        List<CategoryQueryResp> respList = CopyUtil.copyList(categoryList, CategoryQueryResp.class);
+        return respList;
+    }
+
 
     /*
     * save
@@ -81,8 +74,6 @@ public class CategoryService {
         }
 
     }
-
-
     /*
     * delete
     * */

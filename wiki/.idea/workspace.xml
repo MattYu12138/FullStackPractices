@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="ebooks替换为wiki">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="用表格替换搜索框">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/CategoryQueryReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/CategoryQueryReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,57 +63,57 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.SnowFlake.executor": "Run",
-    "Application.WikiApplication.executor": "Run",
-    "HTTP Request.demo | #1.executor": "Run",
-    "HTTP Request.ebook | #1.executor": "Run",
-    "HTTP Request.test | #1.executor": "Run",
-    "HTTP Request.test | #2.executor": "Run",
-    "HTTP Request.test | #3.executor": "Run",
-    "Maven.mybatis-generator.executor": "Run",
-    "Maven.wiki [clean].executor": "Run",
-    "Maven.wiki [compile].executor": "Run",
-    "Maven.wiki [install].executor": "Run",
-    "Maven.wiki [verify].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.WikiApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/views/admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build-dev.executor": "Run",
-    "npm.build.executor": "Run",
-    "npm.serve-dev.executor": "Run",
-    "npm.serve.executor": "Run",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.SnowFlake.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WikiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.demo | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.ebook | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.test | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.test | #3.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.mybatis-generator.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.wiki [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.wiki [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.wiki [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.wiki [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.WikiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/views/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build-dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.serve-dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.serve.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views/admin" />
@@ -137,7 +139,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.mybatis-generator">
+  <component name="RunManager" selected="Spring Boot.WikiApplication">
     <configuration name="SnowFlake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.util.SnowFlake" />
       <module name="wiki" />
@@ -234,9 +236,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.serve-dev" />
         <item itemvalue="HTTP Request.ebook | #1" />
         <item itemvalue="Application.SnowFlake" />
-        <item itemvalue="npm.serve-dev" />
         <item itemvalue="npm.build-dev" />
         <item itemvalue="npm.serve" />
       </list>
@@ -263,38 +265,7 @@
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
-    </task>
-    <task id="LOCAL-00012" summary="增加sql">
-      <option name="closed" value="true" />
-      <created>1753171884760</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1753171884760</updated>
-    </task>
-    <task id="LOCAL-00013" summary="集成mybatis">
-      <option name="closed" value="true" />
-      <created>1753171961594</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1753171961594</updated>
-    </task>
-    <task id="LOCAL-00014" summary="集成mybatis，成功返回数据">
-      <option name="closed" value="true" />
-      <created>1753183049672</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1753183049672</updated>
-    </task>
-    <task id="LOCAL-00015" summary="集成mybatis generator，生成demo表代码">
-      <option name="closed" value="true" />
-      <created>1753185598650</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1753185598650</updated>
+      <workItem from="1753519990944" duration="3818000" />
     </task>
     <task id="LOCAL-00016" summary="增加demo代码查询">
       <option name="closed" value="true" />
@@ -656,7 +627,39 @@
       <option name="project" value="LOCAL" />
       <updated>1753448326190</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="成功可以根据名称查询">
+      <option name="closed" value="true" />
+      <created>1753449901929</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1753449901929</updated>
+    </task>
+    <task id="LOCAL-00062" summary="更改wiki为gettingEbooks，并新增查询postingEbooks">
+      <option name="closed" value="true" />
+      <created>1753521194147</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1753521194147</updated>
+    </task>
+    <task id="LOCAL-00063" summary="更改wiki为gettingEbooks，并新增查询postingEbooks">
+      <option name="closed" value="true" />
+      <created>1753521506165</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1753521506165</updated>
+    </task>
+    <task id="LOCAL-00064" summary="用表格替换搜索框">
+      <option name="closed" value="true" />
+      <created>1753522099965</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1753522099965</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -697,9 +700,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="布局调整，一行三本" />
-    <MESSAGE value="列表查询接口，适合动态查询sql" />
-    <MESSAGE value="vue多环境配置，增加dev和prod配置文件&#10;编译和启动命令增加多环境" />
     <MESSAGE value="增加 --port 添加启动端口" />
     <MESSAGE value="axios请求域更改为读取配置文件" />
     <MESSAGE value="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中" />
@@ -722,7 +722,10 @@
     <MESSAGE value="编辑时复制对象，不会影响页面。" />
     <MESSAGE value="添加category表的前后端" />
     <MESSAGE value="ebooks替换为wiki" />
-    <option name="LAST_COMMIT_MESSAGE" value="ebooks替换为wiki" />
+    <MESSAGE value="成功可以根据名称查询" />
+    <MESSAGE value="更改wiki为gettingEbooks，并新增查询postingEbooks" />
+    <MESSAGE value="用表格替换搜索框" />
+    <option name="LAST_COMMIT_MESSAGE" value="用表格替换搜索框" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -47,6 +47,7 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
+
       <a-form layout="inline" :model="postingEbooks" style="margin-bottom: 2vw">
         <a-form-item>
           <a-input v-model:value="postingEbooks.name" aria-placeholder="名称">
@@ -86,7 +87,7 @@
                   cancel-text="No"
                   @confirm="handleDelete(record.id)"
               >
-              <a-button type="default">删除</a-button>
+                <a-button type="default">删除</a-button>
               </a-popconfirm>
             </a-space>
           </template>
@@ -96,7 +97,7 @@
   </a-layout>
   <a-modal
       title="电子书表单"
-      v-model:visible="model.visible"
+      v-model:open="model.visible"
       :confirm-loading="model.loading"
       @ok="handleModelOk"
   >
@@ -134,7 +135,6 @@ export default defineComponent({
 
     const gettingEbooks = reactive({
       ebook: [],
-
       loading: false,
       pagination: {current: 1, pageSize: 5, total: 0}
     });
