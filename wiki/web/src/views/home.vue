@@ -12,7 +12,7 @@
             <span>Welcome</span>
           </router-link>
         </a-menu-item>
-        <a-sub-menu v-for="item in level1" :key="item.id">
+        <a-sub-menu v-for="item in array2Tree.level1" :key="item.id">
           <template v-slot:title>
             <span>{{ item.name }}</span>
           </template>
@@ -94,7 +94,7 @@ export default defineComponent({
 
     // 一个生命周期函数，初始化写在onMounted里面
     onMounted(() => {
-      handleQueryCategory;
+      handleQueryCategory();
       axios.get("/ebook/list",{
         params:{
           page:1,
