@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="删除侧边栏">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="首页显示分类菜单">
+      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,22 +260,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00024" summary="网站首页开发">
-      <option name="closed" value="true" />
-      <created>1753212181431</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1753212181431</updated>
-    </task>
-    <task id="LOCAL-00025" summary="网站配置router view，并且关闭vue/no-unused-components警告">
-      <option name="closed" value="true" />
-      <created>1753212993435</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1753212993435</updated>
     </task>
     <task id="LOCAL-00026" summary="制作the-header组件">
       <option name="closed" value="true" />
@@ -654,7 +637,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753559344331</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="首页显示分类菜单">
+      <option name="closed" value="true" />
+      <created>1753560043206</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1753560043206</updated>
+    </task>
+    <task id="LOCAL-00074" summary="首页显示分类菜单">
+      <option name="closed" value="true" />
+      <created>1753560046882</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1753560046882</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +694,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="实现页面实时更新，可以往后面翻页浏览" />
     <MESSAGE value="集成PageHelper" />
     <MESSAGE value="封装分页请求参数和返回参数" />
     <MESSAGE value="前后端整合成功" />
@@ -720,7 +718,8 @@
     <MESSAGE value="成功实现”分类“的文字转换" />
     <MESSAGE value="修复bug，防止更改后，在表单还是显示原来数值" />
     <MESSAGE value="删除侧边栏" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除侧边栏" />
+    <MESSAGE value="首页显示分类菜单" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页显示分类菜单" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

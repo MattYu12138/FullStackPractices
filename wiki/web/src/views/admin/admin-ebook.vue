@@ -199,6 +199,12 @@ export default defineComponent({
           array2Tree.level1 = Tool.array2Tree(category, 0);
           console.log("树形结构: " , array2Tree.level1);
 
+
+          //加载完分类之后再加载电子书，防止异步导致错误
+          handleQuery({
+            page: gettingEbooks.pagination.current,  // 当前页
+            size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
+          });
         }else{
           message.error(data.message);
         }
@@ -274,10 +280,6 @@ export default defineComponent({
 
     onMounted(() => {
       handleQueryCategory();
-      handleQuery({
-        page: gettingEbooks.pagination.current,  // 当前页
-        size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
-      });
     });
 
     return {
