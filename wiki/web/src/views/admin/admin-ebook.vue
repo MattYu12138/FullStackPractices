@@ -108,11 +108,17 @@
       <a-form-item label="名称">
         <a-input v-model:value="postingEbooks.ebook.name"/>
       </a-form-item>
-      <a-form-item label="分类一">
-        <a-input v-model:value="postingEbooks.ebook.category1Id"/>
-      </a-form-item>
-      <a-form-item label="分类二">
-        <a-input v-model:value="postingEbooks.ebook.category2Id"/>
+<!--      <a-form-item label="分类一">-->
+<!--        <a-input v-model:value="postingEbooks.ebook.category1Id"/>-->
+<!--      </a-form-item>-->
+<!--      <a-form-item label="分类二">-->
+<!--        <a-input v-model:value="postingEbooks.ebook.category2Id"/>-->
+<!--      </a-form-item>-->
+      <a-form-item label="分类">
+        <a-cascader
+            v-model:value="Categorys.ids"
+            :field-names="{ label: 'name', value: 'id', children: 'children' }"
+            :options="array2Tree.level1"/>
       </a-form-item>
       <a-form-item label="描述">
         <a-input v-model:value="postingEbooks.ebook.description"/>
@@ -132,18 +138,42 @@ export default defineComponent({
   name: 'Home',
   setup() {
 
+    interface Ebook {
+      id?: number;
+      name?: string;
+      cover?: string;
+      description?: string;
+      category1Id?: number;
+      category2Id?: number;
+    }
 
     const gettingEbooks = reactive({
       ebook: [],
       loading: false,
       pagination: {current: 1, pageSize: 5, total: 0}
     });
+
+    const Categorys = reactive<{
+      ids: number[];
+    }>({
+      ids: [],
+    });
+
+    const array2Tree = reactive({
+      level1: [] as any[],
+
+    })
+
     const model = reactive({
       visible: false,
       loading: false
     })
 
-    const postingEbooks = reactive({
+    const postingEbooks = reactive<{
+      ebook: Ebook;
+      name: string;
+      id: number;
+    }>({
       ebook: {},
       name : "",
       id: 0,
@@ -155,7 +185,10 @@ export default defineComponent({
     const edit = (record: any) => {
       model.visible = true;
       postingEbooks.ebook = Tool.copy(record);
-    }
+      Categorys.ids = [postingEbooks.ebook.category1Id ?? 0, postingEbooks.ebook.category2Id ?? 0]
+    };
+
+
     /*
     * add
     * */
@@ -191,6 +224,26 @@ export default defineComponent({
       })
     }
 
+    const handleQueryCategory = () => {
+      model.loading = true;
+      axios.get("category/all").then((response) => {
+        model.loading = false;
+        const data = response.data;
+        if(data.success){
+          const categorys = data.content;
+          console.log("original: " , categorys);
+
+          array2Tree.level1 = [];
+          array2Tree.level1 = Tool.array2Tree(categorys, 0);
+          console.log("树形结构: " , array2Tree.level1);
+
+        }else{
+          message.error(data.message);
+        }
+
+      })
+    }
+
 
 
     const handleDelete = (id: number) => {
@@ -205,9 +258,11 @@ export default defineComponent({
       });
     };
 
-
+    // 点击保存
     const handleModelOk = () => {
       model.loading = true;
+      postingEbooks.ebook.category1Id = Categorys.ids[0];
+      postingEbooks.ebook.category2Id = Categorys.ids[1];
       axios.post("ebook/save", postingEbooks.ebook).then((response) => {
         model.loading = false;
         const data = response.data
@@ -248,6 +303,7 @@ export default defineComponent({
     ];
 
     onMounted(() => {
+      handleQueryCategory();
       handleQuery({
         page: gettingEbooks.pagination.current,  // 当前页
         size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
@@ -258,7 +314,10 @@ export default defineComponent({
       gettingEbooks,
       columns,
       postingEbooks,
+      Categorys,
+      array2Tree,
       handleQuery,
+
       handleTableChange,
 
 

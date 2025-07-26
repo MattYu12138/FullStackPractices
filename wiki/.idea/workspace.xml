@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="改善下拉框不会同时启动，只会打开点击的折叠页面">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="父分类改为下拉选择">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,15 +262,7 @@
       <updated>1752997075515</updated>
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
-      <workItem from="1753519990944" duration="7734000" />
-    </task>
-    <task id="LOCAL-00018" summary="增加ebook代码查询接口">
-      <option name="closed" value="true" />
-      <created>1753205301416</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1753205301416</updated>
+      <workItem from="1753519990944" duration="10755000" />
     </task>
     <task id="LOCAL-00019" summary="增加通用的返回类，所有返回值通过CommonResp">
       <option name="closed" value="true" />
@@ -654,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753550324920</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="父分类改为下拉选择">
+      <option name="closed" value="true" />
+      <created>1753551115957</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1753551115957</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +697,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中" />
     <MESSAGE value="配置axios拦截器打印请求和返回参数" />
     <MESSAGE value="增加打印过滤耗时的过滤器" />
     <MESSAGE value="增加aop请求和返回，去掉过滤器，拦截器" />
@@ -720,7 +721,8 @@
     <MESSAGE value="用表格替换搜索框" />
     <MESSAGE value="优化代码，分类管理不显示分页" />
     <MESSAGE value="改善下拉框不会同时启动，只会打开点击的折叠页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="改善下拉框不会同时启动，只会打开点击的折叠页面" />
+    <MESSAGE value="父分类改为下拉选择" />
+    <option name="LAST_COMMIT_MESSAGE" value="父分类改为下拉选择" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

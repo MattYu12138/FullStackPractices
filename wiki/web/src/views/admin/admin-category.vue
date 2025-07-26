@@ -62,7 +62,7 @@
       <a-table
           :columns="columns"
           :data-source="array2Tree.level1"
-          :loading="gettingCategorys.loading"
+          :loading="model.loading"
           :pagination="false"
           :row-key="record => record.id"
           :expandedRowKeys="array2Tree.expandedRowKeys"
@@ -139,9 +139,9 @@ export default defineComponent({
 
     const gettingCategorys = reactive({
       category: [],
-      loading: false,
       pagination: {current: 1, pageSize: 5, total: 0}
     });
+
     const model = reactive({
       expandedRowKeys:[] as number[],
       visible: false,
@@ -177,9 +177,9 @@ export default defineComponent({
 
 
     const handleQuery = () => {
-      gettingCategorys.loading = true;
+      model.loading = true;
       axios.get("category/all").then((response) => {
-        gettingCategorys.loading = false;
+        model.loading = false;
         const data = response.data;
         if(data.success){
           gettingCategorys.category = data.content;
