@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="暂时显示不出分类">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices&#10;&#10;# Conflicts:&#10;#&#9;wiki/.idea/workspace.xml&#10;#&#9;wiki/web/src/views/admin/admin-ebook.vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,57 +58,57 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.SnowFlake.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WikiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.demo | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.ebook | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #3.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mybatis-generator.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.WikiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/views/admin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build-dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.serve-dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.serve.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.SnowFlake.executor": "Run",
+    "Application.WikiApplication.executor": "Run",
+    "HTTP Request.demo | #1.executor": "Run",
+    "HTTP Request.ebook | #1.executor": "Run",
+    "HTTP Request.test | #1.executor": "Run",
+    "HTTP Request.test | #2.executor": "Run",
+    "HTTP Request.test | #3.executor": "Run",
+    "Maven.mybatis-generator.executor": "Run",
+    "Maven.wiki [clean].executor": "Run",
+    "Maven.wiki [compile].executor": "Run",
+    "Maven.wiki [install].executor": "Run",
+    "Maven.wiki [verify].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.WikiApplication.executor": "Run",
+    "git-widget-placeholder": "Merging main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/views/admin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build-dev.executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.serve-dev.executor": "Run",
+    "npm.serve.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views/admin" />

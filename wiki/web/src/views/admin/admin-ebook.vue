@@ -150,7 +150,7 @@ export default defineComponent({
       category2Id?: number;
     }
 
-    let categorys: any;
+    let category: any[];
 
     const gettingEbooks = reactive({
       ebook: [],
@@ -235,11 +235,11 @@ export default defineComponent({
         model.loading = false;
         const data = response.data;
         if(data.success){
-          categorys = data.content;
-          console.log("original: " , categorys);
+          category = data.content;
+          console.log("original: " , category);
 
           array2Tree.level1 = [];
-          array2Tree.level1 = Tool.array2Tree(categorys, 0);
+          array2Tree.level1 = Tool.array2Tree(category, 0);
           console.log("树形结构: " , array2Tree.level1);
 
         }else{
@@ -264,7 +264,7 @@ export default defineComponent({
 
     const getCategoryName = (cid: number) =>{
       let result = "";
-      categorys.forEach((item: any) =>{
+      category.forEach((item: any) =>{
         if(item.id === cid){
           result = item.name;
         }
@@ -307,7 +307,7 @@ export default defineComponent({
     const columns = [
       {title: '封面', dataIndex: 'cover', key: 'cover'},
       {title: '名称', dataIndex: 'name'},
-      {title: '分类', dataIndex:'category', key: ' category'},
+      {title: '分类', dataIndex:'category', key: 'category'},
       {title: '描述', dataIndex:'description', key:'description'},
       {title: '文档数', dataIndex: 'docCount', key: 'docCount'},
       {title: '阅读数', dataIndex: 'viewCount', key: 'viewCount'},
