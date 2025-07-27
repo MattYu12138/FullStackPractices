@@ -34,7 +34,6 @@ public class DocController {
         List<DocQueryResp> list = docService.all();
         resp.setContent(list);
         return resp;
-
     }
 
     @PostMapping("/save")
@@ -42,7 +41,6 @@ public class DocController {
         CommonResp resp = new CommonResp<>();
         docService.save(docSaveReq);
         return resp;
-
     }
 
     @DeleteMapping("/delete/{id}")
@@ -51,5 +49,4 @@ public class DocController {
         docService.delete(id);
         return resp;
     }
-
 }
