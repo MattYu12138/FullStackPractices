@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="点击二级分类显示目录下电子书">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加doc文档，并添加持久层">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/DocQueryReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/DocSaveReq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp/DocQueryResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +141,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.mybatis-generator">
+  <component name="RunManager" selected="npm.build-dev">
     <configuration name="SnowFlake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.util.SnowFlake" />
       <module name="wiki" />
@@ -233,9 +239,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.serve-dev" />
+        <item itemvalue="npm.build-dev" />
         <item itemvalue="HTTP Request.ebook | #1" />
         <item itemvalue="Application.SnowFlake" />
-        <item itemvalue="npm.build-dev" />
         <item itemvalue="npm.serve" />
       </list>
     </recent_temporary>
@@ -262,14 +268,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00029" summary="去掉helloworld.vue相关组件">
-      <option name="closed" value="true" />
-      <created>1753214081628</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1753214081628</updated>
     </task>
     <task id="LOCAL-00030" summary="集成axios&#10;npm install axios --save">
       <option name="closed" value="true" />
@@ -655,7 +653,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753562088330</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="增加doc文档，并添加持久层">
+      <option name="closed" value="true" />
+      <created>1753603775023</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1753603775023</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +702,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="点击编辑按钮时候，弹出确认画面" />
     <MESSAGE value="模态框显示电子书表单，编辑某一行时可以将该行数据显示到表单" />
     <MESSAGE value="完成编辑功能，编辑成功后刷新列表&#10;查询接口参数改为EbookQueryReq和Resp" />
     <MESSAGE value="增加snowflake功能" />
@@ -721,7 +726,8 @@
     <MESSAGE value="修复bug //加载完分类之后再加载电子书，防止异步导致错误" />
     <MESSAGE value="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件" />
     <MESSAGE value="点击二级分类显示目录下电子书" />
-    <option name="LAST_COMMIT_MESSAGE" value="点击二级分类显示目录下电子书" />
+    <MESSAGE value="增加doc文档，并添加持久层" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加doc文档，并添加持久层" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

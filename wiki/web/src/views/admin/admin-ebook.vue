@@ -34,11 +34,16 @@
             <img :src="record.cover" alt="cover" style="width: 60px"/>
           </template>
           <template v-else-if="column.key === 'category'">
-            <span>{{getCategoryName(record.category1Id)}} / {{getCategoryName(record.category2Id)}}</span>
+            <span>{{ getCategoryName(record.category1Id) }} / {{ getCategoryName(record.category2Id) }}</span>
           </template>
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
+              <router-link to="/admin/doc">
+                <a-button type="primary">
+                  文档管理
+                </a-button>
+              </router-link>
               <a-button type="primary" @click="edit(record)">编辑</a-button>
               <a-popconfirm
                   title="Are you sure delete this task?"
@@ -67,12 +72,7 @@
       <a-form-item label="名称">
         <a-input v-model:value="postingEbooks.ebook.name"/>
       </a-form-item>
-<!--      <a-form-item label="分类一">-->
-<!--        <a-input v-model:value="postingEbooks.ebook.category1Id"/>-->
-<!--      </a-form-item>-->
-<!--      <a-form-item label="分类二">-->
-<!--        <a-input v-model:value="postingEbooks.ebook.category2Id"/>-->
-<!--      </a-form-item>-->
+
       <a-form-item label="分类">
         <a-cascader
             v-model:value="Categorys.ids"
@@ -135,7 +135,7 @@ export default defineComponent({
       id: number;
     }>({
       ebook: {},
-      name : "",
+      name: "",
       id: 0,
     })
 
@@ -171,13 +171,13 @@ export default defineComponent({
           }).then((response) => {
         gettingEbooks.loading = false;
         const data = response.data;
-        if(data.success){
+        if (data.success) {
           gettingEbooks.ebook = data.content.list;
 
           gettingEbooks.pagination.current = params.page;
           gettingEbooks.pagination.pageSize = params.size;
           gettingEbooks.pagination.total = data.content.total;
-        }else{
+        } else {
           message.error(data.message);
         }
 
@@ -185,19 +185,18 @@ export default defineComponent({
     }
 
 
-
     const handleQueryCategory = () => {
       model.loading = true;
       axios.get("category/all").then((response) => {
         model.loading = false;
         const data = response.data;
-        if(data.success){
+        if (data.success) {
           category = data.content;
-          console.log("original: " , category);
+          console.log("original: ", category);
 
           array2Tree.level1 = [];
           array2Tree.level1 = Tool.array2Tree(category, 0);
-          console.log("树形结构: " , array2Tree.level1);
+          console.log("树形结构: ", array2Tree.level1);
 
 
           //加载完分类之后再加载电子书，防止异步导致错误
@@ -205,7 +204,7 @@ export default defineComponent({
             page: gettingEbooks.pagination.current,  // 当前页
             size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
           });
-        }else{
+        } else {
           message.error(data.message);
         }
 
@@ -225,10 +224,10 @@ export default defineComponent({
       });
     };
 
-    const getCategoryName = (cid: number) =>{
+    const getCategoryName = (cid: number) => {
       let result = "";
-      category.forEach((item: any) =>{
-        if(item.id === cid){
+      category.forEach((item: any) => {
+        if (item.id === cid) {
           result = item.name;
         }
       });
@@ -250,7 +249,7 @@ export default defineComponent({
             page: gettingEbooks.pagination.current,  // 当前页
             size: gettingEbooks.pagination.pageSize, // 每页条数（默认配置的值）
           });
-        }else{
+        } else {
           message.error(data.message);
         }
       })
@@ -270,8 +269,8 @@ export default defineComponent({
     const columns = [
       {title: '封面', dataIndex: 'cover', key: 'cover'},
       {title: '名称', dataIndex: 'name'},
-      {title: '分类', dataIndex:'category', key: 'category'},
-      {title: '描述', dataIndex:'description', key:'description'},
+      {title: '分类', dataIndex: 'category', key: 'category'},
+      {title: '描述', dataIndex: 'description', key: 'description'},
       {title: '文档数', dataIndex: 'docCount', key: 'docCount'},
       {title: '阅读数', dataIndex: 'viewCount', key: 'viewCount'},
       {title: '点赞数', dataIndex: 'voteCount', key: 'voteCount'},
