@@ -59,18 +59,44 @@
         <a-input v-model:value="postingDocs.doc.name" />
       </a-form-item>
 
-      <a-form-item label="父文档">
-        <a-select
-            ref="select"
+      <a-form-item label="名称">
+        <a-tree-select
             v-model:value="postingDocs.doc.parent"
+            style="width: 100%"
+            :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
+            :tree-data="array2Tree.level1"
+            placeholder="Please select parent node"
+            tree-default-expand-all
+            :fieldNames="{title: 'name', key: 'id', value: 'id' }"
         >
-          <a-select-option value="0">
-            无
-          </a-select-option>
-          <a-select-option v-for="c in array2Tree.level1" :key="c.id" :value="c.id" :disabled="postingDocs.doc.id === c.id">
-            {{c.name}}
-          </a-select-option>
-        </a-select>
+        </a-tree-select>
+      </a-form-item>
+
+      <a-form-item label="父文档">
+<!--        <a-select-->
+<!--            ref="select"-->
+<!--            v-model:value="postingDocs.doc.parent"-->
+<!--        >-->
+<!--          <a-select-option value="0">-->
+<!--            无-->
+<!--          </a-select-option>-->
+<!--          <a-select-option v-for="c in array2Tree.level1" :key="c.id" :value="c.id" :disabled="postingDocs.doc.id === c.id">-->
+<!--            {{c.name}}-->
+<!--          </a-select-option>-->
+<!--        </a-select>-->
+        <a-tree-select
+            v-model:value="postingDocs.doc.parent"
+            style="width: 100%"
+            :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
+            :tree-data="array2Tree.SelectedData"
+            placeholder="Please select parent doc"
+            tree-default-expand-all
+            :fieldNames="{title: 'name', key: 'id', value: 'id' }"
+        >
+          <template #title="{ key, value }">
+            <span style="color: #08c" v-if="key === '0-0-1'">Child Node1 {{ value }}</span>
+          </template>
+        </a-tree-select>
       </a-form-item>
 
       <a-form-item label="顺序">
@@ -91,8 +117,6 @@ import {Tool} from '@/util/tool'
 export default defineComponent({
   name: 'Home',
   setup() {
-
-
     const gettingDocs = reactive({
       doc: [],
       pagination: {current: 1, pageSize: 5, total: 0}
@@ -106,7 +130,7 @@ export default defineComponent({
 
     const array2Tree = reactive({
       level1: [] as any[],
-
+      SelectedData: [] as any[],
     })
 
     const postingDocs = reactive({
@@ -115,25 +139,61 @@ export default defineComponent({
       id: 0,
     })
 
+    const setDisable = (SelectedData : any, id: any) =>{
+      for(let i = 0; i < SelectedData.length; i ++){
+        const node = SelectedData[i];
+        if(node.id === id){
+          console.log("disabled", node);
+          node.disabled = true;
+
+          const children = node.children;
+          if(Tool.isNotEmpty(children)){
+            for(let j = 0 ; j < children.length; j ++){
+              setDisable(children, children[j].id)
+            }
+          }else{
+            const children = node.children;
+            if(Tool.isNotEmpty(children)){
+              setDisable(children, id);
+            }
+          }
+        }
+      }
+    }
+
     /*
     * edit
     * */
     const edit = (record: any) => {
       model.visible = true;
       postingDocs.doc = Tool.copy(record);
+
+      array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+      setDisable(array2Tree.SelectedData, record.id);
+
+      array2Tree.SelectedData.unshift({id : 0, name:'无'});
     }
+
+
     /*
     * add
     * */
     const add = () => {
       model.visible = true;
       postingDocs.doc = {};
+
+      array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+
+      array2Tree.SelectedData.unshift({id:0,name:'无'});
     }
+
+
 
 
 
     const handleQuery = () => {
       model.loading = true;
+      array2Tree.level1 = [];
       axios.get("doc/all").then((response) => {
         model.loading = false;
         const data = response.data;

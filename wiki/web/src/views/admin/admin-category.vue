@@ -209,7 +209,6 @@ export default defineComponent({
       columns,
       handleQuery,
 
-
       model,
       handleModelOk,
       edit,
