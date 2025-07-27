@@ -64,7 +64,7 @@
             v-model:value="postingDocs.doc.parent"
             style="width: 100%"
             :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-            :tree-data="array2Tree.level1"
+            :tree-data="array2Tree.SelectedData"
             placeholder="Please select parent node"
             tree-default-expand-all
             :fieldNames="{title: 'name', key: 'id', value: 'id' }"
@@ -161,6 +161,19 @@ export default defineComponent({
       }
     }
 
+    // remove "parent" prop to avoid warning from tree component
+    const cleanTreeData = (nodes: any[]) => {
+      if(!nodes) return;
+      nodes.forEach(n => {
+        if("parent" in n){
+          delete n.parent;
+        }
+        if(n.children){
+          cleanTreeData(n.children);
+        }
+      });
+    }
+
     /*
     * edit
     * */
@@ -169,6 +182,7 @@ export default defineComponent({
       postingDocs.doc = Tool.copy(record);
 
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+      cleanTreeData(array2Tree.SelectedData);
       setDisable(array2Tree.SelectedData, record.id);
 
       array2Tree.SelectedData.unshift({id : 0, name:'无'});
@@ -183,6 +197,7 @@ export default defineComponent({
       postingDocs.doc = {};
 
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+      cleanTreeData(array2Tree.SelectedData);
 
       array2Tree.SelectedData.unshift({id:0,name:'无'});
     }
