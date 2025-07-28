@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复bug：更新表单显示不出数据，但能看到排版是正常的">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/domain/DocExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/domain/DocExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,30 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00034" summary="vue多环境配置，增加dev和prod配置文件&#10;编译和启动命令增加多环境">
-      <option name="closed" value="true" />
-      <created>1753261869323</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1753261869323</updated>
-    </task>
-    <task id="LOCAL-00035" summary="增加 --port 添加启动端口">
-      <option name="closed" value="true" />
-      <created>1753262040398</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1753262040398</updated>
-    </task>
-    <task id="LOCAL-00036" summary="axios请求域更改为读取配置文件">
-      <option name="closed" value="true" />
-      <created>1753262188559</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1753262188559</updated>
     </task>
     <task id="LOCAL-00037" summary="在main.js修改axios的baseURL， 之后不用每次写一遍在程序中">
       <option name="closed" value="true" />
@@ -660,7 +630,31 @@
       <option name="project" value="LOCAL" />
       <updated>1753701197409</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="进入doc管理页面会传进ebookId进行确认">
+      <option name="closed" value="true" />
+      <created>1753705019061</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1753705019061</updated>
+    </task>
+    <task id="LOCAL-00084" summary="进入doc管理页面会传进ebookId进行确认">
+      <option name="closed" value="true" />
+      <created>1753705040853</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1753705040853</updated>
+    </task>
+    <task id="LOCAL-00085" summary="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点">
+      <option name="closed" value="true" />
+      <created>1753705062577</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1753705062577</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,10 +695,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="集成validation，为列表接口添加参数校验" />
-    <MESSAGE value="为保存接口添加参数校验 ， name不能为空" />
-    <MESSAGE value="编辑时复制对象，不会影响页面。" />
-    <MESSAGE value="添加category表的前后端" />
     <MESSAGE value="ebooks替换为wiki" />
     <MESSAGE value="成功可以根据名称查询" />
     <MESSAGE value="更改wiki为gettingEbooks，并新增查询postingEbooks" />
@@ -726,7 +716,11 @@
     <MESSAGE value="bug：更新表单递归发生错误" />
     <MESSAGE value="bug：更新表单显示不出数据，但能看到排版是正常的" />
     <MESSAGE value="修复bug：更新表单显示不出数据，但能看到排版是正常的" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug：更新表单显示不出数据，但能看到排版是正常的" />
+    <MESSAGE value="进入doc管理页面会传进ebookId进行确认，删除会同时删除子节点" />
+    <MESSAGE value="进入doc管理页面会传进ebookId进行确认，" />
+    <MESSAGE value="进入doc管理页面会传进ebookId进行确认" />
+    <MESSAGE value="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点" />
+    <option name="LAST_COMMIT_MESSAGE" value="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

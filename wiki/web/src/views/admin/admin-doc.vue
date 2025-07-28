@@ -38,7 +38,7 @@
                   title="Are you sure delete this task?"
                   ok-text="Yes"
                   cancel-text="No"
-                  @confirm="handleDelete(record.id)"
+                  @confirm="showConfirm(record.id)"
               >
                 <a-button type="default">删除</a-button>
               </a-popconfirm>
@@ -81,11 +81,13 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, onMounted, reactive} from 'vue';
+import {defineComponent,createVNode, onMounted, reactive} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
 import {useRoute} from "vue-router";
+import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
+import { Modal } from 'ant-design-vue';
 
 
 export default defineComponent({
@@ -142,6 +144,7 @@ export default defineComponent({
     }
 
     const ids: Array<string> = [];
+    const name: Array<string> = [];
 
 
     const getDeleteIds = (treeSelectedData: any, id: any) => {
@@ -151,8 +154,7 @@ export default defineComponent({
         if(node.id === id) {
           // 找到之后设置为disable
           ids.push(id);
-
-
+          name.push(node.name);
 
           // 遍历找到节点的所有子节点
           const children = node.children;
@@ -195,7 +197,6 @@ export default defineComponent({
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
       array2Tree.SelectedData.unshift({id:0, name:'无'});
     }
-
 
 
     const handleQuery = () => {
@@ -257,6 +258,20 @@ export default defineComponent({
     };
 
 
+    const showConfirm = (id:number) => {
+      Modal.confirm({
+        title: () => 'Do you want to delete these items?',
+        icon: () => createVNode(ExclamationCircleOutlined),
+        content: () => '当你删除你会删除掉' + name.split(','),
+        onOk(id:number) {
+          handleDelete(id);
+        },
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        onCancel() {},
+      });
+    };
+
+
     const columns = [
       { title: '名称', dataIndex: 'name', key: 'name' },
       { title: '父ID', dataIndex: 'parent', key: 'parent' },
@@ -275,6 +290,7 @@ export default defineComponent({
       array2Tree,
       columns,
       handleQuery,
+      showConfirm,
 
 
       model,
