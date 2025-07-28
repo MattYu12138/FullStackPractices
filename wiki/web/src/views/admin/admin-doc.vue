@@ -147,7 +147,7 @@ export default defineComponent({
     const name: Array<string> = [];
 
 
-    const getDeleteIds = (treeSelectedData: any, id: any) => {
+    const getDeletedItemsInfo = (treeSelectedData: any, id: any) => {
       // 遍历所有节点找到当前节点id
       for(let i = 0; i < treeSelectedData.length; i ++){
         const node = treeSelectedData[i];
@@ -160,14 +160,14 @@ export default defineComponent({
           const children = node.children;
           if (Tool.isNotEmpty(children)) {
             for (let j = 0; j < children.length; j++) {
-              getDeleteIds(children, children[j].id);
+              getDeletedItemsInfo(children, children[j].id);
             }
           }
         }else {
           // 如果没有找到当前节点，则道其他子节点中寻找当前节点
           const children = node.children;
           if (Tool.isNotEmpty(children)) {
-            getDeleteIds(children, id);
+            getDeletedItemsInfo(children, id);
           }
         }
       }
@@ -224,7 +224,7 @@ export default defineComponent({
     const handleDelete = (id: number) => {
       ids.length = 0;
       name.length = 0;
-      getDeleteIds(array2Tree.level1, id);
+      getDeletedItemsInfo(array2Tree.level1, id);
       axios.delete("doc/delete/" + ids.join(",")).then((response) => {
         const data = response.data
         if (data.success) {
@@ -263,11 +263,11 @@ export default defineComponent({
     const showConfirm = (id:number) => {
       ids.length = 0;
       name.length = 0;
-      getDeleteIds(array2Tree.level1, id);
+      getDeletedItemsInfo(array2Tree.level1, id);
       Modal.confirm({
         title: () => '删除确认',
         icon: () => createVNode(ExclamationCircleOutlined),
-        content: () => `你将删除${name.join(',')}文档及其子文档，确定删除吗？`,
+        content: () => `你将删除文档及其子文档（${name.join(',')}），确定删除吗？`,
         onOk() {
           handleDelete(id);
         },
