@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="bug：更新表单显示不出数据，但能看到排版是正常的">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复bug：更新表单显示不出数据，但能看到排版是正常的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/domain/DocExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/domain/DocExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,14 +267,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00033" summary="列表查询接口，适合动态查询sql">
-      <option name="closed" value="true" />
-      <created>1753261252773</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1753261252773</updated>
     </task>
     <task id="LOCAL-00034" summary="vue多环境配置，增加dev和prod配置文件&#10;编译和启动命令增加多环境">
       <option name="closed" value="true" />
@@ -654,7 +652,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753621370333</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="修复bug：更新表单显示不出数据，但能看到排版是正常的">
+      <option name="closed" value="true" />
+      <created>1753701197409</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1753701197409</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +701,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="增加删除功能" />
     <MESSAGE value="集成validation，为列表接口添加参数校验" />
     <MESSAGE value="为保存接口添加参数校验 ， name不能为空" />
     <MESSAGE value="编辑时复制对象，不会影响页面。" />
@@ -720,7 +725,8 @@
     <MESSAGE value="从分类管理复制出文档管理的前后端代码  &#10;遗留问题：编辑表单中，只能选择一级文档作为父文档" />
     <MESSAGE value="bug：更新表单递归发生错误" />
     <MESSAGE value="bug：更新表单显示不出数据，但能看到排版是正常的" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug：更新表单显示不出数据，但能看到排版是正常的" />
+    <MESSAGE value="修复bug：更新表单显示不出数据，但能看到排版是正常的" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复bug：更新表单显示不出数据，但能看到排版是正常的" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

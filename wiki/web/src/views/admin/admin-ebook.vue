@@ -39,7 +39,7 @@
           <!-- 操作 -->
           <template v-else-if="column.key === 'action'">
             <a-space>
-              <router-link to="/admin/doc">
+              <router-link :to="'/admin/doc?ebookId=' + record.id">
                 <a-button type="primary">
                   文档管理
                 </a-button>
@@ -91,6 +91,7 @@ import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
+import {useRoute} from "vue-router";
 
 
 export default defineComponent({
@@ -126,7 +127,7 @@ export default defineComponent({
 
     const model = reactive({
       visible: false,
-      loading: false
+      loading: false,
     })
 
     const postingEbooks = reactive<{

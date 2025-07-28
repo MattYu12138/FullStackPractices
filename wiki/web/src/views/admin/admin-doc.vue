@@ -85,6 +85,7 @@ import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
+import {useRoute} from "vue-router";
 
 
 export default defineComponent({
@@ -100,7 +101,8 @@ export default defineComponent({
     const model = reactive({
       expandedRowKeys:[] as number[],
       visible: false,
-      loading: false
+      loading: false,
+      route: useRoute(),
     })
 
     const array2Tree = reactive({
@@ -139,6 +141,36 @@ export default defineComponent({
       }
     }
 
+    const ids: Array<string> = [];
+
+
+    const getDeleteIds = (treeSelectedData: any, id: any) => {
+      // 遍历所有节点找到当前节点id
+      for(let i = 0; i < treeSelectedData.length; i ++){
+        const node = treeSelectedData[i];
+        if(node.id === id) {
+          // 找到之后设置为disable
+          ids.push(id);
+
+
+
+          // 遍历找到节点的所有子节点
+          const children = node.children;
+          if (Tool.isNotEmpty(children)) {
+            for (let j = 0; j < children.length; j++) {
+              getDeleteIds(children, children[j].id);
+            }
+          }
+        }else {
+          // 如果没有找到当前节点，则道其他子节点中寻找当前节点
+          const children = node.children;
+          if (Tool.isNotEmpty(children)) {
+            getDeleteIds(children, id);
+          }
+        }
+      }
+    }
+
     /*
     * edit
     * */
@@ -156,7 +188,9 @@ export default defineComponent({
     * */
     const add = () => {
       model.visible = true;
-      postingDocs.doc = {};
+      postingDocs.doc = {
+        ebookId: model.route.query.ebookId,
+      };
 
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
       array2Tree.SelectedData.unshift({id:0, name:'无'});
@@ -187,7 +221,8 @@ export default defineComponent({
 
 
     const handleDelete = (id: number) => {
-      axios.delete("doc/delete/" + id).then((response) => {
+      getDeleteIds(array2Tree.level1, id);
+      axios.delete("doc/delete/" + ids.join(",")).then((response) => {
         const data = response.data
         if (data.success) {
           handleQuery();
