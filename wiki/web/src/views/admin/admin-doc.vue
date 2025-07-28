@@ -64,26 +64,12 @@
             v-model:value="postingDocs.doc.parent"
             style="width: 100%"
             :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-            :tree-data="array2Tree.level1"
+            :tree-data="array2Tree.SelectedData"
             placeholder="请选择父文档"
             tree-default-expand-all
             :field-names="{ label: 'name', key: 'id', value: 'id' }"
         >
         </a-tree-select>
-      </a-form-item>
-
-      <a-form-item label="父文档">
-        <a-select
-            ref="select"
-            v-model:value="postingDocs.doc.parent"
-        >
-          <a-select-option value="0">
-            无
-          </a-select-option>
-          <a-select-option v-for="c in array2Tree.level1" :key="c.id" :value="c.id" :disabled="postingDocs.doc.id === c.id">
-            {{c.name}}
-          </a-select-option>
-        </a-select>
       </a-form-item>
 
       <a-form-item label="顺序">
@@ -119,7 +105,7 @@ export default defineComponent({
 
     const array2Tree = reactive({
       level1: [] as any[],
-
+      SelectedData: [] as any[],
     })
 
     const postingDocs = reactive({
@@ -128,12 +114,42 @@ export default defineComponent({
       id: 0,
     })
 
+    const setDisable = (treeSelectedData: any, id: any) => {
+      // 遍历所有节点找到当前节点id
+      for(let i = 0; i < treeSelectedData.length; i ++){
+        const node = treeSelectedData[i];
+        if(node.id === id) {
+          // 找到之后设置为disable
+          console.log("disabled", node);
+          node.disabled = true;
+          // 遍历找到节点的所有子节点，如果找到，设置为disable
+          const children = node.children;
+          if (Tool.isNotEmpty(children)) {
+            for (let j = 0; j < children.length; j++) {
+              setDisable(children, children[j].id);
+            }
+          }
+        }else {
+          // 如果没有找到当前节点，则道其他子节点中寻找当前节点
+          const children = node.children;
+          if (Tool.isNotEmpty(children)) {
+            setDisable(children, id);
+          }
+        }
+      }
+    }
+
     /*
     * edit
     * */
     const edit = (record: any) => {
       model.visible = true;
       postingDocs.doc = Tool.copy(record);
+
+      array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+      setDisable(array2Tree.SelectedData, record.id);
+
+      array2Tree.SelectedData.unshift({id:0, name:'无'});
     }
     /*
     * add
@@ -141,6 +157,9 @@ export default defineComponent({
     const add = () => {
       model.visible = true;
       postingDocs.doc = {};
+
+      array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+      array2Tree.SelectedData.unshift({id:0, name:'无'});
     }
 
 
