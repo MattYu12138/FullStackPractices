@@ -67,7 +67,7 @@
             :tree-data="array2Tree.level1"
             placeholder="请选择父文档"
             tree-default-expand-all
-            :replaceFields="{title: 'name', key: 'id', value: 'id'}"
+            :field-names="{ label: 'name', key: 'id', value: 'id' }"
         >
         </a-tree-select>
       </a-form-item>
