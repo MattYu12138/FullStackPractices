@@ -21,7 +21,7 @@
           :loading="model.loading"
           :pagination="false"
           :row-key="record => record.id"
-          :expandedRowKeys="array2Tree.expandedRowKeys"
+          :expandedRowKeys="model.expandedRowKeys"
           @expand="onExpand"
       >
 
@@ -62,14 +62,14 @@
       <a-form-item label="parent doc">
         <a-tree-select
             v-model:value="postingDocs.doc.parent"
-            show-search
             style="width: 100%"
             :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-            :tree-data = "array2Tree.level1"
-            placeholder="选择父文档"
-            :replaceFields="{ title: 'name', key: 'id', value: 'id' }"
+            :tree-data="array2Tree.level1"
+            placeholder="请选择父文档"
             tree-default-expand-all
-        />
+            :replaceFields="{title: 'name', key: 'id', value: 'id'}"
+        >
+        </a-tree-select>
       </a-form-item>
 
       <a-form-item label="父文档">
