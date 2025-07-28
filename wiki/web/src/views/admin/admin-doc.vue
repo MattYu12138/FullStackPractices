@@ -222,6 +222,8 @@ export default defineComponent({
 
 
     const handleDelete = (id: number) => {
+      ids.length = 0;
+      name.length = 0;
       getDeleteIds(array2Tree.level1, id);
       axios.delete("doc/delete/" + ids.join(",")).then((response) => {
         const data = response.data
@@ -259,11 +261,14 @@ export default defineComponent({
 
 
     const showConfirm = (id:number) => {
+      ids.length = 0;
+      name.length = 0;
+      getDeleteIds(array2Tree.level1, id);
       Modal.confirm({
-        title: () => 'Do you want to delete these items?',
+        title: () => '删除确认',
         icon: () => createVNode(ExclamationCircleOutlined),
-        content: () => '当你删除你会删除掉' + name.split(','),
-        onOk(id:number) {
+        content: () => `你将删除${name.join(',')}文档及其子文档，确定删除吗？`,
+        onOk() {
           handleDelete(id);
         },
         // eslint-disable-next-line @typescript-eslint/no-empty-function
