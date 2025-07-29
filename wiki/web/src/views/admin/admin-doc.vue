@@ -277,6 +277,9 @@ export default defineComponent({
           array2Tree.level1 = Tool.array2Tree(gettingDocs.doc, 0);
           console.log("树形结构: " , array2Tree.level1);
 
+          array2Tree.SelectedData = Tool.copy(array2Tree.level1);
+          array2Tree.SelectedData.unshift({id:0,name:'无'});
+
         }else{
           message.error(data.message);
         }
