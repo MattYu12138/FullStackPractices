@@ -185,7 +185,9 @@ export default defineComponent({
     })
 
     const postingDocs = reactive({
-      doc: {},
+      doc: {
+      ebookId: model.route.query.ebookId
+    },
       name : "",
       id: 0,
     })
