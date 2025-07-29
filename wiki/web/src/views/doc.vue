@@ -8,6 +8,7 @@
             @select="onSelect"
             :field-names="{ title: 'name', key: 'id', value: 'id' }"
             :default-expand-all-rows="true"
+            :defaultSelectedKeys="defaultSelectedKeys"
         >
         </a-tree>
       </a-col>
@@ -24,8 +25,6 @@ import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
 import {useRoute} from "vue-router";
-import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
-import { Modal } from 'ant-design-vue';
 import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 
 
@@ -39,6 +38,9 @@ export default defineComponent({
     //
     // const toolbarConfig = {}
     // const editorConfig = { placeholder: '请输入内容...' }
+
+    const defaultSelectedKeys = ref();
+    defaultSelectedKeys.value = [];
 
     const gettingDocs = reactive({
       doc: [],
@@ -181,6 +183,11 @@ export default defineComponent({
           array2Tree.level1 = Tool.array2Tree(gettingDocs.doc, 0);
           console.log("树形结构: " , array2Tree.level1);
 
+          if(Tool.isNotEmpty(array2Tree.level1)){
+            defaultSelectedKeys.value = [array2Tree.level1[0].id]
+            handleQueryContent(array2Tree.level1[0].id)
+          }
+
         }else{
           message.error(data.message);
         }
@@ -275,6 +282,7 @@ export default defineComponent({
       handleQuery,
       // showConfirm,
       onSelect,
+      defaultSelectedKeys,
 
 
       model,

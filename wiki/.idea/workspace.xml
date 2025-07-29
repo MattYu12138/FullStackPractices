@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="admin-doc.vue添加侧拉预览框">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="去掉doc页面样式的scoped，方便在admin-doc中预览相同属性的页面，class = wangEditor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -263,14 +263,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00056" summary="为保存接口添加参数校验 ， name不能为空">
-      <option name="closed" value="true" />
-      <created>1753440147733</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1753440147733</updated>
     </task>
     <task id="LOCAL-00057" summary="编辑时复制对象，不会影响页面。">
       <option name="closed" value="true" />
@@ -656,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753823104567</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="去掉doc页面样式的scoped，方便在admin-doc中预览相同属性的页面，class = wangEditor">
+      <option name="closed" value="true" />
+      <created>1753823289674</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1753823289674</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +712,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="从分类管理复制出文档管理的前后端代码  &#10;遗留问题：编辑表单中，只能选择一级文档作为父文档" />
     <MESSAGE value="bug：更新表单递归发生错误" />
     <MESSAGE value="bug：更新表单显示不出数据，但能看到排版是正常的" />
     <MESSAGE value="修复bug：更新表单显示不出数据，但能看到排版是正常的" />
@@ -737,7 +736,8 @@
     <MESSAGE value="点击文档，加载并显示文档内容" />
     <MESSAGE value="更改valueHtml的初始值，并且为doc的valueHtml添加样式" />
     <MESSAGE value="admin-doc.vue添加侧拉预览框" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin-doc.vue添加侧拉预览框" />
+    <MESSAGE value="去掉doc页面样式的scoped，方便在admin-doc中预览相同属性的页面，class = wangEditor" />
+    <option name="LAST_COMMIT_MESSAGE" value="去掉doc页面样式的scoped，方便在admin-doc中预览相同属性的页面，class = wangEditor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
