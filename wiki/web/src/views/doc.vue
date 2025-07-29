@@ -34,7 +34,7 @@ export default defineComponent({
   components: { Editor, Toolbar },
   setup() {
 
-    // const editorRef = shallowRef();
+    const editorRef = shallowRef();
     const valueHtml = ref('<p>请点击章节进行预览</p>');
     //
     // const toolbarConfig = {}
@@ -296,70 +296,56 @@ export default defineComponent({
 
 
 <style scoped>
-.ant-avatar {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 8%;
-  margin: 5px 0;
-}
-
 .wangEditor {
-  padding: 20px;
-  font-family: "Helvetica", "Arial", sans-serif;
-  line-height: 1.8;
-  color: #333;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-top: 20px;
+  overflow-x: auto;
 }
 
-.wangEditor h1,
-.wangEditor h2,
-.wangEditor h3 {
-  color: #2d8cf0;
-  margin: 1em 0 0.5em;
+.wangEditor p,
+.wangEditor li {
+  white-space: pre-wrap; /* 保留空格 */
 }
 
 .wangEditor blockquote {
-  border-left: 4px solid #ccc;
-  margin: 1em 0;
-  padding-left: 1em;
-  color: #555;
-  background-color: #f9f9f9;
+  border-left: 8px solid #d0e5f2;
+  padding: 10px 10px;
+  margin: 10px 0;
+  background-color: #f1f1f1;
 }
 
-.wangEditor ul,
-.wangEditor ol {
-  padding-left: 2em;
-  margin: 1em 0;
+.wangEditor code {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 3px;
+  border-radius: 3px;
+}
+.wangEditor pre>code {
+  display: block;
+  padding: 10px;
 }
 
 .wangEditor table {
   border-collapse: collapse;
-  margin: 1em 0;
-  width: 100%;
-  font-size: 14px;
+}
+.wangEditor td,
+.wangEditor th {
+  border: 1px solid #ccc;
+  min-width: 50px;
+  height: 20px;
+}
+.wangEditor th {
+  background-color: #f1f1f1;
 }
 
-.wangEditor table th,
-.wangEditor table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+.wangEditor ul,
+.wangEditor ol {
+  padding-left: 20px;
 }
 
-.wangEditor img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1em 0;
+.wangEditor input[type="checkbox"] {
+  margin-right: 5px;
 }
-
-.wangEditor pre {
-  background: #f4f4f4;
-  padding: 12px;
-  font-family: "Courier New", Courier, monospace;
-  overflow-x: auto;
-  font-size: 13px;
-}
-
 </style>
-

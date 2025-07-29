@@ -85,6 +85,12 @@
               <a-input-number v-model:value="postingDocs.doc.sort" :min="0" style="width: 100%" placeholder="Sort"/>
             </a-form-item>
 
+            <a-form-item>
+              <a-button type="primary" @click="handlePreviewContent()">
+                <EyeOutlined/> 内容预览
+              </a-button>
+            </a-form-item>
+
             <a-form-item >
               <div style="border: 1px solid #ccc; padding: 10px; width: 100%;">
                 <Toolbar
@@ -102,12 +108,13 @@
                 />
               </div>
             </a-form-item>
-
-
           </a-form>
         </a-col>
       </a-row>
 
+      <a-drawer width="90vw" placement="right" :closable="false" :visible="drawer.visible" @close="onDrawerClose">
+        <div class="wangEditor" v-html="drawer.previewHtml"></div>
+      </a-drawer>
 
     </a-layout-content>
   </a-layout>
@@ -137,7 +144,8 @@ export default defineComponent({
   components: { Editor, Toolbar },
   setup() {
 
-    const editorRef = shallowRef();const valueHtml = ref('<p>请点击章节进行预览</p>');
+    const editorRef = shallowRef();
+    const valueHtml = ref('<p>请点击章节进行预览</p>');
 
 
     const toolbarConfig = {}
@@ -147,6 +155,22 @@ export default defineComponent({
       doc: [],
       pagination: {current: 1, pageSize: 5, total: 0}
     });
+
+    const drawer = reactive({
+      visible: false,
+      previewHtml: {},
+    })
+
+    const handlePreviewContent = () => {
+      const editor = editorRef.value
+
+      drawer.previewHtml = editor.getHtml();
+      drawer.visible = true;
+    }
+
+    const onDrawerClose =  () => {
+      drawer.visible = false;
+    }
 
     const model = reactive({
       expandedRowKeys:[] as number[],
@@ -387,6 +411,10 @@ export default defineComponent({
       toolbarConfig,
       editorConfig,
       handleCreated,
+
+      drawer,
+      handlePreviewContent,
+      onDrawerClose,
     }
   }
 });
@@ -400,6 +428,58 @@ export default defineComponent({
   line-height: 50px;
   border-radius: 8%;
   margin: 5px 0;
+}
+.wangEditor {
+   border: 3px solid #ccc;
+   border-radius: 5px;
+   padding: 0 10px;
+   margin-top: 20px;
+   overflow-x: auto;
+}
+
+.wangEditor p,
+.wangEditor li {
+  white-space: pre-wrap; /* 保留空格 */
+}
+
+.wangEditor blockquote {
+  border-left: 8px solid #d0e5f2;
+  padding: 10px 10px;
+  margin: 10px 0;
+  background-color: #f1f1f1;
+}
+
+.wangEditor code {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 3px;
+  border-radius: 3px;
+}
+.wangEditor pre>code {
+  display: block;
+  padding: 10px;
+}
+
+.wangEditor table {
+  border-collapse: collapse;
+}
+.wangEditor td,
+.wangEditor th {
+  border: 1px solid #ccc;
+  min-width: 50px;
+  height: 20px;
+}
+.wangEditor th {
+  background-color: #f1f1f1;
+}
+
+.wangEditor ul,
+.wangEditor ol {
+  padding-left: 20px;
+}
+
+.wangEditor input[type="checkbox"] {
+  margin-right: 5px;
 }
 </style>
 
