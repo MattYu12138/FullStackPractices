@@ -295,7 +295,7 @@ export default defineComponent({
 </script>
 
 
-<style scoped>
+<style>
 .wangEditor {
   border: 3px solid #ccc;
   border-radius: 5px;
