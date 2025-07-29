@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="bug:页面没有成功实现删除警告功能">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="安装wangEditor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,14 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00038" summary="配置axios拦截器打印请求和返回参数">
-      <option name="closed" value="true" />
-      <created>1753263009369</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1753263009369</updated>
     </task>
     <task id="LOCAL-00039" summary="增加打印过滤耗时的过滤器">
       <option name="closed" value="true" />
@@ -655,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753705744636</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="安装wangEditor">
+      <option name="closed" value="true" />
+      <created>1753781691294</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1753781691294</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +695,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="成功可以根据名称查询" />
     <MESSAGE value="更改wiki为gettingEbooks，并新增查询postingEbooks" />
     <MESSAGE value="用表格替换搜索框" />
     <MESSAGE value="优化代码，分类管理不显示分页" />
@@ -721,7 +719,8 @@
     <MESSAGE value="进入doc管理页面会传进ebookId进行确认" />
     <MESSAGE value="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点" />
     <MESSAGE value="bug:页面没有成功实现删除警告功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug:页面没有成功实现删除警告功能" />
+    <MESSAGE value="安装wangEditor" />
+    <option name="LAST_COMMIT_MESSAGE" value="安装wangEditor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
