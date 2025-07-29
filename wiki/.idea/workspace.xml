@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices&#10;&#10;# Conflicts:&#10;#&#9;wiki/.idea/workspace.xml&#10;#&#9;wiki/web/src/views/admin/admin-doc.vue">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加后端查询，但是报400错">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,14 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00047" summary="集成PageHelper">
-      <option name="closed" value="true" />
-      <created>1753382604367</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1753382604367</updated>
     </task>
     <task id="LOCAL-00048" summary="封装分页请求参数和返回参数">
       <option name="closed" value="true" />
@@ -658,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753788561876</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="添加后端查询，但是报400错">
+      <option name="closed" value="true" />
+      <created>1753792344646</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1753792344646</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,7 +695,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="暂时显示不出分类" />
     <MESSAGE value="成功实现”分类“的文字转换" />
     <MESSAGE value="修复bug，防止更改后，在表单还是显示原来数值" />
     <MESSAGE value="删除侧边栏" />
@@ -724,7 +719,8 @@
     <MESSAGE value="文档内容表设计，持久层生成" />
     <MESSAGE value="左右布局，方便编辑" />
     <MESSAGE value="布局美化" />
-    <option name="LAST_COMMIT_MESSAGE" value="布局美化" />
+    <MESSAGE value="添加后端查询，但是报400错" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加后端查询，但是报400错" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

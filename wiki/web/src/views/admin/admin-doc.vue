@@ -222,7 +222,7 @@ export default defineComponent({
     }
 
     const handleQueryContent = () => {
-      axios.get("doc/find-content/" + gettingDocs.doc.id).then((response) => {
+      axios.get("doc/find-content/" + postingDocs.doc.id).then((response) => {
 
         const data = response.data;
         if(data.success){
@@ -237,6 +237,7 @@ export default defineComponent({
     * edit
     * */
     const edit = (record: any) => {
+      valueHtml.value = "";
       model.visible = true;
       postingDocs.doc = Tool.copy(record);
       handleQueryContent();
@@ -250,6 +251,8 @@ export default defineComponent({
     * add
     * */
     const add = () => {
+
+      valueHtml.value = "";
       model.visible = true;
       postingDocs.doc = {
         ebookId: model.route.query.ebookId,
@@ -304,8 +307,7 @@ export default defineComponent({
         model.loading = false;
         const data = response.data
         if (data.success) {
-          model.visible = false;
-
+          message.success("Save Success");
           handleQuery();
         }else{
           message.error(data.message);
