@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复500错">
-      <change afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-category.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-ebook.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,14 +266,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00050" summary="点击编辑按钮时候，弹出确认画面">
-      <option name="closed" value="true" />
-      <created>1753392575294</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1753392575294</updated>
     </task>
     <task id="LOCAL-00051" summary="模态框显示电子书表单，编辑某一行时可以将该行数据显示到表单">
       <option name="closed" value="true" />
@@ -661,7 +651,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753817152271</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。">
+      <option name="closed" value="true" />
+      <created>1753818345957</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1753818345957</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,7 +715,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="删除侧边栏" />
     <MESSAGE value="首页显示分类菜单" />
     <MESSAGE value="修复bug //加载完分类之后再加载电子书，防止异步导致错误" />
     <MESSAGE value="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件" />
@@ -742,7 +739,8 @@
     <MESSAGE value="添加后端查询，但是报400错" />
     <MESSAGE value="成功切换表单的数据显示，但是会返回500错误" />
     <MESSAGE value="修复500错" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复500错" />
+    <MESSAGE value="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

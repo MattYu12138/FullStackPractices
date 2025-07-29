@@ -266,7 +266,7 @@ export default defineComponent({
     const handleQuery = () => {
       model.loading = true;
       array2Tree.level1 = [];
-      axios.get("doc/all").then((response) => {
+      axios.get("doc/all/" + model.route.query.ebookId).then((response) => {
         model.loading = false;
         const data = response.data;
         if(data.success){
