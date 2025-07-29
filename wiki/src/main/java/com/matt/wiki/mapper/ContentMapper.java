@@ -25,7 +25,7 @@ public interface ContentMapper {
 
     int updateByExampleSelective(@Param("row") Content row, @Param("example") ContentExample example);
 
-    int updateByExampleWithBLOBs(@Param("row") Content row);
+    int updateByExampleWithBLOBs(@Param("row") Content row, @Param("example") ContentExample example);
 
     int updateByExample(@Param("row") Content row, @Param("example") ContentExample example);
 
