@@ -3,102 +3,109 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-form layout="inline" :model="postingDocs" style="margin-bottom: 2vw">
-        <a-form-item>
-          <a-button type="primary" @click="handleQuery()">
-            查询
-          </a-button>
-        </a-form-item>
-        <a-form-item>
-          <a-button type="primary" @click="add()">
-            新增
-          </a-button>
-        </a-form-item>
-      </a-form>
-      <a-table
-          :columns="columns"
-          :data-source="array2Tree.level1"
-          :loading="model.loading"
-          :pagination="false"
-          :row-key="(record:any) => record.id"
-          :expandedRowKeys="model.expandedRowKeys"
-          @expand="onExpand"
-      >
+      <a-row>
+        <a-col :span="8">
+          <a-form layout="inline" :model="postingDocs" style="margin-bottom: 2vw">
+            <a-form-item>
+              <a-button type="primary" @click="handleQuery()">
+                查询
+              </a-button>
+            </a-form-item>
+            <a-form-item>
+              <a-button type="primary" @click="add()">
+                新增
+              </a-button>
+            </a-form-item>
+          </a-form>
+          <a-table
+              :columns="columns"
+              :data-source="array2Tree.level1"
+              :loading="model.loading"
+              :pagination="false"
+              :row-key="(record:any) => record.id"
+              :expandedRowKeys="model.expandedRowKeys"
+              @expand="onExpand"
+          >
 
-        <template #bodyCell="{ column, record }">
-          <template v-if="column.key === 'cover'">
-            <img :src="record.cover" alt="cover" style="width: 60px"/>
-          </template>
+            <template #bodyCell="{ column, record }">
+              <template v-if="column.key === 'cover'">
+                <img :src="record.cover" alt="cover" style="width: 60px"/>
+              </template>
 
-          <!-- 操作 -->
-          <template v-else-if="column.key === 'action'">
-            <a-space>
-              <a-button type="primary" @click="edit(record)">编辑</a-button>
-              <a-popconfirm
-                  title="Are you sure delete this task?"
-                  ok-text="Yes"
-                  cancel-text="No"
-                  @confirm="showConfirm(record.id)"
+              <!-- 操作 -->
+              <template v-else-if="column.key === 'action'">
+                <a-space>
+                  <a-button type="primary" @click="edit(record)">编辑</a-button>
+                  <a-popconfirm
+                      title="Are you sure delete this task?"
+                      ok-text="Yes"
+                      cancel-text="No"
+                      @confirm="showConfirm(record.id)"
+                  >
+                    <a-button type="default">删除</a-button>
+                  </a-popconfirm>
+                </a-space>
+              </template>
+            </template>
+          </a-table>
+        </a-col>
+        <a-col :span="16">
+          <a-form :model="postingDocs.doc" :label-col="{ span: 6 }">
+            <a-form-item label="名称">
+              <a-input v-model:value="postingDocs.doc.name" />
+            </a-form-item>
+
+            <a-form-item label="parent doc">
+              <a-tree-select
+                  v-model:value="postingDocs.doc.parent"
+                  style="width: 100%"
+                  :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
+                  :tree-data="array2Tree.SelectedData"
+                  placeholder="请选择父文档"
+                  tree-default-expand-all
+                  :field-names="{ label: 'name', key: 'id', value: 'id' }"
               >
-                <a-button type="default">删除</a-button>
-              </a-popconfirm>
-            </a-space>
-          </template>
-        </template>
-      </a-table>
+              </a-tree-select>
+            </a-form-item>
+
+            <a-form-item label="顺序">
+              <a-input-number v-model:value="postingDocs.doc.sort" :min="0" style="width: 100%" />
+            </a-form-item>
+
+            <a-form-item label="内容">
+              <div style="border: 1px solid #ccc; padding: 10px; width: 100%;">
+                <Toolbar
+                    style="border-bottom: 1px solid #ccc; margin-bottom: 5px;"
+                    :editor="editorRef"
+                    :defaultConfig="toolbarConfig"
+                    :mode="'default'"
+                />
+                <Editor
+                    style="height: 400px; overflow-y: auto;"
+                    v-model="valueHtml"
+                    :defaultConfig="editorConfig"
+                    :mode="'default'"
+                    @onCreated="handleCreated"
+                />
+              </div>
+            </a-form-item>
+
+
+          </a-form>
+        </a-col>
+      </a-row>
+
+
     </a-layout-content>
   </a-layout>
-  <a-modal
-      title="文档表单"
-      v-model:open="model.visible"
-      :confirm-loading="model.loading"
-      :width="'80vw'"
-      @ok="handleModelOk"
-  >
-    <a-form :model="postingDocs.doc" :label-col="{ span: 6 }">
-      <a-form-item label="名称">
-        <a-input v-model:value="postingDocs.doc.name" />
-      </a-form-item>
-
-      <a-form-item label="parent doc">
-        <a-tree-select
-            v-model:value="postingDocs.doc.parent"
-            style="width: 100%"
-            :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-            :tree-data="array2Tree.SelectedData"
-            placeholder="请选择父文档"
-            tree-default-expand-all
-            :field-names="{ label: 'name', key: 'id', value: 'id' }"
-        >
-        </a-tree-select>
-      </a-form-item>
-
-      <a-form-item label="顺序">
-        <a-input-number v-model:value="postingDocs.doc.sort" :min="0" style="width: 100%" />
-      </a-form-item>
-
-      <a-form-item label="内容">
-        <div style="border: 1px solid #ccc; padding: 10px; width: 100%;">
-          <Toolbar
-              style="border-bottom: 1px solid #ccc; margin-bottom: 5px;"
-              :editor="editorRef"
-              :defaultConfig="toolbarConfig"
-              :mode="'default'"
-          />
-          <Editor
-              style="height: 400px; overflow-y: auto;"
-              v-model="valueHtml"
-              :defaultConfig="editorConfig"
-              :mode="'default'"
-              @onCreated="handleCreated"
-          />
-        </div>
-      </a-form-item>
-
-
-    </a-form>
-
-  </a-modal>
+<!--  <a-modal-->
+<!--      title="文档表单"-->
+<!--      v-model:open="model.visible"-->
+<!--      :confirm-loading="model.loading"-->
+<!--      :width="'80vw'"-->
+<!--      @ok="handleModelOk"-->
+<!--  >-->
+<!--  </a-modal>-->
 </template>
 
 <script lang="ts">
