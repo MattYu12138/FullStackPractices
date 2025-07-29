@@ -26,7 +26,6 @@
               :row-key="(record:any) => record.id"
               :default-expand-all-rows="true"
               size="small"
-              @expand="onExpand"
           >
 
             <template #bodyCell="{ column, record }">
@@ -222,12 +221,25 @@ export default defineComponent({
       }
     }
 
+    const handleQueryContent = () => {
+      axios.get("doc/find-content/" + gettingDocs.doc.id).then((response) => {
+
+        const data = response.data;
+        if(data.success){
+          valueHtml.value = data.content;
+        }else{
+          message.error(data.message);
+        }
+      })
+    }
+
     /*
     * edit
     * */
     const edit = (record: any) => {
       model.visible = true;
       postingDocs.doc = Tool.copy(record);
+      handleQueryContent();
 
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
       setDisable(array2Tree.SelectedData, record.id);
@@ -242,6 +254,7 @@ export default defineComponent({
       postingDocs.doc = {
         ebookId: model.route.query.ebookId,
       };
+      handleQueryContent();
 
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
       array2Tree.SelectedData.unshift({id:0, name:'无'});
@@ -265,9 +278,10 @@ export default defineComponent({
         }else{
           message.error(data.message);
         }
-
       })
     }
+
+
 
 
     const handleDelete = (id: number) => {
