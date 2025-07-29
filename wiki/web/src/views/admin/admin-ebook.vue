@@ -95,7 +95,7 @@ import {useRoute} from "vue-router";
 
 
 export default defineComponent({
-  name: 'Home',
+  name: 'AdminEbook',
   setup() {
 
     interface Ebook {

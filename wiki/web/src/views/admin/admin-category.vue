@@ -89,7 +89,7 @@ import {Tool} from '@/util/tool'
 
 
 export default defineComponent({
-  name: 'Home',
+  name: 'AdminCategory',
   setup() {
 
 

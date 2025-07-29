@@ -133,7 +133,7 @@ import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 
 
 export default defineComponent({
-  name: 'Home',
+  name: 'AdminDoc',
   components: { Editor, Toolbar },
   setup() {
 
