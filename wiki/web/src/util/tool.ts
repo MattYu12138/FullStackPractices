@@ -21,10 +21,11 @@ export class Tool {
    * 对象复制
    * @param obj
    */
-  public static copy (obj: object) {
-    if (Tool.isNotEmpty(obj)) {
-      return JSON.parse(JSON.stringify(obj));
+  public static copy (obj: any) {
+    if (obj === null || obj === undefined) {
+      return obj;
     }
+    return JSON.parse(JSON.stringify(obj));
   }
 
   /**
