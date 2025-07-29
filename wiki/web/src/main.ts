@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import Antd, {message} from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
+import '@wangeditor/editor/dist/css/style.css'
 import * as Icons from '@ant-design/icons-vue';
 import axios from 'axios';
 

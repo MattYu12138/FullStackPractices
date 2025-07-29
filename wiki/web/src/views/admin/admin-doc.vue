@@ -20,7 +20,7 @@
           :data-source="array2Tree.level1"
           :loading="model.loading"
           :pagination="false"
-          :row-key="record => record.id"
+          :row-key="(record:any) => record.id"
           :expandedRowKeys="model.expandedRowKeys"
           @expand="onExpand"
       >
@@ -52,6 +52,7 @@
       title="文档表单"
       v-model:open="model.visible"
       :confirm-loading="model.loading"
+      :width="'80vw'"
       @ok="handleModelOk"
   >
     <a-form :model="postingDocs.doc" :label-col="{ span: 6 }">
@@ -75,6 +76,26 @@
       <a-form-item label="顺序">
         <a-input-number v-model:value="postingDocs.doc.sort" :min="0" style="width: 100%" />
       </a-form-item>
+
+      <a-form-item label="内容">
+        <div style="border: 1px solid #ccc; padding: 10px; width: 100%;">
+          <Toolbar
+              style="border-bottom: 1px solid #ccc; margin-bottom: 5px;"
+              :editor="editorRef"
+              :defaultConfig="toolbarConfig"
+              :mode="'default'"
+          />
+          <Editor
+              style="height: 400px; overflow-y: auto;"
+              v-model="valueHtml"
+              :defaultConfig="editorConfig"
+              :mode="'default'"
+              @onCreated="handleCreated"
+          />
+        </div>
+      </a-form-item>
+
+
     </a-form>
 
   </a-modal>
@@ -283,6 +304,16 @@ export default defineComponent({
       });
     };
 
+    onBeforeUnmount(() => {
+      const editor = editorRef.value
+      if (editor == null) return
+      editor.destroy()
+    })
+
+    const handleCreated = (editor) => {
+      editorRef.value = editor // 记录 editor 实例，重要！
+    }
+
 
     const columns = [
       { title: '名称', dataIndex: 'name', key: 'name' },
@@ -290,13 +321,6 @@ export default defineComponent({
       { title: '顺序', dataIndex: 'sort', key: 'sort' },
       {title: '操作', key: 'action',},
     ];
-
-
-    onBeforeUnmount(() => {
-      const editor = editorRef.value
-      if (editor == null) return
-      editor.destroy()
-    })
 
 
     onMounted(() => {
@@ -318,6 +342,13 @@ export default defineComponent({
       edit,
       add,
       handleDelete,
+
+      editorRef,
+      valueHtml,
+      mode: 'default', // 或 'simple'
+      toolbarConfig,
+      editorConfig,
+      handleCreated,
     }
   }
 });
