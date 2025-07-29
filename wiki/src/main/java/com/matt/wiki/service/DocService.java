@@ -2,8 +2,10 @@ package com.matt.wiki.service;
 
 
 import com.github.pagehelper.PageHelper;
+import com.matt.wiki.domain.Content;
 import com.matt.wiki.domain.Doc;
 import com.matt.wiki.domain.DocExample;
+import com.matt.wiki.mapper.ContentMapper;
 import com.matt.wiki.mapper.DocMapper;
 import com.matt.wiki.req.DocQueryReq;
 import com.matt.wiki.req.DocSaveReq;
@@ -24,6 +26,9 @@ public class DocService {
 
     @Resource
     private DocMapper docMapper;
+
+    @Resource
+    private ContentMapper contentMapper;
 
     @Resource
     private SnowFlake snowFlake;
@@ -66,11 +71,18 @@ public class DocService {
     * */
     public void save(DocSaveReq docSaveReq) {
         Doc docSave = CopyUtil.copy(docSaveReq, Doc.class);
+        Content contentSave = CopyUtil.copy(docSaveReq, Content.class);
         if(ObjectUtils.isEmpty(docSave.getId())){
             docSave.setId(snowFlake.nextId());
             docMapper.insert(docSave);
+            contentSave.setId(docSave.getId());
+            contentMapper.insert(contentSave);
         }else{
             docMapper.updateByPrimaryKey(docSave);
+            int count = contentMapper.updateByExampleWithBLOBs(contentSave);
+            if(count == 0){
+                contentMapper.insert(contentSave);
+            }
         }
 
     }

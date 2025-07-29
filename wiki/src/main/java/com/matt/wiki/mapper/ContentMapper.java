@@ -2,8 +2,9 @@ package com.matt.wiki.mapper;
 
 import com.matt.wiki.domain.Content;
 import com.matt.wiki.domain.ContentExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ContentMapper {
     long countByExample(ContentExample example);
@@ -24,7 +25,7 @@ public interface ContentMapper {
 
     int updateByExampleSelective(@Param("row") Content row, @Param("example") ContentExample example);
 
-    int updateByExampleWithBLOBs(@Param("row") Content row, @Param("example") ContentExample example);
+    int updateByExampleWithBLOBs(@Param("row") Content row);
 
     int updateByExample(@Param("row") Content row, @Param("example") ContentExample example);
 

@@ -285,6 +285,7 @@ export default defineComponent({
 
     const handleSave = () => {
       model.loading = true;
+      postingDocs.doc.content = valueHtml;
       axios.post("doc/save", postingDocs.doc).then((response) => {
         model.loading = false;
         const data = response.data
