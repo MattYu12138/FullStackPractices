@@ -12,6 +12,7 @@
         </a-tree>
       </a-col>
       <a-col :span="18">
+        <div :innerHTML="valueHtml"></div>
       </a-col>
     </a-row>
   </a-layout>
@@ -34,7 +35,7 @@ export default defineComponent({
   setup() {
 
     // const editorRef = shallowRef();
-    // const valueHtml = ref('<p>hello</p>');
+    const valueHtml = ref('<p>hello</p>');
     //
     // const toolbarConfig = {}
     // const editorConfig = { placeholder: '请输入内容...' }
@@ -56,11 +57,11 @@ export default defineComponent({
       // SelectedData: [] as any[],
     })
 
-    // const postingDocs = reactive({
-    //   doc: {},
-    //   name : "",
-    //   id: 0,
-    // })
+    const postingDocs = reactive({
+      doc: {},
+      name : "",
+      id: 0,
+    })
 
     // const setDisable = (treeSelectedData: any, id: any) => {
     //   // 遍历所有节点找到当前节点id
@@ -117,16 +118,23 @@ export default defineComponent({
     //   }
     // }
 
-    // const handleQueryContent = () => {
-    //   axios.get("doc/find-content/" + postingDocs.doc.id).then((response) => {
-    //     const data = response.data;
-    //     if(data.success){
-    //       valueHtml.value = data.content;
-    //     }else{
-    //       message.error(data.message);
-    //     }
-    //   })
-    // }
+    const handleQueryContent = (id:number) => {
+      axios.get("doc/find-content/" + id).then((response) => {
+        const data = response.data;
+        if(data.success){
+          valueHtml.value = data.content;
+        }else{
+          message.error(data.message);
+        }
+      })
+    }
+
+    const onSelect = (selectedKeys: any, info: any)=>{
+      console.log('selected ', selectedKeys, info);
+      if(Tool.isNotEmpty(selectedKeys)){
+        handleQueryContent(selectedKeys[0]);
+      }
+    }
 
     // /*
     // * edit
@@ -266,6 +274,7 @@ export default defineComponent({
       // columns,
       handleQuery,
       // showConfirm,
+      onSelect,
 
 
       model,
@@ -275,7 +284,7 @@ export default defineComponent({
       // handleDelete,
       //
       // editorRef,
-      // valueHtml,
+      valueHtml,
       // mode: 'default', // 或 'simple'
       // toolbarConfig,
       // editorConfig,
