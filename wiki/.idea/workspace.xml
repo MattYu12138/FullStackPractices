@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="进入文档时候，能直接获取下拉框内容，不需要点击新增">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="点击文档，加载并显示文档内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -263,14 +263,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00053" summary="增加snowflake功能">
-      <option name="closed" value="true" />
-      <created>1753435635670</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1753435635670</updated>
     </task>
     <task id="LOCAL-00054" summary="增加删除功能">
       <option name="closed" value="true" />
@@ -656,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753819089270</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="点击文档，加载并显示文档内容">
+      <option name="closed" value="true" />
+      <created>1753819598473</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1753819598473</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +712,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件" />
     <MESSAGE value="点击二级分类显示目录下电子书" />
     <MESSAGE value="增加doc文档，并添加持久层" />
     <MESSAGE value="从分类管理复制出文档管理的前后端代码  &#10;遗留问题：编辑表单中，只能选择一级文档作为父文档" />
@@ -737,7 +736,8 @@
     <MESSAGE value="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。" />
     <MESSAGE value="修复Bug：会查询电子书下所有页面。" />
     <MESSAGE value="进入文档时候，能直接获取下拉框内容，不需要点击新增" />
-    <option name="LAST_COMMIT_MESSAGE" value="进入文档时候，能直接获取下拉框内容，不需要点击新增" />
+    <MESSAGE value="点击文档，加载并显示文档内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="点击文档，加载并显示文档内容" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

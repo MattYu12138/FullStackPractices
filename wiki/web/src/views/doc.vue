@@ -12,7 +12,7 @@
         </a-tree>
       </a-col>
       <a-col :span="18">
-        <div :innerHTML="valueHtml"></div>
+        <div class="wangEditor" v-html="valueHtml"></div>
       </a-col>
     </a-row>
   </a-layout>
@@ -35,7 +35,7 @@ export default defineComponent({
   setup() {
 
     // const editorRef = shallowRef();
-    const valueHtml = ref('<p>hello</p>');
+    const valueHtml = ref('<p>请点击章节进行预览</p>');
     //
     // const toolbarConfig = {}
     // const editorConfig = { placeholder: '请输入内容...' }
@@ -303,5 +303,63 @@ export default defineComponent({
   border-radius: 8%;
   margin: 5px 0;
 }
+
+.wangEditor {
+  padding: 20px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.8;
+  color: #333;
+}
+
+.wangEditor h1,
+.wangEditor h2,
+.wangEditor h3 {
+  color: #2d8cf0;
+  margin: 1em 0 0.5em;
+}
+
+.wangEditor blockquote {
+  border-left: 4px solid #ccc;
+  margin: 1em 0;
+  padding-left: 1em;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+.wangEditor ul,
+.wangEditor ol {
+  padding-left: 2em;
+  margin: 1em 0;
+}
+
+.wangEditor table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.wangEditor table th,
+.wangEditor table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.wangEditor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+}
+
+.wangEditor pre {
+  background: #f4f4f4;
+  padding: 12px;
+  font-family: "Courier New", Courier, monospace;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
 </style>
 

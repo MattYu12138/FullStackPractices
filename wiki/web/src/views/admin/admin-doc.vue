@@ -137,8 +137,8 @@ export default defineComponent({
   components: { Editor, Toolbar },
   setup() {
 
-    const editorRef = shallowRef();
-    const valueHtml = ref('<p>hello</p>');
+    const editorRef = shallowRef();const valueHtml = ref('<p>请点击章节进行预览</p>');
+
 
     const toolbarConfig = {}
     const editorConfig = { placeholder: '请输入内容...' }
