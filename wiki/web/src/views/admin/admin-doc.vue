@@ -3,7 +3,7 @@
     <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
-      <a-row>
+      <a-row :gutter="24">
         <a-col :span="8">
           <a-form layout="inline" :model="postingDocs" style="margin-bottom: 2vw">
             <a-form-item>
@@ -18,12 +18,14 @@
             </a-form-item>
           </a-form>
           <a-table
+              v-if="array2Tree.level1.length > 0"
               :columns="columns"
               :data-source="array2Tree.level1"
               :loading="model.loading"
               :pagination="false"
               :row-key="(record:any) => record.id"
-              :expandedRowKeys="model.expandedRowKeys"
+              :default-expand-all-rows="true"
+              size="small"
               @expand="onExpand"
           >
 
@@ -35,14 +37,14 @@
               <!-- 操作 -->
               <template v-else-if="column.key === 'action'">
                 <a-space>
-                  <a-button type="primary" @click="edit(record)">编辑</a-button>
+                  <a-button type="primary" @click="edit(record)" size="small">编辑</a-button>
                   <a-popconfirm
                       title="Are you sure delete this task?"
                       ok-text="Yes"
                       cancel-text="No"
                       @confirm="showConfirm(record.id)"
                   >
-                    <a-button type="default">删除</a-button>
+                    <a-button type="default" size="small">删除</a-button>
                   </a-popconfirm>
                 </a-space>
               </template>
@@ -50,29 +52,41 @@
           </a-table>
         </a-col>
         <a-col :span="16">
+          <p>
+            <a-form layout="inline"
+                    :model="postingDocs.doc"
+                    style="margin-bottom: 2vw"
+            >
+              <a-form-item>
+                <a-button type="primary" @click="handleSave()">
+                  save
+                </a-button>
+              </a-form-item>
+            </a-form>
+          </p>
           <a-form :model="postingDocs.doc" :label-col="{ span: 6 }">
-            <a-form-item label="名称">
-              <a-input v-model:value="postingDocs.doc.name" />
+            <a-form-item>
+              <a-input v-model:value="postingDocs.doc.name" placeholder="Name"></a-input>
             </a-form-item>
 
-            <a-form-item label="parent doc">
+            <a-form-item>
               <a-tree-select
                   v-model:value="postingDocs.doc.parent"
                   style="width: 100%"
                   :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
                   :tree-data="array2Tree.SelectedData"
-                  placeholder="请选择父文档"
+                  placeholder="请点击新增或编辑选择父文档"
                   tree-default-expand-all
                   :field-names="{ label: 'name', key: 'id', value: 'id' }"
               >
               </a-tree-select>
             </a-form-item>
 
-            <a-form-item label="顺序">
-              <a-input-number v-model:value="postingDocs.doc.sort" :min="0" style="width: 100%" />
+            <a-form-item aria-placeholder="sort">
+              <a-input-number v-model:value="postingDocs.doc.sort" :min="0" style="width: 100%" placeholder="Sort"/>
             </a-form-item>
 
-            <a-form-item label="内容">
+            <a-form-item >
               <div style="border: 1px solid #ccc; padding: 10px; width: 100%;">
                 <Toolbar
                     style="border-bottom: 1px solid #ccc; margin-bottom: 5px;"
@@ -103,7 +117,7 @@
 <!--      v-model:open="model.visible"-->
 <!--      :confirm-loading="model.loading"-->
 <!--      :width="'80vw'"-->
-<!--      @ok="handleModelOk"-->
+<!--      @ok="handleSave"-->
 <!--  >-->
 <!--  </a-modal>-->
 </template>
@@ -269,7 +283,7 @@ export default defineComponent({
     };
 
 
-    const handleModelOk = () => {
+    const handleSave = () => {
       model.loading = true;
       axios.post("doc/save", postingDocs.doc).then((response) => {
         model.loading = false;
@@ -284,15 +298,15 @@ export default defineComponent({
       })
     }
 
-    const onExpand = (expanded: boolean, record: any) => {
-      if (expanded) {
-        if (!model.expandedRowKeys.includes(record.id)) {
-          model.expandedRowKeys.push(record.id);
-        }
-      } else {
-        model.expandedRowKeys = model.expandedRowKeys.filter(id => id !== record.id);
-      }
-    };
+    // const onExpand = (expanded: boolean, record: any) => {
+    //   if (expanded) {
+    //     if (!model.expandedRowKeys.includes(record.id)) {
+    //       model.expandedRowKeys.push(record.id);
+    //     }
+    //   } else {
+    //     model.expandedRowKeys = model.expandedRowKeys.filter(id => id !== record.id);
+    //   }
+    // };
 
 
     const showConfirm = (id:number) => {
@@ -324,8 +338,6 @@ export default defineComponent({
 
     const columns = [
       { title: '名称', dataIndex: 'name', key: 'name' },
-      { title: '父ID', dataIndex: 'parent', key: 'parent' },
-      { title: '顺序', dataIndex: 'sort', key: 'sort' },
       {title: '操作', key: 'action',},
     ];
 
@@ -337,7 +349,7 @@ export default defineComponent({
     return {
       gettingDocs,
       postingDocs,
-      onExpand,
+      // onExpand,
       array2Tree,
       columns,
       handleQuery,
@@ -345,7 +357,7 @@ export default defineComponent({
 
 
       model,
-      handleModelOk,
+      handleSave,
       edit,
       add,
       handleDelete,
