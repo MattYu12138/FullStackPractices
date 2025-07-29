@@ -81,19 +81,26 @@
 </template>
 
 <script lang="ts">
-import {defineComponent,createVNode, onMounted, reactive} from 'vue';
+import {defineComponent, createVNode, onMounted, shallowRef, ref, reactive, onBeforeUnmount} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
 import {useRoute} from "vue-router";
 import { ExclamationCircleOutlined } from '@ant-design/icons-vue';
 import { Modal } from 'ant-design-vue';
+import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 
 
 export default defineComponent({
   name: 'Home',
+  components: { Editor, Toolbar },
   setup() {
 
+    const editorRef = shallowRef();
+    const valueHtml = ref('<p>hello</p>');
+
+    const toolbarConfig = {}
+    const editorConfig = { placeholder: '请输入内容...' }
 
     const gettingDocs = reactive({
       doc: [],
@@ -283,6 +290,14 @@ export default defineComponent({
       { title: '顺序', dataIndex: 'sort', key: 'sort' },
       {title: '操作', key: 'action',},
     ];
+
+
+    onBeforeUnmount(() => {
+      const editor = editorRef.value
+      if (editor == null) return
+      editor.destroy()
+    })
+
 
     onMounted(() => {
       handleQuery();
