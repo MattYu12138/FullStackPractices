@@ -223,7 +223,6 @@ export default defineComponent({
 
     const handleQueryContent = () => {
       axios.get("doc/find-content/" + postingDocs.doc.id).then((response) => {
-
         const data = response.data;
         if(data.success){
           valueHtml.value = data.content;
@@ -257,7 +256,7 @@ export default defineComponent({
       postingDocs.doc = {
         ebookId: model.route.query.ebookId,
       };
-      handleQueryContent();
+      // handleQueryContent();
 
       array2Tree.SelectedData = Tool.copy(array2Tree.level1);
       array2Tree.SelectedData.unshift({id:0, name:'无'});

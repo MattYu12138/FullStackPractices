@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加后端查询，但是报400错">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="成功切换表单的数据显示，但是会返回500错误">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -261,14 +263,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00048" summary="封装分页请求参数和返回参数">
-      <option name="closed" value="true" />
-      <created>1753388415371</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1753388415371</updated>
     </task>
     <task id="LOCAL-00049" summary="前后端整合成功">
       <option name="closed" value="true" />
@@ -654,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753792344646</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="成功切换表单的数据显示，但是会返回500错误">
+      <option name="closed" value="true" />
+      <created>1753793469196</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1753793469196</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -695,7 +697,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="成功实现”分类“的文字转换" />
     <MESSAGE value="修复bug，防止更改后，在表单还是显示原来数值" />
     <MESSAGE value="删除侧边栏" />
     <MESSAGE value="首页显示分类菜单" />
@@ -720,7 +721,8 @@
     <MESSAGE value="左右布局，方便编辑" />
     <MESSAGE value="布局美化" />
     <MESSAGE value="添加后端查询，但是报400错" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加后端查询，但是报400错" />
+    <MESSAGE value="成功切换表单的数据显示，但是会返回500错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="成功切换表单的数据显示，但是会返回500错误" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
