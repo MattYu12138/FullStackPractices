@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复bug:无法使用ref，当用.value的时候编译报错">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加wangEditor组件，但并未链接数据库">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +136,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build-dev">
+  <component name="RunManager" selected="Maven.mybatis-generator">
     <configuration name="SnowFlake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.util.SnowFlake" />
       <module name="wiki" />
@@ -262,14 +263,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00042" summary="增加aop请求和返回，去掉过滤器，拦截器">
-      <option name="closed" value="true" />
-      <created>1753268359536</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1753268359536</updated>
     </task>
     <task id="LOCAL-00043" summary="将页面变为小写字母开头， 风格如 ： page.vue my-page.vue">
       <option name="closed" value="true" />
@@ -655,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753784131869</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="添加wangEditor组件，但并未链接数据库">
+      <option name="closed" value="true" />
+      <created>1753785268858</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1753785268858</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +697,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="优化代码，分类管理不显示分页" />
     <MESSAGE value="改善下拉框不会同时启动，只会打开点击的折叠页面" />
     <MESSAGE value="父分类改为下拉选择" />
     <MESSAGE value="分类选择改为级联选择组件" />
@@ -721,7 +721,8 @@
     <MESSAGE value="安装wangEditor" />
     <MESSAGE value="正在添加wangEditor&#10;bug:无法使用ref，当用.value的时候编译报错" />
     <MESSAGE value="修复bug:无法使用ref，当用.value的时候编译报错" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug:无法使用ref，当用.value的时候编译报错" />
+    <MESSAGE value="添加wangEditor组件，但并未链接数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加wangEditor组件，但并未链接数据库" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

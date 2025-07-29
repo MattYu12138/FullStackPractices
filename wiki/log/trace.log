@@ -3059,3 +3059,18 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.do
 2025-07-28 22:38:44.211 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m <==      Total: 6
 2025-07-28 22:38:44.212 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"ebookId":1,"id":7,"name":"文档3.1","parent":6,"sort":1,"viewCount":2,"voteCount":1},{"ebookId":1,"id":10,"name":"文档4.1","parent":9,"sort":1,"viewCount":4,"voteCount":3},{"ebookId":1,"id":8,"name":"文档3.2","parent":6,"sort":2,"viewCount":1,"voteCount":0},{"ebookId":1,"id":6,"name":"文档3","parent":0,"sort":3,"viewCount":10,"voteCount":5},{"ebookId":1,"id":9,"name":"文档4","parent":0,"sort":4,"viewCount":0,"voteCount":0},{"ebookId":1,"id":13,"name":"文档5","parent":0,"sort":5,"viewCount":0,"voteCount":0}],"success":true}
 2025-07-28 22:38:44.212 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：247 ms -------------
+2025-07-29 20:48:14.690 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 59061 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-29 20:48:14.690 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-29 20:48:14.915 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-29 20:48:14.916 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-29 20:48:14.916 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-29 20:48:14.916 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-29 20:48:14.922 INFO  o.a.c.c.ContainerBase.[Tomcat-4].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-29 20:48:14.922 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 229 ms
+2025-07-29 20:48:15.252 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-29 20:48:15.267 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-29 20:48:15.269 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-29 20:48:15.277 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.622 seconds (process running for 154386.354)
+2025-07-29 20:48:15.280 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-29 20:48:15.280 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-29 20:48:15.280 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
