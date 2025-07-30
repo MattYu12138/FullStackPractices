@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="进入页面读取第一页节点">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices&#10;&#10;# Conflicts:&#10;#&#9;wiki/.idea/workspace.xml&#10;#&#9;wiki/log/trace.log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-doc.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="RESET_MODE" value="HARD" />
+    <option name="RESET_MODE" value="KEEP" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
