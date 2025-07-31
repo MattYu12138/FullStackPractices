@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserResetPasswordReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserSaveReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserSaveReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/UserService.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。">
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,14 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00064" summary="用表格替换搜索框">
-      <option name="closed" value="true" />
-      <created>1753522099965</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1753522099965</updated>
     </task>
     <task id="LOCAL-00065" summary="优化代码，分类管理不显示分页">
       <option name="closed" value="true" />
@@ -660,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753930716819</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。">
+      <option name="closed" value="true" />
+      <created>1753932296225</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1753932296225</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +710,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="bug:页面没有成功实现删除警告功能" />
     <MESSAGE value="安装wangEditor" />
     <MESSAGE value="正在添加wangEditor&#10;bug:无法使用ref，当用.value的时候编译报错" />
     <MESSAGE value="修复bug:无法使用ref，当用.value的时候编译报错" />
@@ -741,7 +734,8 @@
     <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
     <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截. 修改的时候不修改密码" />
     <MESSAGE value="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion" />
+    <MESSAGE value="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
