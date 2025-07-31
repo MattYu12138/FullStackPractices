@@ -5,6 +5,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.matt.wiki.domain.User;
 import com.matt.wiki.domain.UserExample;
+import com.matt.wiki.exception.BusinessException;
+import com.matt.wiki.exception.BusinessExceptionCode;
 import com.matt.wiki.mapper.UserMapper;
 import com.matt.wiki.req.UserQueryReq;
 import com.matt.wiki.req.UserSaveReq;
@@ -74,14 +76,31 @@ public class UserService {
     public void save(UserSaveReq userSaveReq) {
         User userSave = CopyUtil.copy(userSaveReq, User.class);
         if(ObjectUtils.isEmpty(userSave.getId())){
-            userSave.setId(snowFlake.nextId());
-            userMapper.insert(userSave);
+            var userDB = selectByLoginName(userSaveReq.getLoginName());
+            if(!ObjectUtils.isEmpty(userDB)){
+                userSave.setId(snowFlake.nextId());
+                userMapper.insert(userSave);
+            }else{
+                throw new BusinessException(BusinessExceptionCode.USER_LOGIN_NAME_EXIST);
+            }
+
         }else{
+
             userMapper.updateByPrimaryKey(userSave);
         }
 
     }
 
+    public User selectByLoginName(String LoginName){
+        UserExample userExample = new UserExample();
+        UserExample.Criteria criteria = userExample.createCriteria();
+        criteria.andLoginNameEqualTo(LoginName);
+        List<User> userList = userMapper.selectByExample(userExample);
+        if(userList.size() == 0){
+            return null;
+        }
+        return userList.get(0);
+    }
 
     /*
     * delete
