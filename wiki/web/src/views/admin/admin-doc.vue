@@ -61,6 +61,15 @@
                   save
                 </a-button>
               </a-form-item>
+
+              <a-form-item>
+                <router-link :to="'/admin/ebook'">
+                  <a-button type="primary">
+                    back to ebook
+                  </a-button>
+                </router-link>
+              </a-form-item>
+
             </a-form>
           </p>
           <a-form :model="postingDocs.doc" :label-col="{ span: 6 }">
