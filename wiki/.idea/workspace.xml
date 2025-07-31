@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复一个提交的时候用户已存在的bug">
-      <change afterPath="$PROJECT_DIR$/web/public/js/echarts_5.0.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/js/md5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/public/js/session-storage.js" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserSaveReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserSaveReq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/global.d.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,14 +266,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00062" summary="更改wiki为gettingEbooks，并新增查询postingEbooks">
-      <option name="closed" value="true" />
-      <created>1753521194147</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1753521194147</updated>
     </task>
     <task id="LOCAL-00063" summary="更改wiki为gettingEbooks，并新增查询postingEbooks">
       <option name="closed" value="true" />
@@ -661,7 +651,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753929213861</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截">
+      <option name="closed" value="true" />
+      <created>1753929787317</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1753929787317</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -717,7 +715,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="进入doc管理页面会传进ebookId进行确认，" />
     <MESSAGE value="进入doc管理页面会传进ebookId进行确认" />
     <MESSAGE value="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点" />
     <MESSAGE value="bug:页面没有成功实现删除警告功能" />
@@ -742,7 +739,8 @@
     <MESSAGE value="user表设计和持久层生成" />
     <MESSAGE value="user表设计和持久层生成,初步完成user页面" />
     <MESSAGE value="修复一个提交的时候用户已存在的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复一个提交的时候用户已存在的bug" />
+    <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

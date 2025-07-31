@@ -87,6 +87,7 @@ public class UserService {
         }else{
 
 //            防止绕过前端验证
+            userSave.setLoginName(null);
             userSave.setPassword(null);
             userMapper.updateByPrimaryKeySelective(userSave);
         }

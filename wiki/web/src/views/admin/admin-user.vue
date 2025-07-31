@@ -67,6 +67,9 @@
       <a-form-item label="昵称">
         <a-input v-model:value="postingUsers.user.name"/>
       </a-form-item>
+      <a-form-item label="密码" v-show="!postingUsers.user.id">
+        <a-input v-model:value="postingUsers.user.password"  type="password"/>
+      </a-form-item>
     </a-form>
   </a-modal>
 </template>
@@ -76,8 +79,9 @@ import {defineComponent, onMounted, reactive} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
-import {useRoute} from "vue-router";
 
+declare let hexMd5: any;
+declare let KEY: any;
 
 export default defineComponent({
   name: 'AdminUser',
