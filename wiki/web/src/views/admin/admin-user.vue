@@ -67,9 +67,6 @@
       <a-form-item label="昵称">
         <a-input v-model:value="postingUsers.user.name"/>
       </a-form-item>
-      <a-form-item label="密码" v-show="!postingUsers.user.id" >
-        <a-input v-model:value="postingUsers.user.password" type="password"/>
-      </a-form-item>
     </a-form>
   </a-modal>
 </template>
@@ -177,6 +174,9 @@ export default defineComponent({
     // 点击保存
     const handleModelOk = () => {
       model.loading = true;
+
+      postingUsers.user.password = hexMd5(postingUsers.user.password + KEY);
+
       axios.post("user/save", postingUsers.user).then((response) => {
         model.loading = false;
         const data = response.data

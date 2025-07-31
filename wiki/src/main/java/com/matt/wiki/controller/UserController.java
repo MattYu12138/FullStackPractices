@@ -8,6 +8,7 @@ import com.matt.wiki.resp.UserQueryResp;
 import com.matt.wiki.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -27,6 +28,7 @@ public class UserController {
 
     @PostMapping("/save")
     public CommonResp save(@RequestBody @Valid UserSaveReq userSaveReq){
+        userSaveReq.setPassword(DigestUtils.md5DigestAsHex(userSaveReq.getPassword().getBytes()));
         CommonResp resp = new CommonResp<>();
         userService.save(userSaveReq);
         return resp;
