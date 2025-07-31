@@ -234,6 +234,7 @@ export default defineComponent({
         const data = response.data; // data = commonResp
         if (data.success) {
           resetModel.loading = false;
+          resetModel.visible = false;
 
           // 重新加载列表
           handleQuery({
