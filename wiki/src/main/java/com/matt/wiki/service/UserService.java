@@ -77,7 +77,7 @@ public class UserService {
         User userSave = CopyUtil.copy(userSaveReq, User.class);
         if(ObjectUtils.isEmpty(userSave.getId())){
             var userDB = selectByLoginName(userSaveReq.getLoginName());
-            if(!ObjectUtils.isEmpty(userDB)){
+            if(ObjectUtils.isEmpty(userDB)){
                 userSave.setId(snowFlake.nextId());
                 userMapper.insert(userSave);
             }else{
@@ -86,7 +86,9 @@ public class UserService {
 
         }else{
 
-            userMapper.updateByPrimaryKey(userSave);
+//            防止绕过前端验证
+            userSave.setPassword(null);
+            userMapper.updateByPrimaryKeySelective(userSave);
         }
 
     }
