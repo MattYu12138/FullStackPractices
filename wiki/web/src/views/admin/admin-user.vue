@@ -72,6 +72,19 @@
       </a-form-item>
     </a-form>
   </a-modal>
+
+  <a-modal
+      title="重置密码"
+      v-model:open="resetModel.visible"
+      :confirm-loading="resetModel.loading"
+      @ok="handleResetModalOk"
+  >
+    <a-form :model="postingUsers.user" :label-col="{ span: 6 }" :wrapper-col="{ span: 18 }">
+      <a-form-item label="新密码">
+        <a-input v-model:value="postingUsers.user.password" type="password"/>
+      </a-form-item>
+    </a-form>
+  </a-modal>
 </template>
 
 <script lang="ts">
@@ -104,6 +117,11 @@ export default defineComponent({
 
     const model = reactive({
       visible: false,
+      loading: false,
+    })
+
+    const resetModel = reactive({
+      visible:false,
       loading: false,
     })
 
@@ -161,8 +179,6 @@ export default defineComponent({
     }
 
 
-
-
     const handleDelete = (id: number) => {
       axios.delete("user/delete/" + id).then((response) => {
         const data = response.data
@@ -208,6 +224,36 @@ export default defineComponent({
       });
     };
 
+    const handleResetModalOk = () => {
+      resetModel.loading = true;
+
+      postingUsers.user.password = hexMd5(postingUsers.user.password + KEY);
+
+      axios.post("/user/reset-password", postingUsers.user).then((response) => {
+        resetModel.loading = false;
+        const data = response.data; // data = commonResp
+        if (data.success) {
+          resetModel.loading = false;
+
+          // 重新加载列表
+          handleQuery({
+            page: gettingUsers.pagination.current,
+            size: gettingUsers.pagination.pageSize,
+          });
+        } else {
+          message.error(data.message);
+        }
+      });
+    };
+
+    const resetPassword = (record: any) => {
+      resetModel.visible = true;
+      postingUsers.user = Tool.copy(record);
+      postingUsers.user.password = "";
+
+    };
+
+
     const columns = [
       {title: '登陆名', dataIndex: 'loginName'},
       {title: '名称', dataIndex: 'name'},
@@ -227,11 +273,14 @@ export default defineComponent({
       columns,
       postingUsers,
       handleQuery,
+      handleResetModalOk,
+      resetPassword,
 
       handleTableChange,
 
 
       model,
+      resetModel,
       handleModelOk,
       edit,
       add,

@@ -9,6 +9,7 @@ import com.matt.wiki.exception.BusinessException;
 import com.matt.wiki.exception.BusinessExceptionCode;
 import com.matt.wiki.mapper.UserMapper;
 import com.matt.wiki.req.UserQueryReq;
+import com.matt.wiki.req.UserResetPasswordReq;
 import com.matt.wiki.req.UserSaveReq;
 import com.matt.wiki.resp.PageResp;
 import com.matt.wiki.resp.UserQueryResp;
@@ -113,4 +114,9 @@ public class UserService {
         userMapper.deleteByPrimaryKey(id);
     }
 
-}
+    public void resetPassword(UserResetPasswordReq userResetPasswordReq) {
+        User user = CopyUtil.copy(userResetPasswordReq, User.class);
+        userMapper.updateByPrimaryKeySelective(user);
+    }
+
+    }

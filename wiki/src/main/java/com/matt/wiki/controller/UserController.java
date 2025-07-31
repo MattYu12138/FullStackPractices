@@ -1,6 +1,7 @@
 package com.matt.wiki.controller;
 
 import com.matt.wiki.req.UserQueryReq;
+import com.matt.wiki.req.UserResetPasswordReq;
 import com.matt.wiki.req.UserSaveReq;
 import com.matt.wiki.resp.CommonResp;
 import com.matt.wiki.resp.PageResp;
@@ -40,6 +41,15 @@ public class UserController {
         CommonResp resp = new CommonResp<>();
         userService.delete(id);
         return resp;
+    }
+
+    @PostMapping("/reset-password")
+    public CommonResp resetPassword(@RequestBody @Valid UserResetPasswordReq userResetPasswordReq){
+        userResetPasswordReq.setPassword(DigestUtils.md5DigestAsHex(userResetPasswordReq.getPassword().getBytes()));
+        CommonResp resp = new CommonResp<>();
+        userService.resetPassword(userResetPasswordReq);
+        return resp;
+
     }
 
 }

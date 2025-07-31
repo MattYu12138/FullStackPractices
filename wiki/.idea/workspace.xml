@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserResetPasswordReq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserSaveReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/req/UserSaveReq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/global.d.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/admin/admin-user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/admin/admin-user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -266,14 +267,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00063" summary="更改wiki为gettingEbooks，并新增查询postingEbooks">
-      <option name="closed" value="true" />
-      <created>1753521506165</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1753521506165</updated>
     </task>
     <task id="LOCAL-00064" summary="用表格替换搜索框">
       <option name="closed" value="true" />
@@ -659,7 +652,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753929787317</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion">
+      <option name="closed" value="true" />
+      <created>1753930716819</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1753930716819</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,8 +716,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="进入doc管理页面会传进ebookId进行确认" />
-    <MESSAGE value="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点" />
     <MESSAGE value="bug:页面没有成功实现删除警告功能" />
     <MESSAGE value="安装wangEditor" />
     <MESSAGE value="正在添加wangEditor&#10;bug:无法使用ref，当用.value的时候编译报错" />
@@ -740,7 +739,9 @@
     <MESSAGE value="user表设计和持久层生成,初步完成user页面" />
     <MESSAGE value="修复一个提交的时候用户已存在的bug" />
     <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
+    <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截. 修改的时候不修改密码" />
+    <MESSAGE value="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

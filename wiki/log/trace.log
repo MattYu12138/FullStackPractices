@@ -1559,3 +1559,692 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'a
 2025-07-31 12:57:56.301 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总页数:1
 2025-07-31 12:57:56.302 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
 2025-07-31 12:57:56.302 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：804 ms -------------
+2025-07-31 12:59:15.122 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31 12:59:15.127 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 12:59:15.127 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 12:59:15.130 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 12:59:15.130 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 12:59:15.133 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-07-31 12:59:15.140 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-07-31 12:59:15.202 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 12:59:15.202 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 12:59:15.323 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 12:59:15.324 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 12:59:15.324 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 12:59:15.324 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 12:59:15.328 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 12:59:15.328 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 125 ms
+2025-07-31 12:59:15.551 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 12:59:15.557 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 12:59:15.558 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 12:59:15.563 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.377 seconds (process running for 430.648)
+2025-07-31 12:59:15.565 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 12:59:15.565 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 12:59:15.566 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:00:02.430 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-31 13:00:02.432 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:00:02.432 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:02.435 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:00:02.435 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:02.488 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:00:02.488 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:00:02.599 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:00:02.599 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:02.599 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:00:02.599 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:00:02.602 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:00:02.602 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 113 ms
+2025-07-31 13:00:02.756 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:00:02.761 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:02.762 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:00:02.765 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.291 seconds (process running for 477.849)
+2025-07-31 13:00:02.766 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:00:02.766 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:00:02.766 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:00:30.457 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31 13:00:30.473 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:00:30.478 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:30.483 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:00:30.484 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:30.596 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:00:30.596 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:00:30.752 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:00:30.752 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:30.752 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:00:30.752 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:00:30.756 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:00:30.756 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 159 ms
+2025-07-31 13:00:30.975 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:00:30.980 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:00:30.981 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:00:30.983 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.403 seconds (process running for 506.067)
+2025-07-31 13:00:30.984 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:00:30.984 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:00:30.984 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:01:18.864 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-07-31 13:01:18.868 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:01:18.868 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:01:18.870 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:01:18.870 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:01:18.927 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:01:18.927 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:01:19.044 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:01:19.045 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:01:19.045 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:01:19.045 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:01:19.049 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:01:19.049 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 121 ms
+2025-07-31 13:01:19.225 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:01:19.230 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:01:19.230 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:01:19.233 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.318 seconds (process running for 554.316)
+2025-07-31 13:01:19.233 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:01:19.233 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:01:19.234 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:02:09.172 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-07-31 13:02:09.173 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:02:09.173 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:02:09.175 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:02:09.175 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:02:09.216 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:02:09.216 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:02:09.317 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:02:09.317 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:02:09.317 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:02:09.317 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:02:09.320 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:02:09.320 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 104 ms
+2025-07-31 13:02:09.526 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:02:09.533 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:02:09.534 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:02:09.536 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.33 seconds (process running for 604.619)
+2025-07-31 13:02:09.537 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:02:09.537 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:02:09.537 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:03:14.638 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-07-31 13:03:14.640 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:03:14.641 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:14.642 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:03:14.642 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:14.686 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:03:14.686 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:03:14.790 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:03:14.791 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:14.791 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:03:14.791 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:03:14.794 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:03:14.794 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 107 ms
+2025-07-31 13:03:14.952 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:03:14.957 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:14.958 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:03:14.960 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.286 seconds (process running for 670.041)
+2025-07-31 13:03:14.960 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:03:14.960 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:03:14.961 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:03:42.601 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+2025-07-31 13:03:42.601 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:03:42.602 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:42.603 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:03:42.603 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:42.651 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:03:42.651 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:03:42.847 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:03:42.848 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:42.848 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:03:42.848 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:03:42.851 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:03:42.851 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 199 ms
+2025-07-31 13:03:43.177 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:03:43.183 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:03:43.184 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:03:43.187 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.548 seconds (process running for 698.268)
+2025-07-31 13:03:43.187 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:03:43.187 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:03:43.188 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:08:37.512 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:08:37.514 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:08:37.537 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 22 ms
+2025-07-31 13:08:37.570 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:08:37.571 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:08:37.571 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:08:37.571 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:08:37.572 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:08:37.577 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-2 - Starting...
+2025-07-31 13:08:40.469 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40881855
+2025-07-31 13:08:40.469 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-2 - Start completed.
+2025-07-31 13:08:40.470 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:08:40.470 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:08:40.707 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:08:40.707 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:08:40.707 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:08:40.708 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:08:40.708 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:08:40.944 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:08:40.944 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:08:40.944 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:08:40.945 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:08:40.945 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:08:40.949 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:08:40.949 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：3379 ms -------------
+2025-07-31 13:08:40.957 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:08:40.957 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:08:40.957 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:08:40.957 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:08:40.957 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:08:40.959 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:08:40.959 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:08:41.195 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:08:41.195 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:08:41.195 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:08:41.195 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:08:41.196 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:08:41.432 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:08:41.432 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:08:41.433 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:08:41.433 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:08:41.433 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:08:41.433 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:08:41.433 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：476 ms -------------
+2025-07-31 13:08:41.436 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:08:41.436 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:08:41.437 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:08:41.437 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:08:41.437 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:08:41.437 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:08:41.438 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:08:41.674 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:08:41.674 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:08:41.674 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:08:41.674 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:08:41.674 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:08:41.910 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:08:41.910 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:08:41.910 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:08:41.910 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:08:41.910 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:08:41.910 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:08:41.910 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：474 ms -------------
+2025-07-31 13:14:36.031 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:14:36.034 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:14:36.035 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:14:36.035 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:14:36.035 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:14:36.384 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:14:36.385 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:14:36.621 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:14:36.622 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:14:36.622 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:14:36.623 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:14:36.623 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:14:36.860 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:14:36.860 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:14:36.861 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:14:36.861 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:14:36.861 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:14:36.862 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:14:36.862 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：831 ms -------------
+2025-07-31 13:15:01.538 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:15:01.541 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [c4efeb715d6e8dbdc84df5a2878e431d]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:15:02.844 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:15:02.846 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [863f4a75982d37d7cc45d0152fc9a816]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:15:05.432 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:15:05.434 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [fc66d988b099ac5c22f6941507e2b1c9]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:15:05.881 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:15:05.882 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [f16b5822396339074711e377786978cc]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:16:38.795 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:16:38.799 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:16:38.799 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:16:38.800 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:16:38.800 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:16:39.038 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:16:39.039 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:16:39.274 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:16:39.274 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:16:39.275 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:16:39.275 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:16:39.275 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:16:39.511 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:16:39.511 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:16:39.512 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:16:39.512 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:16:39.512 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:16:39.513 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:16:39.513 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：719 ms -------------
+2025-07-31 13:16:47.738 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:16:47.739 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:16:47.739 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:16:47.739 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:16:47.740 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:16:48.072 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:16:48.073 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:16:48.379 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:16:48.380 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:16:48.381 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:16:48.381 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:16:48.382 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:16:48.618 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:16:48.618 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:16:48.619 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:16:48.619 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:16:48.619 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:16:48.619 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:16:48.619 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：881 ms -------------
+2025-07-31 13:17:59.833 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:17:59.834 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:17:59.835 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:17:59.835 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:17:59.835 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:18:00.163 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:18:00.165 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:18:00.470 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:18:00.471 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:18:00.471 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:18:00.471 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:18:00.471 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:18:00.777 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:18:00.778 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:18:00.778 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:18:00.778 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:18:00.778 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:18:00.779 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:18:00.779 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：946 ms -------------
+2025-07-31 13:18:08.304 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:18:08.305 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [5bb81ed1b92059ff3a4c6dc93b159fd3]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:18:39.548 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:18:39.551 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [95af41a3441eb1e46b0afd60ceed5b63]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:18:42.551 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:18:42.552 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:18:42.552 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:18:42.552 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:18:42.553 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:18:42.792 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:18:42.813 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:18:43.049 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:18:43.050 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:18:43.050 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:18:43.050 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:18:43.050 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:18:43.286 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:18:43.286 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 123456
+2025-07-31 13:18:43.287 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:18:43.287 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:18:43.287 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:18:43.287 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:18:43.287 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：736 ms -------------
+2025-07-31 13:18:43.418 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31 13:18:43.420 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:18:43.422 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:18:43.427 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:18:43.427 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:18:43.430 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2025-07-31 13:18:43.431 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2025-07-31 13:18:43.497 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:18:43.498 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:18:43.639 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:18:43.640 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:18:43.640 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:18:43.640 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:18:43.644 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:18:43.644 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 144 ms
+2025-07-31 13:18:43.838 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:18:43.843 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:18:43.844 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:18:43.847 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.367 seconds (process running for 1598.918)
+2025-07-31 13:18:43.847 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:18:43.847 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:18:43.847 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:18:47.248 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:18:47.249 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:18:47.250 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-07-31 13:18:47.260 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 40
+2025-07-31 13:18:47.262 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [c4efeb715d6e8dbdc84df5a2878e431d]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 40]] ]
+2025-07-31 13:19:20.401 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 40
+2025-07-31 13:19:20.403 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [863f4a75982d37d7cc45d0152fc9a816]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 40]] ]
+2025-07-31 13:19:21.343 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 40
+2025-07-31 13:19:21.344 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [fc66d988b099ac5c22f6941507e2b1c9]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 40]] ]
+2025-07-31 13:19:22.027 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 40
+2025-07-31 13:19:22.028 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.resetPassword(com.matt.wiki.req.UserResetPasswordReq): [Field error in object 'userResetPasswordReq' on field 'password': rejected value [f16b5822396339074711e377786978cc]; codes [Length.userResetPasswordReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userResetPasswordReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 40]] ]
+2025-07-31 13:19:23.623 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31 13:19:23.625 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:19:23.626 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:23.628 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:19:23.628 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:23.685 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:19:23.685 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:19:23.797 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:19:23.797 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:23.797 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:19:23.798 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:19:23.801 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:19:23.801 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 115 ms
+2025-07-31 13:19:24.020 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:19:24.025 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:24.025 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:19:24.028 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.355 seconds (process running for 1639.098)
+2025-07-31 13:19:24.028 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:19:24.028 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:19:24.028 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:19:28.583 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:19:28.583 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:19:28.585 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 2 ms
+2025-07-31 13:19:28.594 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:19:28.594 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/reset-password POST
+2025-07-31 13:19:28.594 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.resetPassword
+2025-07-31 13:19:28.594 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:19:28.596 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"id":1}]
+2025-07-31 13:19:28.599 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-3 - Starting...
+2025-07-31 13:19:31.710 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45e0c930
+2025-07-31 13:19:31.710 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-3 - Start completed.
+2025-07-31 13:19:31.710 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==>  Preparing: update user SET `password` = ? where id = ?
+2025-07-31 13:19:31.712 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==> Parameters: 2123eab6d1dd7611a9fceed3f10e90e0(String), 1(Long)
+2025-07-31 13:19:32.206 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m <==    Updates: 1
+2025-07-31 13:19:32.208 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"success":true}
+2025-07-31 13:19:32.208 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：3614 ms -------------
+2025-07-31 13:19:32.237 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:19:32.237 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:19:32.237 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:19:32.237 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:19:32.238 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:19:32.240 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:19:32.241 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:19:32.486 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:19:32.487 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:19:32.487 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:19:32.488 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:19:32.488 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:19:32.513 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31 13:19:32.514 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:19:32.515 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:32.738 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:19:32.738 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, 2123eab6d1dd7611a9fceed3f10e90e0
+2025-07-31 13:19:32.738 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:19:32.738 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:19:32.738 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:19:32.740 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:19:32.740 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：503 ms -------------
+2025-07-31 13:19:32.800 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:19:32.821 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:32.850 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2025-07-31 13:19:33.549 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2025-07-31 13:19:33.588 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17032 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:19:33.588 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:19:33.684 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:19:33.684 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:33.684 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:19:33.684 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:19:33.687 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:19:33.687 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 98 ms
+2025-07-31 13:19:33.832 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:19:33.837 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:19:33.837 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:19:33.840 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.261 seconds (process running for 1648.91)
+2025-07-31 13:19:33.840 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:19:33.840 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:19:33.840 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:19:39.963 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:19:39.964 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:19:39.966 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 2 ms
+2025-07-31 13:19:39.976 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:19:39.976 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/reset-password POST
+2025-07-31 13:19:39.976 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.resetPassword
+2025-07-31 13:19:39.976 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:19:39.977 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"id":1}]
+2025-07-31 13:19:39.979 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-4 - Starting...
+2025-07-31 13:19:42.565 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6db9edc8
+2025-07-31 13:19:42.566 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-4 - Start completed.
+2025-07-31 13:19:42.566 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==>  Preparing: update user SET `password` = ? where id = ?
+2025-07-31 13:19:42.567 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==> Parameters: aa958ae3002ff8c730d12e619e197711(String), 1(Long)
+2025-07-31 13:19:43.059 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m <==    Updates: 1
+2025-07-31 13:19:43.060 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"success":true}
+2025-07-31 13:19:43.060 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：3085 ms -------------
+2025-07-31 13:19:43.129 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:19:43.130 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:19:43.131 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:19:43.131 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:19:43.138 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:19:43.161 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:19:43.162 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:19:43.407 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:19:43.408 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:19:43.408 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:19:43.408 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:19:43.409 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:19:43.653 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:19:43.654 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:19:43.654 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:19:43.654 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:19:43.654 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:19:43.655 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:19:43.655 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：526 ms -------------
+2025-07-31 13:21:49.285 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:21:49.287 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [c4efeb715d6e8dbdc84df5a2878e431d]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:21:51.188 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:21:51.189 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [863f4a75982d37d7cc45d0152fc9a816]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:21:52.128 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:21:52.129 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [fc66d988b099ac5c22f6941507e2b1c9]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:21:52.694 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:21:52.695 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [f16b5822396339074711e377786978cc]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:21:53.741 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:21:53.742 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [9c0d40d5ad1c0b5c19aeca712eb731bd]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:22:07.983 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:22:07.984 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:22:07.986 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-4 - Shutdown initiated...
+2025-07-31 13:22:07.987 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-4 - Shutdown completed.
+2025-07-31 13:22:09.158 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-07-31 13:22:09.174 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17980 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:22:09.174 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:22:09.198 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-31 13:22:09.199 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-31 13:22:09.696 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:22:09.701 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:22:09.702 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:22:09.702 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:22:09.716 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:22:09.716 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 517 ms
+2025-07-31 13:22:10.115 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:22:10.125 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:22:10.132 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:22:10.137 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.18 seconds (process running for 1.565)
+2025-07-31 13:22:10.138 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:22:10.138 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:22:12.177 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:22:12.177 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:22:12.178 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-07-31 13:22:12.248 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:22:12.257 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [471eac0a8562b0dee81740012b510f25]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:22:40.730 WARN  c.matt.wiki.controller.ControllerExceptionHandler :29   [32m                  [0;39m 参数校验失败：password length must between 6 and 16
+2025-07-31 13:22:40.732 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.matt.wiki.resp.CommonResp com.matt.wiki.controller.UserController.save(com.matt.wiki.req.UserSaveReq): [Field error in object 'userSaveReq' on field 'password': rejected value [f4b3e555be6d666b2865fc4cb2a1e4a8]; codes [Length.userSaveReq.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userSaveReq.password,password]; arguments []; default message [password],20,6]; default message [password length must between 6 and 16]] ]
+2025-07-31 13:22:43.866 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-31 13:22:43.871 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:22:43.873 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:22:43.880 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:22:43.881 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:22:43.991 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 17980 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:22:43.991 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:22:44.347 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:22:44.348 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:22:44.348 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:22:44.348 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:22:44.356 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:22:44.356 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 363 ms
+2025-07-31 13:22:44.780 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:22:44.785 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:22:44.786 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:22:44.789 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.831 seconds (process running for 36.217)
+2025-07-31 13:22:44.790 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-07-31 13:22:44.790 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:22:44.790 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:22:48.120 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:22:48.121 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:22:48.124 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 2 ms
+2025-07-31 13:22:48.196 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:22:48.197 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:22:48.197 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:22:48.198 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:22:48.328 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:22:48.459 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
+2025-07-31 13:22:56.293 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f896e46
+2025-07-31 13:22:56.295 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-07-31 13:22:56.304 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:22:56.324 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:22:56.617 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:22:56.617 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:22:56.620 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:22:56.626 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:22:56.629 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:22:56.680 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 13:22:56.907 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:22:56.907 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:22:56.908 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:22:56.910 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:22:56.910 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:22:56.915 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:22:56.915 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：8720 ms -------------
+2025-07-31 13:22:56.944 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-07-31 13:22:56.948 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-07-31 13:22:58.375 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-07-31 13:22:59.599 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-07-31 13:22:59.619 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 18012 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-07-31 13:22:59.619 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-07-31 13:22:59.648 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-31 13:22:59.648 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-31 13:23:00.169 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-07-31 13:23:00.173 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:23:00.174 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-07-31 13:23:00.174 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 13:23:00.187 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-07-31 13:23:00.187 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 539 ms
+2025-07-31 13:23:00.623 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-07-31 13:23:00.634 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 13:23:00.640 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 13:23:00.645 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.325 seconds (process running for 1.647)
+2025-07-31 13:23:00.647 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-07-31 13:23:00.647 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-07-31 13:23:09.038 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 13:23:09.039 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-07-31 13:23:09.039 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 0 ms
+2025-07-31 13:23:09.115 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:09.115 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/save POST
+2025-07-31 13:23:09.115 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.save
+2025-07-31 13:23:09.115 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:09.140 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"guest","name":"hello"}]
+2025-07-31 13:23:09.163 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
+2025-07-31 13:23:11.754 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4aa203e8
+2025-07-31 13:23:11.756 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-07-31 13:23:11.767 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user WHERE ( login_name = ? )
+2025-07-31 13:23:11.782 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: guest(String)
+2025-07-31 13:23:12.039 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 0
+2025-07-31 13:23:12.043 DEBUG com.matt.wiki.mapper.UserMapper.insert            :135  [32m                  [0;39m ==>  Preparing: insert into user (id, login_name, `name`, `password`) values (?, ?, ?, ?)
+2025-07-31 13:23:12.044 DEBUG com.matt.wiki.mapper.UserMapper.insert            :135  [32m                  [0;39m ==> Parameters: 605963648413863936(Long), guest(String), hello(String), aa958ae3002ff8c730d12e619e197711(String)
+2025-07-31 13:23:12.529 DEBUG com.matt.wiki.mapper.UserMapper.insert            :135  [32m                  [0;39m <==    Updates: 1
+2025-07-31 13:23:12.535 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"success":true}
+2025-07-31 13:23:12.536 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：3422 ms -------------
+2025-07-31 13:23:12.612 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:12.612 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:23:12.612 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:23:12.612 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:12.614 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:23:12.648 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:23:12.648 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:23:12.889 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:23:12.889 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-07-31 13:23:12.890 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:23:12.891 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:23:12.892 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:23:13.133 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:23:13.134 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:23:13.137 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 605963648413863936, guest, hello, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:23:13.138 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-07-31 13:23:13.139 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 2
+2025-07-31 13:23:13.140 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:23:13.142 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":605963648413863936,"loginName":"guest","name":"hello"}],"total":2},"success":true}
+2025-07-31 13:23:13.143 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：531 ms -------------
+2025-07-31 13:23:20.587 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:20.588 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/reset-password POST
+2025-07-31 13:23:20.588 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.resetPassword
+2025-07-31 13:23:20.588 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:20.591 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"id":605963648413863936}]
+2025-07-31 13:23:20.834 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==>  Preparing: update user SET `password` = ? where id = ?
+2025-07-31 13:23:20.835 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==> Parameters: 77c2b54e7d29085aee3e825f35145a4e(String), 605963648413863936(Long)
+2025-07-31 13:23:21.320 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m <==    Updates: 1
+2025-07-31 13:23:21.322 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"success":true}
+2025-07-31 13:23:21.322 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：735 ms -------------
+2025-07-31 13:23:21.341 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:21.341 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:23:21.342 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:23:21.342 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:21.342 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:23:21.344 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:23:21.345 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:23:21.587 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:23:21.588 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-07-31 13:23:21.588 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:23:21.589 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:23:21.589 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:23:21.830 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:23:21.831 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:23:21.832 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 605963648413863936, guest, hello, 77c2b54e7d29085aee3e825f35145a4e
+2025-07-31 13:23:21.832 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-07-31 13:23:21.833 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 2
+2025-07-31 13:23:21.833 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:23:21.834 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":605963648413863936,"loginName":"guest","name":"hello"}],"total":2},"success":true}
+2025-07-31 13:23:21.834 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：493 ms -------------
+2025-07-31 13:23:35.578 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:35.580 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/save POST
+2025-07-31 13:23:35.580 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.save
+2025-07-31 13:23:35.581 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:35.581 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"id":605963648413863936,"loginName":"guest","name":"temp user"}]
+2025-07-31 13:23:35.826 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==>  Preparing: update user SET `name` = ? where id = ?
+2025-07-31 13:23:35.827 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m ==> Parameters: temp user(String), 605963648413863936(Long)
+2025-07-31 13:23:36.329 DEBUG c.m.w.m.UserMapper.updateByPrimaryKeySelective    :135  [32m                  [0;39m <==    Updates: 1
+2025-07-31 13:23:36.331 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"success":true}
+2025-07-31 13:23:36.331 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：753 ms -------------
+2025-07-31 13:23:36.355 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:36.355 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:23:36.356 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:23:36.356 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:36.356 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:23:36.361 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:23:36.361 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:23:36.603 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:23:36.604 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-07-31 13:23:36.604 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:23:36.604 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:23:36.604 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:23:36.944 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:23:36.944 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:23:36.945 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 605963648413863936, guest, temp user, 77c2b54e7d29085aee3e825f35145a4e
+2025-07-31 13:23:36.945 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-07-31 13:23:36.946 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 2
+2025-07-31 13:23:36.946 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:23:36.946 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":605963648413863936,"loginName":"guest","name":"temp user"}],"total":2},"success":true}
+2025-07-31 13:23:36.947 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：592 ms -------------
+2025-07-31 13:23:41.929 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:41.929 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/delete/605963648413863936 DELETE
+2025-07-31 13:23:41.929 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.delete
+2025-07-31 13:23:41.930 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:41.930 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [605963648413863936]
+2025-07-31 13:23:42.268 DEBUG c.matt.wiki.mapper.UserMapper.deleteByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: delete from user where id = ?
+2025-07-31 13:23:42.269 DEBUG c.matt.wiki.mapper.UserMapper.deleteByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 605963648413863936(Long)
+2025-07-31 13:23:42.819 DEBUG c.matt.wiki.mapper.UserMapper.deleteByPrimaryKey  :135  [32m                  [0;39m <==    Updates: 1
+2025-07-31 13:23:42.820 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"success":true}
+2025-07-31 13:23:42.821 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：892 ms -------------
+2025-07-31 13:23:42.833 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-07-31 13:23:42.834 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-07-31 13:23:42.834 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-07-31 13:23:42.835 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-07-31 13:23:42.835 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-07-31 13:23:42.839 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-07-31 13:23:42.839 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-07-31 13:23:43.190 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-07-31 13:23:43.190 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 1
+2025-07-31 13:23:43.190 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:23:43.190 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-07-31 13:23:43.191 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-07-31 13:23:43.497 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-07-31 13:23:43.498 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-07-31 13:23:43.498 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-07-31 13:23:43.498 INFO  com.matt.wiki.service.UserService                 :49   [32m                  [0;39m 总行数: 1
+2025-07-31 13:23:43.499 INFO  com.matt.wiki.service.UserService                 :50   [32m                  [0;39m 总页数:1
+2025-07-31 13:23:43.499 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"}],"total":1},"success":true}
+2025-07-31 13:23:43.499 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：666 ms -------------
