@@ -39,14 +39,14 @@
               <a-button type="primary" @click="resetPassword(record)">
                 重置密码
               </a-button>
-              <a-button type="primary" @click="edit(record)">编辑</a-button>
+              <a-button type="primary" @click="edit(record)">Edit</a-button>
               <a-popconfirm
                   title="Are you sure delete this task?"
                   ok-text="Yes"
                   cancel-text="No"
                   @confirm="handleDelete(record.id)"
               >
-                <a-button type="default">删除</a-button>
+                <a-button type="default">Delete</a-button>
               </a-popconfirm>
             </a-space>
           </template>

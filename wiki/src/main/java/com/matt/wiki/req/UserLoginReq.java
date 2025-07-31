@@ -3,19 +3,23 @@ package com.matt.wiki.req;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public class UserResetPasswordReq {
-    private Long id;
+public class UserLoginReq {
+
+    @NotNull(message = "loginName can not be null")
+    private String loginName;
+
     @NotNull(message = "password can not be null")
 //    @Length(min = 6, max = 32, message = "password length must between 6 and 32")
-    @Pattern(regexp = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$", message = "【密码】至少包含 数字和英文，长度6-20")
+    @Pattern(regexp = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$", message = "【密码】规则不正确")
     private String password;
 
-    public Long getId() {
-        return id;
+
+    public String getLoginName() {
+        return loginName;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
     public String getPassword() {
@@ -32,7 +36,7 @@ public class UserResetPasswordReq {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
+        sb.append(", loginName=").append(loginName);
         sb.append(", password=").append(password);
         sb.append("]");
         return sb.toString();
