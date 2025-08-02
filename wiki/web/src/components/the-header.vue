@@ -25,7 +25,11 @@
     </a-menu>
 
     <div class="right-actions">
-      <a class="login-btn" @click="showLoginModal">Login</a>
+      <template v-if="user.token">
+        <span class="user-text">Hello, {{ user.loginName }}</span>
+        <a class="login-btn" @click="logout">Logout</a>
+      </template>
+      <a v-else class="login-btn" @click="showLoginModal">Login</a>
     </div>
 
     <a-modal
@@ -142,6 +146,11 @@ export default defineComponent({
   color: #fff;
   cursor: pointer;
   padding: 0 16px;         /* 需要更贴边可减小或设为 0 */
+}
+
+.user-text {
+  color: #fff;
+  padding: 0 16px;
 }
 
 </style>
