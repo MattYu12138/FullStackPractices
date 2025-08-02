@@ -25,8 +25,8 @@
     </a-menu>
 
     <div class="right-actions">
-      <template v-if="user.token">
-        <span class="user-text">Hello, {{ user.loginName }}</span>
+      <template v-if="user.id">
+        <span class="user-text">Hello, {{ user.name }}</span>
         <a class="login-btn" @click="logout">Logout</a>
       </template>
       <a v-else class="login-btn" @click="showLoginModal">Login</a>
