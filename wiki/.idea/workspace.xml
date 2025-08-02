@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="使用vuex将变量变为全局信息">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加删除功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/the-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/the-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,22 +257,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00073" summary="首页显示分类菜单">
-      <option name="closed" value="true" />
-      <created>1753560043206</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1753560043206</updated>
-    </task>
-    <task id="LOCAL-00074" summary="首页显示分类菜单">
-      <option name="closed" value="true" />
-      <created>1753560046882</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1753560046882</updated>
     </task>
     <task id="LOCAL-00075" summary="修复bug //加载完分类之后再加载电子书，防止异步导致错误">
       <option name="closed" value="true" />
@@ -651,7 +634,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754178252462</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="解决数据丢失的问题，vuex+sessionStorage">
+      <option name="closed" value="true" />
+      <created>1754178635628</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1754178635628</updated>
+    </task>
+    <task id="LOCAL-00123" summary="增加删除功能">
+      <option name="closed" value="true" />
+      <created>1754179028369</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1754179028369</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,8 +706,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="成功切换表单的数据显示，但是会返回500错误" />
-    <MESSAGE value="修复500错" />
     <MESSAGE value="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。" />
     <MESSAGE value="修复Bug：会查询电子书下所有页面。" />
     <MESSAGE value="进入文档时候，能直接获取下拉框内容，不需要点击新增" />
@@ -732,7 +729,9 @@
     <MESSAGE value="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在" />
     <MESSAGE value="前端显示登录信息，但是刷新后就没有了" />
     <MESSAGE value="使用vuex将变量变为全局信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用vuex将变量变为全局信息" />
+    <MESSAGE value="解决数据丢失的问题，vuex+sessionStorage" />
+    <MESSAGE value="增加删除功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加删除功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

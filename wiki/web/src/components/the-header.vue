@@ -22,15 +22,30 @@
       <a-menu-item key="/about">
         <router-link to="/about">About Us</router-link>
       </a-menu-item>
+
+
     </a-menu>
 
     <div class="right-actions">
-      <template v-if="user.id">
-        <span class="user-text">Hello, {{ user.name }}</span>
-        <a class="login-btn" @click="logout">Logout</a>
-      </template>
-      <a v-else class="login-btn" @click="showLoginModal">Login</a>
+      <a class="login-menu" v-show="user.id">
+        <span>您好：{{user.name}}</span>
+      </a>
+      <a class="login-menu" v-show="!user.id" @click="showLoginModal">
+        <span>登录</span>
+      </a>
+      <a-popconfirm
+          title="确认退出登录?"
+          ok-text="是"
+          cancel-text="否"
+          @confirm="logout()"
+      >
+        <a class="login-menu" v-show="user.id">
+          <span>退出登录</span>
+        </a>
+      </a-popconfirm>
     </div>
+
+
 
     <a-modal
         title="登录"
@@ -142,13 +157,13 @@ export default defineComponent({
   align-items: center;
   height: 64px;
 }
-.login-btn {
+.login-menu {
   color: #fff;
   cursor: pointer;
   padding: 0 16px;         /* 需要更贴边可减小或设为 0 */
 }
 
-.user-text {
+.login-menu {
   color: #fff;
   padding: 0 16px;
 }
