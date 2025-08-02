@@ -1,9 +1,21 @@
 package com.matt.wiki.resp;
 
-public class UserLoginResp {
+import java.io.Serializable;
+
+public class UserLoginResp implements Serializable {
     private Long id;
 
     private String loginName;
+
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     private String name;
     public Long getId() {
@@ -33,14 +45,11 @@ public class UserLoginResp {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", loginName=").append(loginName);
-        sb.append(", name=").append(name);
-        sb.append("]");
-        return sb.toString();
+        return "UserLoginResp{" +
+                "id=" + id +
+                ", loginName='" + loginName + '\'' +
+                ", token='" + token + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

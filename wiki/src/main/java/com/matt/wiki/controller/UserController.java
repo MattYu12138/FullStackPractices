@@ -1,5 +1,6 @@
 package com.matt.wiki.controller;
 
+import com.matt.wiki.aspect.LogAspect;
 import com.matt.wiki.req.UserLoginReq;
 import com.matt.wiki.req.UserQueryReq;
 import com.matt.wiki.req.UserResetPasswordReq;
@@ -9,10 +10,16 @@ import com.matt.wiki.resp.PageResp;
 import com.matt.wiki.resp.UserLoginResp;
 import com.matt.wiki.resp.UserQueryResp;
 import com.matt.wiki.service.UserService;
+import com.matt.wiki.util.SnowFlake;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.concurrent.TimeUnit;
 
 
 @RequestMapping("/user")
@@ -20,6 +27,15 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Resource
     private UserService userService;
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    @Resource
+    private SnowFlake snowFlake;
+
+    private final static Logger LOG = LoggerFactory.getLogger(LogAspect.class);
+
 
     @GetMapping("/list")
     public CommonResp list(@Valid UserQueryReq userQueryReq){
@@ -58,6 +74,13 @@ public class UserController {
         req.setPassword(DigestUtils.md5DigestAsHex(req.getPassword().getBytes()));
         CommonResp<UserLoginResp> resp = new CommonResp<>();
         UserLoginResp userLoginResp = userService.login(req);
+        Long token = snowFlake.nextId();
+
+//        generate token, putting into userLoginResp
+
+        userLoginResp.setToken(token.toString());
+        redisTemplate.opsForValue().set(token, userLoginResp, 3600 *24, TimeUnit.SECONDS);
+        LOG.info("generated token: {}", token);
         resp.setContent(userLoginResp);
         return resp;
     }

@@ -1,14 +1,14 @@
 package com.matt.wiki.req;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 
 public class UserLoginReq {
 
-    @NotNull(message = "loginName can not be null")
+    @NotEmpty(message = "loginName can not be null")
     private String loginName;
 
-    @NotNull(message = "password can not be null")
+    @NotEmpty(message = "password can not be null")
 //    @Length(min = 6, max = 32, message = "password length must between 6 and 32")
     @Pattern(regexp = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,32}$", message = "【密码】规则不正确")
     private String password;
