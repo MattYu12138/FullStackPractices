@@ -4,7 +4,7 @@
     <a-menu
         theme="dark"
         mode="horizontal"
-        :style="{ lineHeight: '64px' , flex: 1}"
+        :style="{ lineHeight: '64px'}"
     >
       <a-menu-item key="/">
         <router-link to="/">Home Page</router-link>
@@ -15,34 +15,16 @@
       <a-menu-item key="/admin/ebook">
         <router-link to="/admin/ebook">Ebook Manage Page</router-link>
       </a-menu-item>
-
       <a-menu-item key="/admin/category">
         <router-link to="/admin/category">Category Manage Page</router-link>
       </a-menu-item>
       <a-menu-item key="/about">
         <router-link to="/about">About Us</router-link>
       </a-menu-item>
+      <a class="login-menu" @click="showLoginModal">
+        <span>Login</span>
+      </a>
     </a-menu>
-    <div class="login-area">
-      <a-popconfirm
-          title="确认退出登录?"
-          ok-text="是"
-          cancel-text="否"
-          @confirm="logout()"
-          v-if="loginConfig.user.id"
-      >
-        <a class="login-menu">
-          <span>退出登录</span>
-        </a>
-      </a-popconfirm>
-
-      <a class="login-menu" v-show="loginConfig.user.id">
-        <span>您好：{{loginConfig.user.name}}</span>
-      </a>
-      <a class="login-menu" v-show="!loginConfig.user.id" @click="showLoginModal">
-        <span>登录</span>
-      </a>
-    </div>
 
     <a-modal
         title="登录"
@@ -142,13 +124,9 @@ export default defineComponent({
 </script>
 
 <style>
-.login-area {
-  margin-left: auto;
-}
-
 .login-menu {
   color: white;
-  margin-left: 16px;
+  float: right;
 }
 </style>
 
