@@ -22,24 +22,27 @@
       <a-menu-item key="/about">
         <router-link to="/about">About Us</router-link>
       </a-menu-item>
+    </a-menu>
 
+    <div class="login-area">
       <a-popconfirm
           title="确认退出登录?"
           ok-text="是"
           cancel-text="否"
           @confirm="logout()"
+          v-if="user.id"
       >
-        <a class="login-menu" v-show="loginConfig.user.id">
+        <a class="login-menu">
           <span>退出登录</span>
         </a>
       </a-popconfirm>
-      <a class="login-menu" v-show="loginConfig.user.id">
-        <span>您好：{{loginConfig.user.name}}</span>
+      <a class="login-menu" v-if="user.id">
+        <span>您好：{{user.name}}</span>
       </a>
-      <a class="login-menu" v-show="!loginConfig.user.id" @click="showLoginModal">
+      <a class="login-menu" v-else @click="showLoginModal">
         <span>登录</span>
       </a>
-    </a-menu>
+    </div>
 
 
     <a-modal
@@ -127,7 +130,7 @@ export default defineComponent({
       });
     };
 
-    return {
+  return {
       showLoginModal,
       loginConfig,
       login,
@@ -140,8 +143,11 @@ export default defineComponent({
 </script>
 
 <style>
-.login-menu{
+.login-area {
   float: right;
+}
+.login-menu {
   color: white;
+  margin-left: 16px;
 }
 </style>
