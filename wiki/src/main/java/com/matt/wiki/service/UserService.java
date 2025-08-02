@@ -127,7 +127,7 @@ public class UserService {
         if(ObjectUtils.isEmpty(userDB)){
 //            用户名不存在
             LOG.warn("User not found for login name: " + req.getLoginName());
-            throw new BusinessException(BusinessExceptionCode.USER_LOGIN_NAME_EXIST);
+            throw new BusinessException(BusinessExceptionCode.LOGIN_USER_ERROR);
         }else{
             if(userDB.getPassword().equals(req.getPassword())){
 //                登录成功
@@ -136,7 +136,7 @@ public class UserService {
             }else{
 //                密码不对
                 LOG.warn("密码不对，输入密码：{}, 数据库密码：{}",req.getPassword(), userDB.getPassword());
-                throw new BusinessException(BusinessExceptionCode.USER_LOGIN_NAME_EXIST);
+                throw new BusinessException(BusinessExceptionCode.LOGIN_USER_ERROR);
 
             }
         }
