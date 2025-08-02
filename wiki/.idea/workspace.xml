@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="前端显示登录信息，但是刷新后就没有了">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/the-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/the-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,14 +259,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00071" summary="修复bug，防止更改后，在表单还是显示原来数值">
-      <option name="closed" value="true" />
-      <created>1753557922512</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1753557922512</updated>
     </task>
     <task id="LOCAL-00072" summary="删除侧边栏">
       <option name="closed" value="true" />
@@ -649,7 +644,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754168782153</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="前端显示登录信息，但是刷新后就没有了">
+      <option name="closed" value="true" />
+      <created>1754177508322</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1754177508322</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,7 +708,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="布局美化" />
     <MESSAGE value="添加后端查询，但是报400错" />
     <MESSAGE value="成功切换表单的数据显示，但是会返回500错误" />
     <MESSAGE value="修复500错" />
@@ -730,7 +732,8 @@
     <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息" />
     <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。" />
     <MESSAGE value="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在" />
+    <MESSAGE value="前端显示登录信息，但是刷新后就没有了" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端显示登录信息，但是刷新后就没有了" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

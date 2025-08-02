@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+const store = createStore({
   state: {
     user: {}
   },
@@ -14,3 +14,5 @@ export default createStore({
   modules: {
   }
 })
+
+export default store;
