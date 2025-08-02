@@ -143,7 +143,7 @@ export default defineComponent({
 
 <style>
 .login-area {
-  float: right;
+  margin-left: auto;
 }
 
 .login-menu {
