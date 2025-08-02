@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置header的登陆弹窗，但显示位置不正确。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/components/the-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,14 +263,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00069" summary="暂时显示不出分类">
-      <option name="closed" value="true" />
-      <created>1753555862122</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1753555862122</updated>
     </task>
     <task id="LOCAL-00070" summary="成功实现”分类“的文字转换">
       <option name="closed" value="true" />
@@ -655,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754167075205</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="配置header的登陆弹窗，但显示位置不正确。">
+      <option name="closed" value="true" />
+      <created>1754167910501</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1754167910501</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +712,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="文档内容表设计，持久层生成" />
     <MESSAGE value="左右布局，方便编辑" />
     <MESSAGE value="布局美化" />
     <MESSAGE value="添加后端查询，但是报400错" />
@@ -736,7 +736,8 @@
     <MESSAGE value="解决重置密码弹窗不消除问题" />
     <MESSAGE value="用户登录后端实现" />
     <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息" />
+    <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置header的登陆弹窗，但显示位置不正确。" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

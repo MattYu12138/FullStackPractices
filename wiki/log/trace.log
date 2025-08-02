@@ -823,3 +823,241 @@
 2025-08-03 06:37:47.839 INFO  com.matt.wiki.service.UserService                 :52   [32m                  [0;39m 总页数:1
 2025-08-03 06:37:47.839 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":606939208078200832,"loginName":"test","name":"ceshi"}],"total":2},"success":true}
 2025-08-03 06:37:47.839 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：525 ms -------------
+2025-08-03 06:43:13.429 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:43:13.431 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-08-03 06:43:13.431 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-08-03 06:43:13.431 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:43:13.432 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-08-03 06:43:13.684 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-08-03 06:43:13.684 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:43:13.991 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 06:43:13.991 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-08-03 06:43:13.992 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 06:43:13.992 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-08-03 06:43:13.992 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-08-03 06:43:14.298 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 06:43:14.298 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-08-03 06:43:14.299 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 06:43:14.299 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-08-03 06:43:14.299 INFO  com.matt.wiki.service.UserService                 :51   [32m                  [0;39m 总行数: 2
+2025-08-03 06:43:14.299 INFO  com.matt.wiki.service.UserService                 :52   [32m                  [0;39m 总页数:1
+2025-08-03 06:43:14.299 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":606939208078200832,"loginName":"test","name":"ceshi"}],"total":2},"success":true}
+2025-08-03 06:43:14.299 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：870 ms -------------
+2025-08-03 06:43:51.771 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:43:51.771 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-08-03 06:43:51.771 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-08-03 06:43:51.771 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:43:51.772 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-08-03 06:43:52.054 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-08-03 06:43:52.058 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:43:52.361 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 06:43:52.361 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-08-03 06:43:52.361 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 06:43:52.362 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-08-03 06:43:52.363 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-08-03 06:43:52.667 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 06:43:52.667 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-08-03 06:43:52.668 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 06:43:52.668 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-08-03 06:43:52.668 INFO  com.matt.wiki.service.UserService                 :51   [32m                  [0;39m 总行数: 2
+2025-08-03 06:43:52.668 INFO  com.matt.wiki.service.UserService                 :52   [32m                  [0;39m 总页数:1
+2025-08-03 06:43:52.669 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":606939208078200832,"loginName":"test","name":"ceshi"}],"total":2},"success":true}
+2025-08-03 06:43:52.669 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：898 ms -------------
+2025-08-03 06:49:34.653 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:49:34.654 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-08-03 06:49:34.654 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-08-03 06:49:34.654 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:49:34.655 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-08-03 06:49:34.893 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-08-03 06:49:34.895 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:49:35.132 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 06:49:35.132 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-08-03 06:49:35.133 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 06:49:35.133 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-08-03 06:49:35.134 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-08-03 06:49:35.371 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 06:49:35.371 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-08-03 06:49:35.372 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 06:49:35.372 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-08-03 06:49:35.373 INFO  com.matt.wiki.service.UserService                 :51   [32m                  [0;39m 总行数: 2
+2025-08-03 06:49:35.373 INFO  com.matt.wiki.service.UserService                 :52   [32m                  [0;39m 总页数:1
+2025-08-03 06:49:35.374 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":606939208078200832,"loginName":"test","name":"ceshi"}],"total":2},"success":true}
+2025-08-03 06:49:35.374 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：721 ms -------------
+2025-08-03 06:51:05.143 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:51:05.147 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/list GET
+2025-08-03 06:51:05.147 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.list
+2025-08-03 06:51:05.147 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:51:05.147 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"","page":1,"size":5}]
+2025-08-03 06:51:05.386 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM user
+2025-08-03 06:51:05.387 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:51:05.718 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 06:51:05.719 TRACE c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :141  [32m                  [0;39m <==        Row: 2
+2025-08-03 06:51:05.719 DEBUG c.m.wiki.mapper.UserMapper.selectByExample_COUNT  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 06:51:05.720 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user LIMIT ?
+2025-08-03 06:51:05.720 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: 5(Integer)
+2025-08-03 06:51:06.024 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 06:51:06.024 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 1, admin, 测试, aa958ae3002ff8c730d12e619e197711
+2025-08-03 06:51:06.025 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 06:51:06.025 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 2
+2025-08-03 06:51:06.026 INFO  com.matt.wiki.service.UserService                 :51   [32m                  [0;39m 总行数: 2
+2025-08-03 06:51:06.026 INFO  com.matt.wiki.service.UserService                 :52   [32m                  [0;39m 总页数:1
+2025-08-03 06:51:06.027 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"id":1,"loginName":"admin","name":"测试"},{"id":606939208078200832,"loginName":"test","name":"ceshi"}],"total":2},"success":true}
+2025-08-03 06:51:06.027 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：884 ms -------------
+2025-08-03 06:58:52.388 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:58:52.390 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 06:58:52.390 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 06:58:52.390 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:58:52.390 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 06:58:52.665 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 06:58:52.666 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:58:52.973 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 06:58:52.973 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 06:58:52.974 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 06:58:52.974 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 06:58:52.975 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 06:58:52.976 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 06:58:52.976 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 06:58:52.976 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 06:58:52.976 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 06:58:52.976 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 06:58:52.976 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 06:58:52.976 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 06:58:52.981 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 06:58:52.981 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：593 ms -------------
+2025-08-03 06:58:55.607 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:58:55.608 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 06:58:55.609 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 06:58:55.609 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:58:55.609 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 06:58:55.847 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 06:58:55.847 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:58:56.084 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 06:58:56.084 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 06:58:56.085 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 06:58:56.085 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 06:58:56.085 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 06:58:56.085 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 06:58:56.085 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 06:58:56.085 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 06:58:56.086 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 06:58:56.087 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 06:58:56.087 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 06:58:56.087 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 06:58:56.093 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 06:58:56.094 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：487 ms -------------
+2025-08-03 06:59:00.140 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 06:59:00.141 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 06:59:00.141 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 06:59:00.141 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 06:59:00.141 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 06:59:00.447 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 06:59:00.448 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 06:59:00.684 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 06:59:00.685 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 06:59:00.685 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 06:59:00.685 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 06:59:00.685 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 06:59:00.685 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 06:59:00.686 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 06:59:00.686 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 06:59:00.686 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 06:59:00.686 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 06:59:00.686 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 06:59:00.687 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 06:59:00.687 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 06:59:00.687 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 06:59:00.687 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 06:59:00.687 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 06:59:00.687 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 06:59:00.688 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 06:59:00.689 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 06:59:00.689 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：549 ms -------------
+2025-08-03 07:00:27.918 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 07:00:27.919 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 07:00:27.919 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 07:00:27.919 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 07:00:27.919 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 07:00:28.156 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 07:00:28.156 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 07:00:28.410 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 07:00:28.411 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 07:00:28.411 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 07:00:28.411 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 07:00:28.412 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 07:00:28.413 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 07:00:28.413 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 07:00:28.413 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 07:00:28.413 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 07:00:28.413 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 07:00:28.413 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 07:00:28.414 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 07:00:28.415 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 07:00:28.415 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：497 ms -------------
+2025-08-03 07:04:57.140 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 07:04:57.141 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/login POST
+2025-08-03 07:04:57.142 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.login
+2025-08-03 07:04:57.142 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 07:04:57.142 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"test"}]
+2025-08-03 07:04:57.380 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user WHERE ( login_name = ? )
+2025-08-03 07:04:57.381 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: test(String)
+2025-08-03 07:04:57.619 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 07:04:57.619 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 07:04:57.619 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 07:04:57.621 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"id":606939208078200832,"loginName":"test","name":"ceshi"},"success":true}
+2025-08-03 07:04:57.621 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：481 ms -------------
+2025-08-03 07:05:09.544 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 07:05:09.545 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/login POST
+2025-08-03 07:05:09.546 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.login
+2025-08-03 07:05:09.546 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 07:05:09.546 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"test"}]
+2025-08-03 07:05:09.783 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user WHERE ( login_name = ? )
+2025-08-03 07:05:09.783 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: test(String)
+2025-08-03 07:05:10.118 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 07:05:10.119 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 07:05:10.119 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 07:05:10.119 WARN  com.matt.wiki.service.UserService                 :138  [32m                  [0;39m 密码不对，输入密码：51d6a530fa191428c43cd9e916854783, 数据库密码：e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 07:05:10.121 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2025-08-03 07:05:10.123 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [com.matt.wiki.exception.BusinessException: 用户名不存在或密码错误]
+2025-08-03 07:05:14.941 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 07:05:14.942 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/login POST
+2025-08-03 07:05:14.942 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.login
+2025-08-03 07:05:14.942 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 07:05:14.942 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"test"}]
+2025-08-03 07:05:15.236 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user WHERE ( login_name = ? )
+2025-08-03 07:05:15.237 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: test(String)
+2025-08-03 07:05:15.474 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 07:05:15.474 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 07:05:15.474 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 07:05:15.475 WARN  com.matt.wiki.service.UserService                 :138  [32m                  [0;39m 密码不对，输入密码：598b12f60947fcec026a06caa257b35a, 数据库密码：e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 07:05:15.475 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m                  [0;39m 业务异常：用户名不存在或密码错误
+2025-08-03 07:05:15.476 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [com.matt.wiki.exception.BusinessException: 用户名不存在或密码错误]
+2025-08-03 07:05:22.088 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 07:05:22.089 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/user/login POST
+2025-08-03 07:05:22.089 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.UserController.login
+2025-08-03 07:05:22.089 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 07:05:22.089 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"loginName":"test"}]
+2025-08-03 07:05:22.405 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==>  Preparing: select id, login_name, `name`, `password` from user WHERE ( login_name = ? )
+2025-08-03 07:05:22.405 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m ==> Parameters: test(String)
+2025-08-03 07:05:22.713 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==    Columns: id, login_name, name, password
+2025-08-03 07:05:22.721 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m                  [0;39m <==        Row: 606939208078200832, test, ceshi, e70e2222a9d67c4f2eae107533359aa4
+2025-08-03 07:05:22.721 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 07:05:22.722 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"id":606939208078200832,"loginName":"test","name":"ceshi"},"success":true}
+2025-08-03 07:05:22.722 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：634 ms -------------

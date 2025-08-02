@@ -4,6 +4,7 @@
     <a-menu
         theme="dark"
         mode="horizontal"
+        class="main-menu"
         :style="{ lineHeight: '64px'}"
     >
       <a-menu-item key="/">
@@ -21,10 +22,11 @@
       <a-menu-item key="/about">
         <router-link to="/about">About Us</router-link>
       </a-menu-item>
-      <a class="login-menu" @click="showLoginModal">
-        <span>Login</span>
-      </a>
     </a-menu>
+
+    <div class="right-actions">
+      <a class="login-btn" @click="showLoginModal">Login</a>
+    </div>
 
     <a-modal
         title="登录"
@@ -124,10 +126,24 @@ export default defineComponent({
 </script>
 
 <style>
-.login-menu {
-  color: white;
-  float: right;
+.header {
+  display: flex;
+  align-items: center;
 }
+.main-menu {
+  flex: 1;                 /* 占满中间空间，把右侧顶到最右 */
+}
+.right-actions {
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+.login-btn {
+  color: #fff;
+  cursor: pointer;
+  padding: 0 16px;         /* 需要更贴边可减小或设为 0 */
+}
+
 </style>
 
 
