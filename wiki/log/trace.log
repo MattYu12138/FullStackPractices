@@ -10583,3 +10583,366 @@ Caused by: java.lang.IllegalArgumentException: Mapped Statements collection alre
 2025-08-03 18:42:01.670 INFO  com.matt.wiki.service.EbookService                :50   [32m                  [0;39m 总页数:0
 2025-08-03 18:42:01.670 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[],"total":0},"success":true}
 2025-08-03 18:42:01.671 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：459 ms -------------
+2025-08-03 18:43:15.510 WARN  com.zaxxer.hikari.pool.PoolBase                   :183  [32m                  [0;39m HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@626cd515 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-03 18:47:50.006 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:47:50.012 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 18:47:50.012 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 18:47:50.013 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:47:50.014 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 18:47:51.466 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 18:47:51.467 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 18:47:52.264 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 18:47:52.265 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 18:47:52.266 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 18:47:52.267 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 18:47:52.268 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 18:47:52.268 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 18:47:52.271 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 18:47:52.271 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：2266 ms -------------
+2025-08-03 18:48:03.747 WARN  com.zaxxer.hikari.pool.PoolBase                   :183  [32m                  [0;39m HikariPool-5 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@128b4688 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-08-03 18:49:15.206 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:15.213 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/all/2 GET
+2025-08-03 18:49:15.214 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-03 18:49:15.215 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:15.216 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [2]
+2025-08-03 18:49:16.449 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-03 18:49:16.451 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==> Parameters: 2(Long)
+2025-08-03 18:49:16.796 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-03 18:49:16.796 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 7, 2, 6, 文档3.1, 1, 6, 1
+2025-08-03 18:49:16.797 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 8, 2, 6, 文档3.2, 2, 5, 0
+2025-08-03 18:49:16.797 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 6, 2, 0, 文档3, 3, 15, 5
+2025-08-03 18:49:16.797 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m <==      Total: 3
+2025-08-03 18:49:16.798 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"ebookId":2,"id":7,"name":"文档3.1","parent":6,"sort":1,"viewCount":6,"voteCount":1},{"ebookId":2,"id":8,"name":"文档3.2","parent":6,"sort":2,"viewCount":5,"voteCount":0},{"ebookId":2,"id":6,"name":"文档3","parent":0,"sort":3,"viewCount":15,"voteCount":5}],"success":true}
+2025-08-03 18:49:16.798 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1592 ms -------------
+2025-08-03 18:49:16.804 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:16.805 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/6 GET
+2025-08-03 18:49:16.805 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:49:16.805 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:16.805 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [6]
+2025-08-03 18:49:16.807 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:49:16.807 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:49:17.152 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:49:17.152 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 6, <<BLOB>>
+2025-08-03 18:49:17.152 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:49:17.153 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:49:17.153 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:49:17.883 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:49:17.885 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<ol><li>我在 <a href=\"www.bilibili.com\" target=\"_blank\">bilibili</a> 看视频</li><li>今天是阴天</li></ol>","success":true}
+2025-08-03 18:49:17.886 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1082 ms -------------
+2025-08-03 18:49:19.210 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:19.211 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-08-03 18:49:19.211 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-08-03 18:49:19.211 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:19.211 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"category2Id":101,"page":1,"size":1000}]
+2025-08-03 18:49:19.558 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook WHERE (category2_id = ?)
+2025-08-03 18:49:19.559 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 101(Long)
+2025-08-03 18:49:19.902 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 18:49:19.903 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 1
+2025-08-03 18:49:19.903 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:49:19.903 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook WHERE ( category2_id = ? ) LIMIT ?
+2025-08-03 18:49:19.903 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 101(Long), 1000(Integer)
+2025-08-03 18:49:20.978 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-08-03 18:49:20.978 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 100, 101, 零基础入门 Vue 开发，企业级应用开发最佳前端框架, /image/cover2.png, null, 0, null
+2025-08-03 18:49:20.978 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:49:20.979 INFO  com.matt.wiki.service.EbookService                :49   [32m                  [0;39m 总行数: 1
+2025-08-03 18:49:20.979 INFO  com.matt.wiki.service.EbookService                :50   [32m                  [0;39m 总页数:1
+2025-08-03 18:49:20.980 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳前端框架","id":2,"name":"Vue 入门教程","viewCount":0}],"total":1},"success":true}
+2025-08-03 18:49:20.980 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1770 ms -------------
+2025-08-03 18:49:52.117 INFO  io.lettuce.core.protocol.CommandHandler           :217  [32m                  [0;39m null Unexpected exception during request: java.net.SocketException: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2025-08-03 18:49:52.178 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:52.178 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 18:49:52.178 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 18:49:52.178 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:52.179 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 18:49:52.272 INFO  io.lettuce.core.protocol.ConnectionWatchdog       :171  [32m                  [0;39m Reconnecting, last destination was r-uf6hiejpl0utnd2s15pd.redis.rds.aliyuncs.com/47.117.205.33:6379
+2025-08-03 18:49:53.311 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 18:49:53.313 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 18:49:53.657 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 18:49:53.658 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 18:49:53.659 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 18:49:53.659 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 18:49:53.660 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 18:49:53.661 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1483 ms -------------
+2025-08-03 18:49:55.178 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:55.178 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-08-03 18:49:55.178 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-08-03 18:49:55.179 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:55.179 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"category2Id":101,"page":1,"size":1000}]
+2025-08-03 18:49:56.247 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook WHERE (category2_id = ?)
+2025-08-03 18:49:56.248 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 101(Long)
+2025-08-03 18:49:56.267 INFO  io.lettuce.core.protocol.ReconnectionHandler      :178  [32m                  [0;39m Reconnected to r-uf6hiejpl0utnd2s15pd.redis.rds.aliyuncs.com/<unresolved>:6379
+2025-08-03 18:49:57.294 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 18:49:57.294 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 1
+2025-08-03 18:49:57.295 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:49:57.295 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook WHERE ( category2_id = ? ) LIMIT ?
+2025-08-03 18:49:57.295 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 101(Long), 1000(Integer)
+2025-08-03 18:49:57.640 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-08-03 18:49:57.641 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 100, 101, 零基础入门 Vue 开发，企业级应用开发最佳前端框架, /image/cover2.png, null, 0, null
+2025-08-03 18:49:57.641 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:49:57.641 INFO  com.matt.wiki.service.EbookService                :49   [32m                  [0;39m 总行数: 1
+2025-08-03 18:49:57.641 INFO  com.matt.wiki.service.EbookService                :50   [32m                  [0;39m 总页数:1
+2025-08-03 18:49:57.641 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳前端框架","id":2,"name":"Vue 入门教程","viewCount":0}],"total":1},"success":true}
+2025-08-03 18:49:57.641 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：2463 ms -------------
+2025-08-03 18:49:58.532 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:58.532 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/all/2 GET
+2025-08-03 18:49:58.532 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-03 18:49:58.532 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:58.532 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [2]
+2025-08-03 18:49:58.878 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-03 18:49:58.878 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==> Parameters: 2(Long)
+2025-08-03 18:49:59.875 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-03 18:49:59.876 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 7, 2, 6, 文档3.1, 1, 6, 1
+2025-08-03 18:49:59.876 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 8, 2, 6, 文档3.2, 2, 5, 0
+2025-08-03 18:49:59.876 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 6, 2, 0, 文档3, 3, 16, 5
+2025-08-03 18:49:59.876 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m <==      Total: 3
+2025-08-03 18:49:59.876 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"ebookId":2,"id":7,"name":"文档3.1","parent":6,"sort":1,"viewCount":6,"voteCount":1},{"ebookId":2,"id":8,"name":"文档3.2","parent":6,"sort":2,"viewCount":5,"voteCount":0},{"ebookId":2,"id":6,"name":"文档3","parent":0,"sort":3,"viewCount":16,"voteCount":5}],"success":true}
+2025-08-03 18:49:59.876 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1344 ms -------------
+2025-08-03 18:49:59.910 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:49:59.911 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/6 GET
+2025-08-03 18:49:59.911 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:49:59.911 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:49:59.911 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [6]
+2025-08-03 18:49:59.911 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:49:59.911 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:50:00.275 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:50:00.275 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 6, <<BLOB>>
+2025-08-03 18:50:00.276 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:50:00.276 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:50:00.276 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:50:00.969 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:50:00.970 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<ol><li>我在 <a href=\"www.bilibili.com\" target=\"_blank\">bilibili</a> 看视频</li><li>今天是阴天</li></ol>","success":true}
+2025-08-03 18:50:00.970 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1060 ms -------------
+2025-08-03 18:52:24.523 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:52:24.559 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-03 18:52:24.559 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-03 18:52:24.560 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:52:24.560 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: []
+2025-08-03 18:52:24.833 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-03 18:52:24.834 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m ==> Parameters: 
+2025-08-03 18:52:25.080 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==    Columns: id, parent, name, sort
+2025-08-03 18:52:25.080 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-03 18:52:25.080 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 101, 100, Vue, 101
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 200, 0, Java, 200
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 302, 300, Go, 302
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 501, 500, Docker, 501
+2025-08-03 18:52:25.081 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-03 18:52:25.082 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m                  [0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-03 18:52:25.082 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m                  [0;39m <==      Total: 16
+2025-08-03 18:52:25.082 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-03 18:52:25.082 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：559 ms -------------
+2025-08-03 18:52:26.355 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:52:26.356 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/ebook/list GET
+2025-08-03 18:52:26.356 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.EbookController.list
+2025-08-03 18:52:26.356 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:52:26.356 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [{"category2Id":101,"page":1,"size":1000}]
+2025-08-03 18:52:26.684 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook WHERE (category2_id = ?)
+2025-08-03 18:52:26.685 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m ==> Parameters: 101(Long)
+2025-08-03 18:52:26.930 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==    Columns: count(0)
+2025-08-03 18:52:26.930 TRACE c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :141  [32m                  [0;39m <==        Row: 1
+2025-08-03 18:52:26.930 DEBUG c.m.wiki.mapper.EbookMapper.selectByExample_COUNT :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:52:26.932 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook WHERE ( category2_id = ? ) LIMIT ?
+2025-08-03 18:52:26.932 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m ==> Parameters: 101(Long), 1000(Integer)
+2025-08-03 18:52:27.196 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2025-08-03 18:52:27.197 TRACE com.matt.wiki.mapper.EbookMapper.selectByExample  :141  [32m                  [0;39m <==        Row: 2, Vue 入门教程, 100, 101, 零基础入门 Vue 开发，企业级应用开发最佳前端框架, /image/cover2.png, null, 0, null
+2025-08-03 18:52:27.197 DEBUG com.matt.wiki.mapper.EbookMapper.selectByExample  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:52:27.197 INFO  com.matt.wiki.service.EbookService                :49   [32m                  [0;39m 总行数: 1
+2025-08-03 18:52:27.197 INFO  com.matt.wiki.service.EbookService                :50   [32m                  [0;39m 总页数:1
+2025-08-03 18:52:27.198 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":100,"category2Id":101,"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳前端框架","id":2,"name":"Vue 入门教程","viewCount":0}],"total":1},"success":true}
+2025-08-03 18:52:27.198 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：843 ms -------------
+2025-08-03 18:53:26.377 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:26.385 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/all/2 GET
+2025-08-03 18:53:26.386 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-03 18:53:26.386 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:26.387 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [2]
+2025-08-03 18:53:26.722 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-03 18:53:26.723 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==> Parameters: 2(Long)
+2025-08-03 18:53:27.055 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-03 18:53:27.056 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 7, 2, 6, 文档3.1, 1, 6, 1
+2025-08-03 18:53:27.056 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 8, 2, 6, 文档3.2, 2, 5, 0
+2025-08-03 18:53:27.057 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 6, 2, 0, 文档3, 3, 17, 5
+2025-08-03 18:53:27.057 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m <==      Total: 3
+2025-08-03 18:53:27.060 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"ebookId":2,"id":7,"name":"文档3.1","parent":6,"sort":1,"viewCount":6,"voteCount":1},{"ebookId":2,"id":8,"name":"文档3.2","parent":6,"sort":2,"viewCount":5,"voteCount":0},{"ebookId":2,"id":6,"name":"文档3","parent":0,"sort":3,"viewCount":17,"voteCount":5}],"success":true}
+2025-08-03 18:53:27.060 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：683 ms -------------
+2025-08-03 18:53:27.104 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:27.104 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/6 GET
+2025-08-03 18:53:27.104 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:27.104 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:27.104 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [6]
+2025-08-03 18:53:27.104 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:27.104 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:27.429 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:27.429 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 6, <<BLOB>>
+2025-08-03 18:53:27.429 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:27.430 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:27.430 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:28.105 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:28.106 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<ol><li>我在 <a href=\"www.bilibili.com\" target=\"_blank\">bilibili</a> 看视频</li><li>今天是阴天</li></ol>","success":true}
+2025-08-03 18:53:28.106 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1002 ms -------------
+2025-08-03 18:53:30.835 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:30.836 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/all/2 GET
+2025-08-03 18:53:30.836 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-03 18:53:30.836 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:30.836 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [2]
+2025-08-03 18:53:31.165 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-03 18:53:31.165 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==> Parameters: 2(Long)
+2025-08-03 18:53:31.503 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-03 18:53:31.504 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 7, 2, 6, 文档3.1, 1, 6, 1
+2025-08-03 18:53:31.504 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 8, 2, 6, 文档3.2, 2, 5, 0
+2025-08-03 18:53:31.504 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 6, 2, 0, 文档3, 3, 18, 5
+2025-08-03 18:53:31.504 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m <==      Total: 3
+2025-08-03 18:53:31.505 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"ebookId":2,"id":7,"name":"文档3.1","parent":6,"sort":1,"viewCount":6,"voteCount":1},{"ebookId":2,"id":8,"name":"文档3.2","parent":6,"sort":2,"viewCount":5,"voteCount":0},{"ebookId":2,"id":6,"name":"文档3","parent":0,"sort":3,"viewCount":18,"voteCount":5}],"success":true}
+2025-08-03 18:53:31.505 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：670 ms -------------
+2025-08-03 18:53:31.525 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:31.525 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/6 GET
+2025-08-03 18:53:31.525 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:31.525 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:31.525 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [6]
+2025-08-03 18:53:31.525 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:31.526 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:31.870 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:31.870 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 6, <<BLOB>>
+2025-08-03 18:53:31.870 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:31.870 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:31.870 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:32.550 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:32.551 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<ol><li>我在 <a href=\"www.bilibili.com\" target=\"_blank\">bilibili</a> 看视频</li><li>今天是阴天</li></ol>","success":true}
+2025-08-03 18:53:32.551 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1026 ms -------------
+2025-08-03 18:53:33.778 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:33.778 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/7 GET
+2025-08-03 18:53:33.778 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:33.778 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:33.779 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [7]
+2025-08-03 18:53:34.127 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:34.128 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 7(Long)
+2025-08-03 18:53:34.471 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:34.471 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 7, <<BLOB>>
+2025-08-03 18:53:34.471 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:34.472 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:34.472 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 7(Long)
+2025-08-03 18:53:35.155 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:35.155 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<p>wobuhao</p>","success":true}
+2025-08-03 18:53:35.155 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1377 ms -------------
+2025-08-03 18:53:36.976 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:36.976 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/8 GET
+2025-08-03 18:53:36.976 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:36.977 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:36.977 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [8]
+2025-08-03 18:53:37.321 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:37.322 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 8(Long)
+2025-08-03 18:53:37.666 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:37.667 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 8, <<BLOB>>
+2025-08-03 18:53:37.667 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:37.668 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:37.668 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 8(Long)
+2025-08-03 18:53:38.407 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:38.409 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<p>im good</p>","success":true}
+2025-08-03 18:53:38.409 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1433 ms -------------
+2025-08-03 18:53:51.942 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:51.943 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/6 GET
+2025-08-03 18:53:51.943 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:51.943 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:51.943 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [6]
+2025-08-03 18:53:52.289 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:52.290 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:52.635 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:52.635 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 6, <<BLOB>>
+2025-08-03 18:53:52.635 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:52.636 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:52.636 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:53.071 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:53.071 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/7 GET
+2025-08-03 18:53:53.071 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:53.072 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:53.072 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [7]
+2025-08-03 18:53:53.407 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:53.408 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 7(Long)
+2025-08-03 18:53:53.909 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:53.910 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<ol><li>我在 <a href=\"www.bilibili.com\" target=\"_blank\">bilibili</a> 看视频</li><li>今天是阴天</li></ol>","success":true}
+2025-08-03 18:53:53.910 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1968 ms -------------
+2025-08-03 18:53:54.396 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:54.397 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 7, <<BLOB>>
+2025-08-03 18:53:54.397 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:54.397 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:54.397 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 7(Long)
+2025-08-03 18:53:55.774 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:55.775 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<p>wobuhao</p>","success":true}
+2025-08-03 18:53:55.776 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：2705 ms -------------
+2025-08-03 18:53:57.052 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:57.053 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/all/2 GET
+2025-08-03 18:53:57.054 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-03 18:53:57.055 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:57.055 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [2]
+2025-08-03 18:53:57.401 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-03 18:53:57.402 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m ==> Parameters: 2(Long)
+2025-08-03 18:53:57.747 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-03 18:53:57.747 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 7, 2, 6, 文档3.1, 1, 8, 1
+2025-08-03 18:53:57.747 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 8, 2, 6, 文档3.2, 2, 6, 0
+2025-08-03 18:53:57.747 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m                  [0;39m <==        Row: 6, 2, 0, 文档3, 3, 20, 5
+2025-08-03 18:53:57.747 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m                  [0;39m <==      Total: 3
+2025-08-03 18:53:57.748 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":[{"ebookId":2,"id":7,"name":"文档3.1","parent":6,"sort":1,"viewCount":8,"voteCount":1},{"ebookId":2,"id":8,"name":"文档3.2","parent":6,"sort":2,"viewCount":6,"voteCount":0},{"ebookId":2,"id":6,"name":"文档3","parent":0,"sort":3,"viewCount":20,"voteCount":5}],"success":true}
+2025-08-03 18:53:57.748 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：696 ms -------------
+2025-08-03 18:53:57.764 INFO  com.matt.wiki.aspect.LogAspect                    :43   [32m                  [0;39m ------------- 开始 -------------
+2025-08-03 18:53:57.765 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m 请求地址: http://localhost:8080/doc/find-content/6 GET
+2025-08-03 18:53:57.765 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-03 18:53:57.765 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-03 18:53:57.765 INFO  com.matt.wiki.aspect.LogAspect                    :66   [32m                  [0;39m 请求参数: [6]
+2025-08-03 18:53:57.765 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-03 18:53:57.765 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:58.110 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==    Columns: id, content
+2025-08-03 18:53:58.110 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m                  [0;39m <==        Row: 6, <<BLOB>>
+2025-08-03 18:53:58.110 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m                  [0;39m <==      Total: 1
+2025-08-03 18:53:58.111 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-03 18:53:58.111 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m ==> Parameters: 6(Long)
+2025-08-03 18:53:58.948 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m                  [0;39m <==    Updates: 1
+2025-08-03 18:53:58.948 INFO  com.matt.wiki.aspect.LogAspect                    :79   [32m                  [0;39m 返回结果: {"content":"<ol><li>我在 <a href=\"www.bilibili.com\" target=\"_blank\">bilibili</a> 看视频</li><li>今天是阴天</li></ol>","success":true}
+2025-08-03 18:53:58.948 INFO  com.matt.wiki.aspect.LogAspect                    :80   [32m                  [0;39m ------------- 结束 耗时：1184 ms -------------

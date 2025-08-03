@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="about页面现在可以在未登录的情况下显示">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper/DocMapperCust.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/DocMapperCust.xml" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="阅读文档，阅读数+1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,14 +262,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00082" summary="修复bug：更新表单显示不出数据，但能看到排版是正常的">
-      <option name="closed" value="true" />
-      <created>1753701197409</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1753701197409</updated>
     </task>
     <task id="LOCAL-00083" summary="进入doc管理页面会传进ebookId进行确认">
       <option name="closed" value="true" />
@@ -658,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754184857327</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="阅读文档，阅读数+1">
+      <option name="closed" value="true" />
+      <created>1754210586402</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1754210586402</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +711,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="去掉doc页面样式的scoped，方便在admin-doc中预览相同属性的页面，class = wangEditor" />
     <MESSAGE value="进入页面读取第一页节点" />
     <MESSAGE value="user表设计和持久层生成" />
     <MESSAGE value="user表设计和持久层生成,初步完成user页面" />
@@ -739,7 +735,8 @@
     <MESSAGE value="未登录不显示页面" />
     <MESSAGE value="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面" />
     <MESSAGE value="about页面现在可以在未登录的情况下显示" />
-    <option name="LAST_COMMIT_MESSAGE" value="about页面现在可以在未登录的情况下显示" />
+    <MESSAGE value="阅读文档，阅读数+1" />
+    <option name="LAST_COMMIT_MESSAGE" value="阅读文档，阅读数+1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

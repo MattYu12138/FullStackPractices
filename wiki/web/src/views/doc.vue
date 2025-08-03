@@ -15,6 +15,14 @@
         </a-tree>
       </a-col>
       <a-col :span="18">
+        <div>
+          <h2>{{doc.name}}</h2>
+          <div>
+            <span>Read: {{doc.viewCount}}</span> &nbsp; &nbsp;
+            <span>Vote: {{doc.voteCount}}</span>
+          </div>
+          <a-divider style="height: 2px;  background-color: #9999cc"/>
+        </div>
         <div class="wangEditor" v-html="valueHtml"></div>
       </a-col>
     </a-row>
@@ -23,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, createVNode, onMounted, shallowRef, ref, reactive, onBeforeUnmount} from 'vue';
+import {defineComponent, onMounted, ref, reactive} from 'vue';
 import axios from 'axios';
 import {message} from 'ant-design-vue';
 import {Tool} from '@/util/tool'
@@ -36,7 +44,7 @@ export default defineComponent({
   components: { Editor, Toolbar },
   setup() {
 
-    const editorRef = shallowRef();
+    // const editorRef = shallowRef();
     const valueHtml = ref('');
     //
     // const toolbarConfig = {}
@@ -62,11 +70,14 @@ export default defineComponent({
       // SelectedData: [] as any[],
     })
 
-    const postingDocs = reactive({
-      doc: {},
-      name : "",
-      id: 0,
-    })
+    const doc = ref();
+    doc.value = {};
+
+    // const postingDocs = reactive({
+    //   doc: {},
+    //   name : "",
+    //   id: 0,
+    // })
 
     // const setDisable = (treeSelectedData: any, id: any) => {
     //   // 遍历所有节点找到当前节点id
@@ -137,6 +148,7 @@ export default defineComponent({
     const onSelect = (selectedKeys: any, info: any)=>{
       console.log('selected ', selectedKeys, info);
       if(Tool.isNotEmpty(selectedKeys)){
+        doc.value = info.selectedNodes[0].props;
         handleQueryContent(selectedKeys[0]);
       }
     }
@@ -189,6 +201,8 @@ export default defineComponent({
           if(Tool.isNotEmpty(array2Tree.level1)){
             defaultSelectedKeys.value = [array2Tree.level1[0].id]
             handleQueryContent(array2Tree.level1[0].id)
+            // 初始显示文档信息
+            doc.value = array2Tree.level1[0];
           }
 
         }else{
@@ -277,6 +291,7 @@ export default defineComponent({
     });
 
     return {
+      doc,
       gettingDocs,
       // postingDocs,
       // onExpand,
