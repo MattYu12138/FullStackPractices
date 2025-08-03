@@ -24,6 +24,11 @@
           <a-divider style="height: 2px;  background-color: #9999cc"/>
         </div>
         <div class="wangEditor" v-html="valueHtml"></div>
+        <div class="vote-div">
+          <a-button type="primary" shape="round" size="small" @click="vote">
+            <template #icon><LikeOutlined/> &nbsp;thumbs up: {{doc.voteCount}}</template>
+          </a-button>
+        </div>
       </a-col>
     </a-row>
     </a-layout-content>
@@ -151,6 +156,17 @@ export default defineComponent({
         doc.value = info.selectedNodes[0];
         handleQueryContent(selectedKeys[0]);
       }
+    }
+
+    const vote = () => {
+      axios.get('/doc/vote/' + doc.value.id).then((response) =>{
+        const data = response.data;
+        if(data.success){
+          doc.value.voteCount++;
+        }else{
+          message.error(data.message);
+        }
+      })
     }
 
     // /*
@@ -292,6 +308,7 @@ export default defineComponent({
 
     return {
       doc,
+      vote,
       gettingDocs,
       // postingDocs,
       // onExpand,
