@@ -6458,3 +6458,225 @@ Caused by: java.lang.ClassNotFoundException: com.matt.wiki.service.DocService
 2025-08-04 09:15:05.265 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607350759109038080[0;39m ==> Parameters: 
 2025-08-04 09:15:05.738 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607350759109038080[0;39m <==    Updates: 4
 2025-08-04 09:15:05.738 INFO  com.matt.wiki.job.DocJob                          :33   [32m607350759109038080[0;39m 更新电子书下的文档数据结束，耗时：735毫秒
+2025-08-04 09:15:34.999 INFO  com.matt.wiki.job.DocJob                          :30   [32m607350884921380864[0;39m 更新电子书下的文档数据开始
+2025-08-04 09:15:35.236 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607350884921380864[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 09:15:35.237 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607350884921380864[0;39m ==> Parameters: 
+2025-08-04 09:15:35.798 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607350884921380864[0;39m <==    Updates: 4
+2025-08-04 09:15:35.799 INFO  com.matt.wiki.job.DocJob                          :33   [32m607350884921380864[0;39m 更新电子书下的文档数据结束，耗时：800毫秒
+2025-08-04 09:16:05.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607351010771472384[0;39m 更新电子书下的文档数据开始
+2025-08-04 09:16:05.241 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351010771472384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 09:16:05.242 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351010771472384[0;39m ==> Parameters: 
+2025-08-04 09:16:05.801 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351010771472384[0;39m <==    Updates: 4
+2025-08-04 09:16:05.802 INFO  com.matt.wiki.job.DocJob                          :33   [32m607351010771472384[0;39m 更新电子书下的文档数据结束，耗时：798毫秒
+2025-08-04 09:16:35.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607351136600592384[0;39m 更新电子书下的文档数据开始
+2025-08-04 09:16:35.292 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351136600592384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 09:16:35.292 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351136600592384[0;39m ==> Parameters: 
+2025-08-04 09:16:35.836 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351136600592384[0;39m <==    Updates: 4
+2025-08-04 09:16:35.837 INFO  com.matt.wiki.job.DocJob                          :33   [32m607351136600592384[0;39m 更新电子书下的文档数据结束，耗时：833毫秒
+2025-08-04 09:16:50.660 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351202266615808[0;39m ------------- 开始 -------------
+2025-08-04 09:16:50.660 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351202266615808[0;39m 请求地址: http://localhost:8080/doc/vote/607349498297061376 GET
+2025-08-04 09:16:50.660 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351202266615808[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:16:50.660 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351202266615808[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:16:50.661 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351202266615808[0;39m 请求参数: [607349498297061376]
+2025-08-04 09:16:50.900 INFO  com.matt.wiki.util.RedisUtil                      :31   [32m607351202266615808[0;39m key不存在，放入：DOC_VOTE_607349498297061376_0:0:0:0:0:0:0:1，过期 5 秒
+2025-08-04 09:16:51.373 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351202266615808[0;39m ==>  Preparing: update doc set vote_count = vote_count + 1 where id = ?
+2025-08-04 09:16:51.374 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351202266615808[0;39m ==> Parameters: 607349498297061376(Long)
+2025-08-04 09:16:51.982 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351202266615808[0;39m <==    Updates: 1
+2025-08-04 09:16:51.983 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351202266615808[0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc where id = ?
+2025-08-04 09:16:51.984 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351202266615808[0;39m ==> Parameters: 607349498297061376(Long)
+2025-08-04 09:16:52.220 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351202266615808[0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-04 09:16:52.220 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351202266615808[0;39m <==        Row: 607349498297061376, 1, 2, test2, 2, 1, 2
+2025-08-04 09:16:52.220 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351202266615808[0;39m <==      Total: 1
+2025-08-04 09:16:52.223 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351202266615808[0;39m 返回结果: {"success":true}
+2025-08-04 09:16:52.223 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351202266615808[0;39m ------------- 结束 耗时：1563 ms -------------
+2025-08-04 09:16:52.225 INFO  com.matt.wiki.rocketmq.VoteTopicConsumer          :24   [32m                  [0;39m ROCKETMQ收到消息：【test2】被点赞！
+2025-08-04 09:16:59.412 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351238975164416[0;39m ------------- 开始 -------------
+2025-08-04 09:16:59.413 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351238975164416[0;39m 请求地址: http://localhost:8080/doc/vote/607349498297061376 GET
+2025-08-04 09:16:59.413 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351238975164416[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:16:59.413 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351238975164416[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:16:59.413 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351238975164416[0;39m 请求参数: [607349498297061376]
+2025-08-04 09:16:59.653 INFO  com.matt.wiki.util.RedisUtil                      :31   [32m607351238975164416[0;39m key不存在，放入：DOC_VOTE_607349498297061376_0:0:0:0:0:0:0:1，过期 5 秒
+2025-08-04 09:17:00.125 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351238975164416[0;39m ==>  Preparing: update doc set vote_count = vote_count + 1 where id = ?
+2025-08-04 09:17:00.126 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351238975164416[0;39m ==> Parameters: 607349498297061376(Long)
+2025-08-04 09:17:00.686 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351238975164416[0;39m <==    Updates: 1
+2025-08-04 09:17:00.686 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351238975164416[0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc where id = ?
+2025-08-04 09:17:00.686 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351238975164416[0;39m ==> Parameters: 607349498297061376(Long)
+2025-08-04 09:17:00.924 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351238975164416[0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-04 09:17:00.924 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351238975164416[0;39m <==        Row: 607349498297061376, 1, 2, test2, 2, 1, 3
+2025-08-04 09:17:00.924 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351238975164416[0;39m <==      Total: 1
+2025-08-04 09:17:00.928 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351238975164416[0;39m 返回结果: {"success":true}
+2025-08-04 09:17:00.928 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351238975164416[0;39m ------------- 结束 耗时：1516 ms -------------
+2025-08-04 09:17:00.929 INFO  com.matt.wiki.rocketmq.VoteTopicConsumer          :24   [32m                  [0;39m ROCKETMQ收到消息：【test2】被点赞！
+2025-08-04 09:17:04.384 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351259829243904[0;39m ------------- 开始 -------------
+2025-08-04 09:17:04.384 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351259829243904[0;39m 请求地址: http://localhost:8080/doc/find-content/607349526793162752 GET
+2025-08-04 09:17:04.384 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351259829243904[0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-04 09:17:04.384 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351259829243904[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:04.384 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351259829243904[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:04.679 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351259829243904[0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-04 09:17:04.680 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351259829243904[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:04.987 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607351259829243904[0;39m <==    Columns: id, content
+2025-08-04 09:17:04.987 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607351259829243904[0;39m <==        Row: 607349526793162752, <<BLOB>>
+2025-08-04 09:17:04.987 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351259829243904[0;39m <==      Total: 1
+2025-08-04 09:17:04.988 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351259829243904[0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-04 09:17:04.988 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351259829243904[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:04.999 INFO  com.matt.wiki.job.DocJob                          :30   [32m607351262408740864[0;39m 更新电子书下的文档数据开始
+2025-08-04 09:17:05.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351262408740864[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 09:17:05.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351262408740864[0;39m ==> Parameters: 
+2025-08-04 09:17:05.499 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351259829243904[0;39m <==    Updates: 1
+2025-08-04 09:17:05.500 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351259829243904[0;39m 返回结果: {"content":"<p>请点击章节进行预览</p>","success":true}
+2025-08-04 09:17:05.500 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351259829243904[0;39m ------------- 结束 耗时：1116 ms -------------
+2025-08-04 09:17:05.806 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351262408740864[0;39m <==    Updates: 4
+2025-08-04 09:17:05.806 INFO  com.matt.wiki.job.DocJob                          :33   [32m607351262408740864[0;39m 更新电子书下的文档数据结束，耗时：806毫秒
+2025-08-04 09:17:07.056 INFO  com.matt.wiki.websocket.WebSocketServer           :32   [32m607350432431476736[0;39m 有新连接：token：ZDibT6TZTx，session id：0，当前连接数：1
+2025-08-04 09:17:07.063 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351271065784320[0;39m ------------- 开始 -------------
+2025-08-04 09:17:07.063 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351271065784320[0;39m 请求地址: http://localhost:8080/doc/all/1 GET
+2025-08-04 09:17:07.063 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351271065784320[0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-04 09:17:07.063 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351271065784320[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:07.063 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351271065784320[0;39m 请求参数: [1]
+2025-08-04 09:17:07.301 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m607351271065784320[0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-04 09:17:07.302 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m607351271065784320[0;39m ==> Parameters: 1(Long)
+2025-08-04 09:17:07.538 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-04 09:17:07.539 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 1, 1, 0, 文档1, 1, 16, 1
+2025-08-04 09:17:07.539 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 9, 1
+2025-08-04 09:17:07.539 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 8, 2
+2025-08-04 09:17:07.540 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 607349475404550144, 1, 2, test, 1, 1, 1
+2025-08-04 09:17:07.540 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 3, 1, 0, 文档2, 2, 6, 1
+2025-08-04 09:17:07.540 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 11, 3
+2025-08-04 09:17:07.540 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 607349498297061376, 1, 2, test2, 2, 1, 3
+2025-08-04 09:17:07.540 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 607349526793162752, 1, 2, test3, 3, 1, 0
+2025-08-04 09:17:07.540 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607351271065784320[0;39m <==        Row: 605371330069663744, 1, 12, test, 10, 0, 0
+2025-08-04 09:17:07.541 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m607351271065784320[0;39m <==      Total: 9
+2025-08-04 09:17:07.546 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351271065784320[0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":16,"voteCount":1},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":9,"voteCount":1},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":8,"voteCount":2},{"ebookId":1,"id":607349475404550144,"name":"test","parent":2,"sort":1,"viewCount":1,"voteCount":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":6,"voteCount":1},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":11,"voteCount":3},{"ebookId":1,"id":607349498297061376,"name":"test2","parent":2,"sort":2,"viewCount":1,"voteCount":3},{"ebookId":1,"id":607349526793162752,"name":"test3","parent":2,"sort":3,"viewCount":1,"voteCount":0},{"ebookId":1,"id":605371330069663744,"name":"test","parent":12,"sort":10,"viewCount":0,"voteCount":0}],"success":true}
+2025-08-04 09:17:07.546 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351271065784320[0;39m ------------- 结束 耗时：483 ms -------------
+2025-08-04 09:17:07.579 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351273230045184[0;39m ------------- 开始 -------------
+2025-08-04 09:17:07.579 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351273230045184[0;39m 请求地址: http://localhost:8080/doc/find-content/1 GET
+2025-08-04 09:17:07.579 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351273230045184[0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-04 09:17:07.579 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351273230045184[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:07.579 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351273230045184[0;39m 请求参数: [1]
+2025-08-04 09:17:07.580 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351273230045184[0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-04 09:17:07.580 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351273230045184[0;39m ==> Parameters: 1(Long)
+2025-08-04 09:17:07.816 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607351273230045184[0;39m <==    Columns: id, content
+2025-08-04 09:17:07.816 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607351273230045184[0;39m <==        Row: 1, <<BLOB>>
+2025-08-04 09:17:07.817 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351273230045184[0;39m <==      Total: 1
+2025-08-04 09:17:07.817 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351273230045184[0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-04 09:17:07.817 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351273230045184[0;39m ==> Parameters: 1(Long)
+2025-08-04 09:17:08.294 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351273230045184[0;39m <==    Updates: 1
+2025-08-04 09:17:08.295 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351273230045184[0;39m 返回结果: {"content":"<p>hello</p>","success":true}
+2025-08-04 09:17:08.295 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351273230045184[0;39m ------------- 结束 耗时：716 ms -------------
+2025-08-04 09:17:12.312 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351293081686016[0;39m ------------- 开始 -------------
+2025-08-04 09:17:12.312 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351293081686016[0;39m 请求地址: http://localhost:8080/doc/find-content/607349526793162752 GET
+2025-08-04 09:17:12.312 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351293081686016[0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-04 09:17:12.312 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351293081686016[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:12.312 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351293081686016[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:12.564 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351293081686016[0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-04 09:17:12.564 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351293081686016[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:12.863 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607351293081686016[0;39m <==    Columns: id, content
+2025-08-04 09:17:12.863 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607351293081686016[0;39m <==        Row: 607349526793162752, <<BLOB>>
+2025-08-04 09:17:12.863 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607351293081686016[0;39m <==      Total: 1
+2025-08-04 09:17:12.863 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351293081686016[0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-04 09:17:12.864 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351293081686016[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:13.213 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351296860753920[0;39m ------------- 开始 -------------
+2025-08-04 09:17:13.213 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351296860753920[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:13.213 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351296860753920[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:13.213 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351296860753920[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:13.213 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351296860753920[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:13.338 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607351293081686016[0;39m <==    Updates: 1
+2025-08-04 09:17:13.339 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351293081686016[0;39m 返回结果: {"content":"<p>请点击章节进行预览</p>","success":true}
+2025-08-04 09:17:13.339 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351293081686016[0;39m ------------- 结束 耗时：1027 ms -------------
+2025-08-04 09:17:13.450 INFO  com.matt.wiki.util.RedisUtil                      :31   [32m607351296860753920[0;39m key不存在，放入：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1，过期 5 秒
+2025-08-04 09:17:13.687 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351296860753920[0;39m ==>  Preparing: update doc set vote_count = vote_count + 1 where id = ?
+2025-08-04 09:17:13.688 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351296860753920[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:14.163 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351296860753920[0;39m <==    Updates: 1
+2025-08-04 09:17:14.164 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351296860753920[0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc where id = ?
+2025-08-04 09:17:14.164 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351296860753920[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:14.401 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351296860753920[0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-04 09:17:14.401 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351296860753920[0;39m <==        Row: 607349526793162752, 1, 2, test3, 3, 2, 1
+2025-08-04 09:17:14.402 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351296860753920[0;39m <==      Total: 1
+2025-08-04 09:17:14.405 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351296860753920[0;39m 返回结果: {"success":true}
+2025-08-04 09:17:14.405 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351296860753920[0;39m ------------- 结束 耗时：1192 ms -------------
+2025-08-04 09:17:14.407 INFO  com.matt.wiki.rocketmq.VoteTopicConsumer          :24   [32m                  [0;39m ROCKETMQ收到消息：【test3】被点赞！
+2025-08-04 09:17:14.407 INFO  com.matt.wiki.websocket.WebSocketServer           :76   [32m                  [0;39m 推送消息：ZDibT6TZTx，内容：【test3】被点赞！
+2025-08-04 09:17:16.644 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351311251410944[0;39m ------------- 开始 -------------
+2025-08-04 09:17:16.644 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351311251410944[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:16.645 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351311251410944[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:16.645 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351311251410944[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:16.645 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351311251410944[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:16.881 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351311251410944[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:16.882 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351311251410944[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:16.884 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351311251410944[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:17.843 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351316280381440[0;39m ------------- 开始 -------------
+2025-08-04 09:17:17.844 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351316280381440[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:17.844 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351316280381440[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:17.844 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351316280381440[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:17.844 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351316280381440[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:18.085 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351316280381440[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:18.088 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351316280381440[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:18.091 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351316280381440[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:18.092 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351317324763136[0;39m ------------- 开始 -------------
+2025-08-04 09:17:18.092 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351317324763136[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:18.092 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351317324763136[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:18.092 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351317324763136[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:18.092 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351317324763136[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:18.328 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351317324763136[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:18.328 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351317324763136[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:18.329 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351317324763136[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:18.331 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351318327201792[0;39m ------------- 开始 -------------
+2025-08-04 09:17:18.331 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351318327201792[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:18.331 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351318327201792[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:18.332 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351318327201792[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:18.332 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351318327201792[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:18.568 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351318327201792[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:18.568 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351318327201792[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:18.569 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351318327201792[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:18.571 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351319333834752[0;39m ------------- 开始 -------------
+2025-08-04 09:17:18.571 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351319333834752[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:18.571 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351319333834752[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:18.571 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351319333834752[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:18.571 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351319333834752[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:18.808 INFO  com.matt.wiki.util.RedisUtil                      :31   [32m607351319333834752[0;39m key不存在，放入：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1，过期 5 秒
+2025-08-04 09:17:19.282 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351319333834752[0;39m ==>  Preparing: update doc set vote_count = vote_count + 1 where id = ?
+2025-08-04 09:17:19.283 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351319333834752[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:19.834 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseVoteCount:135  [32m607351319333834752[0;39m <==    Updates: 1
+2025-08-04 09:17:19.835 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351319333834752[0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc where id = ?
+2025-08-04 09:17:19.835 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351319333834752[0;39m ==> Parameters: 607349526793162752(Long)
+2025-08-04 09:17:20.144 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351319333834752[0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-04 09:17:20.145 TRACE com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :141  [32m607351319333834752[0;39m <==        Row: 607349526793162752, 1, 2, test3, 3, 2, 2
+2025-08-04 09:17:20.145 DEBUG com.matt.wiki.mapper.DocMapper.selectByPrimaryKey :135  [32m607351319333834752[0;39m <==      Total: 1
+2025-08-04 09:17:20.147 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607351319333834752[0;39m 返回结果: {"success":true}
+2025-08-04 09:17:20.147 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607351319333834752[0;39m ------------- 结束 耗时：1576 ms -------------
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.rocketmq.VoteTopicConsumer          :24   [32m                  [0;39m ROCKETMQ收到消息：【test3】被点赞！
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351325956640768[0;39m ------------- 开始 -------------
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351325956640768[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351325956640768[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351325956640768[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.websocket.WebSocketServer           :76   [32m                  [0;39m 推送消息：ZDibT6TZTx，内容：【test3】被点赞！
+2025-08-04 09:17:20.150 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351325956640768[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:20.388 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351325956640768[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:20.388 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351325956640768[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:20.389 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351325956640768[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:20.391 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351326967468032[0;39m ------------- 开始 -------------
+2025-08-04 09:17:20.391 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351326967468032[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:20.391 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351326967468032[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:20.391 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351326967468032[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:20.391 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351326967468032[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:20.628 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351326967468032[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:20.629 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351326967468032[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:20.630 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351326967468032[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:20.631 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607351327974100992[0;39m ------------- 开始 -------------
+2025-08-04 09:17:20.632 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607351327974100992[0;39m 请求地址: http://localhost:8080/doc/vote/607349526793162752 GET
+2025-08-04 09:17:20.632 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607351327974100992[0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 09:17:20.632 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607351327974100992[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 09:17:20.632 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607351327974100992[0;39m 请求参数: [607349526793162752]
+2025-08-04 09:17:20.869 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m607351327974100992[0;39m key已存在：DOC_VOTE_607349526793162752_0:0:0:0:0:0:0:1
+2025-08-04 09:17:20.870 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m607351327974100992[0;39m 业务异常：您已点赞过
+2025-08-04 09:17:20.870 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m607351327974100992[0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 09:17:35.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607351388246249472[0;39m 更新电子书下的文档数据开始
+2025-08-04 09:17:35.245 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351388246249472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 09:17:35.245 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351388246249472[0;39m ==> Parameters: 
+2025-08-04 09:17:35.808 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351388246249472[0;39m <==    Updates: 4
+2025-08-04 09:17:35.808 INFO  com.matt.wiki.job.DocJob                          :33   [32m607351388246249472[0;39m 更新电子书下的文档数据结束，耗时：807毫秒
+2025-08-04 09:18:05.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607351514079563776[0;39m 更新电子书下的文档数据开始
+2025-08-04 09:18:05.299 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351514079563776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 09:18:05.299 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351514079563776[0;39m ==> Parameters: 
+2025-08-04 09:18:05.913 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607351514079563776[0;39m <==    Updates: 4
+2025-08-04 09:18:05.913 INFO  com.matt.wiki.job.DocJob                          :33   [32m607351514079563776[0;39m 更新电子书下的文档数据结束，耗时：911毫秒
