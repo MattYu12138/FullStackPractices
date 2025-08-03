@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复不刷新doc页面的问题">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加点赞系统，但出问题了">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/DocController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper/DocMapperCust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper/DocMapperCust.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DocMapperCust.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DocMapperCust.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,14 +263,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00084" summary="进入doc管理页面会传进ebookId进行确认">
-      <option name="closed" value="true" />
-      <created>1753705040853</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1753705040853</updated>
     </task>
     <task id="LOCAL-00085" summary="进入doc管理页面会传进ebookId进行确认，同时删除会删除子节点">
       <option name="closed" value="true" />
@@ -659,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754212275170</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="添加点赞系统，但出问题了">
+      <option name="closed" value="true" />
+      <created>1754212940873</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1754212940873</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +712,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="user表设计和持久层生成" />
     <MESSAGE value="user表设计和持久层生成,初步完成user页面" />
     <MESSAGE value="修复一个提交的时候用户已存在的bug" />
     <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
@@ -740,7 +736,8 @@
     <MESSAGE value="about页面现在可以在未登录的情况下显示" />
     <MESSAGE value="阅读文档，阅读数+1" />
     <MESSAGE value="修复不刷新doc页面的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复不刷新doc页面的问题" />
+    <MESSAGE value="添加点赞系统，但出问题了" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加点赞系统，但出问题了" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
