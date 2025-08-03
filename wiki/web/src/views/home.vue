@@ -30,10 +30,18 @@
         <template #renderItem="{ item }">
           <a-list-item key="item.name">
             <template #actions>
-          <span v-for="{ icon, text } in actions" :key="icon">
-            <component :is="icon" style="margin-right: 8px"/>
-            {{ text }}
-          </span>
+              <span>
+                <component v-bind:is="'FileOutlined'" style="margin-right: 8px" />
+                {{ item.docCount }}
+              </span>
+              <span>
+                <component v-bind:is="'UserOutlined'" style="margin-right: 8px" />
+                {{ item.viewCount }}
+              </span>
+              <span>
+                <component v-bind:is="'LikeOutlined'" style="margin-right: 8px" />
+                {{ item.voteCount }}
+              </span>
             </template>
 
             <a-list-item-meta :description="item.description">
@@ -58,11 +66,13 @@ import {defineComponent, onMounted, reactive, toRef} from 'vue';
 import axios from 'axios';
 import {Tool} from "@/util/tool";
 import {message} from "ant-design-vue";
+import {LikeOutlined} from "@ant-design/icons-vue";
 
 const listData: any = [];
 
 export default defineComponent({
   name: 'Home',
+  methods: {LikeOutlined},
   setup() {
 
     const ebooksTmp = reactive(
@@ -140,25 +150,8 @@ export default defineComponent({
       ebooks: toRef(ebooksTmp, "books"),
       listData,
       pagination: {
-        onChange: (page: any) => {
-          console.log(page);
-        },
         pageSize: 3,
       },
-      actions: [
-        {
-          icon: 'StarOutlined',
-          text: '15622',
-        },
-        {
-          icon: 'LikeOutlined',
-          text: '15611',
-        },
-        {
-          icon: 'MessageOutlined',
-          text: '2',
-        },
-      ],
     }
   }
 });
