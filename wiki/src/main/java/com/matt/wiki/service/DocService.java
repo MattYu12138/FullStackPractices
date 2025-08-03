@@ -5,6 +5,8 @@ import com.github.pagehelper.PageHelper;
 import com.matt.wiki.domain.Content;
 import com.matt.wiki.domain.Doc;
 import com.matt.wiki.domain.DocExample;
+import com.matt.wiki.exception.BusinessException;
+import com.matt.wiki.exception.BusinessExceptionCode;
 import com.matt.wiki.mapper.ContentMapper;
 import com.matt.wiki.mapper.DocMapper;
 import com.matt.wiki.mapper.DocMapperCust;
@@ -13,6 +15,8 @@ import com.matt.wiki.req.DocSaveReq;
 import com.matt.wiki.resp.DocQueryResp;
 import com.matt.wiki.resp.PageResp;
 import com.matt.wiki.util.CopyUtil;
+import com.matt.wiki.util.RedisUtil;
+import com.matt.wiki.util.RequestContext;
 import com.matt.wiki.util.SnowFlake;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
@@ -36,6 +40,9 @@ public class DocService {
 
     @Resource
     private SnowFlake snowFlake;
+
+    @Resource
+    public RedisUtil redisUtil;
 
     private static final Logger LOG = LoggerFactory.getLogger(DocService.class);
 
@@ -119,7 +126,13 @@ public class DocService {
     }
 
     public void vote(Long id){
-        docMapperCust.increaseVoteCount(id);
+        String key = RequestContext.getRemoteAddr();
+        if(redisUtil.validateRepeat("DOC_VOTE_" + id + "_" + key, 3600 * 24)){
+            docMapperCust.increaseVoteCount(id);
+        }else{
+            throw new BusinessException(BusinessExceptionCode.VOTE_REPEAT);
+        }
     }
+
 
 }

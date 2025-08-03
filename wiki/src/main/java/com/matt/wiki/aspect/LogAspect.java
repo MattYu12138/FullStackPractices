@@ -2,6 +2,7 @@ package com.matt.wiki.aspect;
 
 import com.alibaba.fastjson.support.spring.PropertyPreFilters;
 import com.alibaba.fastjson.JSONObject;
+import com.matt.wiki.util.RequestContext;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
@@ -44,6 +45,8 @@ public class LogAspect {
         LOG.info("请求地址: {} {}", request.getRequestURL().toString(), request.getMethod());
         LOG.info("类名方法: {}.{}", signature.getDeclaringTypeName(), name);
         LOG.info("远程地址: {}", request.getRemoteAddr());
+
+        RequestContext.setRemoteAddr(getRemoteIp(request));
 
         // 打印请求参数
         Object[] args = joinPoint.getArgs();
