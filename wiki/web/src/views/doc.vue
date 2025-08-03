@@ -9,7 +9,7 @@
             :tree-data="array2Tree.level1"
             @select="onSelect"
             :field-names="{ title: 'name', key: 'id', value: 'id' }"
-            :default-expand-all-rows="true"
+            :defaultExpandAll="true"
             :defaultSelectedKeys="defaultSelectedKeys"
         >
         </a-tree>
@@ -145,10 +145,10 @@ export default defineComponent({
       })
     }
 
-    const onSelect = (selectedKeys: any, info: any)=>{
+    const onSelect = (selectedKeys: any, info: any) => {
       console.log('selected ', selectedKeys, info);
-      if(Tool.isNotEmpty(selectedKeys)){
-        doc.value = info.selectedNodes[0].props;
+      if (Tool.isNotEmpty(selectedKeys) && info.selectedNodes && info.selectedNodes.length > 0) {
+        doc.value = info.selectedNodes[0];
         handleQueryContent(selectedKeys[0]);
       }
     }
