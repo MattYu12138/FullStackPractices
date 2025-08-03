@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="异步化解耦点赞和通知功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/rocketmq/VoteTopicConsumer.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/rocketmq/VoteTopicConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/rocketmq/VoteTopicConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -266,30 +266,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00094" summary="布局美化">
-      <option name="closed" value="true" />
-      <created>1753787680092</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1753787680093</updated>
-    </task>
-    <task id="LOCAL-00095" summary="布局美化">
-      <option name="closed" value="true" />
-      <created>1753788561876</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1753788561876</updated>
-    </task>
-    <task id="LOCAL-00096" summary="添加后端查询，但是报400错">
-      <option name="closed" value="true" />
-      <created>1753792344646</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1753792344646</updated>
     </task>
     <task id="LOCAL-00097" summary="成功切换表单的数据显示，但是会返回500错误">
       <option name="closed" value="true" />
@@ -659,7 +635,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754254772652</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="使用rocketmq解耦合点赞，发送和接收调试功能">
+      <option name="closed" value="true" />
+      <created>1754262927099</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1754262927099</updated>
+    </task>
+    <task id="LOCAL-00144" summary="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知">
+      <option name="closed" value="true" />
+      <created>1754263099673</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1754263099673</updated>
+    </task>
+    <task id="LOCAL-00145" summary="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知">
+      <option name="closed" value="true" />
+      <created>1754263109964</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1754263109964</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,9 +715,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="用户登录后端实现" />
-    <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息" />
-    <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。" />
     <MESSAGE value="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在" />
     <MESSAGE value="前端显示登录信息，但是刷新后就没有了" />
     <MESSAGE value="使用vuex将变量变为全局信息" />
@@ -740,7 +737,10 @@
     <MESSAGE value="Merge pull request #13 from MattYu12138/codex/fix-websocket-error-popup-in-footer&#10;&#10;Send initial WebSocket message to trigger footer notification" />
     <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
     <MESSAGE value="异步化解耦点赞和通知功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="异步化解耦点赞和通知功能" />
+    <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
+    <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
