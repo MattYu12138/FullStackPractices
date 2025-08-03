@@ -138,7 +138,7 @@ public class DocService {
         }
 
         var docDB = docMapper.selectByPrimaryKey(id);
-        webSocketServer.sendInfo(docDB.getName() + "is endorsed!");
+        webSocketServer.sendInfo(docDB.getName() + " is endorsed!");
     }
 
 

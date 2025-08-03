@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加日志流水号，方便运维">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/websocket/WebSocketServer.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置websocket，收到点赞后弹窗给提示">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.prod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/the-footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/util/tool.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/util/tool.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,14 +262,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00090" summary="修复bug:无法使用ref，当用.value的时候编译报错">
-      <option name="closed" value="true" />
-      <created>1753784131869</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1753784131869</updated>
     </task>
     <task id="LOCAL-00091" summary="添加wangEditor组件，但并未链接数据库">
       <option name="closed" value="true" />
@@ -663,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754251031108</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="配置websocket，收到点赞后弹窗给提示">
+      <option name="closed" value="true" />
+      <created>1754253219527</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1754253219527</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +711,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。" />
     <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
     <MESSAGE value="解决重置密码弹窗不消除问题" />
     <MESSAGE value="用户登录后端实现" />
@@ -744,7 +735,8 @@
     <MESSAGE value="定时更新ebook表，通过关联查询doc" />
     <MESSAGE value="配置首页显示，点赞，浏览数，文档数" />
     <MESSAGE value="增加日志流水号，方便运维" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加日志流水号，方便运维" />
+    <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置websocket，收到点赞后弹窗给提示" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -30,6 +30,11 @@ public class WebSocketServer {
         map.put(token, session);
         this.token = token;
         LOG.info("有新连接：token：{}，session id：{}，当前连接数：{}", token, session.getId(), map.size());
+        try {
+            session.getBasicRemote().sendText("connect success");
+        } catch (IOException e) {
+            LOG.error("Failed to send connect message", e);
+        }
     }
 
     /**
