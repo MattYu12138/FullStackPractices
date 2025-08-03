@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置websocket，收到点赞后弹窗给提示">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="异步化解耦点赞和通知功能">
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,11 +117,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/service" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/util" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/interceptor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -262,22 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00091" summary="添加wangEditor组件，但并未链接数据库">
-      <option name="closed" value="true" />
-      <created>1753785268858</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1753785268858</updated>
-    </task>
-    <task id="LOCAL-00092" summary="文档内容表设计，持久层生成">
-      <option name="closed" value="true" />
-      <created>1753786144741</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1753786144741</updated>
     </task>
     <task id="LOCAL-00093" summary="左右布局，方便编辑">
       <option name="closed" value="true" />
@@ -655,7 +638,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754253219527</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="配置websocket，收到点赞后弹窗给提示">
+      <option name="closed" value="true" />
+      <created>1754253690163</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1754253690163</updated>
+    </task>
+    <task id="LOCAL-00141" summary="异步化解耦点赞和通知功能">
+      <option name="closed" value="true" />
+      <created>1754254564479</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1754254564479</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,8 +710,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
-    <MESSAGE value="解决重置密码弹窗不消除问题" />
     <MESSAGE value="用户登录后端实现" />
     <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息" />
     <MESSAGE value="配置header的登陆弹窗，但显示位置不正确。" />
@@ -735,8 +732,10 @@
     <MESSAGE value="定时更新ebook表，通过关联查询doc" />
     <MESSAGE value="配置首页显示，点赞，浏览数，文档数" />
     <MESSAGE value="增加日志流水号，方便运维" />
+    <MESSAGE value="Merge pull request #13 from MattYu12138/codex/fix-websocket-error-popup-in-footer&#10;&#10;Send initial WebSocket message to trigger footer notification" />
     <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置websocket，收到点赞后弹窗给提示" />
+    <MESSAGE value="异步化解耦点赞和通知功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="异步化解耦点赞和通知功能" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

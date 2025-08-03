@@ -7,12 +7,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @ComponentScan("com.matt")
 @SpringBootApplication
 @MapperScan("com.matt.wiki.mapper")
 @EnableScheduling
+@EnableAsync
 public class WikiApplication {
 	private static final Log LOG = LogFactory.getLog(WikiApplication.class);
 
