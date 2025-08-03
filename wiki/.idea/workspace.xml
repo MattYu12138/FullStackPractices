@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="解决不显示问题">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/RequestContext.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="相同ip在24小时之内现在不能点赞多次">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/DocJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/EbookSnapshotJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/TestJob.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/WikiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/WikiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper/DocMapperCust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper/DocMapperCust.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DocMapperCust.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DocMapperCust.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/util",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,11 +125,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/util" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/interceptor" />
       <recent name="$PROJECT_DIR$/web/public" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/exception" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -266,14 +269,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00086" summary="bug:页面没有成功实现删除警告功能">
-      <option name="closed" value="true" />
-      <created>1753705744636</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1753705744636</updated>
     </task>
     <task id="LOCAL-00087" summary="安装wangEditor">
       <option name="closed" value="true" />
@@ -659,7 +654,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754217267843</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="相同ip在24小时之内现在不能点赞多次">
+      <option name="closed" value="true" />
+      <created>1754217953640</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1754217953640</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +718,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修复一个提交的时候用户已存在的bug" />
     <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截" />
     <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截. 修改的时候不修改密码" />
     <MESSAGE value="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion" />
@@ -740,7 +742,8 @@
     <MESSAGE value="修复不刷新doc页面的问题" />
     <MESSAGE value="添加点赞系统，但出问题了" />
     <MESSAGE value="解决不显示问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决不显示问题" />
+    <MESSAGE value="相同ip在24小时之内现在不能点赞多次" />
+    <option name="LAST_COMMIT_MESSAGE" value="相同ip在24小时之内现在不能点赞多次" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
