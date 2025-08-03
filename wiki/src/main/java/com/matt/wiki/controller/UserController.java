@@ -1,5 +1,6 @@
 package com.matt.wiki.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.matt.wiki.aspect.LogAspect;
 import com.matt.wiki.req.UserLoginReq;
 import com.matt.wiki.req.UserQueryReq;
@@ -79,8 +80,9 @@ public class UserController {
 //        generate token, putting into userLoginResp
 
         userLoginResp.setToken(token.toString());
-        redisTemplate.opsForValue().set(token.toString(), userLoginResp, 3600 *24, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().set(token.toString(), JSONObject.toJSONString(userLoginResp), 3600 *24, TimeUnit.SECONDS);
         LOG.info("generated token: {}", token);
+
         resp.setContent(userLoginResp);
         return resp;
     }

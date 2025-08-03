@@ -1,8 +1,6 @@
 package com.matt.wiki.resp;
 
-import java.io.Serializable;
-
-public class UserLoginResp implements Serializable {
+public class UserLoginResp  {
     private Long id;
 
     private String loginName;
