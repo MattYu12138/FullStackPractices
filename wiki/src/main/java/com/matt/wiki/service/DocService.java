@@ -7,6 +7,7 @@ import com.matt.wiki.domain.Doc;
 import com.matt.wiki.domain.DocExample;
 import com.matt.wiki.mapper.ContentMapper;
 import com.matt.wiki.mapper.DocMapper;
+import com.matt.wiki.mapper.DocMapperCust;
 import com.matt.wiki.req.DocQueryReq;
 import com.matt.wiki.req.DocSaveReq;
 import com.matt.wiki.resp.DocQueryResp;
@@ -26,6 +27,9 @@ public class DocService {
 
     @Resource
     private DocMapper docMapper;
+
+    @Resource
+    private DocMapperCust docMapperCust;
 
     @Resource
     private ContentMapper contentMapper;
@@ -76,6 +80,8 @@ public class DocService {
         Content contentSave = CopyUtil.copy(docSaveReq, Content.class);
         if(ObjectUtils.isEmpty(docSave.getId())){
             docSave.setId(snowFlake.nextId());
+            docSave.setVoteCount(0);
+            docSave.setViewCount(0);
             docMapper.insert(docSave);
             contentSave.setId(docSave.getId());
             contentMapper.insert(contentSave);
@@ -104,6 +110,7 @@ public class DocService {
 
     public String findContent(Long id){
         Content content = contentMapper.selectByPrimaryKey(id);
+        docMapperCust.increaseViewCount(id);
         if(ObjectUtils.isEmpty(content)){
             LOG.warn("Content not found for doc id: " + id + " , return empty string.");
             return "";
