@@ -18,6 +18,7 @@ import com.matt.wiki.util.CopyUtil;
 import com.matt.wiki.util.RedisUtil;
 import com.matt.wiki.util.RequestContext;
 import com.matt.wiki.util.SnowFlake;
+import com.matt.wiki.websocket.WebSocketServer;
 import jakarta.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,9 @@ public class DocService {
 
     @Resource
     public RedisUtil redisUtil;
+
+    @Resource
+    public WebSocketServer webSocketServer;
 
     private static final Logger LOG = LoggerFactory.getLogger(DocService.class);
 
@@ -132,7 +136,11 @@ public class DocService {
         }else{
             throw new BusinessException(BusinessExceptionCode.VOTE_REPEAT);
         }
+
+        var docDB = docMapper.selectByPrimaryKey(id);
+        webSocketServer.sendInfo(docDB.getName() + "is endorsed!");
     }
+
 
     public void updateEbookInfo(){
         docMapperCust.updateEbookInfo();
