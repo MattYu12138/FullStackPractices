@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修复bug，前后端token统一用String">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/components/the-header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/the-header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,22 +258,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00079" summary="从分类管理复制出文档管理的前后端代码  &#10;遗留问题：编辑表单中，只能选择一级文档作为父文档">
-      <option name="closed" value="true" />
-      <created>1753604741856</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1753604741856</updated>
-    </task>
-    <task id="LOCAL-00080" summary="bug：更新表单递归发生错误">
-      <option name="closed" value="true" />
-      <created>1753615347129</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1753615347129</updated>
     </task>
     <task id="LOCAL-00081" summary="bug：更新表单显示不出数据，但能看到排版是正常的">
       <option name="closed" value="true" />
@@ -651,7 +635,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754182122948</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="未登录不显示页面">
+      <option name="closed" value="true" />
+      <created>1754182439620</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1754182439620</updated>
+    </task>
+    <task id="LOCAL-00129" summary="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面">
+      <option name="closed" value="true" />
+      <created>1754182922882</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1754182922882</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,8 +707,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="点击文档，加载并显示文档内容" />
-    <MESSAGE value="更改valueHtml的初始值，并且为doc的valueHtml添加样式" />
     <MESSAGE value="admin-doc.vue添加侧拉预览框" />
     <MESSAGE value="去掉doc页面样式的scoped，方便在admin-doc中预览相同属性的页面，class = wangEditor" />
     <MESSAGE value="进入页面读取第一页节点" />
@@ -732,7 +730,9 @@
     <MESSAGE value="增加退出账户功能" />
     <MESSAGE value="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数" />
     <MESSAGE value="修复bug，前后端token统一用String" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug，前后端token统一用String" />
+    <MESSAGE value="未登录不显示页面" />
+    <MESSAGE value="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
