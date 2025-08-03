@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="定时更新ebook表，通过关联查询doc">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置首页显示，点赞，浏览数，文档数">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,14 +264,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00088" summary="正在添加wangEditor&#10;bug:无法使用ref，当用.value的时候编译报错">
-      <option name="closed" value="true" />
-      <created>1753782043672</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1753782043672</updated>
     </task>
     <task id="LOCAL-00089" summary="正在添加wangEditor&#10;bug:无法使用ref，当用.value的时候编译报错">
       <option name="closed" value="true" />
@@ -655,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754218814141</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="配置首页显示，点赞，浏览数，文档数">
+      <option name="closed" value="true" />
+      <created>1754250503663</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1754250503663</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +713,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截. 修改的时候不修改密码" />
     <MESSAGE value="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion" />
     <MESSAGE value="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。" />
     <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
@@ -736,7 +737,8 @@
     <MESSAGE value="解决不显示问题" />
     <MESSAGE value="相同ip在24小时之内现在不能点赞多次" />
     <MESSAGE value="定时更新ebook表，通过关联查询doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="定时更新ebook表，通过关联查询doc" />
+    <MESSAGE value="配置首页显示，点赞，浏览数，文档数" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置首页显示，点赞，浏览数，文档数" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

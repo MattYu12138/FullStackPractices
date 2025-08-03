@@ -128,3 +128,322 @@
 2025-08-04 05:48:05.764 INFO  com.matt.wiki.service.EbookService                :50   [32m                  [0;39m 总页数:1
 2025-08-04 05:48:05.764 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m                  [0;39m 返回结果: {"content":{"list":[{"category1Id":100,"category2Id":102,"cover":"/image/cover1.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":7,"id":1,"name":"Spring Boot 入门教程","viewCount":43,"voteCount":5},{"category1Id":100,"category2Id":102,"description":"前端页面开发必备技能组合教程","id":6,"name":"HTML + CSS 快速入门"}],"total":2},"success":true}
 2025-08-04 05:48:05.764 INFO  com.matt.wiki.aspect.LogAspect                    :83   [32m                  [0;39m ------------- 结束 耗时：761 ms -------------
+2025-08-04 05:48:35.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607298791682478080[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:48:35.318 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607298791682478080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:48:35.319 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607298791682478080[0;39m ==> Parameters: 
+2025-08-04 05:48:35.829 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607298791682478080[0;39m <==    Updates: 4
+2025-08-04 05:48:35.830 INFO  com.matt.wiki.job.DocJob                          :33   [32m607298791682478080[0;39m 更新电子书下的文档数据结束，耗时：825毫秒
+2025-08-04 05:48:40.113 INFO  com.matt.wiki.aspect.LogAspect                    :44   [32m                  [0;39m ------------- 开始 -------------
+2025-08-04 05:48:40.113 INFO  com.matt.wiki.aspect.LogAspect                    :45   [32m                  [0;39m 请求地址: http://localhost:8080/doc/vote/6 GET
+2025-08-04 05:48:40.113 INFO  com.matt.wiki.aspect.LogAspect                    :46   [32m                  [0;39m 类名方法: com.matt.wiki.controller.DocController.vote
+2025-08-04 05:48:40.114 INFO  com.matt.wiki.aspect.LogAspect                    :47   [32m                  [0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 05:48:40.114 INFO  com.matt.wiki.aspect.LogAspect                    :69   [32m                  [0;39m 请求参数: [6]
+2025-08-04 05:48:41.870 INFO  com.matt.wiki.util.RedisUtil                      :28   [32m                  [0;39m key已存在：DOC_VOTE_6_0:0:0:0:0:0:0:1
+2025-08-04 05:48:41.874 WARN  c.matt.wiki.controller.ControllerExceptionHandler :44   [32m                  [0;39m 业务异常：您已点赞过
+2025-08-04 05:48:41.876 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m                  [0;39m Resolved [com.matt.wiki.exception.BusinessException: 您已点赞过]
+2025-08-04 05:49:05.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607298917503209472[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:49:05.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607298917503209472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:49:05.253 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607298917503209472[0;39m ==> Parameters: 
+2025-08-04 05:49:05.728 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607298917503209472[0;39m <==    Updates: 4
+2025-08-04 05:49:05.728 INFO  com.matt.wiki.job.DocJob                          :33   [32m607298917503209472[0;39m 更新电子书下的文档数据结束，耗时：726毫秒
+2025-08-04 05:49:35.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607299043344912384[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:49:35.242 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299043344912384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:49:35.242 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299043344912384[0;39m ==> Parameters: 
+2025-08-04 05:49:35.731 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299043344912384[0;39m <==    Updates: 4
+2025-08-04 05:49:35.732 INFO  com.matt.wiki.job.DocJob                          :33   [32m607299043344912384[0;39m 更新电子书下的文档数据结束，耗时：728毫秒
+2025-08-04 05:50:05.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607299169169838080[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:50:05.240 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299169169838080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:50:05.241 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299169169838080[0;39m ==> Parameters: 
+2025-08-04 05:50:05.715 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299169169838080[0;39m <==    Updates: 4
+2025-08-04 05:50:05.715 INFO  com.matt.wiki.job.DocJob                          :33   [32m607299169169838080[0;39m 更新电子书下的文档数据结束，耗时：711毫秒
+2025-08-04 05:50:10.934 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 05:50:10.936 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 05:50:10.954 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-04 05:50:10.957 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-04 05:52:42.644 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-04 05:52:42.665 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 78245 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 05:52:42.665 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 05:52:42.684 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 05:52:42.684 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 05:52:43.012 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 05:52:43.014 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 05:52:43.029 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-08-04 05:52:43.384 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 05:52:43.390 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:52:43.391 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 05:52:43.391 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 05:52:43.407 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 05:52:43.407 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 722 ms
+2025-08-04 05:52:44.056 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 05:52:44.066 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:52:44.071 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 05:52:44.078 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.654 seconds (process running for 2.015)
+2025-08-04 05:52:44.080 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 05:52:44.080 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 05:53:05.010 INFO  com.matt.wiki.job.DocJob                          :30   [32m607299924173918208[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:53:05.020 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607299924173918208[0;39m HikariPool-1 - Starting...
+2025-08-04 05:53:07.623 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607299924173918208[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7334e4b1
+2025-08-04 05:53:07.624 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607299924173918208[0;39m HikariPool-1 - Start completed.
+2025-08-04 05:53:07.628 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299924173918208[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:53:07.639 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299924173918208[0;39m ==> Parameters: 
+2025-08-04 05:53:08.112 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607299924173918208[0;39m <==    Updates: 4
+2025-08-04 05:53:08.114 INFO  com.matt.wiki.job.DocJob                          :33   [32m607299924173918208[0;39m 更新电子书下的文档数据结束，耗时：3104毫秒
+2025-08-04 05:53:10.847 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 05:53:10.851 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 05:53:10.857 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-04 05:53:11.193 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-04 05:53:12.448 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-04 05:53:12.465 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 78265 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 05:53:12.465 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 05:53:12.492 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 05:53:12.492 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 05:53:12.792 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 05:53:12.793 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 05:53:12.807 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-08-04 05:53:13.143 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 05:53:13.148 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:53:13.149 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 05:53:13.149 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 05:53:13.163 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 05:53:13.163 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 671 ms
+2025-08-04 05:53:13.815 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 05:53:13.825 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:53:13.831 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 05:53:13.839 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.646 seconds (process running for 1.987)
+2025-08-04 05:53:13.840 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 05:53:13.840 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 05:53:35.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300049973678080[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:53:35.012 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607300049973678080[0;39m HikariPool-1 - Starting...
+2025-08-04 05:53:37.250 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607300049973678080[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f0f2bbd
+2025-08-04 05:53:37.251 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607300049973678080[0;39m HikariPool-1 - Start completed.
+2025-08-04 05:53:37.256 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300049973678080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:53:37.271 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300049973678080[0;39m ==> Parameters: 
+2025-08-04 05:53:37.745 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300049973678080[0;39m <==    Updates: 4
+2025-08-04 05:53:37.746 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300049973678080[0;39m 更新电子书下的文档数据结束，耗时：2742毫秒
+2025-08-04 05:53:56.659 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-04 05:53:56.663 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 05:53:56.664 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:53:56.671 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 05:53:56.671 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:53:56.681 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-04 05:53:56.686 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-04 05:53:56.741 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 78265 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 05:53:56.741 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 05:53:56.806 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 05:53:56.806 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 05:53:56.809 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 05:53:56.861 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 05:53:56.861 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:53:56.861 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 05:53:56.861 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 05:53:56.865 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 05:53:56.865 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 123 ms
+2025-08-04 05:53:57.110 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 05:53:57.116 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:53:57.117 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 05:53:57.120 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.392 seconds (process running for 45.27)
+2025-08-04 05:53:57.121 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-04 05:53:57.121 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 05:53:57.122 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 05:54:05.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300175790215168[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:54:05.001 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607300175790215168[0;39m HikariPool-2 - Starting...
+2025-08-04 05:54:07.333 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607300175790215168[0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d0d3cc3
+2025-08-04 05:54:07.333 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607300175790215168[0;39m HikariPool-2 - Start completed.
+2025-08-04 05:54:07.333 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300175790215168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:54:07.334 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300175790215168[0;39m ==> Parameters: 
+2025-08-04 05:54:07.808 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300175790215168[0;39m <==    Updates: 4
+2025-08-04 05:54:07.808 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300175790215168[0;39m 更新电子书下的文档数据结束，耗时：2807毫秒
+2025-08-04 05:54:15.743 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-08-04 05:54:15.744 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 05:54:15.744 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:54:15.746 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 05:54:15.746 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:54:15.747 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2025-08-04 05:54:16.903 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2025-08-04 05:54:16.969 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 78265 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 05:54:16.969 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 05:54:17.035 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 05:54:17.035 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 05:54:17.039 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-08-04 05:54:17.076 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 05:54:17.076 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:54:17.077 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 05:54:17.077 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 05:54:17.080 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 05:54:17.080 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 110 ms
+2025-08-04 05:54:17.135 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/com/matt/wiki/controller/UserController.class]: com/matt/wiki/aspect/LogAspect
+2025-08-04 05:54:17.136 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-08-04 05:54:17.140 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-04 05:54:17.149 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/com/matt/wiki/controller/UserController.class]: com/matt/wiki/aspect/LogAspect
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1242)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at com.matt.wiki.WikiApplication.main(WikiApplication.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: com/matt/wiki/aspect/LogAspect
+	at com.matt.wiki.controller.UserController.<clinit>(UserController.java:38)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
+	at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.ensureClassInitialized(MethodHandleAccessorFactory.java:300)
+	at java.base/jdk.internal.reflect.MethodHandleAccessorFactory.newConstructorAccessor(MethodHandleAccessorFactory.java:103)
+	at java.base/jdk.internal.reflect.ReflectionFactory.newConstructorAccessor(ReflectionFactory.java:200)
+	at java.base/java.lang.reflect.Constructor.acquireConstructorAccessor(Constructor.java:547)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:497)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:122)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1351)
+	... 20 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.matt.wiki.aspect.LogAspect
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:496)
+	at java.base/java.lang.Class.forName(Class.java:475)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 32 common frames omitted
+2025-08-04 05:54:40.819 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 78265 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 05:54:40.819 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 05:54:40.931 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 05:54:40.933 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 05:54:40.936 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 05:54:41.008 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 05:54:41.009 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:54:41.009 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 05:54:41.009 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 05:54:41.013 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 05:54:41.014 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 193 ms
+2025-08-04 05:54:41.340 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 05:54:41.345 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:54:41.346 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 05:54:41.348 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.547 seconds (process running for 89.5)
+2025-08-04 05:54:41.349 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-04 05:54:41.349 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 05:54:41.349 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 05:55:05.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300427452649472[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:55:05.001 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607300427452649472[0;39m HikariPool-3 - Starting...
+2025-08-04 05:55:07.349 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607300427452649472[0;39m HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fda0438
+2025-08-04 05:55:07.349 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607300427452649472[0;39m HikariPool-3 - Start completed.
+2025-08-04 05:55:07.350 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300427452649472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:55:07.350 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300427452649472[0;39m ==> Parameters: 
+2025-08-04 05:55:07.825 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300427452649472[0;39m <==    Updates: 4
+2025-08-04 05:55:07.825 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300427452649472[0;39m 更新电子书下的文档数据结束，耗时：2824毫秒
+2025-08-04 05:55:19.711 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 05:55:19.713 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 05:55:19.714 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-3 - Shutdown initiated...
+2025-08-04 05:55:20.639 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-3 - Shutdown completed.
+2025-08-04 05:55:21.684 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-04 05:55:21.701 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 78330 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 05:55:21.702 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 05:55:21.735 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 05:55:21.735 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 05:55:22.046 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 05:55:22.047 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 05:55:22.063 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-08-04 05:55:22.388 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 05:55:22.393 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:55:22.393 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 05:55:22.393 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 05:55:22.406 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 05:55:22.407 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 671 ms
+2025-08-04 05:55:23.049 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 05:55:23.061 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 05:55:23.068 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 05:55:23.076 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.583 seconds (process running for 1.872)
+2025-08-04 05:55:23.078 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 05:55:23.078 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 05:55:30.467 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-04 05:55:30.467 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-08-04 05:55:30.468 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-08-04 05:55:30.493 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607300534369652736[0;39m ------------- 开始 -------------
+2025-08-04 05:55:30.493 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607300534369652736[0;39m 请求地址: http://localhost:8080/doc/all/1 GET
+2025-08-04 05:55:30.493 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607300534369652736[0;39m 类名方法: com.matt.wiki.controller.DocController.all
+2025-08-04 05:55:30.494 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607300534369652736[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 05:55:30.509 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607300534369652736[0;39m 请求参数: [1]
+2025-08-04 05:55:30.527 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607300534369652736[0;39m HikariPool-1 - Starting...
+2025-08-04 05:55:32.893 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607300534369652736[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8c7d8bc
+2025-08-04 05:55:32.895 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607300534369652736[0;39m HikariPool-1 - Start completed.
+2025-08-04 05:55:32.902 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m607300534369652736[0;39m ==>  Preparing: select id, ebook_id, parent, `name`, sort, view_count, vote_count from doc WHERE ( ebook_id = ? ) order by sort asc
+2025-08-04 05:55:32.921 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m607300534369652736[0;39m ==> Parameters: 1(Long)
+2025-08-04 05:55:33.173 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==    Columns: id, ebook_id, parent, name, sort, view_count, vote_count
+2025-08-04 05:55:33.174 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 1, 1, 0, 文档1, 1, 9, 1
+2025-08-04 05:55:33.175 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 2, 1, 1, 文档1.1, 1, 8, 0
+2025-08-04 05:55:33.175 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 4, 1, 3, 文档2.1, 1, 6, 1
+2025-08-04 05:55:33.175 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 607130915923169280, 1, 2, test1, 1, 6, 1
+2025-08-04 05:55:33.176 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 3, 1, 0, 文档2, 2, 5, 0
+2025-08-04 05:55:33.176 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 5, 1, 3, 文档2.2, 2, 9, 2
+2025-08-04 05:55:33.176 TRACE com.matt.wiki.mapper.DocMapper.selectByExample    :141  [32m607300534369652736[0;39m <==        Row: 605371330069663744, 1, 12, test, 10, 0, 0
+2025-08-04 05:55:33.176 DEBUG com.matt.wiki.mapper.DocMapper.selectByExample    :135  [32m607300534369652736[0;39m <==      Total: 7
+2025-08-04 05:55:33.192 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607300534369652736[0;39m 返回结果: {"content":[{"ebookId":1,"id":1,"name":"文档1","parent":0,"sort":1,"viewCount":9,"voteCount":1},{"ebookId":1,"id":2,"name":"文档1.1","parent":1,"sort":1,"viewCount":8,"voteCount":0},{"ebookId":1,"id":4,"name":"文档2.1","parent":3,"sort":1,"viewCount":6,"voteCount":1},{"ebookId":1,"id":607130915923169280,"name":"test1","parent":2,"sort":1,"viewCount":6,"voteCount":1},{"ebookId":1,"id":3,"name":"文档2","parent":0,"sort":2,"viewCount":5,"voteCount":0},{"ebookId":1,"id":5,"name":"文档2.2","parent":3,"sort":2,"viewCount":9,"voteCount":2},{"ebookId":1,"id":605371330069663744,"name":"test","parent":12,"sort":10,"viewCount":0,"voteCount":0}],"success":true}
+2025-08-04 05:55:33.192 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607300534369652736[0;39m ------------- 结束 耗时：2700 ms -------------
+2025-08-04 05:55:33.253 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607300545950126080[0;39m ------------- 开始 -------------
+2025-08-04 05:55:33.254 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607300545950126080[0;39m 请求地址: http://localhost:8080/doc/find-content/1 GET
+2025-08-04 05:55:33.254 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607300545950126080[0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-04 05:55:33.254 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607300545950126080[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 05:55:33.254 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607300545950126080[0;39m 请求参数: [1]
+2025-08-04 05:55:33.255 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607300545950126080[0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-04 05:55:33.255 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607300545950126080[0;39m ==> Parameters: 1(Long)
+2025-08-04 05:55:33.492 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607300545950126080[0;39m <==    Columns: id, content
+2025-08-04 05:55:33.492 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607300545950126080[0;39m <==        Row: 1, <<BLOB>>
+2025-08-04 05:55:33.492 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607300545950126080[0;39m <==      Total: 1
+2025-08-04 05:55:33.494 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607300545950126080[0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-04 05:55:33.494 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607300545950126080[0;39m ==> Parameters: 1(Long)
+2025-08-04 05:55:33.970 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607300545950126080[0;39m <==    Updates: 1
+2025-08-04 05:55:33.971 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607300545950126080[0;39m 返回结果: {"content":"<p>hello</p>","success":true}
+2025-08-04 05:55:33.971 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607300545950126080[0;39m ------------- 结束 耗时：718 ms -------------
+2025-08-04 05:55:34.623 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m607300551696322560[0;39m ------------- 开始 -------------
+2025-08-04 05:55:34.623 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m607300551696322560[0;39m 请求地址: http://localhost:8080/doc/find-content/607130915923169280 GET
+2025-08-04 05:55:34.624 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m607300551696322560[0;39m 类名方法: com.matt.wiki.controller.DocController.findContent
+2025-08-04 05:55:34.624 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m607300551696322560[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-04 05:55:34.624 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m607300551696322560[0;39m 请求参数: [607130915923169280]
+2025-08-04 05:55:34.860 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607300551696322560[0;39m ==>  Preparing: select id , content from content where id = ?
+2025-08-04 05:55:34.861 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607300551696322560[0;39m ==> Parameters: 607130915923169280(Long)
+2025-08-04 05:55:35.009 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300553315323904[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:55:35.009 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300553315323904[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:55:35.010 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300553315323904[0;39m ==> Parameters: 
+2025-08-04 05:55:35.099 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607300551696322560[0;39m <==    Columns: id, content
+2025-08-04 05:55:35.099 TRACE c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :141  [32m607300551696322560[0;39m <==        Row: 607130915923169280, <<BLOB>>
+2025-08-04 05:55:35.099 DEBUG c.m.wiki.mapper.ContentMapper.selectByPrimaryKey  :135  [32m607300551696322560[0;39m <==      Total: 1
+2025-08-04 05:55:35.100 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607300551696322560[0;39m ==>  Preparing: update doc set view_count = view_count + 1 where id = ?
+2025-08-04 05:55:35.100 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607300551696322560[0;39m ==> Parameters: 607130915923169280(Long)
+2025-08-04 05:55:35.517 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300553315323904[0;39m <==    Updates: 4
+2025-08-04 05:55:35.518 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300553315323904[0;39m 更新电子书下的文档数据结束，耗时：509毫秒
+2025-08-04 05:55:35.576 DEBUG c.matt.wiki.mapper.DocMapperCust.increaseViewCount:135  [32m607300551696322560[0;39m <==    Updates: 1
+2025-08-04 05:55:35.576 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m607300551696322560[0;39m 返回结果: {"content":"<p>Heello</p>","success":true}
+2025-08-04 05:55:35.577 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m607300551696322560[0;39m ------------- 结束 耗时：954 ms -------------
+2025-08-04 05:56:05.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300679115083776[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:56:05.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300679115083776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:56:05.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300679115083776[0;39m ==> Parameters: 
+2025-08-04 05:56:05.776 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300679115083776[0;39m <==    Updates: 4
+2025-08-04 05:56:05.777 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300679115083776[0;39m 更新电子书下的文档数据结束，耗时：775毫秒
+2025-08-04 05:56:35.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300804952592384[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:56:35.355 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300804952592384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:56:35.356 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300804952592384[0;39m ==> Parameters: 
+2025-08-04 05:56:35.917 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300804952592384[0;39m <==    Updates: 4
+2025-08-04 05:56:35.918 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300804952592384[0;39m 更新电子书下的文档数据结束，耗时：914毫秒
+2025-08-04 05:57:05.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607300930781712384[0;39m 更新电子书下的文档数据开始
+2025-08-04 05:57:05.258 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300930781712384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 05:57:05.258 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300930781712384[0;39m ==> Parameters: 
+2025-08-04 05:57:05.871 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607300930781712384[0;39m <==    Updates: 4
+2025-08-04 05:57:05.871 INFO  com.matt.wiki.job.DocJob                          :33   [32m607300930781712384[0;39m 更新电子书下的文档数据结束，耗时：867毫秒

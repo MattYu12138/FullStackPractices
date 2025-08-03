@@ -1,8 +1,10 @@
 package com.matt.wiki.aspect;
 
-import com.alibaba.fastjson.support.spring.PropertyPreFilters;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.support.spring.PropertyPreFilters;
 import com.matt.wiki.util.RequestContext;
+import com.matt.wiki.util.SnowFlake;
+import jakarta.annotation.Resource;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,6 +17,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -26,6 +29,9 @@ public class LogAspect {
 
     private final static Logger LOG = LoggerFactory.getLogger(LogAspect.class);
 
+    @Resource
+    private SnowFlake snowFlake;
+
     /** 定义一个切点 针对所有controller */
     @Pointcut("execution(public * com.matt.*.controller..*Controller.*(..))")
     public void controllerPointcut() {}
@@ -33,6 +39,8 @@ public class LogAspect {
 //    前置通知，在业务代码之前。打印日志
     @Before("controllerPointcut()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
+
+        MDC.put("LOG_ID", String.valueOf(snowFlake.nextId()));
 
         // 开始打印请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
