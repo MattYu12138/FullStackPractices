@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加退出账户功能">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/interceptor/LogInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/LoginUserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/interceptor/LoginInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -261,14 +255,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00076" summary="默认显示欢迎页面，点击欢迎菜单时，显示欢迎页面，点击分类菜单时，显示电子书，只有二级分类才能触发click事件">
-      <option name="closed" value="true" />
-      <created>1753561359777</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1753561359777</updated>
     </task>
     <task id="LOCAL-00077" summary="点击二级分类显示目录下电子书">
       <option name="closed" value="true" />
@@ -654,7 +640,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754179413156</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数">
+      <option name="closed" value="true" />
+      <created>1754179890793</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1754179890793</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +704,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修复Bug：会查询电子书下所有页面。" />
     <MESSAGE value="进入文档时候，能直接获取下拉框内容，不需要点击新增" />
     <MESSAGE value="点击文档，加载并显示文档内容" />
     <MESSAGE value="更改valueHtml的初始值，并且为doc的valueHtml添加样式" />
@@ -735,7 +728,8 @@
     <MESSAGE value="解决数据丢失的问题，vuex+sessionStorage" />
     <MESSAGE value="增加删除功能" />
     <MESSAGE value="增加退出账户功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加退出账户功能" />
+    <MESSAGE value="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
