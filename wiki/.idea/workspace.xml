@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加统计数值接口">
-      <change afterPath="$PROJECT_DIR$/web/src/components/the-welcome.vue" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加统计数值前端页面">
+      <change afterPath="$PROJECT_DIR$/web/public/js/echarts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/js/echarts_5.0.2.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +92,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/src/components",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/public/js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,11 +124,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/public/js" />
       <recent name="$PROJECT_DIR$/web/src/components" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -259,14 +261,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00103" summary="更改valueHtml的初始值，并且为doc的valueHtml添加样式">
-      <option name="closed" value="true" />
-      <created>1753821483975</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1753821483975</updated>
     </task>
     <task id="LOCAL-00104" summary="admin-doc.vue添加侧拉预览框">
       <option name="closed" value="true" />
@@ -652,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754270559485</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="增加统计数值前端页面">
+      <option name="closed" value="true" />
+      <created>1754271469888</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1754271469888</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,7 +710,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修复bug，前后端token统一用String" />
     <MESSAGE value="未登录不显示页面" />
     <MESSAGE value="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面" />
     <MESSAGE value="about页面现在可以在未登录的情况下显示" />
@@ -733,7 +734,20 @@
     <MESSAGE value="Merge pull request #15 from MattYu12138/codex/fix-invalid-bound-statement-error&#10;&#10;fix: correct EbookSnapshot mapper namespace" />
     <MESSAGE value="添加allowMultiQueries=true使数据库能同时接受多个语句" />
     <MESSAGE value="增加统计数值接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加统计数值接口" />
+    <MESSAGE value="增加统计数值前端页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加统计数值前端页面" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/src/components/the-welcome.vue</url>
+          <line>256</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
