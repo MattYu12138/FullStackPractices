@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="改回使用websocket">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/rocketmq/VoteTopicConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/rocketmq/VoteTopicConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/DocService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/DocJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/DocJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +113,9 @@
       "redis",
       "mysql"
     ],
+    "RunConfigurationTargetLRU": [
+      "fc100143-2e3a-40db-b282-3a2164050681"
+    ],
     "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
       "MySQL"
     ]
@@ -146,19 +147,12 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve-dev">
-    <configuration name="SnowFlake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.util.SnowFlake" />
-      <module name="wiki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.matt.wiki.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Database Script.all.sql">
+    <configuration name="all.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/doc/db/all.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="fc100143-2e3a-40db-b282-3a2164050681" />
+      <method v="2" />
     </configuration>
     <configuration name="ebook | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/ebook.http" executionIdentifier="#1" runType="Run single request">
       <method v="2" />
@@ -226,7 +220,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.SnowFlake" />
+      <item itemvalue="Database Script.all.sql" />
       <item itemvalue="HTTP Request.test | #5" />
       <item itemvalue="HTTP Request.ebook | #1" />
       <item itemvalue="Maven.mybatis-generator" />
@@ -236,11 +230,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.all.sql" />
         <item itemvalue="npm.serve-dev" />
         <item itemvalue="HTTP Request.test | #5" />
         <item itemvalue="npm.build-dev" />
         <item itemvalue="HTTP Request.ebook | #1" />
-        <item itemvalue="Application.SnowFlake" />
       </list>
     </recent_temporary>
   </component>
@@ -266,14 +260,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00097" summary="成功切换表单的数据显示，但是会返回500错误">
-      <option name="closed" value="true" />
-      <created>1753793469196</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1753793469196</updated>
     </task>
     <task id="LOCAL-00098" summary="修复500错">
       <option name="closed" value="true" />
@@ -659,7 +645,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754263109964</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="改回使用websocket">
+      <option name="closed" value="true" />
+      <created>1754263298114</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1754263298114</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,7 +709,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在" />
     <MESSAGE value="前端显示登录信息，但是刷新后就没有了" />
     <MESSAGE value="使用vuex将变量变为全局信息" />
     <MESSAGE value="解决数据丢失的问题，vuex+sessionStorage" />
@@ -740,7 +733,8 @@
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能" />
     <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
+    <MESSAGE value="改回使用websocket" />
+    <option name="LAST_COMMIT_MESSAGE" value="改回使用websocket" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
