@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="富文本框现在一定会在页面内">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加application-prod.properties，在配置中可以配置VM改变读取文件">
+      <change afterPath="$PROJECT_DIR$/doc/deploy/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/deploy/server.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/deploy/web.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/matt/wiki/WikiApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/WikiApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +93,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "/Users/yushuzhan/Library/Application Support/JetBrains/IntelliJIdea2025.1/plugins/Shell Script/shellcheck",
     "Spring Boot.WikiApplication.executor": "Run",
     "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
     "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
@@ -95,7 +102,7 @@
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/resources",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/doc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,11 +134,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web/public/js" />
       <recent name="$PROJECT_DIR$/web/src/components" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/temp" />
@@ -268,15 +275,7 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-      <workItem from="1754346235855" duration="1904000" />
-    </task>
-    <task id="LOCAL-00108" summary="user表设计和持久层生成,初步完成user页面">
-      <option name="closed" value="true" />
-      <created>1753925697168</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1753925697168</updated>
+      <workItem from="1754346235855" duration="4345000" />
     </task>
     <task id="LOCAL-00109" summary="user表设计和持久层生成,初步完成user页面">
       <option name="closed" value="true" />
@@ -662,7 +661,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754274174413</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="添加application-prod.properties，在配置中可以配置VM改变读取文件">
+      <option name="closed" value="true" />
+      <created>1754348214852</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1754348214852</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -718,7 +725,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="修复不刷新doc页面的问题" />
     <MESSAGE value="添加点赞系统，但出问题了" />
     <MESSAGE value="解决不显示问题" />
     <MESSAGE value="相同ip在24小时之内现在不能点赞多次" />
@@ -743,7 +749,8 @@
     <MESSAGE value="修改logo，未完成" />
     <MESSAGE value="加载的时候会显示加载提示，特别是第一次进入网站" />
     <MESSAGE value="富文本框现在一定会在页面内" />
-    <option name="LAST_COMMIT_MESSAGE" value="富文本框现在一定会在页面内" />
+    <MESSAGE value="添加application-prod.properties，在配置中可以配置VM改变读取文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加application-prod.properties，在配置中可以配置VM改变读取文件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
