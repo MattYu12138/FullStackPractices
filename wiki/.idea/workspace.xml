@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="改回使用websocket">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加后端ebookSnapshot的持久层和mapper">
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/DocJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/job/DocJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookSnapshotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookSnapshotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/resp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,11 +122,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/config" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/util" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/service" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/job" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -260,30 +259,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00098" summary="修复500错">
-      <option name="closed" value="true" />
-      <created>1753817152271</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1753817152271</updated>
-    </task>
-    <task id="LOCAL-00099" summary="增加doc界面，用树形届面展示。Bug：会查询电子书下所有页面。">
-      <option name="closed" value="true" />
-      <created>1753818345957</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1753818345957</updated>
-    </task>
-    <task id="LOCAL-00100" summary="修复Bug：会查询电子书下所有页面。">
-      <option name="closed" value="true" />
-      <created>1753818744786</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1753818744786</updated>
     </task>
     <task id="LOCAL-00101" summary="进入文档时候，能直接获取下拉框内容，不需要点击新增">
       <option name="closed" value="true" />
@@ -653,7 +628,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754263298114</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="sql快照逻辑">
+      <option name="closed" value="true" />
+      <created>1754268353244</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1754268353244</updated>
+    </task>
+    <task id="LOCAL-00148" summary="增加后端ebookSnapshot的持久层和mapper">
+      <option name="closed" value="true" />
+      <created>1754269029881</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1754269029881</updated>
+    </task>
+    <task id="LOCAL-00149" summary="增加后端ebookSnapshot的持久层和mapper">
+      <option name="closed" value="true" />
+      <created>1754269114060</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1754269114060</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,8 +708,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="前端显示登录信息，但是刷新后就没有了" />
-    <MESSAGE value="使用vuex将变量变为全局信息" />
     <MESSAGE value="解决数据丢失的问题，vuex+sessionStorage" />
     <MESSAGE value="增加删除功能" />
     <MESSAGE value="增加退出账户功能" />
@@ -734,7 +731,9 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
     <MESSAGE value="改回使用websocket" />
-    <option name="LAST_COMMIT_MESSAGE" value="改回使用websocket" />
+    <MESSAGE value="sql快照逻辑" />
+    <MESSAGE value="增加后端ebookSnapshot的持久层和mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加后端ebookSnapshot的持久层和mapper" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

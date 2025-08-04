@@ -10199,3 +10199,988 @@ Caused by: java.nio.channels.ClosedChannelException: null
 2025-08-04 10:45:50.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373597094318080[0;39m ==> Parameters: 
 2025-08-04 10:45:50.744 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373597094318080[0;39m <==    Updates: 4
 2025-08-04 10:45:50.744 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373597094318080[0;39m 更新电子书下的文档数据结束，耗时：740毫秒
+2025-08-04 10:46:00.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373639045746688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:46:00.329 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373639045746688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:46:00.329 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373639045746688[0;39m ==> Parameters: 
+2025-08-04 10:46:00.843 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373639045746688[0;39m <==    Updates: 4
+2025-08-04 10:46:00.844 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373639045746688[0;39m 更新电子书下的文档数据结束，耗时：839毫秒
+2025-08-04 10:46:10.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373680984592384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:46:10.251 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373680984592384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:46:10.251 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373680984592384[0;39m ==> Parameters: 
+2025-08-04 10:46:10.773 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373680984592384[0;39m <==    Updates: 4
+2025-08-04 10:46:10.774 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373680984592384[0;39m 更新电子书下的文档数据结束，耗时：770毫秒
+2025-08-04 10:46:20.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373722931826688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:46:20.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373722931826688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:46:20.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373722931826688[0;39m ==> Parameters: 
+2025-08-04 10:46:20.745 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373722931826688[0;39m <==    Updates: 4
+2025-08-04 10:46:20.745 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373722931826688[0;39m 更新电子书下的文档数据结束，耗时：740毫秒
+2025-08-04 10:46:30.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373764866478080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:46:30.261 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373764866478080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:46:30.262 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373764866478080[0;39m ==> Parameters: 
+2025-08-04 10:46:30.755 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373764866478080[0;39m <==    Updates: 4
+2025-08-04 10:46:30.756 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373764866478080[0;39m 更新电子书下的文档数据结束，耗时：753毫秒
+2025-08-04 10:46:40.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373806817906688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:46:40.251 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373806817906688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:46:40.251 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373806817906688[0;39m ==> Parameters: 
+2025-08-04 10:46:40.779 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373806817906688[0;39m <==    Updates: 4
+2025-08-04 10:46:40.779 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373806817906688[0;39m 更新电子书下的文档数据结束，耗时：774毫秒
+2025-08-04 10:46:50.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373848744169472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:46:50.301 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373848744169472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:46:50.301 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373848744169472[0;39m ==> Parameters: 
+2025-08-04 10:46:50.818 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373848744169472[0;39m <==    Updates: 4
+2025-08-04 10:46:50.819 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373848744169472[0;39m 更新电子书下的文档数据结束，耗时：818毫秒
+2025-08-04 10:47:00.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373890695598080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:47:00.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373890695598080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:47:00.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373890695598080[0;39m ==> Parameters: 
+2025-08-04 10:47:00.745 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373890695598080[0;39m <==    Updates: 4
+2025-08-04 10:47:00.746 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373890695598080[0;39m 更新电子书下的文档数据结束，耗时：742毫秒
+2025-08-04 10:47:10.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373932630249472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:47:10.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373932630249472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:47:10.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373932630249472[0;39m ==> Parameters: 
+2025-08-04 10:47:10.741 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373932630249472[0;39m <==    Updates: 4
+2025-08-04 10:47:10.742 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373932630249472[0;39m 更新电子书下的文档数据结束，耗时：741毫秒
+2025-08-04 10:47:20.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607373974577483776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:47:20.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373974577483776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:47:20.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373974577483776[0;39m ==> Parameters: 
+2025-08-04 10:47:20.741 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607373974577483776[0;39m <==    Updates: 4
+2025-08-04 10:47:20.741 INFO  com.matt.wiki.job.DocJob                          :33   [32m607373974577483776[0;39m 更新电子书下的文档数据结束，耗时：739毫秒
+2025-08-04 10:47:30.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374016520523776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:47:30.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374016520523776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:47:30.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374016520523776[0;39m ==> Parameters: 
+2025-08-04 10:47:30.741 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374016520523776[0;39m <==    Updates: 4
+2025-08-04 10:47:30.741 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374016520523776[0;39m 更新电子书下的文档数据结束，耗时：739毫秒
+2025-08-04 10:47:40.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374058455175168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:47:40.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374058455175168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:47:40.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374058455175168[0;39m ==> Parameters: 
+2025-08-04 10:47:40.742 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374058455175168[0;39m <==    Updates: 4
+2025-08-04 10:47:40.742 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374058455175168[0;39m 更新电子书下的文档数据结束，耗时：741毫秒
+2025-08-04 10:47:50.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374100410798080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:47:50.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374100410798080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:47:50.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374100410798080[0;39m ==> Parameters: 
+2025-08-04 10:47:50.744 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374100410798080[0;39m <==    Updates: 4
+2025-08-04 10:47:50.744 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374100410798080[0;39m 更新电子书下的文档数据结束，耗时：741毫秒
+2025-08-04 10:48:00.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374142341255168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:48:00.343 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374142341255168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:48:00.343 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374142341255168[0;39m ==> Parameters: 
+2025-08-04 10:48:00.837 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374142341255168[0;39m <==    Updates: 4
+2025-08-04 10:48:00.837 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374142341255168[0;39m 更新电子书下的文档数据结束，耗时：836毫秒
+2025-08-04 10:48:10.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374184301072384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:48:10.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374184301072384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:48:10.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374184301072384[0;39m ==> Parameters: 
+2025-08-04 10:48:10.892 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374184301072384[0;39m <==    Updates: 4
+2025-08-04 10:48:10.892 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374184301072384[0;39m 更新电子书下的文档数据结束，耗时：888毫秒
+2025-08-04 10:48:20.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374226248306688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:48:20.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374226248306688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:48:20.252 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374226248306688[0;39m ==> Parameters: 
+2025-08-04 10:48:20.745 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374226248306688[0;39m <==    Updates: 4
+2025-08-04 10:48:20.745 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374226248306688[0;39m 更新电子书下的文档数据结束，耗时：740毫秒
+2025-08-04 10:48:30.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374268178763776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:48:30.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374268178763776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:48:30.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374268178763776[0;39m ==> Parameters: 
+2025-08-04 10:48:30.756 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374268178763776[0;39m <==    Updates: 4
+2025-08-04 10:48:30.756 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374268178763776[0;39m 更新电子书下的文档数据结束，耗时：754毫秒
+2025-08-04 10:48:40.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374310130192384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:48:40.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374310130192384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:48:40.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374310130192384[0;39m ==> Parameters: 
+2025-08-04 10:48:40.742 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374310130192384[0;39m <==    Updates: 4
+2025-08-04 10:48:40.743 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374310130192384[0;39m 更新电子书下的文档数据结束，耗时：739毫秒
+2025-08-04 10:48:50.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374352064843776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:48:50.315 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374352064843776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:48:50.316 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374352064843776[0;39m ==> Parameters: 
+2025-08-04 10:48:50.869 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374352064843776[0;39m <==    Updates: 4
+2025-08-04 10:48:50.869 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374352064843776[0;39m 更新电子书下的文档数据结束，耗时：867毫秒
+2025-08-04 10:49:00.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374394016272384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:49:00.351 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374394016272384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:49:00.352 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374394016272384[0;39m ==> Parameters: 
+2025-08-04 10:49:00.846 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374394016272384[0;39m <==    Updates: 4
+2025-08-04 10:49:00.846 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374394016272384[0;39m 更新电子书下的文档数据结束，耗时：842毫秒
+2025-08-04 10:49:10.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374435946729472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:49:10.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374435946729472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:49:10.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374435946729472[0;39m ==> Parameters: 
+2025-08-04 10:49:10.897 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374435946729472[0;39m <==    Updates: 4
+2025-08-04 10:49:10.898 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374435946729472[0;39m 更新电子书下的文档数据结束，耗时：897毫秒
+2025-08-04 10:49:20.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374477889769472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:49:20.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374477889769472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:49:20.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374477889769472[0;39m ==> Parameters: 
+2025-08-04 10:49:20.741 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374477889769472[0;39m <==    Updates: 4
+2025-08-04 10:49:20.742 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374477889769472[0;39m 更新电子书下的文档数据结束，耗时：740毫秒
+2025-08-04 10:49:30.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374519828615168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:49:30.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374519828615168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:49:30.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374519828615168[0;39m ==> Parameters: 
+2025-08-04 10:49:30.764 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374519828615168[0;39m <==    Updates: 4
+2025-08-04 10:49:30.765 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374519828615168[0;39m 更新电子书下的文档数据结束，耗时：765毫秒
+2025-08-04 10:49:40.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374561788432384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:49:40.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374561788432384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:49:40.251 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374561788432384[0;39m ==> Parameters: 
+2025-08-04 10:49:40.798 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374561788432384[0;39m <==    Updates: 4
+2025-08-04 10:49:40.799 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374561788432384[0;39m 更新电子书下的文档数据结束，耗时：795毫秒
+2025-08-04 10:49:50.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374603723083776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:49:50.322 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374603723083776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:49:50.322 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374603723083776[0;39m ==> Parameters: 
+2025-08-04 10:49:50.936 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374603723083776[0;39m <==    Updates: 4
+2025-08-04 10:49:50.937 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374603723083776[0;39m 更新电子书下的文档数据结束，耗时：934毫秒
+2025-08-04 10:50:00.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374645674512384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:50:00.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374645674512384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:50:00.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374645674512384[0;39m ==> Parameters: 
+2025-08-04 10:50:00.749 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374645674512384[0;39m <==    Updates: 4
+2025-08-04 10:50:00.749 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374645674512384[0;39m 更新电子书下的文档数据结束，耗时：745毫秒
+2025-08-04 10:50:10.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374687600775168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:50:10.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374687600775168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:50:10.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374687600775168[0;39m ==> Parameters: 
+2025-08-04 10:50:10.802 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374687600775168[0;39m <==    Updates: 4
+2025-08-04 10:50:10.802 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374687600775168[0;39m 更新电子书下的文档数据结束，耗时：802毫秒
+2025-08-04 10:50:20.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374729556398080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:50:20.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374729556398080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:50:20.250 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374729556398080[0;39m ==> Parameters: 
+2025-08-04 10:50:20.837 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374729556398080[0;39m <==    Updates: 4
+2025-08-04 10:50:20.838 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374729556398080[0;39m 更新电子书下的文档数据结束，耗时：835毫秒
+2025-08-04 10:50:30.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374771499438080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:50:30.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374771499438080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:50:30.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374771499438080[0;39m ==> Parameters: 
+2025-08-04 10:50:30.743 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374771499438080[0;39m <==    Updates: 4
+2025-08-04 10:50:30.743 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374771499438080[0;39m 更新电子书下的文档数据结束，耗时：740毫秒
+2025-08-04 10:50:40.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374813429895168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:50:40.294 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374813429895168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:50:40.294 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374813429895168[0;39m ==> Parameters: 
+2025-08-04 10:50:40.789 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374813429895168[0;39m <==    Updates: 4
+2025-08-04 10:50:40.789 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374813429895168[0;39m 更新电子书下的文档数据结束，耗时：789毫秒
+2025-08-04 10:50:50.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374855372935168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:50:50.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374855372935168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:50:50.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374855372935168[0;39m ==> Parameters: 
+2025-08-04 10:50:50.751 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374855372935168[0;39m <==    Updates: 4
+2025-08-04 10:50:50.751 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374855372935168[0;39m 更新电子书下的文档数据结束，耗时：751毫秒
+2025-08-04 10:51:00.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607374897328558080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:51:00.262 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374897328558080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:51:00.262 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374897328558080[0;39m ==> Parameters: 
+2025-08-04 10:51:00.774 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607374897328558080[0;39m <==    Updates: 4
+2025-08-04 10:51:00.774 INFO  com.matt.wiki.job.DocJob                          :33   [32m607374897328558080[0;39m 更新电子书下的文档数据结束，耗时：771毫秒
+2025-08-04 10:51:00.796 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-08-04 10:51:00.797 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 10:51:00.798 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:51:00.799 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 10:51:00.799 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:51:00.807 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-04 10:51:00.809 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-04 10:51:00.812 ERROR com.matt.wiki.websocket.WebSocketServer           :62   [32m                  [0;39m 发生错误
+java.io.IOException: java.nio.channels.ClosedChannelException
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:326)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:266)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:778)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:575)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:542)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:530)
+	at org.apache.tomcat.websocket.WsWebSocketContainer.destroy(WsWebSocketContainer.java:1022)
+	at org.apache.tomcat.websocket.server.WsContextListener.contextDestroyed(WsContextListener.java:46)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4090)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:4700)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1219)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1208)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:814)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardService.stopInternal(StandardService.java:468)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:915)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:235)
+	at org.apache.catalina.startup.Tomcat.stop(Tomcat.java:448)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.stopTomcat(TomcatWebServer.java:301)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.destroy(TomcatWebServer.java:374)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:182)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.devtools.restart.Restarter.stop(Restarter.java:308)
+	at org.springframework.boot.devtools.restart.Restarter.lambda$restart$1(Restarter.java:250)
+	at org.springframework.boot.devtools.restart.Restarter$LeakSafeThread.run(Restarter.java:612)
+Caused by: java.nio.channels.ClosedChannelException: null
+	at org.apache.tomcat.util.net.NioChannel$1.write(NioChannel.java:282)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1665)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:987)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1358)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1287)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1262)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:171)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:521)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlockInternal(WsRemoteEndpointImplBase.java:313)
+	... 36 common frames omitted
+2025-08-04 10:51:00.813 INFO  com.matt.wiki.websocket.WebSocketServer           :46   [32m                  [0;39m 连接关闭，token：IyijItli22，session id：1！当前连接数：0
+2025-08-04 10:51:00.860 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 85483 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 10:51:00.860 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:51:00.950 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 10:51:00.950 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 10:51:00.953 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 10:51:01.031 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 10:51:01.032 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:51:01.032 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 10:51:01.032 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 10:51:01.036 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 10:51:01.036 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 175 ms
+2025-08-04 10:51:01.124 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed
+2025-08-04 10:51:01.124 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-08-04 10:51:01.127 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-04 10:51:01.134 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at com.matt.wiki.WikiApplication.main(WikiApplication.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryService': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:606)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:577)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:739)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/com/matt/wiki/mapper/CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1450)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:606)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:577)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:739)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1541)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.matt.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.resp.StatisticResp
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698)
+	... 70 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.matt.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.resp.StatisticResp
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:143)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125)
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.matt.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.resp.StatisticResp
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101)
+	... 76 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.resp.StatisticResp
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
+	... 78 common frames omitted
+2025-08-04 10:53:52.111 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 85483 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 10:53:52.111 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:53:52.189 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 10:53:52.189 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 10:53:52.192 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 10:53:52.249 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 10:53:52.250 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:53:52.250 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 10:53:52.250 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 10:53:52.253 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 10:53:52.254 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 142 ms
+2025-08-04 10:53:52.653 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 10:53:52.662 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:53:52.664 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 10:53:52.677 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.581 seconds (process running for 1614.33)
+2025-08-04 10:53:52.680 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-04 10:53:52.680 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 10:53:52.681 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 10:54:00.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375652307472384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:54:00.005 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607375652307472384[0;39m HikariPool-2 - Starting...
+2025-08-04 10:54:02.647 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607375652307472384[0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@82e5aaa
+2025-08-04 10:54:02.647 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607375652307472384[0;39m HikariPool-2 - Start completed.
+2025-08-04 10:54:02.647 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375652307472384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:54:02.648 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375652307472384[0;39m ==> Parameters: 
+2025-08-04 10:54:03.131 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375652307472384[0;39m <==    Updates: 4
+2025-08-04 10:54:03.131 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375652307472384[0;39m 更新电子书下的文档数据结束，耗时：3126毫秒
+2025-08-04 10:54:10.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375694250512384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:54:10.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375694250512384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:54:10.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375694250512384[0;39m ==> Parameters: 
+2025-08-04 10:54:10.729 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375694250512384[0;39m <==    Updates: 4
+2025-08-04 10:54:10.729 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375694250512384[0;39m 更新电子书下的文档数据结束，耗时：724毫秒
+2025-08-04 10:54:20.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375736193552384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:54:20.354 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375736193552384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:54:20.355 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375736193552384[0;39m ==> Parameters: 
+2025-08-04 10:54:20.866 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375736193552384[0;39m <==    Updates: 4
+2025-08-04 10:54:20.866 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375736193552384[0;39m 更新电子书下的文档数据结束，耗时：862毫秒
+2025-08-04 10:54:30.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375778132398080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:54:30.287 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375778132398080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:54:30.287 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375778132398080[0;39m ==> Parameters: 
+2025-08-04 10:54:30.800 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375778132398080[0;39m <==    Updates: 4
+2025-08-04 10:54:30.800 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375778132398080[0;39m 更新电子书下的文档数据结束，耗时：797毫秒
+2025-08-04 10:54:40.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375820079632384[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:54:40.322 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375820079632384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:54:40.322 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375820079632384[0;39m ==> Parameters: 
+2025-08-04 10:54:40.834 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375820079632384[0;39m <==    Updates: 4
+2025-08-04 10:54:40.834 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375820079632384[0;39m 更新电子书下的文档数据结束，耗时：830毫秒
+2025-08-04 10:54:50.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375862005895168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:54:50.242 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375862005895168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:54:50.243 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375862005895168[0;39m ==> Parameters: 
+2025-08-04 10:54:50.768 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375862005895168[0;39m <==    Updates: 4
+2025-08-04 10:54:50.768 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375862005895168[0;39m 更新电子书下的文档数据结束，耗时：767毫秒
+2025-08-04 10:55:00.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375903948935168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:55:00.290 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375903948935168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:55:00.291 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375903948935168[0;39m ==> Parameters: 
+2025-08-04 10:55:00.775 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375903948935168[0;39m <==    Updates: 4
+2025-08-04 10:55:00.775 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375903948935168[0;39m 更新电子书下的文档数据结束，耗时：774毫秒
+2025-08-04 10:55:10.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375945896169472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:55:10.326 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375945896169472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:55:10.326 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375945896169472[0;39m ==> Parameters: 
+2025-08-04 10:55:10.838 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375945896169472[0;39m <==    Updates: 4
+2025-08-04 10:55:10.838 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375945896169472[0;39m 更新电子书下的文档数据结束，耗时：837毫秒
+2025-08-04 10:55:20.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607375987835015168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:55:20.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375987835015168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:55:20.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375987835015168[0;39m ==> Parameters: 
+2025-08-04 10:55:20.771 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607375987835015168[0;39m <==    Updates: 4
+2025-08-04 10:55:20.771 INFO  com.matt.wiki.job.DocJob                          :33   [32m607375987835015168[0;39m 更新电子书下的文档数据结束，耗时：770毫秒
+2025-08-04 10:55:30.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376029799026688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:55:30.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376029799026688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:55:30.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376029799026688[0;39m ==> Parameters: 
+2025-08-04 10:55:30.731 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376029799026688[0;39m <==    Updates: 4
+2025-08-04 10:55:30.731 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376029799026688[0;39m 更新电子书下的文档数据结束，耗时：726毫秒
+2025-08-04 10:55:40.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376071742066688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:55:40.329 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376071742066688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:55:40.330 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376071742066688[0;39m ==> Parameters: 
+2025-08-04 10:55:40.842 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376071742066688[0;39m <==    Updates: 4
+2025-08-04 10:55:40.842 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376071742066688[0;39m 更新电子书下的文档数据结束，耗时：837毫秒
+2025-08-04 10:55:50.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376113676718080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:55:50.244 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376113676718080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:55:50.244 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376113676718080[0;39m ==> Parameters: 
+2025-08-04 10:55:50.731 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376113676718080[0;39m <==    Updates: 4
+2025-08-04 10:55:50.731 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376113676718080[0;39m 更新电子书下的文档数据结束，耗时：728毫秒
+2025-08-04 10:56:00.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376155628146688[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:56:00.298 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376155628146688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:56:00.298 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376155628146688[0;39m ==> Parameters: 
+2025-08-04 10:56:00.781 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376155628146688[0;39m <==    Updates: 4
+2025-08-04 10:56:00.781 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376155628146688[0;39m 更新电子书下的文档数据结束，耗时：776毫秒
+2025-08-04 10:56:10.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376197550215168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:56:10.333 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376197550215168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:56:10.333 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376197550215168[0;39m ==> Parameters: 
+2025-08-04 10:56:10.817 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376197550215168[0;39m <==    Updates: 4
+2025-08-04 10:56:10.817 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376197550215168[0;39m 更新电子书下的文档数据结束，耗时：817毫秒
+2025-08-04 10:56:20.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376239497449472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:56:20.244 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376239497449472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:56:20.244 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376239497449472[0;39m ==> Parameters: 
+2025-08-04 10:56:20.778 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376239497449472[0;39m <==    Updates: 4
+2025-08-04 10:56:20.779 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376239497449472[0;39m 更新电子书下的文档数据结束，耗时：778毫秒
+2025-08-04 10:56:30.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376281448878080[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:56:30.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376281448878080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:56:30.249 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376281448878080[0;39m ==> Parameters: 
+2025-08-04 10:56:30.732 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376281448878080[0;39m <==    Updates: 4
+2025-08-04 10:56:30.733 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376281448878080[0;39m 更新电子书下的文档数据结束，耗时：729毫秒
+2025-08-04 10:56:40.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376323387723776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:56:40.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376323387723776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:56:40.246 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376323387723776[0;39m ==> Parameters: 
+2025-08-04 10:56:40.746 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376323387723776[0;39m <==    Updates: 4
+2025-08-04 10:56:40.746 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376323387723776[0;39m 更新电子书下的文档数据结束，耗时：743毫秒
+2025-08-04 10:56:50.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376365330763776[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:56:50.270 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376365330763776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:56:50.270 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376365330763776[0;39m ==> Parameters: 
+2025-08-04 10:56:50.782 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376365330763776[0;39m <==    Updates: 4
+2025-08-04 10:56:50.782 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376365330763776[0;39m 更新电子书下的文档数据结束，耗时：779毫秒
+2025-08-04 10:57:00.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376407269609472[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:57:00.307 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376407269609472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:57:00.307 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376407269609472[0;39m ==> Parameters: 
+2025-08-04 10:57:00.817 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376407269609472[0;39m <==    Updates: 4
+2025-08-04 10:57:00.817 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376407269609472[0;39m 更新电子书下的文档数据结束，耗时：816毫秒
+2025-08-04 10:57:10.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376449208455168[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:57:10.241 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376449208455168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:57:10.242 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376449208455168[0;39m ==> Parameters: 
+2025-08-04 10:57:10.749 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376449208455168[0;39m <==    Updates: 4
+2025-08-04 10:57:10.750 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376449208455168[0;39m 更新电子书下的文档数据结束，耗时：750毫秒
+2025-08-04 10:57:16.914 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 5 class path changes (5 additions, 0 deletions, 0 modifications)
+2025-08-04 10:57:16.915 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 10:57:16.915 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:57:16.916 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 10:57:16.916 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:57:16.918 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2025-08-04 10:57:16.919 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2025-08-04 10:57:16.973 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 85483 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 10:57:16.973 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:57:17.051 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 10:57:17.052 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 10:57:17.055 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 10:57:17.121 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 10:57:17.121 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:57:17.121 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 10:57:17.121 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 10:57:17.126 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 10:57:17.126 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 152 ms
+2025-08-04 10:57:17.219 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed
+2025-08-04 10:57:17.220 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-08-04 10:57:17.223 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-04 10:57:17.224 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at com.matt.wiki.WikiApplication.main(WikiApplication.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryService': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:606)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:577)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:739)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/com/matt/wiki/mapper/CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1450)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:606)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:577)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:739)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1541)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.jiawa.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698)
+	... 70 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.jiawa.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:143)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125)
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.jiawa.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101)
+	... 76 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
+	... 78 common frames omitted
+2025-08-04 10:58:02.437 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 85483 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 10:58:02.437 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:58:02.507 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 10:58:02.507 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 10:58:02.511 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 10:58:02.567 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 10:58:02.567 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:58:02.567 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 10:58:02.567 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 10:58:02.571 INFO  o.a.c.c.ContainerBase.[Tomcat-2].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 10:58:02.571 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 133 ms
+2025-08-04 10:58:02.638 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed
+2025-08-04 10:58:02.640 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-08-04 10:58:02.643 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-04 10:58:02.644 ERROR org.springframework.boot.SpringApplication        :857  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryController': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at com.matt.wiki.WikiApplication.main(WikiApplication.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'categoryService': Injection of resource dependencies failed
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:606)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:577)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:739)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'categoryMapper' defined in file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/com/matt/wiki/mapper/CategoryMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1450)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:468)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:606)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:577)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:739)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:272)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:369)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1745)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1541)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:700)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:577)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:720)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:189)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes/mapper/EbookSnapshotMapperCust.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.jiawa.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:100)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:698)
+	... 70 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.jiawa.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:105)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:143)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:135)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:125)
+	... 72 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.jiawa.wiki.resp.StatisticResp'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:128)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:132)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101)
+	... 76 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.jiawa.wiki.resp.StatisticResp
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:226)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:103)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:322)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
+	... 78 common frames omitted
+2025-08-04 10:58:21.237 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 85483 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 10:58:21.237 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:58:21.321 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 10:58:21.321 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 10:58:21.323 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 10:58:21.378 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 10:58:21.378 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:58:21.379 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 10:58:21.379 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 10:58:21.382 INFO  o.a.c.c.ContainerBase.[Tomcat-3].[localhost].[/]  :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 10:58:21.382 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 144 ms
+2025-08-04 10:58:21.687 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 10:58:21.695 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:58:21.696 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 10:58:21.699 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.478 seconds (process running for 1883.349)
+2025-08-04 10:58:21.699 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-04 10:58:21.699 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 10:58:21.700 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 10:58:52.335 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 10:58:52.337 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 10:58:53.698 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-04 10:58:53.718 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 86188 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 10:58:53.719 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 10:58:53.737 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 10:58:53.737 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 10:58:54.023 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 10:58:54.024 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 10:58:54.037 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-08-04 10:58:54.364 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 10:58:54.370 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:58:54.371 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 10:58:54.371 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 10:58:54.386 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 10:58:54.386 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 649 ms
+2025-08-04 10:58:55.012 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 10:58:55.025 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 10:58:55.030 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 10:58:55.037 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.527 seconds (process running for 1.951)
+2025-08-04 10:58:55.038 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 10:58:55.038 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 10:59:00.016 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m607376910649004032[0;39m 生成今日电子书快照开始
+2025-08-04 10:59:00.023 ERROR o.s.s.support.TaskUtils$LoggingErrorHandler       :95   [32m607376910649004032[0;39m Unexpected error occurred in scheduled task
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.matt.wiki.mapper.EbookSnapshotMapperCust.genSnapshot
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy106.genSnapshot(Unknown Source)
+	at com.matt.wiki.service.EbookSnapshotService.genSnapshot(EbookSnapshotService.java:16)
+	at com.matt.wiki.job.EbookSnapshotJob.doSnapshot(EbookSnapshotJob.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2025-08-04 10:59:00.025 INFO  com.matt.wiki.job.DocJob                          :30   [32m607376910686752768[0;39m 更新电子书下的文档数据开始
+2025-08-04 10:59:00.036 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607376910686752768[0;39m HikariPool-1 - Starting...
+2025-08-04 10:59:02.486 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607376910686752768[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74346aa8
+2025-08-04 10:59:02.487 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607376910686752768[0;39m HikariPool-1 - Start completed.
+2025-08-04 10:59:02.491 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376910686752768[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 10:59:02.502 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376910686752768[0;39m ==> Parameters: 
+2025-08-04 10:59:02.976 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607376910686752768[0;39m <==    Updates: 4
+2025-08-04 10:59:02.978 INFO  com.matt.wiki.job.DocJob                          :33   [32m607376910686752768[0;39m 更新电子书下的文档数据结束，耗时：2953毫秒
+2025-08-04 11:00:00.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m607377162248523776[0;39m 更新电子书下的文档数据开始
+2025-08-04 11:00:00.238 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377162248523776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 11:00:00.238 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377162248523776[0;39m ==> Parameters: 
+2025-08-04 11:00:00.735 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377162248523776[0;39m <==    Updates: 4
+2025-08-04 11:00:00.736 INFO  com.matt.wiki.job.DocJob                          :33   [32m607377162248523776[0;39m 更新电子书下的文档数据结束，耗时：734毫秒
+2025-08-04 11:00:00.736 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m607377165327142912[0;39m 生成今日电子书快照开始
+2025-08-04 11:00:00.736 ERROR o.s.s.support.TaskUtils$LoggingErrorHandler       :95   [32m607377165327142912[0;39m Unexpected error occurred in scheduled task
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.matt.wiki.mapper.EbookSnapshotMapperCust.genSnapshot
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy106.genSnapshot(Unknown Source)
+	at com.matt.wiki.service.EbookSnapshotService.genSnapshot(EbookSnapshotService.java:16)
+	at com.matt.wiki.job.EbookSnapshotJob.doSnapshot(EbookSnapshotJob.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2025-08-04 11:01:00.002 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m607377413906763776[0;39m 生成今日电子书快照开始
+2025-08-04 11:01:00.003 ERROR o.s.s.support.TaskUtils$LoggingErrorHandler       :95   [32m607377413906763776[0;39m Unexpected error occurred in scheduled task
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.matt.wiki.mapper.EbookSnapshotMapperCust.genSnapshot
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy106.genSnapshot(Unknown Source)
+	at com.matt.wiki.service.EbookSnapshotService.genSnapshot(EbookSnapshotService.java:16)
+	at com.matt.wiki.job.EbookSnapshotJob.doSnapshot(EbookSnapshotJob.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2025-08-04 11:01:00.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m607377413915152384[0;39m 更新电子书下的文档数据开始
+2025-08-04 11:01:00.241 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377413915152384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 11:01:00.242 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377413915152384[0;39m ==> Parameters: 
+2025-08-04 11:01:00.714 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377413915152384[0;39m <==    Updates: 4
+2025-08-04 11:01:00.714 INFO  com.matt.wiki.job.DocJob                          :33   [32m607377413915152384[0;39m 更新电子书下的文档数据结束，耗时：710毫秒
+2025-08-04 11:01:36.569 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-04 11:01:36.572 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 11:01:36.572 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-04 11:01:36.576 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 11:01:36.576 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-04 11:01:36.582 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-04 11:01:36.586 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-04 11:01:36.635 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 86188 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 11:01:36.635 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 11:01:36.722 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 11:01:36.722 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 11:01:36.725 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-04 11:01:36.798 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 11:01:36.798 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 11:01:36.798 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 11:01:36.799 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 11:01:36.803 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 11:01:36.803 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 167 ms
+2025-08-04 11:01:37.110 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 11:01:37.118 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 11:01:37.119 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 11:01:37.122 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 0.503 seconds (process running for 164.035)
+2025-08-04 11:01:37.122 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-04 11:01:37.123 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 11:01:37.123 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 11:02:00.006 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m607377665581780992[0;39m 生成今日电子书快照开始
+2025-08-04 11:02:00.006 ERROR o.s.s.support.TaskUtils$LoggingErrorHandler       :95   [32m607377665581780992[0;39m Unexpected error occurred in scheduled task
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.matt.wiki.mapper.EbookSnapshotMapperCust.genSnapshot
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy5/jdk.proxy5.$Proxy129.genSnapshot(Unknown Source)
+	at com.matt.wiki.service.EbookSnapshotService.genSnapshot(EbookSnapshotService.java:17)
+	at com.matt.wiki.job.EbookSnapshotJob.doSnapshot(EbookSnapshotJob.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2025-08-04 11:02:00.007 INFO  com.matt.wiki.job.DocJob                          :30   [32m607377665585975296[0;39m 更新电子书下的文档数据开始
+2025-08-04 11:02:00.008 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607377665585975296[0;39m HikariPool-2 - Starting...
+2025-08-04 11:02:02.635 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607377665585975296[0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38ea5bff
+2025-08-04 11:02:02.635 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607377665585975296[0;39m HikariPool-2 - Start completed.
+2025-08-04 11:02:02.635 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377665585975296[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 11:02:02.636 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377665585975296[0;39m ==> Parameters: 
+2025-08-04 11:02:03.127 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377665585975296[0;39m <==    Updates: 4
+2025-08-04 11:02:03.127 INFO  com.matt.wiki.job.DocJob                          :33   [32m607377665585975296[0;39m 更新电子书下的文档数据结束，耗时：3120毫秒
+2025-08-04 11:02:45.537 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-04 11:02:45.539 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-04 11:02:45.540 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2025-08-04 11:02:45.541 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2025-08-04 11:02:46.794 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-04 11:02:46.818 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 86261 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-04 11:02:46.818 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-04 11:02:46.842 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-04 11:02:46.842 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-04 11:02:47.177 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-04 11:02:47.178 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-04 11:02:47.193 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-08-04 11:02:47.550 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-04 11:02:47.555 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-04 11:02:47.556 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-04 11:02:47.556 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-04 11:02:47.571 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-04 11:02:47.572 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 729 ms
+2025-08-04 11:02:48.261 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-04 11:02:48.276 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-04 11:02:48.284 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-04 11:02:48.294 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 1.71 seconds (process running for 2.019)
+2025-08-04 11:02:48.295 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-04 11:02:48.295 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-04 11:03:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m607377917235826688[0;39m 生成今日电子书快照开始
+2025-08-04 11:03:00.007 ERROR o.s.s.support.TaskUtils$LoggingErrorHandler       :95   [32m607377917235826688[0;39m Unexpected error occurred in scheduled task
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.matt.wiki.mapper.EbookSnapshotMapperCust.genSnapshot
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:96)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:36)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:94)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy106.genSnapshot(Unknown Source)
+	at com.matt.wiki.service.EbookSnapshotService.genSnapshot(EbookSnapshotService.java:17)
+	at com.matt.wiki.job.EbookSnapshotJob.doSnapshot(EbookSnapshotJob.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.runInternal(ScheduledMethodRunnable.java:130)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.lambda$run$2(ScheduledMethodRunnable.java:124)
+	at io.micrometer.observation.Observation.observe(Observation.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:124)
+	at org.springframework.scheduling.config.Task$OutcomeTrackingRunnable.run(Task.java:85)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2025-08-04 11:03:00.009 INFO  com.matt.wiki.job.DocJob                          :30   [32m607377917248409600[0;39m 更新电子书下的文档数据开始
+2025-08-04 11:03:00.020 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m607377917248409600[0;39m HikariPool-1 - Starting...
+2025-08-04 11:03:02.461 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m607377917248409600[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@466c5a2e
+2025-08-04 11:03:02.463 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m607377917248409600[0;39m HikariPool-1 - Start completed.
+2025-08-04 11:03:02.471 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377917248409600[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-04 11:03:02.489 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377917248409600[0;39m ==> Parameters: 
+2025-08-04 11:03:02.962 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m607377917248409600[0;39m <==    Updates: 4
+2025-08-04 11:03:02.965 INFO  com.matt.wiki.job.DocJob                          :33   [32m607377917248409600[0;39m 更新电子书下的文档数据结束，耗时：2956毫秒
