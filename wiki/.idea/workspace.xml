@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="增加后端ebookSnapshot的持久层和mapper">
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加allowMultiQueries=true使数据库能同时接受多个语句">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/EbookSnapshotController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookSnapshotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/EbookSnapshotService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
     "Spring Boot.WikiApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/resp",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/java/com/matt/wiki/controller",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,11 +121,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/mapper" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/service" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/job" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/src/views" />
@@ -259,14 +258,6 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00101" summary="进入文档时候，能直接获取下拉框内容，不需要点击新增">
-      <option name="closed" value="true" />
-      <created>1753819089270</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1753819089270</updated>
     </task>
     <task id="LOCAL-00102" summary="点击文档，加载并显示文档内容">
       <option name="closed" value="true" />
@@ -652,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754269114060</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="添加allowMultiQueries=true使数据库能同时接受多个语句">
+      <option name="closed" value="true" />
+      <created>1754270118396</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1754270118396</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,9 +707,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="解决数据丢失的问题，vuex+sessionStorage" />
-    <MESSAGE value="增加删除功能" />
-    <MESSAGE value="增加退出账户功能" />
     <MESSAGE value="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数" />
     <MESSAGE value="修复bug，前后端token统一用String" />
     <MESSAGE value="未登录不显示页面" />
@@ -733,7 +729,10 @@
     <MESSAGE value="改回使用websocket" />
     <MESSAGE value="sql快照逻辑" />
     <MESSAGE value="增加后端ebookSnapshot的持久层和mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加后端ebookSnapshot的持久层和mapper" />
+    <MESSAGE value="增加后端ebookSnapshot的持久层和mapper，" />
+    <MESSAGE value="Merge pull request #15 from MattYu12138/codex/fix-invalid-bound-statement-error&#10;&#10;fix: correct EbookSnapshot mapper namespace" />
+    <MESSAGE value="添加allowMultiQueries=true使数据库能同时接受多个语句" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加allowMultiQueries=true使数据库能同时接受多个语句" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
