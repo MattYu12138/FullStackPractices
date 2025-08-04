@@ -24,7 +24,7 @@
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
     >
       <div class="welcome" v-show="Home.showWelcome">
-        <h1>欢迎使用</h1>
+        <the-welcome/>
       </div>
       <a-list v-show="!Home.showWelcome" item-layout="vertical" size="large" :grid="{ gutter :20, column : 3}" :data-source="ebooks">
         <template #renderItem="{ item }">
@@ -67,11 +67,13 @@ import axios from 'axios';
 import {Tool} from "@/util/tool";
 import {message} from "ant-design-vue";
 import {LikeOutlined} from "@ant-design/icons-vue";
+import TheWelcome from "@/components/the-welcome.vue";
 
 const listData: any = [];
 
 export default defineComponent({
   name: 'Home',
+  components: {TheWelcome},
   methods: {LikeOutlined},
   setup() {
 
@@ -152,6 +154,7 @@ export default defineComponent({
       pagination: {
         pageSize: 3,
       },
+      TheWelcome,
     }
   }
 });
