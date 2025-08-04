@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修改logo，未完成">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="富文本框现在一定会在页面内">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/doc.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/doc.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,9 +88,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.WikiApplication.executor": "Run",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/public/js",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,7 +108,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "ts.external.directory.path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -121,13 +127,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/web/public/js" />
       <recent name="$PROJECT_DIR$/web/src/components" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller" />
       <recent name="$PROJECT_DIR$/src/main/java/com/matt/wiki/resp" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/temp" />
       <recent name="$PROJECT_DIR$/web/src/views" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/doc/db" />
@@ -145,7 +152,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.all.sql">
+  <component name="RunManager" selected="Spring Boot.WikiApplication">
     <configuration name="all.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/doc/db/all.sql" />
       <script-mode>FILE</script-mode>
@@ -191,6 +198,9 @@
     </configuration>
     <configuration name="WikiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="wiki" />
+      <selectedOptions>
+        <option name="environmentVariables" />
+      </selectedOptions>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.matt.wiki.WikiApplication" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
@@ -258,22 +268,7 @@
       <workItem from="1753069641478" duration="28248000" />
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
-    </task>
-    <task id="LOCAL-00106" summary="进入页面读取第一页节点">
-      <option name="closed" value="true" />
-      <created>1753823686292</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1753823686292</updated>
-    </task>
-    <task id="LOCAL-00107" summary="user表设计和持久层生成">
-      <option name="closed" value="true" />
-      <created>1753869703412</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1753869703412</updated>
+      <workItem from="1754346235855" duration="1904000" />
     </task>
     <task id="LOCAL-00108" summary="user表设计和持久层生成,初步完成user页面">
       <option name="closed" value="true" />
@@ -651,7 +646,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754273910389</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="加载的时候会显示加载提示，特别是第一次进入网站">
+      <option name="closed" value="true" />
+      <created>1754274139007</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1754274139007</updated>
+    </task>
+    <task id="LOCAL-00156" summary="富文本框现在一定会在页面内">
+      <option name="closed" value="true" />
+      <created>1754274174413</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1754274174413</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,8 +718,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="about页面现在可以在未登录的情况下显示" />
-    <MESSAGE value="阅读文档，阅读数+1" />
     <MESSAGE value="修复不刷新doc页面的问题" />
     <MESSAGE value="添加点赞系统，但出问题了" />
     <MESSAGE value="解决不显示问题" />
@@ -732,7 +741,9 @@
     <MESSAGE value="增加统计数值前端页面" />
     <MESSAGE value="集成echarts" />
     <MESSAGE value="修改logo，未完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改logo，未完成" />
+    <MESSAGE value="加载的时候会显示加载提示，特别是第一次进入网站" />
+    <MESSAGE value="富文本框现在一定会在页面内" />
+    <option name="LAST_COMMIT_MESSAGE" value="富文本框现在一定会在页面内" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -740,13 +751,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web/src/components/the-welcome.vue</url>
           <line>256</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web/src/components/the-header.vue</url>
           <line>17</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
