@@ -388,6 +388,12 @@ export default defineComponent({
   padding-left: 20px;
 }
 
+.wangEditor img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .wangEditor input[type="checkbox"] {
   margin-right: 5px;
 }
