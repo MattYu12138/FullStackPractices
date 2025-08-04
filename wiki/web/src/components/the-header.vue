@@ -1,6 +1,6 @@
 <template>
   <a-layout-header class="header">
-    <div class="logo"/>
+    <div class="logo">Hello</div>
     <a-menu
         theme="dark"
         mode="horizontal"
@@ -164,6 +164,14 @@ export default defineComponent({
 .login-menu {
   color: #fff;
   padding: 0 16px;
+}
+.logo{
+  width:120px;
+  height:31px;
+  background:rgba(255,255,255,0.2);
+  float: left;
+  color: white;
+  font-size: 18px;
 }
 
 </style>
