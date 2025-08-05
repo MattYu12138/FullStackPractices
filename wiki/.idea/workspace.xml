@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="静态网站配置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deploy/web.conf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deploy/web.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/deploy/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deploy/server.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.prod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,14 +277,6 @@
       <workItem from="1753204587938" duration="2111000" />
       <workItem from="1753519990944" duration="13661000" />
       <workItem from="1754346235855" duration="4345000" />
-    </task>
-    <task id="LOCAL-00110" summary="修复一个提交的时候用户已存在的bug">
-      <option name="closed" value="true" />
-      <created>1753929213861</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1753929213861</updated>
     </task>
     <task id="LOCAL-00111" summary="添加hexMd5.js用作当前端传输密码的时候进行加密，避免被拦截">
       <option name="closed" value="true" />
@@ -669,7 +662,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754351815296</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="静态网站配置">
+      <option name="closed" value="true" />
+      <created>1754352365184</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1754352365184</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -725,7 +726,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="解决不显示问题" />
     <MESSAGE value="相同ip在24小时之内现在不能点赞多次" />
     <MESSAGE value="定时更新ebook表，通过关联查询doc" />
     <MESSAGE value="配置首页显示，点赞，浏览数，文档数" />
@@ -750,7 +750,8 @@
     <MESSAGE value="添加application-prod.properties，在配置中可以配置VM改变读取文件" />
     <MESSAGE value="Springboot多环境配置，生产发布修改" />
     <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
+    <MESSAGE value="静态网站配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="静态网站配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
