@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置LLM的key，以及LLMTest类">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/LLMFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/LLMService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/OpenAiLLMService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/QwenLLMService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加适配大模型的factory类，并添加applicaction-test.properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/QwenLLMService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/QwenLLMService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMFactoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +75,8 @@
     "HTTP Request.test | #2.executor": "Run",
     "HTTP Request.test | #3.executor": "Run",
     "HTTP Request.test | #5.executor": "Run",
+    "JUnit.LLMFactoryTest.testOpenAiFactoryReturnsService.executor": "Run",
+    "JUnit.LLMFactoryTest.testQwenFactoryWithoutApiKey.executor": "Run",
     "JUnit.LLMTest.executor": "Run",
     "JUnit.LLMTest.testDashScope.executor": "Run",
     "JUnit.LLMTest.testDashScopeWanx.executor": "Run",
@@ -166,7 +163,39 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LLMTest.testQwenFactory">
+  <component name="RunManager" selected="JUnit.LLMFactoryTest.testQwenFactoryWithoutApiKey">
+    <configuration name="LLMFactoryTest.testOpenAiFactoryReturnsService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMFactoryTest" />
+      <option name="METHOD_NAME" value="testOpenAiFactoryReturnsService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLMFactoryTest.testQwenFactoryWithoutApiKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMFactoryTest" />
+      <option name="METHOD_NAME" value="testQwenFactoryWithoutApiKey" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LLMTest.testDashScope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wiki" />
       <extension name="coverage">
@@ -178,22 +207,6 @@
       <option name="PACKAGE_NAME" value="com.matt.wiki" />
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
       <option name="METHOD_NAME" value="testDashScope" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LLMTest.testDeepSeekViaOpenAiCompatibleApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wiki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.matt.wiki.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.matt.wiki" />
-      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
-      <option name="METHOD_NAME" value="testDeepSeekViaOpenAiCompatibleApi" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -226,22 +239,6 @@
       <option name="PACKAGE_NAME" value="com.matt.wiki" />
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
       <option name="METHOD_NAME" value="testQwenFactory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LLMTest.testSpringBoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wiki" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.matt.wiki.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.matt.wiki" />
-      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
-      <option name="METHOD_NAME" value="testSpringBoot" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -290,21 +287,21 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.LLMFactoryTest.testOpenAiFactoryReturnsService" />
+      <item itemvalue="JUnit.LLMFactoryTest.testQwenFactoryWithoutApiKey" />
       <item itemvalue="JUnit.LLMTest.testDashScope" />
-      <item itemvalue="JUnit.LLMTest.testDeepSeekViaOpenAiCompatibleApi" />
       <item itemvalue="JUnit.LLMTest.testOpenAiFactory" />
       <item itemvalue="JUnit.LLMTest.testQwenFactory" />
-      <item itemvalue="JUnit.LLMTest.testSpringBoot" />
       <item itemvalue="Maven.mybatis-generator" />
       <item itemvalue="Spring Boot.WikiApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LLMFactoryTest.testQwenFactoryWithoutApiKey" />
+        <item itemvalue="JUnit.LLMFactoryTest.testOpenAiFactoryReturnsService" />
         <item itemvalue="JUnit.LLMTest.testQwenFactory" />
         <item itemvalue="JUnit.LLMTest.testOpenAiFactory" />
         <item itemvalue="JUnit.LLMTest.testDashScope" />
-        <item itemvalue="JUnit.LLMTest.testDeepSeekViaOpenAiCompatibleApi" />
-        <item itemvalue="JUnit.LLMTest.testSpringBoot" />
       </list>
     </recent_temporary>
   </component>
@@ -336,15 +333,7 @@
       <workItem from="1754986326187" duration="90000" />
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
-      <workItem from="1756043622692" duration="25776000" />
-    </task>
-    <task id="LOCAL-00118" summary="配置header的登陆弹窗，但显示位置不正确。">
-      <option name="closed" value="true" />
-      <created>1754167910501</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1754167910501</updated>
+      <workItem from="1756043622692" duration="26628000" />
     </task>
     <task id="LOCAL-00119" summary="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在">
       <option name="closed" value="true" />
@@ -730,7 +719,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756069682584</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="添加适配大模型的factory类，并添加applicaction-test.properties">
+      <option name="closed" value="true" />
+      <created>1756070746763</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1756070746763</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,7 +783,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
     <MESSAGE value="改回使用websocket" />
     <MESSAGE value="sql快照逻辑" />
@@ -811,7 +807,8 @@
     <MESSAGE value="添加langchain4j依赖，添加测试类LLMTest.java" />
     <MESSAGE value="在WebSocketConfig中添加@Profile(&quot;!test&quot;), 在LLMTest添加@ActiveProfile(test)" />
     <MESSAGE value="配置LLM的key，以及LLMTest类" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置LLM的key，以及LLMTest类" />
+    <MESSAGE value="添加适配大模型的factory类，并添加applicaction-test.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加适配大模型的factory类，并添加applicaction-test.properties" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
