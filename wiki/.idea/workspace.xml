@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="版本1.0.0">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加langchain4j依赖，添加测试类LLMTest.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +156,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LLMTest">
+  <component name="RunManager" selected="npm.serve-dev">
     <configuration name="all.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/doc/db/all.sql" />
       <script-mode>FILE</script-mode>
@@ -255,8 +255,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LLMTest" />
-        <item itemvalue="npm.build-prod" />
         <item itemvalue="npm.serve-dev" />
+        <item itemvalue="npm.build-prod" />
         <item itemvalue="HTTP Request.test | #3" />
         <item itemvalue="Database Script.all.sql" />
       </list>
@@ -290,15 +290,7 @@
       <workItem from="1754986326187" duration="90000" />
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
-      <workItem from="1756043622692" duration="16001000" />
-    </task>
-    <task id="LOCAL-00115" summary="用户登录后端实现">
-      <option name="closed" value="true" />
-      <created>1753972750764</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1753972750764</updated>
+      <workItem from="1756043622692" duration="16598000" />
     </task>
     <task id="LOCAL-00116" summary="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息">
       <option name="closed" value="true" />
@@ -684,7 +676,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756058415240</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="添加langchain4j依赖，添加测试类LLMTest.java">
+      <option name="closed" value="true" />
+      <created>1756060300653</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1756060300654</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -740,7 +740,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Merge pull request #13 from MattYu12138/codex/fix-websocket-error-popup-in-footer&#10;&#10;Send initial WebSocket message to trigger footer notification" />
     <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
     <MESSAGE value="异步化解耦点赞和通知功能" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能" />
@@ -765,7 +764,8 @@
     <MESSAGE value="更换新的数据库，配置不变" />
     <MESSAGE value="Merge pull request #18 from MattYu12138/codex/investigate-login-password-mismatch-issue&#10;&#10;feat(web): add responsive header for mobile" />
     <MESSAGE value="版本1.0.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="版本1.0.0" />
+    <MESSAGE value="添加langchain4j依赖，添加测试类LLMTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加langchain4j依赖，添加测试类LLMTest.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
