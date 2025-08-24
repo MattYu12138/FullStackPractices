@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置prod环境">
-      <change afterPath="$PROJECT_DIR$/doc/deploy/stop-wiki.sh" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="版本1.0.0">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deploy/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deploy/server.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deploy/web.conf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deploy/web.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.prod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,69 +65,70 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.SnowFlake.executor&quot;: &quot;Run&quot;,
-    &quot;Application.WikiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.demo | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.ebook | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #3.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.test | #5.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mybatis-generator.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.wiki [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/yushuzhan/Library/Application Support/JetBrains/IntelliJIdea2025.1/plugins/Shell Script/shellcheck&quot;,
-    &quot;Spring Boot.WikiApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/doc&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build-dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build-prod.executor&quot;: &quot;Run&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.serve-dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.serve.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.SnowFlake.executor": "Run",
+    "Application.WikiApplication.executor": "Run",
+    "HTTP Request.demo | #1.executor": "Run",
+    "HTTP Request.ebook | #1.executor": "Run",
+    "HTTP Request.test | #1.executor": "Run",
+    "HTTP Request.test | #2.executor": "Run",
+    "HTTP Request.test | #3.executor": "Run",
+    "HTTP Request.test | #5.executor": "Run",
+    "JUnit.LLMTest.executor": "Run",
+    "Maven.mybatis-generator.executor": "Run",
+    "Maven.wiki [clean].executor": "Run",
+    "Maven.wiki [compile].executor": "Run",
+    "Maven.wiki [install].executor": "Run",
+    "Maven.wiki [verify].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "/Users/yushuzhan/Library/Application Support/JetBrains/IntelliJIdea2025.1/plugins/Shell Script/shellcheck",
+    "Spring Boot.WikiApplication.executor": "Run",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/doc",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build-dev.executor": "Run",
+    "npm.build-prod.executor": "Run",
+    "npm.build.executor": "Run",
+    "npm.serve-dev.executor": "Run",
+    "npm.serve.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "ts.external.directory.path": "/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;redis&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redis",
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;fc100143-2e3a-40db-b282-3a2164050681&quot;
+    "RunConfigurationTargetLRU": [
+      "fc100143-2e3a-40db-b282-3a2164050681"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/doc" />
@@ -158,7 +156,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.WikiApplication">
+  <component name="RunManager" selected="JUnit.LLMTest">
     <configuration name="all.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/doc/db/all.sql" />
       <script-mode>FILE</script-mode>
@@ -168,8 +166,20 @@
     <configuration name="test | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/test.http" executionIdentifier="#3" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/test.http" executionIdentifier="#5" index="5" runType="Run single request">
-      <method v="2" />
+    <configuration name="LLMTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="mybatis-generator" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -236,19 +246,19 @@
     <list>
       <item itemvalue="Database Script.all.sql" />
       <item itemvalue="HTTP Request.test | #3" />
-      <item itemvalue="HTTP Request.test | #5" />
+      <item itemvalue="JUnit.LLMTest" />
       <item itemvalue="Maven.mybatis-generator" />
-      <item itemvalue="Spring Boot.WikiApplication" />
       <item itemvalue="npm.build-prod" />
       <item itemvalue="npm.serve-dev" />
+      <item itemvalue="Spring Boot.WikiApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LLMTest" />
         <item itemvalue="npm.build-prod" />
-        <item itemvalue="HTTP Request.test | #3" />
         <item itemvalue="npm.serve-dev" />
+        <item itemvalue="HTTP Request.test | #3" />
         <item itemvalue="Database Script.all.sql" />
-        <item itemvalue="HTTP Request.test | #5" />
       </list>
     </recent_temporary>
   </component>
@@ -280,30 +290,7 @@
       <workItem from="1754986326187" duration="90000" />
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
-    </task>
-    <task id="LOCAL-00112" summary="Merge pull request #7 from MattYu12138/codex/add-hexmd5.js-for-password-encryption&#10;&#10;Fix MD5 script inclusion">
-      <option name="closed" value="true" />
-      <created>1753930716819</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1753930716819</updated>
-    </task>
-    <task id="LOCAL-00113" summary="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。">
-      <option name="closed" value="true" />
-      <created>1753932296225</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1753932296225</updated>
-    </task>
-    <task id="LOCAL-00114" summary="解决重置密码弹窗不消除问题">
-      <option name="closed" value="true" />
-      <created>1753932779401</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1753932779401</updated>
+      <workItem from="1756043622692" duration="16001000" />
     </task>
     <task id="LOCAL-00115" summary="用户登录后端实现">
       <option name="closed" value="true" />
@@ -673,7 +660,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754357564017</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices">
+      <option name="closed" value="true" />
+      <created>1756043656518</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1756043656518</updated>
+    </task>
+    <task id="LOCAL-00162" summary="更换新的数据库，配置不变">
+      <option name="closed" value="true" />
+      <created>1756044870079</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1756044870079</updated>
+    </task>
+    <task id="LOCAL-00163" summary="版本1.0.0">
+      <option name="closed" value="true" />
+      <created>1756058415240</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1756058415240</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,9 +740,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="定时更新ebook表，通过关联查询doc" />
-    <MESSAGE value="配置首页显示，点赞，浏览数，文档数" />
-    <MESSAGE value="增加日志流水号，方便运维" />
     <MESSAGE value="Merge pull request #13 from MattYu12138/codex/fix-websocket-error-popup-in-footer&#10;&#10;Send initial WebSocket message to trigger footer notification" />
     <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
     <MESSAGE value="异步化解耦点赞和通知功能" />
@@ -751,10 +759,13 @@
     <MESSAGE value="富文本框现在一定会在页面内" />
     <MESSAGE value="添加application-prod.properties，在配置中可以配置VM改变读取文件" />
     <MESSAGE value="Springboot多环境配置，生产发布修改" />
-    <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
     <MESSAGE value="静态网站配置" />
     <MESSAGE value="配置prod环境" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置prod环境" />
+    <MESSAGE value="Merge branch 'main' of https://github.com/MattYu12138/FullStackPractices" />
+    <MESSAGE value="更换新的数据库，配置不变" />
+    <MESSAGE value="Merge pull request #18 from MattYu12138/codex/investigate-login-password-mismatch-issue&#10;&#10;feat(web): add responsive header for mobile" />
+    <MESSAGE value="版本1.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="版本1.0.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
