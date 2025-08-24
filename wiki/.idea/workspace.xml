@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加适配大模型的factory类，并添加applicaction-test.properties">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="修改LLMService">
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/QwenLLMService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/factory/service/QwenLLMService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMFactoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -333,15 +331,7 @@
       <workItem from="1754986326187" duration="90000" />
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
-      <workItem from="1756043622692" duration="26628000" />
-    </task>
-    <task id="LOCAL-00119" summary="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在">
-      <option name="closed" value="true" />
-      <created>1754168782153</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1754168782153</updated>
+      <workItem from="1756043622692" duration="26957000" />
     </task>
     <task id="LOCAL-00120" summary="前端显示登录信息，但是刷新后就没有了">
       <option name="closed" value="true" />
@@ -727,7 +717,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756070746763</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="修改LLMService">
+      <option name="closed" value="true" />
+      <created>1756071596835</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1756071596835</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -783,7 +781,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
     <MESSAGE value="改回使用websocket" />
     <MESSAGE value="sql快照逻辑" />
     <MESSAGE value="增加后端ebookSnapshot的持久层和mapper" />
@@ -808,7 +805,8 @@
     <MESSAGE value="在WebSocketConfig中添加@Profile(&quot;!test&quot;), 在LLMTest添加@ActiveProfile(test)" />
     <MESSAGE value="配置LLM的key，以及LLMTest类" />
     <MESSAGE value="添加适配大模型的factory类，并添加applicaction-test.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加适配大模型的factory类，并添加applicaction-test.properties" />
+    <MESSAGE value="修改LLMService" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改LLMService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
