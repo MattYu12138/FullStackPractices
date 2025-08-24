@@ -40,10 +40,57 @@
         <a class="login-menu" v-show="user.id">
           <span>退出登录</span>
         </a>
-      </a-popconfirm>
-    </div>
+    </a-popconfirm>
+  </div>
 
 
+
+    <a-button class="mobile-menu-button" type="text" @click="mobileMenuVisible = true">
+      <menu-outlined />
+    </a-button>
+
+    <a-drawer
+        class="mobile-drawer"
+        placement="left"
+        v-model:open="mobileMenuVisible"
+        :header-style="{ display: 'none' }"
+    >
+      <a-menu mode="inline" @click="mobileMenuVisible = false">
+        <a-menu-item key="/">
+          <router-link to="/">Home Page</router-link>
+        </a-menu-item>
+        <a-menu-item key="/about">
+          <router-link to="/about">About Us</router-link>
+        </a-menu-item>
+        <a-menu-item key="/admin/user" :style="user.id ? {} : {display: 'none'}">
+          <router-link to="/admin/user">User Manage Page</router-link>
+        </a-menu-item>
+        <a-menu-item key="/admin/ebook" :style="user.id ? {} : {display: 'none'}">
+          <router-link to="/admin/ebook">Ebook Manage Page</router-link>
+        </a-menu-item>
+        <a-menu-item key="/admin/category" :style="user.id ? {} : {display: 'none'}">
+          <router-link to="/admin/category">Category Manage Page</router-link>
+        </a-menu-item>
+      </a-menu>
+      <div class="drawer-actions">
+        <a class="login-menu" v-show="user.id">
+          <span>您好：{{user.name}}</span>
+        </a>
+        <a class="login-menu" v-show="!user.id" @click="showLoginModal">
+          <span>登录</span>
+        </a>
+        <a-popconfirm
+            title="确认退出登录?"
+            ok-text="是"
+            cancel-text="否"
+            @confirm="logout()"
+        >
+          <a class="login-menu" v-show="user.id">
+            <span>退出登录</span>
+          </a>
+        </a-popconfirm>
+      </div>
+    </a-drawer>
 
     <a-modal
         title="登录"
@@ -66,9 +113,10 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, computed, reactive} from 'vue';
+import {defineComponent, computed, reactive, ref} from 'vue';
 import axios from 'axios';
 import { message } from 'ant-design-vue';
+import { MenuOutlined } from '@ant-design/icons-vue';
 import store from "@/store";
 
 declare let hexMd5: any;
@@ -76,6 +124,7 @@ declare let KEY: any;
 
 export default defineComponent({
   name: 'the-header',
+  components: { MenuOutlined },
 
   setup () {
     // 登录后保存
@@ -96,6 +145,8 @@ export default defineComponent({
     const showLoginModal = () => {
       loginConfig.visible= true;
     };
+
+    const mobileMenuVisible = ref(false);
 
     // 登录
     const login = () => {
@@ -135,7 +186,8 @@ export default defineComponent({
       loginConfig,
       login,
       user,
-      logout
+      logout,
+      mobileMenuVisible
     }
   }
 
@@ -172,6 +224,27 @@ export default defineComponent({
   float: left;
   color: white;
   font-size: 18px;
+}
+
+.mobile-menu-button {
+  display: none;
+  margin-left: auto;
+  color: #fff;
+}
+
+.drawer-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .main-menu, .right-actions {
+    display: none;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
 }
 
 </style>
