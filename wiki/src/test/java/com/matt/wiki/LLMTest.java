@@ -1,6 +1,8 @@
 package com.matt.wiki;
 
 
+import com.matt.wiki.factory.LLMFactory;
+import com.matt.wiki.factory.service.LLMService;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.community.model.dashscope.WanxImageModel;
 import dev.langchain4j.data.image.Image;
@@ -17,7 +19,7 @@ import org.springframework.test.context.ActiveProfiles;
 public class LLMTest {
 
     @MockBean
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 //
 //    @Autowired
 //    private OpenAiChatModel openAiChatModel;
@@ -50,5 +52,20 @@ public class LLMTest {
         Response<Image> response = wanxImageModel.generate("美女");
         System.out.println(response.content().url());
 
+    }
+
+    @Test
+    public void testOpenAiFactory(){
+        LLMService llmService = LLMFactory.createLLMService(LLMFactory.modelType.OPENAI);
+        String chat = llmService.chat("你是谁");
+        System.out.println(chat);
+    }
+
+
+    @Test
+    public void testQwenFactory(){
+        LLMService llmService = LLMFactory.createLLMService(LLMFactory.modelType.QWEN);
+        String chat = llmService.chat("你是谁");
+        System.out.println(chat);
     }
 }
