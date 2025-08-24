@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加langchain4j依赖，添加测试类LLMTest.java">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="在WebSocketConfig中添加@Profile(&quot;!test&quot;), 在LLMTest添加@ActiveProfile(test)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/matt/wiki/LLMTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +78,10 @@
     "HTTP Request.test | #3.executor": "Run",
     "HTTP Request.test | #5.executor": "Run",
     "JUnit.LLMTest.executor": "Run",
+    "JUnit.LLMTest.testDashScope.executor": "Run",
+    "JUnit.LLMTest.testDashScopeWanx.executor": "Run",
+    "JUnit.LLMTest.testDeepSeekViaOpenAiCompatibleApi.executor": "Run",
+    "JUnit.LLMTest.testSpringBoot.executor": "Run",
     "Maven.mybatis-generator.executor": "Run",
     "Maven.wiki [clean].executor": "Run",
     "Maven.wiki [compile].executor": "Run",
@@ -156,16 +161,7 @@
       <recent name="com.matt.wiki.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve-dev">
-    <configuration name="all.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
-      <script-file value="$PROJECT_DIR$/doc/db/all.sql" />
-      <script-mode>FILE</script-mode>
-      <data-source id="fc100143-2e3a-40db-b282-3a2164050681" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http/test.http" executionIdentifier="#3" index="3" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.LLMTest.testDashScope">
     <configuration name="LLMTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wiki" />
       <extension name="coverage">
@@ -176,7 +172,72 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.matt.wiki" />
       <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLMTest.testDashScope" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
+      <option name="METHOD_NAME" value="testDashScope" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLMTest.testDashScopeWanx" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
+      <option name="METHOD_NAME" value="testDashScopeWanx" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLMTest.testDeepSeekViaOpenAiCompatibleApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
+      <option name="METHOD_NAME" value="testDeepSeekViaOpenAiCompatibleApi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LLMTest.testSpringBoot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wiki" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matt.wiki.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.matt.wiki" />
+      <option name="MAIN_CLASS_NAME" value="com.matt.wiki.LLMTest" />
+      <option name="METHOD_NAME" value="testSpringBoot" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,42 +284,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="build-prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/web/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build-prod" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="serve-dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/web/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="serve-dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Database Script.all.sql" />
-      <item itemvalue="HTTP Request.test | #3" />
+      <item itemvalue="JUnit.LLMTest.testDashScope" />
+      <item itemvalue="JUnit.LLMTest.testDashScopeWanx" />
+      <item itemvalue="JUnit.LLMTest.testDeepSeekViaOpenAiCompatibleApi" />
+      <item itemvalue="JUnit.LLMTest.testSpringBoot" />
       <item itemvalue="JUnit.LLMTest" />
       <item itemvalue="Maven.mybatis-generator" />
-      <item itemvalue="npm.build-prod" />
-      <item itemvalue="npm.serve-dev" />
       <item itemvalue="Spring Boot.WikiApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LLMTest.testDashScope" />
+        <item itemvalue="JUnit.LLMTest.testDeepSeekViaOpenAiCompatibleApi" />
+        <item itemvalue="JUnit.LLMTest.testSpringBoot" />
+        <item itemvalue="JUnit.LLMTest.testDashScopeWanx" />
         <item itemvalue="JUnit.LLMTest" />
-        <item itemvalue="npm.serve-dev" />
-        <item itemvalue="npm.build-prod" />
-        <item itemvalue="HTTP Request.test | #3" />
-        <item itemvalue="Database Script.all.sql" />
       </list>
     </recent_temporary>
   </component>
@@ -290,15 +331,7 @@
       <workItem from="1754986326187" duration="90000" />
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
-      <workItem from="1756043622692" duration="16598000" />
-    </task>
-    <task id="LOCAL-00116" summary="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息">
-      <option name="closed" value="true" />
-      <created>1754164981309</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1754164981309</updated>
+      <workItem from="1756043622692" duration="24616000" />
     </task>
     <task id="LOCAL-00117" summary="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息">
       <option name="closed" value="true" />
@@ -684,7 +717,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756060300654</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="在WebSocketConfig中添加@Profile(&quot;!test&quot;), 在LLMTest添加@ActiveProfile(test)">
+      <option name="closed" value="true" />
+      <created>1756060819894</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1756060819894</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -740,7 +781,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
     <MESSAGE value="异步化解耦点赞和通知功能" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
@@ -765,7 +805,8 @@
     <MESSAGE value="Merge pull request #18 from MattYu12138/codex/investigate-login-password-mismatch-issue&#10;&#10;feat(web): add responsive header for mobile" />
     <MESSAGE value="版本1.0.0" />
     <MESSAGE value="添加langchain4j依赖，添加测试类LLMTest.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加langchain4j依赖，添加测试类LLMTest.java" />
+    <MESSAGE value="在WebSocketConfig中添加@Profile(&quot;!test&quot;), 在LLMTest添加@ActiveProfile(test)" />
+    <option name="LAST_COMMIT_MESSAGE" value="在WebSocketConfig中添加@Profile(&quot;!test&quot;), 在LLMTest添加@ActiveProfile(test)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
