@@ -2,6 +2,7 @@ package com.matt.wiki.controller;
 
 
 import com.matt.wiki.aiservice.AiAssistant;
+import com.matt.wiki.service.AiChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,9 @@ public class AiController {
     @Autowired
     private AiAssistant aiAssistant;
 
+    @Autowired
+    private AiChatService aiChatService;
+
     @GetMapping("/chat")
     public String chat(
             @RequestParam(value = "message", defaultValue = "Hello") String message,
@@ -29,6 +33,6 @@ public class AiController {
     public Flux<String> chatStream(
             @RequestParam(value = "message", defaultValue = "Hello") String message,
             @RequestParam(value = "userId", defaultValue = "111") String userId) {
-        return aiAssistant.chatStream(userId, message);
+        return aiChatService.chatStream(userId, message);
     }
 }
