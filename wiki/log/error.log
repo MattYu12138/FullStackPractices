@@ -4658,3 +4658,39 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.matt.wiki.do
 	at org.apache.ibatis.io.Resources.classForName(Resources.java:322)
 	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:124)
 	... 78 common frames omitted
+2025-08-26 06:16:47.728 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'qwenStreamingChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'qwenStreamingChatModel' in your configuration.
+
+2025-08-26 06:21:49.928 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'qwenStreamingChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'qwenStreamingChatModel' in your configuration.
+
