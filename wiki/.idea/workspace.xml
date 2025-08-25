@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="BUG:cannot run project due to the issue of without a bean called qwenStreamingChatModel">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/AiModelConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/ChatMemoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/ChatMemoryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/TestUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,15 +279,7 @@
       <workItem from="1754986326187" duration="90000" />
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
-      <workItem from="1756151395970" duration="3347000" />
-    </task>
-    <task id="LOCAL-00113" summary="添加重制密码按钮，单独将重置密码放出来。单独创建UserResetPasswordReq用作重置密码。">
-      <option name="closed" value="true" />
-      <created>1753932296225</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1753932296225</updated>
+      <workItem from="1756151395970" duration="4523000" />
     </task>
     <task id="LOCAL-00114" summary="解决重置密码弹窗不消除问题">
       <option name="closed" value="true" />
@@ -672,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756153355960</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration">
+      <option name="closed" value="true" />
+      <created>1756154877827</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1756154877827</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -728,7 +729,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="配置首页显示，点赞，浏览数，文档数" />
     <MESSAGE value="增加日志流水号，方便运维" />
     <MESSAGE value="Merge pull request #13 from MattYu12138/codex/fix-websocket-error-popup-in-footer&#10;&#10;Send initial WebSocket message to trigger footer notification" />
     <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
@@ -753,7 +753,8 @@
     <MESSAGE value="静态网站配置" />
     <MESSAGE value="配置prod环境" />
     <MESSAGE value="BUG:cannot run project due to the issue of without a bean called qwenStreamingChatModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="BUG:cannot run project due to the issue of without a bean called qwenStreamingChatModel" />
+    <MESSAGE value="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

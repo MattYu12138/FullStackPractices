@@ -1,7 +1,9 @@
 package com.matt.wiki.util;
 
 import dev.langchain4j.agent.tool.Tool;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TestUtil {
 
     @Tool("Get User Class")

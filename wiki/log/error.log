@@ -4784,3 +4784,57 @@ Action:
 
 Consider defining a bean named 'QwenChatModel' in your configuration.
 
+2025-08-26 06:55:34.801 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'QwenChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'QwenChatModel' in your configuration.
+
+2025-08-26 06:55:51.160 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'qwenStreamingChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'qwenStreamingChatModel' in your configuration.
+
+2025-08-26 07:06:34.233 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'qwenStreamingChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'qwenStreamingChatModel' in your configuration.
+

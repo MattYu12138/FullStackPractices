@@ -13,7 +13,7 @@ public class ChatMemoryConfig {
 
     @Bean
     public ChatMemoryProvider chatMemoryProvider(ChatMemoryStore chatMemoryStore) {
-        return id -> new MessageWindowChatMemory.Builder().id(id).maxMessages(10).chatMemoryStore(chatMemoryStore).build();
+        return id -> new MessageWindowChatMemory.Builder().id(id).maxMessages(20).chatMemoryStore(chatMemoryStore).build();
     }
 
     @Bean
