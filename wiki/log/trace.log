@@ -1204,3 +1204,271 @@ Action:
 
 Consider defining a bean named 'qwenStreamingChatModel' in your configuration.
 
+2025-08-26 07:35:09.093 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-26 07:35:09.115 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 94102 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-26 07:35:09.116 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-26 07:35:09.147 INFO  o.s.boot.devtools.restart.ChangeableUrls          :252  [32m                  [0;39m The Class-Path manifest attribute in /Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2025-08-26 07:35:09.148 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-26 07:35:09.148 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-26 07:35:09.514 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 07:35:09.515 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 07:35:09.529 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-08-26 07:35:09.940 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-26 07:35:09.947 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-26 07:35:09.948 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-26 07:35:09.948 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-26 07:35:09.965 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-26 07:35:09.966 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 818 ms
+2025-08-26 07:35:10.013 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-26 07:35:10.173 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aiController': Unsatisfied dependency expressed through field 'aiAssistant': Error creating bean with name 'aiAssistant': Cannot resolve reference to bean 'QwenChatModel' while setting bean property 'chatModel'
+2025-08-26 07:35:10.180 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-08-26 07:35:10.191 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-26 07:35:10.199 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'QwenChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'QwenChatModel' in your configuration.
+
+2025-08-26 07:49:29.330 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-26 07:49:29.347 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 94392 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-26 07:49:29.348 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-26 07:49:29.367 INFO  o.s.boot.devtools.restart.ChangeableUrls          :252  [32m                  [0;39m The Class-Path manifest attribute in /Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2025-08-26 07:49:29.367 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-26 07:49:29.367 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-26 07:49:29.697 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 07:49:29.698 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 07:49:29.713 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2025-08-26 07:49:30.095 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-26 07:49:30.100 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-26 07:49:30.101 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-26 07:49:30.101 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-26 07:49:30.117 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-26 07:49:30.117 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 750 ms
+2025-08-26 07:49:30.155 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-26 07:49:30.297 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:635  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'aiController': Unsatisfied dependency expressed through field 'aiAssistant': Error creating bean with name 'aiAssistant': Cannot resolve reference to bean 'QwenChatModel' while setting bean property 'chatModel'
+2025-08-26 07:49:30.304 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Stopping service [Tomcat]
+2025-08-26 07:49:30.314 INFO  o.s.b.a.logging.ConditionEvaluationReportLogger   :82   [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-26 07:49:30.323 ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter  :40   [32m                  [0;39m 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field aiAssistant in com.matt.wiki.controller.AiController required a bean named 'QwenChatModel' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean named 'QwenChatModel' in your configuration.
+
+2025-08-26 07:49:47.806 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-26 07:49:47.825 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 94427 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-26 07:49:47.825 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-26 07:49:47.845 INFO  o.s.boot.devtools.restart.ChangeableUrls          :252  [32m                  [0;39m The Class-Path manifest attribute in /Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2025-08-26 07:49:47.845 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-26 07:49:47.845 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-26 07:49:48.225 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 07:49:48.227 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 07:49:48.243 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2025-08-26 07:49:48.635 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-26 07:49:48.642 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-26 07:49:48.643 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-26 07:49:48.644 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-26 07:49:48.662 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-26 07:49:48.663 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 818 ms
+2025-08-26 07:49:48.719 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-26 07:49:49.590 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-26 07:49:49.598 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-26 07:49:49.606 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 2.006 seconds (process running for 2.434)
+2025-08-26 07:49:49.607 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-26 07:49:49.608 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-26 07:49:53.779 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-26 07:49:53.779 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-08-26 07:49:53.780 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-08-26 07:49:53.790 INFO  com.matt.wiki.interceptor.LoginInterceptor        :31   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2025-08-26 07:49:53.791 INFO  com.matt.wiki.interceptor.LoginInterceptor        :42   [32m                  [0;39m 接口登录拦截：，path：http://127.0.0.1:8080/
+2025-08-26 07:49:53.791 INFO  com.matt.wiki.interceptor.LoginInterceptor        :46   [32m                  [0;39m 登录校验开始，token：null
+2025-08-26 07:49:53.792 INFO  com.matt.wiki.interceptor.LoginInterceptor        :48   [32m                  [0;39m token为空，请求被拦截
+2025-08-26 07:50:00.012 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615301880263872512[0;39m 生成今日电子书快照开始
+2025-08-26 07:50:00.031 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m615301880263872512[0;39m HikariPool-1 - Starting...
+2025-08-26 07:50:03.014 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m615301880263872512[0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@328357e5
+2025-08-26 07:50:03.017 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m615301880263872512[0;39m HikariPool-1 - Start completed.
+2025-08-26 07:50:03.028 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615301880263872512[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:50:03.048 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615301880263872512[0;39m ==> Parameters: 
+2025-08-26 07:50:03.553 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615301880263872512[0;39m <==    Updates: 0
+2025-08-26 07:50:03.557 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615301880263872512[0;39m 生成今日电子书快照结束，耗时：3544毫秒
+2025-08-26 07:50:03.558 INFO  com.matt.wiki.job.DocJob                          :30   [32m615301895141068800[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:50:03.559 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615301895141068800[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:50:03.560 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615301895141068800[0;39m ==> Parameters: 
+2025-08-26 07:50:04.091 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615301895141068800[0;39m <==    Updates: 1
+2025-08-26 07:50:04.091 INFO  com.matt.wiki.job.DocJob                          :33   [32m615301895141068800[0;39m 更新电子书下的文档数据结束，耗时：532毫秒
+2025-08-26 07:51:00.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m615302131896946688[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:51:00.309 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302131896946688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:51:00.309 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302131896946688[0;39m ==> Parameters: 
+2025-08-26 07:51:00.923 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302131896946688[0;39m <==    Updates: 1
+2025-08-26 07:51:00.924 INFO  com.matt.wiki.job.DocJob                          :33   [32m615302131896946688[0;39m 更新电子书下的文档数据结束，耗时：918毫秒
+2025-08-26 07:51:00.924 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615302135751512064[0;39m 生成今日电子书快照开始
+2025-08-26 07:51:00.925 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302135751512064[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:51:00.926 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302135751512064[0;39m ==> Parameters: 
+2025-08-26 07:51:01.436 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302135751512064[0;39m <==    Updates: 0
+2025-08-26 07:51:01.438 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615302135751512064[0;39m 生成今日电子书快照结束，耗时：514毫秒
+2025-08-26 07:51:27.020 INFO  com.matt.wiki.interceptor.LoginInterceptor        :31   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2025-08-26 07:51:27.021 INFO  com.matt.wiki.interceptor.LoginInterceptor        :42   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8080/ai/chat
+2025-08-26 07:51:27.021 INFO  com.matt.wiki.interceptor.LoginInterceptor        :46   [32m                  [0;39m 登录校验开始，token：null
+2025-08-26 07:51:27.022 INFO  com.matt.wiki.interceptor.LoginInterceptor        :48   [32m                  [0;39m token为空，请求被拦截
+2025-08-26 07:51:50.515 INFO  com.matt.wiki.websocket.WebSocketServer           :32   [32m                  [0;39m 有新连接：token：cjM1jDxPew，session id：0，当前连接数：1
+2025-08-26 07:51:50.581 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m615302344019677185[0;39m ------------- 开始 -------------
+2025-08-26 07:51:50.581 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m615302344019677186[0;39m ------------- 开始 -------------
+2025-08-26 07:51:50.581 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m615302344019677184[0;39m ------------- 开始 -------------
+2025-08-26 07:51:50.582 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615302344019677185[0;39m 请求地址: http://localhost:8080/ebook-snapshot/get-statistic GET
+2025-08-26 07:51:50.583 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615302344019677185[0;39m 类名方法: com.matt.wiki.controller.EbookSnapshotController.getStatistic
+2025-08-26 07:51:50.583 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615302344019677186[0;39m 请求地址: http://localhost:8080/ebook-snapshot/get-30-statistic GET
+2025-08-26 07:51:50.584 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615302344019677186[0;39m 类名方法: com.matt.wiki.controller.EbookSnapshotController.get30Statistic
+2025-08-26 07:51:50.584 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615302344019677186[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 07:51:50.583 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615302344019677184[0;39m 请求地址: http://localhost:8080/category/all GET
+2025-08-26 07:51:50.583 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615302344019677185[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 07:51:50.585 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615302344019677184[0;39m 类名方法: com.matt.wiki.controller.CategoryController.all
+2025-08-26 07:51:50.585 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615302344019677184[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 07:51:50.627 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m615302344019677185[0;39m 请求参数: []
+2025-08-26 07:51:50.627 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m615302344019677184[0;39m 请求参数: []
+2025-08-26 07:51:50.627 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m615302344019677186[0;39m 请求参数: []
+2025-08-26 07:51:50.871 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.getStatistic :135  [32m615302344019677185[0;39m ==>  Preparing: select t1.`date` as `date`, sum(t1.view_count) as viewCount, sum(t1.vote_count) as voteCount, sum(t1.view_increase) as viewIncrease, sum(t1.vote_increase) as voteIncrease from ebook_snapshot t1 where t1.`date` >= date_sub(curdate(), interval 1 day) group by t1.`date` order by t1.`date` asc;
+2025-08-26 07:51:50.871 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.getStatistic :135  [32m615302344019677185[0;39m ==> Parameters: 
+2025-08-26 07:51:50.879 DEBUG c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :135  [32m615302344019677186[0;39m ==>  Preparing: select t1.`date` as `date`, sum(t1.view_increase) as viewIncrease, sum(t1.vote_increase) as voteIncrease from ebook_snapshot t1 where t1.`date` between date_sub(curdate(), interval 30 day) and date_sub(curdate(), interval 1 day) group by t1.`date` order by t1.`date` asc;
+2025-08-26 07:51:50.880 DEBUG c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :135  [32m615302344019677186[0;39m ==> Parameters: 
+2025-08-26 07:51:50.885 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m615302344019677184[0;39m ==>  Preparing: select id, parent, `name`, sort from category order by sort asc
+2025-08-26 07:51:50.886 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m615302344019677184[0;39m ==> Parameters: 
+2025-08-26 07:51:51.218 TRACE c.m.w.mapper.EbookSnapshotMapperCust.getStatistic :141  [32m615302344019677185[0;39m <==    Columns: date, viewCount, voteCount, viewIncrease, voteIncrease
+2025-08-26 07:51:51.218 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==    Columns: id, parent, name, sort
+2025-08-26 07:51:51.218 TRACE c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :141  [32m615302344019677186[0;39m <==    Columns: date, viewIncrease, voteIncrease
+2025-08-26 07:51:51.218 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 100, 0, 前端开发, 100
+2025-08-26 07:51:51.219 TRACE c.m.w.mapper.EbookSnapshotMapperCust.getStatistic :141  [32m615302344019677185[0;39m <==        Row: 2025-08-25, 182, 261, 44, 22
+2025-08-26 07:51:51.219 TRACE c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :141  [32m615302344019677186[0;39m <==        Row: 2025-08-22, 61, 52
+2025-08-26 07:51:51.220 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 101, 100, Vue, 101
+2025-08-26 07:51:51.220 TRACE c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :141  [32m615302344019677186[0;39m <==        Row: 2025-08-23, 33, 33
+2025-08-26 07:51:51.220 TRACE c.m.w.mapper.EbookSnapshotMapperCust.getStatistic :141  [32m615302344019677185[0;39m <==        Row: 2025-08-26, 182, 261, 0, 0
+2025-08-26 07:51:51.221 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 102, 100, HTML & CSS, 102
+2025-08-26 07:51:51.221 TRACE c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :141  [32m615302344019677186[0;39m <==        Row: 2025-08-24, 44, 154
+2025-08-26 07:51:51.221 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.getStatistic :135  [32m615302344019677185[0;39m <==      Total: 2
+2025-08-26 07:51:51.221 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 200, 0, Java, 200
+2025-08-26 07:51:51.221 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 201, 200, 基础应用, 201
+2025-08-26 07:51:51.221 TRACE c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :141  [32m615302344019677186[0;39m <==        Row: 2025-08-25, 44, 22
+2025-08-26 07:51:51.221 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 202, 200, 框架应用, 202
+2025-08-26 07:51:51.221 DEBUG c.m.w.m.EbookSnapshotMapperCust.get30Statistic    :135  [32m615302344019677186[0;39m <==      Total: 4
+2025-08-26 07:51:51.222 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 300, 0, 后端开发, 300
+2025-08-26 07:51:51.222 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 301, 300, Node.js, 301
+2025-08-26 07:51:51.222 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 302, 300, Go, 302
+2025-08-26 07:51:51.222 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 400, 0, 数据库, 400
+2025-08-26 07:51:51.222 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 401, 400, MySQL, 401
+2025-08-26 07:51:51.223 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 402, 400, PostgreSQL, 402
+2025-08-26 07:51:51.223 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 500, 0, 运维与部署, 500
+2025-08-26 07:51:51.224 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 501, 500, Docker, 501
+2025-08-26 07:51:51.224 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 502, 500, Kubernetes, 502
+2025-08-26 07:51:51.224 TRACE c.matt.wiki.mapper.CategoryMapper.selectByExample :141  [32m615302344019677184[0;39m <==        Row: 503, 500, CI/CD, 503
+2025-08-26 07:51:51.224 DEBUG c.matt.wiki.mapper.CategoryMapper.selectByExample :135  [32m615302344019677184[0;39m <==      Total: 16
+2025-08-26 07:51:51.237 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m615302344019677184[0;39m 返回结果: {"content":[{"id":100,"name":"前端开发","parent":0,"sort":100},{"id":101,"name":"Vue","parent":100,"sort":101},{"id":102,"name":"HTML & CSS","parent":100,"sort":102},{"id":200,"name":"Java","parent":0,"sort":200},{"id":201,"name":"基础应用","parent":200,"sort":201},{"id":202,"name":"框架应用","parent":200,"sort":202},{"id":300,"name":"后端开发","parent":0,"sort":300},{"id":301,"name":"Node.js","parent":300,"sort":301},{"id":302,"name":"Go","parent":300,"sort":302},{"id":400,"name":"数据库","parent":0,"sort":400},{"id":401,"name":"MySQL","parent":400,"sort":401},{"id":402,"name":"PostgreSQL","parent":400,"sort":402},{"id":500,"name":"运维与部署","parent":0,"sort":500},{"id":501,"name":"Docker","parent":500,"sort":501},{"id":502,"name":"Kubernetes","parent":500,"sort":502},{"id":503,"name":"CI/CD","parent":500,"sort":503}],"success":true}
+2025-08-26 07:51:51.237 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m615302344019677184[0;39m ------------- 结束 耗时：658 ms -------------
+2025-08-26 07:51:51.238 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m615302344019677185[0;39m 返回结果: {"content":[{"date":1756044000000,"viewCount":182,"viewIncrease":44,"voteCount":261,"voteIncrease":22},{"date":1756130400000,"viewCount":182,"viewIncrease":0,"voteCount":261,"voteIncrease":0}],"success":true}
+2025-08-26 07:51:51.239 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m615302344019677185[0;39m ------------- 结束 耗时：660 ms -------------
+2025-08-26 07:51:51.239 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m615302344019677186[0;39m 返回结果: {"content":[{"date":1755784800000,"viewCount":0,"viewIncrease":61,"voteCount":0,"voteIncrease":52},{"date":1755871200000,"viewCount":0,"viewIncrease":33,"voteCount":0,"voteIncrease":33},{"date":1755957600000,"viewCount":0,"viewIncrease":44,"voteCount":0,"voteIncrease":154},{"date":1756044000000,"viewCount":0,"viewIncrease":44,"voteCount":0,"voteIncrease":22}],"success":true}
+2025-08-26 07:51:51.239 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m615302344019677186[0;39m ------------- 结束 耗时：660 ms -------------
+2025-08-26 07:51:56.661 INFO  com.matt.wiki.aspect.LogAspect                    :52   [32m615302369529434112[0;39m ------------- 开始 -------------
+2025-08-26 07:51:56.661 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615302369529434112[0;39m 请求地址: http://localhost:8080/user/login POST
+2025-08-26 07:51:56.661 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615302369529434112[0;39m 类名方法: com.matt.wiki.controller.UserController.login
+2025-08-26 07:51:56.662 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615302369529434112[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 07:51:56.662 INFO  com.matt.wiki.aspect.LogAspect                    :77   [32m615302369529434112[0;39m 请求参数: [{"loginName":"test"}]
+2025-08-26 07:51:56.921 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m615302369529434112[0;39m ==>  Preparing: select id, login_name, `name`, `password` from user WHERE ( login_name = ? )
+2025-08-26 07:51:56.925 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m615302369529434112[0;39m ==> Parameters: test(String)
+2025-08-26 07:51:57.245 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m615302369529434112[0;39m <==    Columns: id, login_name, name, password
+2025-08-26 07:51:57.246 TRACE com.matt.wiki.mapper.UserMapper.selectByExample   :141  [32m615302369529434112[0;39m <==        Row: 2, test, test, e70e2222a9d67c4f2eae107533359aa4
+2025-08-26 07:51:57.247 DEBUG com.matt.wiki.mapper.UserMapper.selectByExample   :135  [32m615302369529434112[0;39m <==      Total: 1
+2025-08-26 07:51:58.986 INFO  com.matt.wiki.aspect.LogAspect                    :84   [32m615302369529434112[0;39m generated token: 615302371995684864
+2025-08-26 07:51:58.987 INFO  com.matt.wiki.aspect.LogAspect                    :90   [32m615302369529434112[0;39m 返回结果: {"content":{"id":2,"loginName":"test","name":"test","token":"615302371995684864"},"success":true}
+2025-08-26 07:51:58.987 INFO  com.matt.wiki.aspect.LogAspect                    :91   [32m615302369529434112[0;39m ------------- 结束 耗时：2326 ms -------------
+2025-08-26 07:52:00.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m615302383542603776[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:52:00.253 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302383542603776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:52:00.254 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302383542603776[0;39m ==> Parameters: 
+2025-08-26 07:52:00.756 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302383542603776[0;39m <==    Updates: 1
+2025-08-26 07:52:00.757 INFO  com.matt.wiki.job.DocJob                          :33   [32m615302383542603776[0;39m 更新电子书下的文档数据结束，耗时：754毫秒
+2025-08-26 07:52:00.757 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615302386709303296[0;39m 生成今日电子书快照开始
+2025-08-26 07:52:00.757 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302386709303296[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:52:00.758 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302386709303296[0;39m ==> Parameters: 
+2025-08-26 07:52:01.340 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302386709303296[0;39m <==    Updates: 0
+2025-08-26 07:52:01.340 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615302386709303296[0;39m 生成今日电子书快照结束，耗时：583毫秒
+2025-08-26 07:52:05.251 INFO  com.matt.wiki.websocket.WebSocketServer           :46   [32m                  [0;39m 连接关闭，token：cjM1jDxPew，session id：0！当前连接数：0
+2025-08-26 07:52:05.447 INFO  com.matt.wiki.websocket.WebSocketServer           :32   [32m                  [0;39m 有新连接：token：yI1iRtCAgg，session id：1，当前连接数：1
+2025-08-26 07:52:18.207 INFO  com.matt.wiki.interceptor.LoginInterceptor        :31   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2025-08-26 07:52:18.208 INFO  com.matt.wiki.interceptor.LoginInterceptor        :42   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8080/ai/chat
+2025-08-26 07:52:18.208 INFO  com.matt.wiki.interceptor.LoginInterceptor        :46   [32m                  [0;39m 登录校验开始，token：null
+2025-08-26 07:52:18.208 INFO  com.matt.wiki.interceptor.LoginInterceptor        :48   [32m                  [0;39m token为空，请求被拦截
+2025-08-26 07:52:18.217 INFO  com.matt.wiki.websocket.WebSocketServer           :46   [32m                  [0;39m 连接关闭，token：yI1iRtCAgg，session id：1！当前连接数：0
+2025-08-26 07:52:21.230 INFO  com.matt.wiki.interceptor.LoginInterceptor        :31   [32m                  [0;39m ------------- LoginInterceptor 开始 -------------
+2025-08-26 07:52:21.231 INFO  com.matt.wiki.interceptor.LoginInterceptor        :42   [32m                  [0;39m 接口登录拦截：，path：http://localhost:8080/ai/chat
+2025-08-26 07:52:21.231 INFO  com.matt.wiki.interceptor.LoginInterceptor        :46   [32m                  [0;39m 登录校验开始，token：null
+2025-08-26 07:52:21.231 INFO  com.matt.wiki.interceptor.LoginInterceptor        :48   [32m                  [0;39m token为空，请求被拦截
+2025-08-26 07:52:31.823 INFO  com.matt.wiki.websocket.WebSocketServer           :32   [32m615302344019677185[0;39m 有新连接：token：W2ddvCOV53，session id：2，当前连接数：1
+2025-08-26 07:52:45.962 INFO  com.matt.wiki.interceptor.LoginInterceptor        :31   [32m615302344019677186[0;39m ------------- LoginInterceptor 开始 -------------
+2025-08-26 07:52:45.963 INFO  com.matt.wiki.interceptor.LoginInterceptor        :42   [32m615302344019677186[0;39m 接口登录拦截：，path：http://localhost:8080/ai/chat
+2025-08-26 07:52:45.963 INFO  com.matt.wiki.interceptor.LoginInterceptor        :46   [32m615302344019677186[0;39m 登录校验开始，token：null
+2025-08-26 07:52:45.963 INFO  com.matt.wiki.interceptor.LoginInterceptor        :48   [32m615302344019677186[0;39m token为空，请求被拦截
+2025-08-26 07:53:00.001 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615302635196649472[0;39m 生成今日电子书快照开始
+2025-08-26 07:53:00.323 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302635196649472[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:53:00.324 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302635196649472[0;39m ==> Parameters: 
+2025-08-26 07:53:00.828 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302635196649472[0;39m <==    Updates: 0
+2025-08-26 07:53:00.828 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615302635196649472[0;39m 生成今日电子书快照结束，耗时：826毫秒
+2025-08-26 07:53:00.828 INFO  com.matt.wiki.job.DocJob                          :30   [32m615302638665338880[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:53:00.829 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302638665338880[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:53:00.829 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302638665338880[0;39m ==> Parameters: 
+2025-08-26 07:53:01.394 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302638665338880[0;39m <==    Updates: 1
+2025-08-26 07:53:01.395 INFO  com.matt.wiki.job.DocJob                          :33   [32m615302638665338880[0;39m 更新电子书下的文档数据结束，耗时：566毫秒
+2025-08-26 07:54:00.002 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615302886859083776[0;39m 生成今日电子书快照开始
+2025-08-26 07:54:00.331 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302886859083776[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:54:00.331 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302886859083776[0;39m ==> Parameters: 
+2025-08-26 07:54:01.354 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615302886859083776[0;39m <==    Updates: 0
+2025-08-26 07:54:01.355 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615302886859083776[0;39m 生成今日电子书快照结束，耗时：1352毫秒
+2025-08-26 07:54:01.355 INFO  com.matt.wiki.job.DocJob                          :30   [32m615302892533977088[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:54:01.355 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302892533977088[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:54:01.355 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302892533977088[0;39m ==> Parameters: 
+2025-08-26 07:54:02.846 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615302892533977088[0;39m <==    Updates: 1
+2025-08-26 07:54:02.846 INFO  com.matt.wiki.job.DocJob                          :33   [32m615302892533977088[0;39m 更新电子书下的文档数据结束，耗时：1491毫秒
+2025-08-26 07:55:00.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m615303138517323776[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:55:00.338 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615303138517323776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:55:00.339 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615303138517323776[0;39m ==> Parameters: 
+2025-08-26 07:55:00.897 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615303138517323776[0;39m <==    Updates: 1
+2025-08-26 07:55:00.898 INFO  com.matt.wiki.job.DocJob                          :33   [32m615303138517323776[0;39m 更新电子书下的文档数据结束，耗时：890毫秒
+2025-08-26 07:55:00.898 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615303142275420160[0;39m 生成今日电子书快照开始
+2025-08-26 07:55:00.899 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615303142275420160[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:55:00.901 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615303142275420160[0;39m ==> Parameters: 
+2025-08-26 07:55:01.762 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615303142275420160[0;39m <==    Updates: 0
+2025-08-26 07:55:01.762 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615303142275420160[0;39m 生成今日电子书快照结束，耗时：864毫秒
+2025-08-26 07:56:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615303390188146688[0;39m 生成今日电子书快照开始
+2025-08-26 07:56:00.345 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615303390188146688[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 07:56:00.345 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615303390188146688[0;39m ==> Parameters: 
+2025-08-26 07:56:00.851 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615303390188146688[0;39m <==    Updates: 0
+2025-08-26 07:56:00.851 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615303390188146688[0;39m 生成今日电子书快照结束，耗时：844毫秒
+2025-08-26 07:56:00.851 INFO  com.matt.wiki.job.DocJob                          :30   [32m615303393736527872[0;39m 更新电子书下的文档数据开始
+2025-08-26 07:56:00.852 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615303393736527872[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 07:56:00.852 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615303393736527872[0;39m ==> Parameters: 
+2025-08-26 07:56:01.472 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615303393736527872[0;39m <==    Updates: 1
+2025-08-26 07:56:01.472 INFO  com.matt.wiki.job.DocJob                          :33   [32m615303393736527872[0;39m 更新电子书下的文档数据结束，耗时：621毫秒
