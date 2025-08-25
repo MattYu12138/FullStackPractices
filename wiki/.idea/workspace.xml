@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge branch 'ApplyLLM' of https://github.com/MattYu12138/FullStackPractices into ApplyLLM">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="解决没有生成bean的问题，">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/config/SpringMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/TestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/TestUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,15 +278,7 @@
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
       <workItem from="1756151395970" duration="4523000" />
-      <workItem from="1756158409462" duration="458000" />
-    </task>
-    <task id="LOCAL-00114" summary="解决重置密码弹窗不消除问题">
-      <option name="closed" value="true" />
-      <created>1753932779401</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1753932779401</updated>
+      <workItem from="1756158409462" duration="1589000" />
     </task>
     <task id="LOCAL-00115" summary="用户登录后端实现">
       <option name="closed" value="true" />
@@ -672,7 +664,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756154877827</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="解决没有生成bean的问题，">
+      <option name="closed" value="true" />
+      <created>1756158969383</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1756158969383</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -728,7 +728,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="增加日志流水号，方便运维" />
     <MESSAGE value="Merge pull request #13 from MattYu12138/codex/fix-websocket-error-popup-in-footer&#10;&#10;Send initial WebSocket message to trigger footer notification" />
     <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
     <MESSAGE value="异步化解耦点赞和通知功能" />
@@ -753,7 +752,8 @@
     <MESSAGE value="配置prod环境" />
     <MESSAGE value="BUG:cannot run project due to the issue of without a bean called qwenStreamingChatModel" />
     <MESSAGE value="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration" />
+    <MESSAGE value="解决没有生成bean的问题，" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决没有生成bean的问题，" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
