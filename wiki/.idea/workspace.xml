@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="配置prod环境">
-      <change afterPath="$PROJECT_DIR$/doc/deploy/stop-wiki.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deploy/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deploy/server.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/deploy/web.conf" beforeDir="false" afterPath="$PROJECT_DIR$/doc/deploy/web.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.env.prod" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.prod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +92,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ApplyLLM&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/doc&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -238,9 +232,9 @@
       <item itemvalue="HTTP Request.test | #3" />
       <item itemvalue="HTTP Request.test | #5" />
       <item itemvalue="Maven.mybatis-generator" />
-      <item itemvalue="Spring Boot.WikiApplication" />
       <item itemvalue="npm.build-prod" />
       <item itemvalue="npm.serve-dev" />
+      <item itemvalue="Spring Boot.WikiApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -710,7 +704,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/ApplyLLM" />
                       </list>
                     </value>
                   </entry>
