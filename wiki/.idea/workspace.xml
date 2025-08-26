@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="这里测试类返回班级为5班， 放开所有ai/**路径">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aioutput/GuestRegisterOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aioutput/IntentionOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiIntentionAssistant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/AiChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/impl/AiChatServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/prompts/getIntention.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/prompts/guestRegister.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="将intentionAssistant和general的分开">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/AiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/AiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,15 +276,7 @@
       <workItem from="1755587601566" duration="557000" />
       <workItem from="1755955304417" duration="3595000" />
       <workItem from="1756151395970" duration="4523000" />
-      <workItem from="1756158409462" duration="6921000" />
-    </task>
-    <task id="LOCAL-00116" summary="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息">
-      <option name="closed" value="true" />
-      <created>1754164981309</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1754164981309</updated>
+      <workItem from="1756158409462" duration="8251000" />
     </task>
     <task id="LOCAL-00117" summary="配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息">
       <option name="closed" value="true" />
@@ -680,7 +662,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756160246329</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="将intentionAssistant和general的分开">
+      <option name="closed" value="true" />
+      <created>1756165820372</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1756165820372</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,7 +726,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="配置websocket，收到点赞后弹窗给提示" />
     <MESSAGE value="异步化解耦点赞和通知功能" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能" />
     <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
@@ -761,7 +750,8 @@
     <MESSAGE value="Merge pull request #20 from MattYu12138/codex/add-bean-definition-for-qwenstreamingchatmodel&#10;&#10;Add Qwen chat model configuration" />
     <MESSAGE value="解决没有生成bean的问题，" />
     <MESSAGE value="这里测试类返回班级为5班， 放开所有ai/**路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="这里测试类返回班级为5班， 放开所有ai/**路径" />
+    <MESSAGE value="将intentionAssistant和general的分开" />
+    <option name="LAST_COMMIT_MESSAGE" value="将intentionAssistant和general的分开" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

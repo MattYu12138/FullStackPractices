@@ -170,3 +170,32 @@ on t1.ebook_id = t2.ebook_id
 set t1.view_increase = (t1.view_count - IFNULL(t2.view_count,0)),
 t1.vote_increase = (t1.vote_count - IFNULL(t2.vote_count,0))
 where t1.`date` = curdate();
+
+-- 客户表（首次咨询登记）
+CREATE TABLE clients (
+                         id                BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT '主键ID',
+                         user_name         VARCHAR(100)       NULL COMMENT '用户姓名',
+                         phone             VARCHAR(32)        NULL COMMENT '手机号码（建议存规范化格式，如+61...）',
+                         email             VARCHAR(255)       NULL COMMENT '邮箱',
+                         case_type         VARCHAR(120)       NULL COMMENT '案件类型（如 Immigration / Family / Commercial & Contract 等）',
+                         area              VARCHAR(120)       NULL COMMENT '地区（如 Melbourne, VIC）',
+                         language          ENUM('zh','en','both','other','unknown')
+                                                              NOT NULL DEFAULT 'unknown' COMMENT '语言偏好',
+                         urgency           ENUM('low','medium','high','unknown')
+                                                              NOT NULL DEFAULT 'unknown' COMMENT '紧急程度',
+                         completed         ENUM('yes','no')   NOT NULL DEFAULT 'no' COMMENT '是否完成登记',
+                         last_llm_output   TEXT               NULL COMMENT 'LLM output to Guest（最后一次对客话术快照）',
+
+                         source            VARCHAR(50)        NOT NULL DEFAULT 'web' COMMENT '来源：web/chat/phone等',
+                         consent           TINYINT(1)         NOT NULL DEFAULT 0 COMMENT '是否已获得隐私/存储同意 0/1',
+                         created_at        DATETIME           NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+                         updated_at        DATETIME           NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+                         deleted           TINYINT(1)         NOT NULL DEFAULT 0 COMMENT '逻辑删除 0/1',
+
+    -- 唯一/检索索引（允许多 NULL）
+                         UNIQUE KEY uk_clients_email (email),
+                         UNIQUE KEY uk_clients_phone (phone),
+                         KEY idx_clients_case_type (case_type),
+                         KEY idx_clients_created_at (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+    COMMENT='政通律师事务所 - 客户表（首次咨询登记）';
