@@ -1,12 +1,17 @@
 package com.matt.wiki.service.impl;
 
+import com.alibaba.dashscope.utils.JsonUtils;
+import com.matt.wiki.aioutput.ClientOutput;
 import com.matt.wiki.aioutput.GuestRegisterOutput;
 import com.matt.wiki.aioutput.IntentionOutput;
 import com.matt.wiki.aiservice.AiAssistant;
+import com.matt.wiki.aiservice.ClientAssistant;
 import com.matt.wiki.aop.ChatFlow;
 import com.matt.wiki.entity.ChatHistoryEntity;
+import com.matt.wiki.entity.ClientEntity;
 import com.matt.wiki.entity.GuestRegisterEntity;
 import com.matt.wiki.repository.ChatHistoryRepository;
+import com.matt.wiki.repository.ClientRepository;
 import com.matt.wiki.repository.GuestRegisterRepository;
 import com.matt.wiki.service.AiChatService;
 import com.matt.wiki.service.CategoryService;
@@ -16,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -43,6 +49,11 @@ public class AiChatServiceImpl implements AiChatService {
     @Resource
     private GuestRegisterRepository guestRegisterRepository;
 
+    @Resource
+    private ClientAssistant clientAssistant;
+    @Autowired
+    private ClientRepository clientRepository;
+
     @ChatFlow
     @Override
     public String chatStream(String userId, String message) {
@@ -61,6 +72,7 @@ public class AiChatServiceImpl implements AiChatService {
 //                    2.费用
                 break;
             case 3 :
+                output = findClientProperties(userId,message);
 //                    3.进度查询
                 break;
             case 4 :
@@ -73,6 +85,19 @@ public class AiChatServiceImpl implements AiChatService {
                 return output;
         }
         return output;
+    }
+
+    private String findClientProperties(String userId, String message) {
+        StringBuffer sb = new StringBuffer();
+        clientAssistant.clientProperty(userId,message).doOnNext(sb::append).blockLast();
+        LOG.info("clientProperty: {}", sb.toString());
+        ClientOutput clientOutput = JsonUtils.fromJson(sb.toString(), ClientOutput.class);
+        if(clientOutput.getCompleted()){
+            ClientEntity clientEntity = new ClientEntity();
+            BeanUtils.copyProperties(clientOutput,clientEntity);
+            clientRepository.save(clientEntity);
+        }
+        return clientOutput.getOutput();
     }
 
     @Override
@@ -156,4 +181,6 @@ public class AiChatServiceImpl implements AiChatService {
         }
         return guestRegisterOutput.getOutput();
     }
+
+
 }
