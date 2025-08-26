@@ -7,6 +7,9 @@ import lombok.Data;
 @Data
 public class GuestRegisterOutput {
 
+    @Description("id")
+    private Long id;
+
     @Description("LLM output to Guest")
     private String output;
 

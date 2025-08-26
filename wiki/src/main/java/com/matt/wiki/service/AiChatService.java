@@ -1,6 +1,9 @@
 package com.matt.wiki.service;
 
 import com.matt.wiki.aop.ChatFlow;
+import com.matt.wiki.vo.ChatHistoryVo;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface AiChatService {
     /**
@@ -10,4 +13,23 @@ public interface AiChatService {
      */
     @ChatFlow
     String chatStream(String userId, String message);
+
+    /**
+     * 查询聊天历史记录
+     * @param userId
+     * @param page
+     * @return
+     */
+    Page<ChatHistoryVo> queryChatHistory(String userId, Pageable page);
+
+    /**
+     * 删除聊天历史记录
+     * @param userId
+     */
+    void clearChatHistory(String userId);
+
+//    public String embeddingIndex();
+//
+//    List<String> embeddingQuery(String message);
+
 }
