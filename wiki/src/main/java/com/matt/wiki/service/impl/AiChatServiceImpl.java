@@ -3,7 +3,6 @@ package com.matt.wiki.service.impl;
 import com.matt.wiki.aioutput.GuestRegisterOutput;
 import com.matt.wiki.aioutput.IntentionOutput;
 import com.matt.wiki.aiservice.AiAssistant;
-import com.matt.wiki.aiservice.AiIntentionAssistant;
 import com.matt.wiki.entity.GuestRegisterEntity;
 import com.matt.wiki.repository.GuestRegisterRepository;
 import com.matt.wiki.service.AiChatService;
@@ -25,8 +24,8 @@ public class AiChatServiceImpl implements AiChatService {
     @Resource
     private AiAssistant aiAssistant;
 
-    @Resource
-    private AiIntentionAssistant aiIntentionAssistant;
+//    @Resource
+//    private AiIntentionAssistant aiIntentionAssistant;
 
     @Resource
     private GuestRegisterRepository guestRegisterRepository;
@@ -35,7 +34,7 @@ public class AiChatServiceImpl implements AiChatService {
     public Flux<String> chatStream(String userId, String message) {
 
 //        用户意图
-        IntentionOutput intention = aiIntentionAssistant.intention(userId, message);
+        IntentionOutput intention = aiAssistant.intention(userId, message);
         LOG.info("----" + intention);
         Integer intent = intention.getIntention();
         if (intent == null) {

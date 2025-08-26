@@ -2,6 +2,7 @@ package com.matt.wiki.aiservice;
 
 
 import com.matt.wiki.aioutput.GuestRegisterOutput;
+import com.matt.wiki.aioutput.IntentionOutput;
 import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
@@ -11,7 +12,7 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
 import reactor.core.publisher.Flux;
 
 @AiService(wiringMode = AiServiceWiringMode.EXPLICIT, chatModel = "qwenChatModel",
-        streamingChatModel = "qwenStreamingChatModel", chatMemoryProvider = "chatMemoryProvider", tools = "testUtil")
+        streamingChatModel = "qwenStreamingChatModel", tools = "ChatHistoryTools")
 public interface AiAssistant {
 
     String chat(@MemoryId  String id, @UserMessage String message);
@@ -21,5 +22,10 @@ public interface AiAssistant {
     @SystemMessage(fromResource = "/prompts/guestRegister.txt")
     @UserMessage("当前sessionId:{{sessionId}}; 用户当前消息:{{message}}")
     GuestRegisterOutput guestRegister(@V("sessionId") String sessionId,@V("message") String message);
+
+    @SystemMessage(fromResource = "prompts/getIntention.txt")
+    @UserMessage("当前sessionId:{{sessionId}}; 用户当前消息:{{message}}")
+    IntentionOutput intention(@V("sessionId") String sessionId, @V("message") String message);
+
 
 }

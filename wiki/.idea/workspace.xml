@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="应用JPA实现持久层，数据传到sql有bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aop/ChatFlow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aop/ChatFlowAop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/entity/ChatHistoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/repository/ChatHistoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/ChatHistoryTools.java" afterDir="false" />
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="生成了chathistory的持久层，但是暂时没应用">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/db/all.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/db/all.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/WikiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/WikiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiIntentionAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiIntentionAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/repository/ChatHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/repository/ChatHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/impl/AiChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/impl/AiChatServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/ChatHistoryTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/ChatHistoryTools.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator/generator-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/prompts/getIntention.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/prompts/getIntention.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/prompts/guestRegister.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/prompts/guestRegister.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,22 +283,6 @@
       <workItem from="1755955304417" duration="3595000" />
       <workItem from="1756151395970" duration="4523000" />
       <workItem from="1756158409462" duration="10747000" />
-    </task>
-    <task id="LOCAL-00119" summary="修复bug：配置header的登陆弹窗，但显示位置不正确。 错误显示报错信息,当密码错误的时候，显示登录名已存在">
-      <option name="closed" value="true" />
-      <created>1754168782153</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1754168782153</updated>
-    </task>
-    <task id="LOCAL-00120" summary="前端显示登录信息，但是刷新后就没有了">
-      <option name="closed" value="true" />
-      <created>1754177508322</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1754177508322</updated>
     </task>
     <task id="LOCAL-00121" summary="使用vuex将变量变为全局信息">
       <option name="closed" value="true" />
@@ -676,7 +660,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756172440017</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="创建ChatHistory实体和对应工具类，并采取AOP环绕的方式读取中断会话">
+      <option name="closed" value="true" />
+      <created>1756214514376</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1756214514376</updated>
+    </task>
+    <task id="LOCAL-00169" summary="生成了chathistory的持久层，但是暂时没应用">
+      <option name="closed" value="true" />
+      <created>1756216074809</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1756216074809</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,6 +688,11 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="ApplyLLM" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="main" />
@@ -713,7 +718,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/ApplyLLM" />
+                        <option value="ApplyLLM" />
                       </list>
                     </value>
                   </entry>
@@ -732,8 +737,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="使用rocketmq解耦合点赞，发送和接收调试功能&#10;&#10;点赞-》发mq-〉收mq-》弹出通知" />
-    <MESSAGE value="改回使用websocket" />
     <MESSAGE value="sql快照逻辑" />
     <MESSAGE value="增加后端ebookSnapshot的持久层和mapper" />
     <MESSAGE value="增加后端ebookSnapshot的持久层和mapper，" />
@@ -757,7 +760,9 @@
     <MESSAGE value="将intentionAssistant和general的分开" />
     <MESSAGE value="创建clients表" />
     <MESSAGE value="应用JPA实现持久层，数据传到sql有bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="应用JPA实现持久层，数据传到sql有bug" />
+    <MESSAGE value="创建ChatHistory实体和对应工具类，并采取AOP环绕的方式读取中断会话" />
+    <MESSAGE value="生成了chathistory的持久层，但是暂时没应用" />
+    <option name="LAST_COMMIT_MESSAGE" value="生成了chathistory的持久层，但是暂时没应用" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
