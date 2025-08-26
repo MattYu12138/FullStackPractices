@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="将AiIntentionAssistant功能重新整合到AiAssistant里面，添加chathistoryTool工具类，使Ai能够获取历史记录。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/ChatHistoryTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/util/ChatHistoryTools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,14 +279,6 @@
       <workItem from="1755955304417" duration="3595000" />
       <workItem from="1756151395970" duration="4523000" />
       <workItem from="1756158409462" duration="10747000" />
-    </task>
-    <task id="LOCAL-00122" summary="解决数据丢失的问题，vuex+sessionStorage">
-      <option name="closed" value="true" />
-      <created>1754178635628</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1754178635628</updated>
     </task>
     <task id="LOCAL-00123" summary="增加删除功能">
       <option name="closed" value="true" />
@@ -669,7 +664,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756216968373</updated>
     </task>
-    <option name="localTasksCounter" value="171" />
+    <task id="LOCAL-00171" summary="将AiIntentionAssistant功能重新整合到AiAssistant里面，添加chathistoryTool工具类，使Ai能够获取历史记录。">
+      <option name="closed" value="true" />
+      <created>1756217465194</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1756217465194</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,7 +733,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="增加后端ebookSnapshot的持久层和mapper" />
     <MESSAGE value="增加后端ebookSnapshot的持久层和mapper，" />
     <MESSAGE value="Merge pull request #15 from MattYu12138/codex/fix-invalid-bound-statement-error&#10;&#10;fix: correct EbookSnapshot mapper namespace" />
     <MESSAGE value="添加allowMultiQueries=true使数据库能同时接受多个语句" />
@@ -754,6 +756,7 @@
     <MESSAGE value="应用JPA实现持久层，数据传到sql有bug" />
     <MESSAGE value="创建ChatHistory实体和对应工具类，并采取AOP环绕的方式读取中断会话" />
     <MESSAGE value="生成了chathistory的持久层，但是暂时没应用" />
+    <MESSAGE value="Merge pull request #25 from MattYu12138/codex/fix-application-startup-issue&#10;&#10;Fix chat history repository method naming" />
     <MESSAGE value="将AiIntentionAssistant功能重新整合到AiAssistant里面，添加chathistoryTool工具类，使Ai能够获取历史记录。" />
     <option name="LAST_COMMIT_MESSAGE" value="将AiIntentionAssistant功能重新整合到AiAssistant里面，添加chathistoryTool工具类，使Ai能够获取历史记录。" />
   </component>

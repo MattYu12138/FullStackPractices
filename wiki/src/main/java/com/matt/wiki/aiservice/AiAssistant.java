@@ -12,7 +12,7 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
 import reactor.core.publisher.Flux;
 
 @AiService(wiringMode = AiServiceWiringMode.EXPLICIT, chatModel = "qwenChatModel",
-        streamingChatModel = "qwenStreamingChatModel", tools = "ChatHistoryTools")
+        streamingChatModel = "qwenStreamingChatModel", tools = "chatHistoryTools")
 public interface AiAssistant {
 
     String chat(@MemoryId  String id, @UserMessage String message);
