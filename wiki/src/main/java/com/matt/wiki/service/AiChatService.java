@@ -1,6 +1,6 @@
 package com.matt.wiki.service;
 
-import reactor.core.publisher.Flux;
+import com.matt.wiki.aop.ChatFlow;
 
 public interface AiChatService {
     /**
@@ -8,5 +8,6 @@ public interface AiChatService {
      * @param userId
      * @param message
      */
-    Flux<String> chatStream(String userId, String message);
+    @ChatFlow
+    String chatStream(String userId, String message);
 }

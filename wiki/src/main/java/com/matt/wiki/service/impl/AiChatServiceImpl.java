@@ -3,6 +3,7 @@ package com.matt.wiki.service.impl;
 import com.matt.wiki.aioutput.GuestRegisterOutput;
 import com.matt.wiki.aioutput.IntentionOutput;
 import com.matt.wiki.aiservice.AiAssistant;
+import com.matt.wiki.aop.ChatFlow;
 import com.matt.wiki.entity.GuestRegisterEntity;
 import com.matt.wiki.repository.GuestRegisterRepository;
 import com.matt.wiki.service.AiChatService;
@@ -13,7 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import reactor.core.publisher.Flux;
 
 @Slf4j
 @Service
@@ -30,16 +30,14 @@ public class AiChatServiceImpl implements AiChatService {
     @Resource
     private GuestRegisterRepository guestRegisterRepository;
 
+    @ChatFlow
     @Override
-    public Flux<String> chatStream(String userId, String message) {
+    public String chatStream(String userId, String message) {
 
 //        用户意图
         IntentionOutput intention = aiAssistant.intention(userId, message);
         LOG.info("----" + intention);
         Integer intent = intention.getIntention();
-        if (intent == null) {
-            return Flux.just(intention.getOutput());
-        }
         String output = intention.getOutput();
         switch (intent){
             case 1 :
@@ -59,9 +57,9 @@ public class AiChatServiceImpl implements AiChatService {
 //                    5.其他"
                 break;
             default :
-                return Flux.just(intention.getOutput());
+                return output;
         }
-        return Flux.just(output);
+        return output;
     }
 
     private String guestRegister(String userId, String message){

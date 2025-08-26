@@ -33,6 +33,6 @@ public class AiController {
     public Flux<String> chatStream(
             @RequestParam(value = "message", defaultValue = "Hello") String message,
             @RequestParam(value = "userId", defaultValue = "111") String userId) {
-        return aiChatService.chatStream(userId, message);
+        return Flux.just(aiChatService.chatStream(userId, message));
     }
 }

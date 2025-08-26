@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="Merge branch 'ApplyLLM' of https://github.com/MattYu12138/FullStackPractices into ApplyLLM">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="注释掉MemoryId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/aiservice/AiAssistant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/AiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/controller/AiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/AiChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/AiChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/impl/AiChatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/matt/wiki/service/impl/AiChatServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,14 +280,6 @@
       <workItem from="1755955304417" duration="3595000" />
       <workItem from="1756151395970" duration="4523000" />
       <workItem from="1756158409462" duration="10747000" />
-    </task>
-    <task id="LOCAL-00124" summary="增加退出账户功能">
-      <option name="closed" value="true" />
-      <created>1754179413156</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1754179413156</updated>
     </task>
     <task id="LOCAL-00125" summary="增加过滤器，防止别人直接调用接口，例如调用save接口，不能直接外部直接用网址传入参数">
       <option name="closed" value="true" />
@@ -672,7 +665,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756217814274</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="注释掉MemoryId">
+      <option name="closed" value="true" />
+      <created>1756218434404</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1756218434404</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,7 +734,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Merge pull request #15 from MattYu12138/codex/fix-invalid-bound-statement-error&#10;&#10;fix: correct EbookSnapshot mapper namespace" />
     <MESSAGE value="添加allowMultiQueries=true使数据库能同时接受多个语句" />
     <MESSAGE value="增加统计数值接口" />
     <MESSAGE value="增加统计数值前端页面" />
@@ -758,7 +758,8 @@
     <MESSAGE value="Merge pull request #25 from MattYu12138/codex/fix-application-startup-issue&#10;&#10;Fix chat history repository method naming" />
     <MESSAGE value="将AiIntentionAssistant功能重新整合到AiAssistant里面，添加chathistoryTool工具类，使Ai能够获取历史记录。" />
     <MESSAGE value="Merge branch 'ApplyLLM' of https://github.com/MattYu12138/FullStackPractices into ApplyLLM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'ApplyLLM' of https://github.com/MattYu12138/FullStackPractices into ApplyLLM" />
+    <MESSAGE value="注释掉MemoryId" />
+    <option name="LAST_COMMIT_MESSAGE" value="注释掉MemoryId" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
