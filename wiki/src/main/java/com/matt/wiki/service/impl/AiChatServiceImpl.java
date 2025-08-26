@@ -67,10 +67,12 @@ public class AiChatServiceImpl implements AiChatService {
     private String guestRegister(String userId, String message){
         GuestRegisterOutput guestRegisterOutput = aiAssistant.guestRegister(userId,message);
         LOG.info("----" + guestRegisterOutput);
-        if(guestRegisterOutput.getCompleted()){
-//持久化层数据库
+        String completed = guestRegisterOutput.getCompleted();
+        if ("yes".equalsIgnoreCase(completed) || "true".equalsIgnoreCase(completed)) {
+            // 持久化层数据库
             GuestRegisterEntity entity = new GuestRegisterEntity();
-            BeanUtils.copyProperties(guestRegisterOutput,entity);
+            BeanUtils.copyProperties(guestRegisterOutput, entity);
+            entity.setCompleted(Boolean.TRUE);
             guestRegisterRepository.save(entity);
 
         }
