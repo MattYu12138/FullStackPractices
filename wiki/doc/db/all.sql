@@ -177,8 +177,6 @@ CREATE TABLE `clients` (
                            `id`           BIGINT NOT NULL AUTO_INCREMENT COMMENT 'id',
                            `created_date` DATETIME NOT NULL COMMENT '创建时间',
                            `updated_date` DATETIME NOT NULL COMMENT '更新时间',
-
-                           `output`     TEXT          DEFAULT NULL COMMENT 'LLM output to Guest',
                            `user_name`  VARCHAR(100)  DEFAULT NULL COMMENT '用户姓名',
                            `phone`      VARCHAR(32)   DEFAULT NULL COMMENT '手机号码',
                            `email`      VARCHAR(255)  DEFAULT NULL COMMENT '邮箱',
@@ -186,9 +184,21 @@ CREATE TABLE `clients` (
                            `area`       VARCHAR(120)  DEFAULT NULL COMMENT '地区',
                            `language`   VARCHAR(16)   DEFAULT NULL COMMENT '语言（zh/en/both/other 等）',
                            `urgency`    VARCHAR(16)   DEFAULT NULL COMMENT '紧急程度（low/medium/high）',
-                           `completed`  TINYINT(1)    NOT NULL DEFAULT 0 COMMENT '是否完成登记：1=是，0=否',
 
                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
   COLLATE=utf8mb4_0900_ai_ci
     COMMENT='政通律师事务所';
+
+
+-- BEGIN TABLE chat_history
+DROP TABLE IF EXISTS chat_history;
+CREATE TABLE `chat_history` (
+                                `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'id',
+                                `created_date` datetime NOT NULL COMMENT '创建时间',
+                                `updated_date` datetime NOT NULL COMMENT '更新时间',
+                                `session_id` varchar(255) DEFAULT NULL COMMENT '会话id',
+                                `role` varchar(50) DEFAULT NULL COMMENT '角色',
+                                `content` longtext COMMENT '内容',
+                                PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=587 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='聊天历史';
