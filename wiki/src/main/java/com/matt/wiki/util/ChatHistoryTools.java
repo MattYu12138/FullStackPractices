@@ -21,19 +21,16 @@ public class ChatHistoryTools {
     private ChatHistoryRepository chatHistoryRepository;
 
     @Tool("获取用户聊天历史对话")
-    public List<ChatHistory> getChatHistory(@P("sessionId") String sessionId){
-
-
+    public List<ChatHistory> getChatHistory(@P("sessionId")String sessionId){
         List<ChatHistory> result = new ArrayList<>();
-        List<ChatHistoryEntity> entityList = chatHistoryRepository.findByTop20SessionIdOderByIdDesc(sessionId);
-
-        for(ChatHistoryEntity entity: entityList){
-            ChatHistory history = new ChatHistory();
-            history.setRole(entity.getRole());
-            history.setContent(entity.getContent());
-            result.add(history);
+        List<ChatHistoryEntity> entityList = chatHistoryRepository.findTop20BySessionIdOrderByIdDesc(sessionId);
+        for(ChatHistoryEntity entity : entityList){
+            ChatHistory chatHistory = new ChatHistory();
+            chatHistory.setRole(entity.getRole());
+            chatHistory.setContent(entity.getContent());
+            result.add(chatHistory);
         }
-
+        log.info("========getChatHistory" + result);
         return result;
     }
 }
