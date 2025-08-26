@@ -10143,3 +10143,1242 @@ Consider defining a bean of type 'com.matt.wiki.service.AiChatService' in your c
 2025-08-27 08:59:00.913 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615681636327100416[0;39m ==> Parameters: 
 2025-08-27 08:59:01.412 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615681636327100416[0;39m <==    Updates: 1
 2025-08-27 08:59:01.413 INFO  com.matt.wiki.job.DocJob                          :33   [32m615681636327100416[0;39m 更新电子书下的文档数据结束，耗时：501毫秒
+2025-08-27 09:00:00.002 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615681884168523776[0;39m 生成今日电子书快照开始
+2025-08-27 09:00:00.303 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615681884168523776[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:00:00.304 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615681884168523776[0;39m ==> Parameters: 
+2025-08-27 09:00:00.918 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615681884168523776[0;39m <==    Updates: 0
+2025-08-27 09:00:00.919 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615681884168523776[0;39m 生成今日电子书快照结束，耗时：917毫秒
+2025-08-27 09:00:00.919 INFO  com.matt.wiki.job.DocJob                          :30   [32m615681888014700544[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:00:00.920 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615681888014700544[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:00:00.920 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615681888014700544[0;39m ==> Parameters: 
+2025-08-27 09:00:01.420 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615681888014700544[0;39m <==    Updates: 1
+2025-08-27 09:00:01.422 INFO  com.matt.wiki.job.DocJob                          :33   [32m615681888014700544[0;39m 更新电子书下的文档数据结束，耗时：503毫秒
+2025-08-27 09:01:00.007 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615682135847735296[0;39m 生成今日电子书快照开始
+2025-08-27 09:01:00.310 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682135847735296[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:01:00.310 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682135847735296[0;39m ==> Parameters: 
+2025-08-27 09:01:00.810 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682135847735296[0;39m <==    Updates: 0
+2025-08-27 09:01:00.812 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615682135847735296[0;39m 生成今日电子书快照结束，耗时：804毫秒
+2025-08-27 09:01:00.812 INFO  com.matt.wiki.job.DocJob                          :30   [32m615682139224150016[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:01:00.813 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682139224150016[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:01:00.813 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682139224150016[0;39m ==> Parameters: 
+2025-08-27 09:01:01.436 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682139224150016[0;39m <==    Updates: 1
+2025-08-27 09:01:01.437 INFO  com.matt.wiki.job.DocJob                          :33   [32m615682139224150016[0;39m 更新电子书下的文档数据结束，耗时：625毫秒
+2025-08-27 09:01:29.280 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615682258627596288[0;39m ------------- 开始 -------------
+2025-08-27 09:01:29.281 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615682258627596288[0;39m 请求地址: http://localhost:8080/ai/chat-history GET
+2025-08-27 09:01:29.281 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615682258627596288[0;39m 类名方法: com.matt.wiki.controller.AiController.queryChatHistory
+2025-08-27 09:01:29.281 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615682258627596288[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:01:29.311 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615682258627596288[0;39m 请求参数: ["111",{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false}]
+2025-08-27 09:01:29.367 DEBUG org.hibernate.SQL                                 :135  [32m615682258627596288[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:01:30.045 INFO  com.matt.wiki.aspect.LogAspect                    :98   [32m615682258627596288[0;39m 返回结果: {"content":[],"metadata":{}}
+2025-08-27 09:01:30.045 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615682258627596288[0;39m ------------- 结束 耗时：765 ms -------------
+2025-08-27 09:01:45.011 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615682324608192512[0;39m ------------- 开始 -------------
+2025-08-27 09:01:45.013 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615682324608192512[0;39m 请求地址: http://localhost:8080/ai/chat-history GET
+2025-08-27 09:01:45.013 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615682324608192512[0;39m 类名方法: com.matt.wiki.controller.AiController.queryChatHistory
+2025-08-27 09:01:45.013 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615682324608192512[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:01:45.013 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615682324608192512[0;39m 请求参数: ["111",{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false}]
+2025-08-27 09:01:45.016 DEBUG org.hibernate.SQL                                 :135  [32m615682324608192512[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:01:45.519 INFO  com.matt.wiki.aspect.LogAspect                    :98   [32m615682324608192512[0;39m 返回结果: {"content":[],"metadata":{}}
+2025-08-27 09:01:45.520 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615682324608192512[0;39m ------------- 结束 耗时：509 ms -------------
+2025-08-27 09:02:00.004 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615682387493392384[0;39m 生成今日电子书快照开始
+2025-08-27 09:02:00.316 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682387493392384[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:02:00.317 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682387493392384[0;39m ==> Parameters: 
+2025-08-27 09:02:00.820 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682387493392384[0;39m <==    Updates: 0
+2025-08-27 09:02:00.821 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615682387493392384[0;39m 生成今日电子书快照结束，耗时：815毫秒
+2025-08-27 09:02:00.821 INFO  com.matt.wiki.job.DocJob                          :30   [32m615682390920138752[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:02:00.822 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682390920138752[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:02:00.822 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682390920138752[0;39m ==> Parameters: 
+2025-08-27 09:02:01.321 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682390920138752[0;39m <==    Updates: 1
+2025-08-27 09:02:01.322 INFO  com.matt.wiki.job.DocJob                          :33   [32m615682390920138752[0;39m 更新电子书下的文档数据结束，耗时：501毫秒
+2025-08-27 09:02:05.435 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615682410272657408[0;39m ------------- 开始 -------------
+2025-08-27 09:02:05.435 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615682410272657408[0;39m 请求地址: http://localhost:8080/ai/chat-history GET
+2025-08-27 09:02:05.435 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615682410272657408[0;39m 类名方法: com.matt.wiki.controller.AiController.queryChatHistory
+2025-08-27 09:02:05.435 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615682410272657408[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:02:05.436 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615682410272657408[0;39m 请求参数: ["111",{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false}]
+2025-08-27 09:02:05.438 DEBUG org.hibernate.SQL                                 :135  [32m615682410272657408[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:02:06.052 INFO  com.matt.wiki.aspect.LogAspect                    :98   [32m615682410272657408[0;39m 返回结果: {"content":[],"metadata":{}}
+2025-08-27 09:02:06.053 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615682410272657408[0;39m ------------- 结束 耗时：618 ms -------------
+2025-08-27 09:02:47.180 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615682585363877888[0;39m ------------- 开始 -------------
+2025-08-27 09:02:47.181 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615682585363877888[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:02:47.181 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615682585363877888[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:02:47.181 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615682585363877888[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:02:47.181 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615682585363877888[0;39m 请求参数: ["我想查询我案件的情况","111"]
+2025-08-27 09:02:47.189 INFO  com.matt.wiki.service.CategoryService             :38   [32m615682585363877888[0;39m -------sessionId:111, message:我想查询我案件的情况
+2025-08-27 09:02:47.879 DEBUG org.hibernate.SQL                                 :135  [32m615682585363877888[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:02:51.884 DEBUG org.hibernate.SQL                                 :135  [32m615682585363877888[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:02:52.139 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615682585363877888[0;39m ========getChatHistory[ChatHistory [Hash = 1053156693, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我想查询我案件的情况]]
+2025-08-27 09:02:55.133 INFO  com.matt.wiki.service.CategoryService             :63   [32m615682585363877888[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:03:00.003 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615682639147438080[0;39m 生成今日电子书快照开始
+2025-08-27 09:03:00.245 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682639147438080[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:03:00.247 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682639147438080[0;39m ==> Parameters: 
+2025-08-27 09:03:00.727 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682639147438080[0;39m <==    Updates: 0
+2025-08-27 09:03:00.728 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615682639147438080[0;39m 生成今日电子书快照结束，耗时：724毫秒
+2025-08-27 09:03:00.729 INFO  com.matt.wiki.job.DocJob                          :30   [32m615682642192502784[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:03:00.729 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682642192502784[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:03:00.730 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682642192502784[0;39m ==> Parameters: 
+2025-08-27 09:03:01.211 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682642192502784[0;39m <==    Updates: 1
+2025-08-27 09:03:01.213 INFO  com.matt.wiki.job.DocJob                          :33   [32m615682642192502784[0;39m 更新电子书下的文档数据结束，耗时：484毫秒
+2025-08-27 09:03:08.364 INFO  com.matt.wiki.service.CategoryService             :93   [32m615682585363877888[0;39m clientProperty: {
+  "output": "您好，请问您的姓名和手机号是多少？这将帮助我们查询您的案件信息。",
+  "user_name": "",
+  "phone": "",
+  "email": "",
+  "case_type": "",
+  "area": "",
+  "completed": false,
+  "id": 0
+}
+2025-08-27 09:03:08.369 INFO  com.matt.wiki.service.CategoryService             :41   [32m615682585363877888[0;39m -------sessionId:111, aiMessage:您好，请问您的姓名和手机号是多少？这将帮助我们查询您的案件信息。
+2025-08-27 09:03:08.623 DEBUG org.hibernate.SQL                                 :135  [32m615682585363877888[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:03:09.436 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615682585363877888[0;39m 返回结果: FluxJust
+2025-08-27 09:03:09.436 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615682585363877888[0;39m ------------- 结束 耗时：22256 ms -------------
+2025-08-27 09:03:25.594 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615682746483871744[0;39m ------------- 开始 -------------
+2025-08-27 09:03:25.595 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615682746483871744[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:03:25.595 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615682746483871744[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:03:25.595 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615682746483871744[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:03:25.595 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615682746483871744[0;39m 请求参数: ["张三 15926499414","111"]
+2025-08-27 09:03:25.596 INFO  com.matt.wiki.service.CategoryService             :38   [32m615682746483871744[0;39m -------sessionId:111, message:张三 15926499414
+2025-08-27 09:03:26.129 DEBUG org.hibernate.SQL                                 :135  [32m615682746483871744[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:03:29.091 DEBUG org.hibernate.SQL                                 :135  [32m615682746483871744[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:03:29.345 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615682746483871744[0;39m ========getChatHistory[ChatHistory [Hash = 2023920435, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三 15926499414], ChatHistory [Hash = 99277720, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请问您的姓名和手机号是多少？这将帮助我们查询您的案件信息。], ChatHistory [Hash = 1780071833, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我想查询我案件的情况]]
+2025-08-27 09:03:33.326 INFO  com.matt.wiki.service.CategoryService             :63   [32m615682746483871744[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:03:41.942 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:03:42.514 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 774325192, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三 15926499414], ChatHistory [Hash = 507222601, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请问您的姓名和手机号是多少？这将帮助我们查询您的案件信息。], ChatHistory [Hash = 1799946535, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我想查询我案件的情况]]
+2025-08-27 09:03:54.581 INFO  com.matt.wiki.service.CategoryService             :93   [32m615682746483871744[0;39m clientProperty: {
+  "output": "您好张三先生，感谢提供信息。为了更准确地为您登记或查询案件，请补充以下信息：1.您丢失物品的类型（如钱包、手机等）；2.丢失的具体地点及区域；3.是否需要紧急处理？",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "completed": false
+}
+2025-08-27 09:03:54.582 INFO  com.matt.wiki.service.CategoryService             :41   [32m615682746483871744[0;39m -------sessionId:111, aiMessage:您好张三先生，感谢提供信息。为了更准确地为您登记或查询案件，请补充以下信息：1.您丢失物品的类型（如钱包、手机等）；2.丢失的具体地点及区域；3.是否需要紧急处理？
+2025-08-27 09:03:54.833 DEBUG org.hibernate.SQL                                 :135  [32m615682746483871744[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:03:55.618 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615682746483871744[0;39m 返回结果: FluxJust
+2025-08-27 09:03:55.619 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615682746483871744[0;39m ------------- 结束 耗时：30025 ms -------------
+2025-08-27 09:04:00.001 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615682890797289472[0;39m 生成今日电子书快照开始
+2025-08-27 09:04:00.242 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682890797289472[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:04:00.244 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682890797289472[0;39m ==> Parameters: 
+2025-08-27 09:04:00.738 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615682890797289472[0;39m <==    Updates: 0
+2025-08-27 09:04:00.739 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615682890797289472[0;39m 生成今日电子书快照结束，耗时：738毫秒
+2025-08-27 09:04:00.740 INFO  com.matt.wiki.job.DocJob                          :30   [32m615682893896880128[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:04:00.741 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682893896880128[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:04:00.741 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682893896880128[0;39m ==> Parameters: 
+2025-08-27 09:04:01.286 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615682893896880128[0;39m <==    Updates: 1
+2025-08-27 09:04:01.287 INFO  com.matt.wiki.job.DocJob                          :33   [32m615682893896880128[0;39m 更新电子书下的文档数据结束，耗时：547毫秒
+2025-08-27 09:04:50.479 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-27 09:04:50.480 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-27 09:04:50.482 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:660  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27 09:04:50.482 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-22 - Shutdown initiated...
+2025-08-27 09:04:50.483 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-22 - Shutdown completed.
+2025-08-27 09:04:51.874 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-27 09:04:51.890 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 9777 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-27 09:04:51.891 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-27 09:04:51.913 INFO  o.s.boot.devtools.restart.ChangeableUrls          :252  [32m                  [0;39m The Class-Path manifest attribute in /Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2025-08-27 09:04:51.913 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-27 09:04:51.913 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-27 09:04:52.357 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-27 09:04:52.358 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-27 09:04:52.441 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 78 ms. Found 4 JPA repository interfaces.
+2025-08-27 09:04:52.451 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-27 09:04:52.451 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-27 09:04:52.458 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.BaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:04:52.459 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.ChatHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:04:52.459 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:04:52.459 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.GuestRegisterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:04:52.459 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-08-27 09:04:52.907 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-27 09:04:52.911 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-27 09:04:52.912 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-27 09:04:52.912 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-27 09:04:52.926 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-27 09:04:52.926 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1013 ms
+2025-08-27 09:04:52.965 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-27 09:04:53.014 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
+2025-08-27 09:04:56.046 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ba9f26c
+2025-08-27 09:04:56.048 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-08-27 09:04:56.076 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-27 09:04:56.103 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-27 09:04:56.118 INFO  o.hibernate.cache.internal.RegionFactoryInitiator :50   [32m                  [0;39m HHH000026: Second-level cache disabled
+2025-08-27 09:04:56.226 INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo :87   [32m                  [0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-27 09:04:56.806 INFO  org.hibernate.orm.connections.pooling             :163  [32m                  [0;39m HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-27 09:04:56.811 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79eef033) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@62a1ccf4)
+2025-08-27 09:04:56.811 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@8478cf3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@157dc290)
+2025-08-27 09:04:56.811 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1b1cc764) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@77b66e9f)
+2025-08-27 09:04:56.811 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4322548e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@38b06738)
+2025-08-27 09:04:56.811 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@456aa0ad) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@16cec09)
+2025-08-27 09:04:56.812 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@503b4e8e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6b097a16)
+2025-08-27 09:04:56.812 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7bf6d012) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1d9c67c1)
+2025-08-27 09:04:56.812 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@17d905c2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@372004e5)
+2025-08-27 09:04:56.812 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a1b2453) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4c7f6be)
+2025-08-27 09:04:57.201 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:59   [32m                  [0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-27 09:04:57.202 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:447  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27 09:04:57.807 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:258  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-27 09:04:58.167 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-27 09:04:58.174 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-27 09:04:58.183 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 6.5 seconds (process running for 6.941)
+2025-08-27 09:04:58.184 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-27 09:04:58.184 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-27 09:05:00.012 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615683142501666816[0;39m 生成今日电子书快照开始
+2025-08-27 09:05:00.290 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683142501666816[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:05:00.310 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683142501666816[0;39m ==> Parameters: 
+2025-08-27 09:05:00.815 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683142501666816[0;39m <==    Updates: 0
+2025-08-27 09:05:00.818 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615683142501666816[0;39m 生成今日电子书快照结束，耗时：805毫秒
+2025-08-27 09:05:00.821 INFO  com.matt.wiki.job.DocJob                          :30   [32m615683145894858752[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:05:00.822 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683145894858752[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:05:00.823 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683145894858752[0;39m ==> Parameters: 
+2025-08-27 09:05:01.324 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683145894858752[0;39m <==    Updates: 1
+2025-08-27 09:05:01.325 INFO  com.matt.wiki.job.DocJob                          :33   [32m615683145894858752[0;39m 更新电子书下的文档数据结束，耗时：504毫秒
+2025-08-27 09:05:09.851 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-27 09:05:09.851 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-08-27 09:05:09.852 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-08-27 09:05:09.878 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615683183878475776[0;39m ------------- 开始 -------------
+2025-08-27 09:05:09.878 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615683183878475776[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:05:09.878 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615683183878475776[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:05:09.878 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615683183878475776[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:05:09.897 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615683183878475776[0;39m 请求参数: ["我的案件办的咋样了","111"]
+2025-08-27 09:05:09.899 INFO  com.matt.wiki.service.CategoryService             :38   [32m615683183878475776[0;39m -------sessionId:111, message:我的案件办的咋样了
+2025-08-27 09:05:10.549 DEBUG org.hibernate.SQL                                 :135  [32m615683183878475776[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:05:13.987 DEBUG org.hibernate.SQL                                 :135  [32m615683183878475776[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:05:14.252 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615683183878475776[0;39m ========getChatHistory[ChatHistory [Hash = 1589644251, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了], ChatHistory [Hash = 1407129, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，感谢提供信息。为了更准确地为您登记或查询案件，请补充以下信息：1.您丢失物品的类型（如钱包、手机等）；2.丢失的具体地点及区域；3.是否需要紧急处理？], ChatHistory [Hash = 623100206, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三 15926499414], ChatHistory [Hash = 744245633, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请问您的姓名和手机号是多少？这将帮助我们查询您的案件信息。], ChatHistory [Hash = 1922826498, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我想查询我案件的情况]]
+2025-08-27 09:05:18.316 INFO  com.matt.wiki.service.CategoryService             :63   [32m615683183878475776[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:05:30.767 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:05:31.331 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 1064274920, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了], ChatHistory [Hash = 76112308, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，感谢提供信息。为了更准确地为您登记或查询案件，请补充以下信息：1.您丢失物品的类型（如钱包、手机等）；2.丢失的具体地点及区域；3.是否需要紧急处理？], ChatHistory [Hash = 1956844655, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三 15926499414], ChatHistory [Hash = 1990777966, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请问您的姓名和手机号是多少？这将帮助我们查询您的案件信息。], ChatHistory [Hash = 895166872, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我想查询我案件的情况]]
+2025-08-27 09:05:45.717 INFO  com.matt.wiki.service.CategoryService             :28   [32m                  [0;39m 根据手机号查询物品登记信息，手机号：15926499414
+2025-08-27 09:05:45.721 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        ce1_0.id,
+        ce1_0.area,
+        ce1_0.case_type,
+        ce1_0.created_date,
+        ce1_0.email,
+        ce1_0.language,
+        ce1_0.phone,
+        ce1_0.updated_date,
+        ce1_0.urgency,
+        ce1_0.user_name 
+    from
+        clients ce1_0 
+    where
+        ce1_0.phone=?
+2025-08-27 09:05:57.578 INFO  com.matt.wiki.service.CategoryService             :93   [32m615683183878475776[0;39m clientProperty: {
+  "output": "您好张三先生，我们已为您查询到案件信息（案件ID：6）。您的离婚案件正在处理中，目前处于高优先级状态。建议您直接联系负责律师或前往悉尼办公室获取详细进展。感谢您的耐心等待。",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "email": "774364662@qq.com",
+  "case_type": "Family (divorce)",
+  "area": "Sydney",
+  "completed": true,
+  "id": 6
+}
+2025-08-27 09:05:57.849 DEBUG org.hibernate.SQL                                 :135  [32m615683183878475776[0;39m 
+    select
+        ce1_0.id,
+        ce1_0.area,
+        ce1_0.case_type,
+        ce1_0.created_date,
+        ce1_0.email,
+        ce1_0.language,
+        ce1_0.phone,
+        ce1_0.updated_date,
+        ce1_0.urgency,
+        ce1_0.user_name 
+    from
+        clients ce1_0 
+    where
+        ce1_0.id=?
+2025-08-27 09:05:58.144 DEBUG org.hibernate.SQL                                 :135  [32m615683183878475776[0;39m 
+    update
+        clients 
+    set
+        area=?,
+        case_type=?,
+        email=?,
+        language=?,
+        phone=?,
+        updated_date=?,
+        urgency=?,
+        user_name=? 
+    where
+        id=?
+2025-08-27 09:05:58.933 INFO  com.matt.wiki.service.CategoryService             :41   [32m615683183878475776[0;39m -------sessionId:111, aiMessage:您好张三先生，我们已为您查询到案件信息（案件ID：6）。您的离婚案件正在处理中，目前处于高优先级状态。建议您直接联系负责律师或前往悉尼办公室获取详细进展。感谢您的耐心等待。
+2025-08-27 09:05:59.185 DEBUG org.hibernate.SQL                                 :135  [32m615683183878475776[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:05:59.966 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615683183878475776[0;39m 返回结果: FluxJust
+2025-08-27 09:05:59.967 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615683183878475776[0;39m ------------- 结束 耗时：50090 ms -------------
+2025-08-27 09:06:00.016 INFO  com.matt.wiki.job.DocJob                          :30   [32m615683394176684032[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:06:00.017 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683394176684032[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:06:00.017 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683394176684032[0;39m ==> Parameters: 
+2025-08-27 09:06:00.682 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683394176684032[0;39m <==    Updates: 1
+2025-08-27 09:06:00.683 INFO  com.matt.wiki.job.DocJob                          :33   [32m615683394176684032[0;39m 更新电子书下的文档数据结束，耗时：667毫秒
+2025-08-27 09:06:00.684 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615683396978479104[0;39m 生成今日电子书快照开始
+2025-08-27 09:06:00.686 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683396978479104[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:06:00.687 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683396978479104[0;39m ==> Parameters: 
+2025-08-27 09:06:01.240 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683396978479104[0;39m <==    Updates: 0
+2025-08-27 09:06:01.241 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615683396978479104[0;39m 生成今日电子书快照结束，耗时：556毫秒
+2025-08-27 09:07:00.003 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615683645780398080[0;39m 生成今日电子书快照开始
+2025-08-27 09:07:00.256 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683645780398080[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:07:00.257 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683645780398080[0;39m ==> Parameters: 
+2025-08-27 09:07:00.758 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683645780398080[0;39m <==    Updates: 0
+2025-08-27 09:07:00.759 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615683645780398080[0;39m 生成今日电子书快照结束，耗时：755毫秒
+2025-08-27 09:07:00.760 INFO  com.matt.wiki.job.DocJob                          :30   [32m615683648955486208[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:07:00.761 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683648955486208[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:07:00.761 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683648955486208[0;39m ==> Parameters: 
+2025-08-27 09:07:01.263 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683648955486208[0;39m <==    Updates: 1
+2025-08-27 09:07:01.263 INFO  com.matt.wiki.job.DocJob                          :33   [32m615683648955486208[0;39m 更新电子书下的文档数据结束，耗时：503毫秒
+2025-08-27 09:08:00.000 INFO  com.matt.wiki.job.DocJob                          :30   [32m615683897426055168[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:08:00.260 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683897426055168[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:08:00.261 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683897426055168[0;39m ==> Parameters: 
+2025-08-27 09:08:00.798 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615683897426055168[0;39m <==    Updates: 1
+2025-08-27 09:08:00.800 INFO  com.matt.wiki.job.DocJob                          :33   [32m615683897426055168[0;39m 更新电子书下的文档数据结束，耗时：793毫秒
+2025-08-27 09:08:00.801 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615683900785692672[0;39m 生成今日电子书快照开始
+2025-08-27 09:08:00.801 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683900785692672[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:08:00.803 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683900785692672[0;39m ==> Parameters: 
+2025-08-27 09:08:01.357 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615683900785692672[0;39m <==    Updates: 0
+2025-08-27 09:08:01.357 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615683900785692672[0;39m 生成今日电子书快照结束，耗时：556毫秒
+2025-08-27 09:08:19.623 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:211  [32m                  [0;39m Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-27 09:08:19.625 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-27 09:08:19.626 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Pausing ProtocolHandler ["http-nio-8080"]
+2025-08-27 09:08:19.628 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-27 09:08:19.629 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Stopping ProtocolHandler ["http-nio-8080"]
+2025-08-27 09:08:19.638 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:660  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27 09:08:19.640 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-27 09:08:19.643 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-27 09:08:19.705 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 9777 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-27 09:08:19.706 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-27 09:08:19.815 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-27 09:08:19.815 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-27 09:08:19.825 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 8 ms. Found 4 JPA repository interfaces.
+2025-08-27 09:08:19.828 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-27 09:08:19.828 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-27 09:08:19.832 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.BaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:08:19.832 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.ChatHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:08:19.832 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.ClientRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:08:19.832 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.GuestRegisterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-27 09:08:19.832 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-08-27 09:08:19.965 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-27 09:08:19.966 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-27 09:08:19.966 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-27 09:08:19.966 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-27 09:08:19.972 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-27 09:08:19.972 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 265 ms
+2025-08-27 09:08:19.997 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-27 09:08:20.035 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-2 - Starting...
+2025-08-27 09:08:22.808 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dec7fb1
+2025-08-27 09:08:22.808 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-2 - Start completed.
+2025-08-27 09:08:22.809 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-27 09:08:22.811 INFO  o.hibernate.cache.internal.RegionFactoryInitiator :50   [32m                  [0;39m HHH000026: Second-level cache disabled
+2025-08-27 09:08:22.818 INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo :87   [32m                  [0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-27 09:08:23.072 INFO  org.hibernate.orm.connections.pooling             :163  [32m                  [0;39m HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-27 09:08:23.073 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@71a723b2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1cbafcd)
+2025-08-27 09:08:23.073 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79d3ee1a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@29283f56)
+2025-08-27 09:08:23.073 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@615a2372) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3db35d53)
+2025-08-27 09:08:23.073 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5bf6c7c1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@33cc8166)
+2025-08-27 09:08:23.074 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@33d75de) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@24c3f92f)
+2025-08-27 09:08:23.074 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4966fab9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1ef68542)
+2025-08-27 09:08:23.074 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@760d90c7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4d3c15a8)
+2025-08-27 09:08:23.074 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@33f19d84) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1987d22d)
+2025-08-27 09:08:23.074 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@316e272) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2e2a36ed)
+2025-08-27 09:08:23.127 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:59   [32m                  [0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-27 09:08:23.127 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:447  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-27 09:08:23.386 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:258  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-27 09:08:23.582 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-27 09:08:23.583 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-27 09:08:23.586 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 3.903 seconds (process running for 212.324)
+2025-08-27 09:08:23.587 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-27 09:08:23.587 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-27 09:08:23.587 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-27 09:09:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615684149105266688[0;39m 生成今日电子书快照开始
+2025-08-27 09:09:00.258 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684149105266688[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:09:00.258 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684149105266688[0;39m ==> Parameters: 
+2025-08-27 09:09:00.763 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684149105266688[0;39m <==    Updates: 0
+2025-08-27 09:09:00.763 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615684149105266688[0;39m 生成今日电子书快照结束，耗时：757毫秒
+2025-08-27 09:09:00.763 INFO  com.matt.wiki.job.DocJob                          :30   [32m615684152284549120[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:09:00.764 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684152284549120[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:09:00.764 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684152284549120[0;39m ==> Parameters: 
+2025-08-27 09:09:01.267 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684152284549120[0;39m <==    Updates: 1
+2025-08-27 09:09:01.268 INFO  com.matt.wiki.job.DocJob                          :33   [32m615684152284549120[0;39m 更新电子书下的文档数据结束，耗时：505毫秒
+2025-08-27 09:10:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615684400763506688[0;39m 生成今日电子书快照开始
+2025-08-27 09:10:00.257 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684400763506688[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:10:00.257 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684400763506688[0;39m ==> Parameters: 
+2025-08-27 09:10:00.813 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684400763506688[0;39m <==    Updates: 0
+2025-08-27 09:10:00.813 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615684400763506688[0;39m 生成今日电子书快照结束，耗时：807毫秒
+2025-08-27 09:10:00.814 INFO  com.matt.wiki.job.DocJob                          :30   [32m615684404156698624[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:10:00.815 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684404156698624[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:10:00.816 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684404156698624[0;39m ==> Parameters: 
+2025-08-27 09:10:01.372 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684404156698624[0;39m <==    Updates: 1
+2025-08-27 09:10:01.373 INFO  com.matt.wiki.job.DocJob                          :33   [32m615684404156698624[0;39m 更新电子书下的文档数据结束，耗时：559毫秒
+2025-08-27 09:11:00.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m615684652417552384[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:11:00.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684652417552384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:11:00.256 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684652417552384[0;39m ==> Parameters: 
+2025-08-27 09:11:00.758 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684652417552384[0;39m <==    Updates: 1
+2025-08-27 09:11:00.758 INFO  com.matt.wiki.job.DocJob                          :33   [32m615684652417552384[0;39m 更新电子书下的文档数据结束，耗时：753毫秒
+2025-08-27 09:11:00.759 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615684655584251904[0;39m 生成今日电子书快照开始
+2025-08-27 09:11:00.759 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684655584251904[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:11:00.759 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684655584251904[0;39m ==> Parameters: 
+2025-08-27 09:11:01.276 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684655584251904[0;39m <==    Updates: 0
+2025-08-27 09:11:01.277 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615684655584251904[0;39m 生成今日电子书快照结束，耗时：518毫秒
+2025-08-27 09:12:00.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m615684904071598080[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:12:00.257 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684904071598080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:12:00.258 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684904071598080[0;39m ==> Parameters: 
+2025-08-27 09:12:00.826 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615684904071598080[0;39m <==    Updates: 1
+2025-08-27 09:12:00.826 INFO  com.matt.wiki.job.DocJob                          :33   [32m615684904071598080[0;39m 更新电子书下的文档数据结束，耗时：822毫秒
+2025-08-27 09:12:00.827 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615684907527704576[0;39m 生成今日电子书快照开始
+2025-08-27 09:12:00.827 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684907527704576[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:12:00.827 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684907527704576[0;39m ==> Parameters: 
+2025-08-27 09:12:01.330 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615684907527704576[0;39m <==    Updates: 0
+2025-08-27 09:12:01.330 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615684907527704576[0;39m 生成今日电子书快照结束，耗时：503毫秒
+2025-08-27 09:13:00.003 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615685155729838080[0;39m 生成今日电子书快照开始
+2025-08-27 09:13:00.322 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685155729838080[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:13:00.323 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685155729838080[0;39m ==> Parameters: 
+2025-08-27 09:13:00.826 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685155729838080[0;39m <==    Updates: 0
+2025-08-27 09:13:00.827 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615685155729838080[0;39m 生成今日电子书快照结束，耗时：823毫秒
+2025-08-27 09:13:00.827 INFO  com.matt.wiki.job.DocJob                          :30   [32m615685159185944576[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:13:00.828 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685159185944576[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:13:00.828 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685159185944576[0;39m ==> Parameters: 
+2025-08-27 09:13:01.331 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685159185944576[0;39m <==    Updates: 1
+2025-08-27 09:13:01.331 INFO  com.matt.wiki.job.DocJob                          :33   [32m615685159185944576[0;39m 更新电子书下的文档数据结束，耗时：504毫秒
+2025-08-27 09:14:00.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m615685407396466688[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:14:00.257 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685407396466688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:14:00.258 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685407396466688[0;39m ==> Parameters: 
+2025-08-27 09:14:00.760 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685407396466688[0;39m <==    Updates: 1
+2025-08-27 09:14:00.761 INFO  com.matt.wiki.job.DocJob                          :33   [32m615685407396466688[0;39m 更新电子书下的文档数据结束，耗时：756毫秒
+2025-08-27 09:14:00.762 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615685410571554816[0;39m 生成今日电子书快照开始
+2025-08-27 09:14:00.762 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685410571554816[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:14:00.764 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685410571554816[0;39m ==> Parameters: 
+2025-08-27 09:14:01.270 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685410571554816[0;39m <==    Updates: 0
+2025-08-27 09:14:01.270 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615685410571554816[0;39m 生成今日电子书快照结束，耗时：508毫秒
+2025-08-27 09:15:00.003 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615685659046318080[0;39m 生成今日电子书快照开始
+2025-08-27 09:15:00.336 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685659046318080[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:15:00.337 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685659046318080[0;39m ==> Parameters: 
+2025-08-27 09:15:00.839 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685659046318080[0;39m <==    Updates: 0
+2025-08-27 09:15:00.840 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615685659046318080[0;39m 生成今日电子书快照结束，耗时：836毫秒
+2025-08-27 09:15:00.841 INFO  com.matt.wiki.job.DocJob                          :30   [32m615685662561144832[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:15:00.841 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685662561144832[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:15:00.842 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685662561144832[0;39m ==> Parameters: 
+2025-08-27 09:15:01.406 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685662561144832[0;39m <==    Updates: 1
+2025-08-27 09:15:01.407 INFO  com.matt.wiki.job.DocJob                          :33   [32m615685662561144832[0;39m 更新电子书下的文档数据结束，耗时：566毫秒
+2025-08-27 09:15:33.174 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-27 09:15:33.174 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-08-27 09:15:33.176 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 2 ms
+2025-08-27 09:15:33.181 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615685798204936192[0;39m ------------- 开始 -------------
+2025-08-27 09:15:33.182 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615685798204936192[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:15:33.182 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615685798204936192[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:15:33.182 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615685798204936192[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:15:33.184 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615685798204936192[0;39m 请求参数: ["我的案件办的咋样了","111"]
+2025-08-27 09:15:33.184 INFO  com.matt.wiki.service.CategoryService             :38   [32m615685798204936192[0;39m -------sessionId:111, message:我的案件办的咋样了
+2025-08-27 09:15:33.697 DEBUG org.hibernate.SQL                                 :135  [32m615685798204936192[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:15:37.823 DEBUG org.hibernate.SQL                                 :135  [32m615685798204936192[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:15:38.123 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615685798204936192[0;39m ========getChatHistory[ChatHistory [Hash = 1341289077, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:15:43.963 INFO  com.matt.wiki.service.CategoryService             :63   [32m615685798204936192[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:15:57.569 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:15:58.106 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 587237347, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:16:00.003 INFO  com.matt.wiki.job.DocJob                          :30   [32m615685910704558080[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:16:00.343 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685910704558080[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:16:00.344 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685910704558080[0;39m ==> Parameters: 
+2025-08-27 09:16:00.847 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615685910704558080[0;39m <==    Updates: 1
+2025-08-27 09:16:00.848 INFO  com.matt.wiki.job.DocJob                          :33   [32m615685910704558080[0;39m 更新电子书下的文档数据结束，耗时：844毫秒
+2025-08-27 09:16:00.849 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615685914252939264[0;39m 生成今日电子书快照开始
+2025-08-27 09:16:00.850 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685914252939264[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:16:00.851 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685914252939264[0;39m ==> Parameters: 
+2025-08-27 09:16:01.354 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615685914252939264[0;39m <==    Updates: 0
+2025-08-27 09:16:01.355 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615685914252939264[0;39m 生成今日电子书快照结束，耗时：506毫秒
+2025-08-27 09:16:08.610 INFO  com.matt.wiki.service.CategoryService             :93   [32m615685798204936192[0;39m clientProperty: {
+  "output": "您好，请您提供姓名和手机号码，以便我们查询您的案件进展。",
+  "user_name": "",
+  "phone": "",
+  "email": "",
+  "case_type": "",
+  "area": "",
+  "completed": false,
+  "id": null
+}
+2025-08-27 09:16:08.615 INFO  com.matt.wiki.service.CategoryService             :41   [32m615685798204936192[0;39m -------sessionId:111, aiMessage:您好，请您提供姓名和手机号码，以便我们查询您的案件进展。
+2025-08-27 09:16:08.868 DEBUG org.hibernate.SQL                                 :135  [32m615685798204936192[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:16:09.708 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615685798204936192[0;39m 返回结果: FluxJust
+2025-08-27 09:16:09.708 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615685798204936192[0;39m ------------- 结束 耗时：36527 ms -------------
+2025-08-27 09:16:30.012 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615686036571426816[0;39m ------------- 开始 -------------
+2025-08-27 09:16:30.013 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615686036571426816[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:16:30.013 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615686036571426816[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:16:30.013 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615686036571426816[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:16:30.014 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615686036571426816[0;39m 请求参数: ["张三， 15926499414","111"]
+2025-08-27 09:16:30.014 INFO  com.matt.wiki.service.CategoryService             :38   [32m615686036571426816[0;39m -------sessionId:111, message:张三， 15926499414
+2025-08-27 09:16:30.529 DEBUG org.hibernate.SQL                                 :135  [32m615686036571426816[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:16:33.217 DEBUG org.hibernate.SQL                                 :135  [32m615686036571426816[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:16:33.523 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615686036571426816[0;39m ========getChatHistory[ChatHistory [Hash = 194191262, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 615724915, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 1830166282, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:16:36.185 INFO  com.matt.wiki.service.CategoryService             :63   [32m615686036571426816[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:16:53.708 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:16:54.312 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 1243795035, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 1660578300, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 167638390, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:17:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615686162371186688[0;39m 生成今日电子书快照开始
+2025-08-27 09:17:00.258 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686162371186688[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:17:00.260 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686162371186688[0;39m ==> Parameters: 
+2025-08-27 09:17:00.764 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686162371186688[0;39m <==    Updates: 0
+2025-08-27 09:17:00.765 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615686162371186688[0;39m 生成今日电子书快照结束，耗时：759毫秒
+2025-08-27 09:17:00.766 INFO  com.matt.wiki.job.DocJob                          :30   [32m615686165563052032[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:17:00.767 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686165563052032[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:17:00.767 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686165563052032[0;39m ==> Parameters: 
+2025-08-27 09:17:01.271 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686165563052032[0;39m <==    Updates: 1
+2025-08-27 09:17:01.272 INFO  com.matt.wiki.job.DocJob                          :33   [32m615686165563052032[0;39m 更新电子书下的文档数据结束，耗时：506毫秒
+2025-08-27 09:17:05.791 INFO  com.matt.wiki.service.CategoryService             :28   [32m                  [0;39m 根据手机号查询物品登记信息，手机号：15926499414
+2025-08-27 09:17:05.797 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        ce1_0.id,
+        ce1_0.area,
+        ce1_0.case_type,
+        ce1_0.created_date,
+        ce1_0.email,
+        ce1_0.language,
+        ce1_0.phone,
+        ce1_0.updated_date,
+        ce1_0.urgency,
+        ce1_0.user_name 
+    from
+        clients ce1_0 
+    where
+        ce1_0.phone=?
+2025-08-27 09:17:15.688 INFO  com.matt.wiki.service.CategoryService             :93   [32m615686036571426816[0;39m clientProperty: {
+  "output": "您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "completed": false
+}
+2025-08-27 09:17:15.689 INFO  com.matt.wiki.service.CategoryService             :41   [32m615686036571426816[0;39m -------sessionId:111, aiMessage:您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？
+2025-08-27 09:17:16.020 DEBUG org.hibernate.SQL                                 :135  [32m615686036571426816[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:17:16.837 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615686036571426816[0;39m 返回结果: FluxJust
+2025-08-27 09:17:16.837 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615686036571426816[0;39m ------------- 结束 耗时：46825 ms -------------
+2025-08-27 09:17:33.058 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615686301005516800[0;39m ------------- 开始 -------------
+2025-08-27 09:17:33.059 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615686301005516800[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:17:33.059 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615686301005516800[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:17:33.059 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615686301005516800[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:17:33.060 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615686301005516800[0;39m 请求参数: ["劳动纠纷，在悉尼","111"]
+2025-08-27 09:17:33.060 INFO  com.matt.wiki.service.CategoryService             :38   [32m615686301005516800[0;39m -------sessionId:111, message:劳动纠纷，在悉尼
+2025-08-27 09:17:33.573 DEBUG org.hibernate.SQL                                 :135  [32m615686301005516800[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:17:35.992 DEBUG org.hibernate.SQL                                 :135  [32m615686301005516800[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:17:36.295 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615686301005516800[0;39m ========getChatHistory[ChatHistory [Hash = 823124839, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 1541141515, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 746966521, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 1310524140, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 4707475, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:17:41.006 INFO  com.matt.wiki.service.CategoryService             :63   [32m615686301005516800[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:17:56.778 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:17:57.391 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 882307935, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 1805000003, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 1048721994, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 1054134583, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 1037816249, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:18:00.001 INFO  com.matt.wiki.job.DocJob                          :30   [32m615686414012649472[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:18:00.254 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686414012649472[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:18:00.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686414012649472[0;39m ==> Parameters: 
+2025-08-27 09:18:00.759 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686414012649472[0;39m <==    Updates: 1
+2025-08-27 09:18:00.760 INFO  com.matt.wiki.job.DocJob                          :33   [32m615686414012649472[0;39m 更新电子书下的文档数据结束，耗时：758毫秒
+2025-08-27 09:18:00.760 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615686417196126208[0;39m 生成今日电子书快照开始
+2025-08-27 09:18:00.761 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686417196126208[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:18:00.762 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686417196126208[0;39m ==> Parameters: 
+2025-08-27 09:18:01.265 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686417196126208[0;39m <==    Updates: 0
+2025-08-27 09:18:01.266 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615686417196126208[0;39m 生成今日电子书快照结束，耗时：505毫秒
+2025-08-27 09:18:09.163 INFO  com.matt.wiki.service.CategoryService             :93   [32m615686301005516800[0;39m clientProperty: {
+  "output": "您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "case_type": "劳动纠纷",
+  "area": "悉尼",
+  "completed": true
+}
+2025-08-27 09:18:09.478 DEBUG org.hibernate.SQL                                 :135  [32m615686301005516800[0;39m 
+    insert 
+    into
+        clients
+        (area, case_type, created_date, email, language, phone, updated_date, urgency, user_name) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-08-27 09:18:10.393 INFO  com.matt.wiki.service.CategoryService             :41   [32m615686301005516800[0;39m -------sessionId:111, aiMessage:您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。
+2025-08-27 09:18:10.647 DEBUG org.hibernate.SQL                                 :135  [32m615686301005516800[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:18:11.405 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615686301005516800[0;39m 返回结果: FluxJust
+2025-08-27 09:18:11.406 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615686301005516800[0;39m ------------- 结束 耗时：38348 ms -------------
+2025-08-27 09:18:21.781 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615686505364590592[0;39m ------------- 开始 -------------
+2025-08-27 09:18:21.782 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615686505364590592[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:18:21.782 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615686505364590592[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:18:21.783 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615686505364590592[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:18:21.783 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615686505364590592[0;39m 请求参数: ["不对，在墨尔本","111"]
+2025-08-27 09:18:21.783 INFO  com.matt.wiki.service.CategoryService             :38   [32m615686505364590592[0;39m -------sessionId:111, message:不对，在墨尔本
+2025-08-27 09:18:22.299 DEBUG org.hibernate.SQL                                 :135  [32m615686505364590592[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:18:24.837 DEBUG org.hibernate.SQL                                 :135  [32m615686505364590592[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:18:25.095 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615686505364590592[0;39m ========getChatHistory[ChatHistory [Hash = 1636154445, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=不对，在墨尔本], ChatHistory [Hash = 1294214631, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。], ChatHistory [Hash = 1296191891, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 1400916088, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 531362193, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 1934419102, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 752745901, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:18:29.339 INFO  com.matt.wiki.service.CategoryService             :63   [32m615686505364590592[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回复期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:18:44.747 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:18:45.313 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 1120641278, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=不对，在墨尔本], ChatHistory [Hash = 1311439708, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。], ChatHistory [Hash = 732670817, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 1451237385, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 1230222967, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 1354388506, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 649858511, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:18:56.530 INFO  com.matt.wiki.service.CategoryService             :93   [32m615686505364590592[0;39m clientProperty: {
+  "output": "张三先生，感谢您指出信息错误。我们查到此前登记的劳动纠纷案件记录（ID:123），原地区显示为悉尼。您现在更正为墨尔本，是否需要补充或更新此案件的其他信息？当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414。",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "case_type": "劳动纠纷",
+  "area": "墨尔本",
+  "completed": false,
+  "id": 123
+}
+2025-08-27 09:18:56.531 INFO  com.matt.wiki.service.CategoryService             :41   [32m615686505364590592[0;39m -------sessionId:111, aiMessage:张三先生，感谢您指出信息错误。我们查到此前登记的劳动纠纷案件记录（ID:123），原地区显示为悉尼。您现在更正为墨尔本，是否需要补充或更新此案件的其他信息？当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414。
+2025-08-27 09:18:56.784 DEBUG org.hibernate.SQL                                 :135  [32m615686505364590592[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:18:57.540 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615686505364590592[0;39m 返回结果: FluxJust
+2025-08-27 09:18:57.541 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615686505364590592[0;39m ------------- 结束 耗时：35760 ms -------------
+2025-08-27 09:19:00.002 INFO  com.matt.wiki.job.DocJob                          :30   [32m615686665675083776[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:19:00.261 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686665675083776[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:19:00.262 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686665675083776[0;39m ==> Parameters: 
+2025-08-27 09:19:00.765 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686665675083776[0;39m <==    Updates: 1
+2025-08-27 09:19:00.766 INFO  com.matt.wiki.job.DocJob                          :33   [32m615686665675083776[0;39m 更新电子书下的文档数据结束，耗时：763毫秒
+2025-08-27 09:19:00.766 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615686668879532032[0;39m 生成今日电子书快照开始
+2025-08-27 09:19:00.767 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686668879532032[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:19:00.768 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686668879532032[0;39m ==> Parameters: 
+2025-08-27 09:19:01.270 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686668879532032[0;39m <==    Updates: 0
+2025-08-27 09:19:01.271 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615686668879532032[0;39m 生成今日电子书快照结束，耗时：504毫秒
+2025-08-27 09:19:38.285 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615686826245623808[0;39m ------------- 开始 -------------
+2025-08-27 09:19:38.286 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615686826245623808[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:19:38.286 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615686826245623808[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:19:38.286 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615686826245623808[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:19:38.286 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615686826245623808[0;39m 请求参数: ["邮箱774364662@qq.com","111"]
+2025-08-27 09:19:38.286 INFO  com.matt.wiki.service.CategoryService             :38   [32m615686826245623808[0;39m -------sessionId:111, message:邮箱774364662@qq.com
+2025-08-27 09:19:38.792 DEBUG org.hibernate.SQL                                 :135  [32m615686826245623808[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:19:41.332 DEBUG org.hibernate.SQL                                 :135  [32m615686826245623808[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:19:41.589 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615686826245623808[0;39m ========getChatHistory[ChatHistory [Hash = 27191519, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=邮箱774364662@qq.com], ChatHistory [Hash = 823213843, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=张三先生，感谢您指出信息错误。我们查到此前登记的劳动纠纷案件记录（ID:123），原地区显示为悉尼。您现在更正为墨尔本，是否需要补充或更新此案件的其他信息？当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414。], ChatHistory [Hash = 718841940, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=不对，在墨尔本], ChatHistory [Hash = 1617885411, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。], ChatHistory [Hash = 373308449, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 772890717, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 1105524675, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 1448785660, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 1097607458, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:19:45.063 INFO  com.matt.wiki.service.CategoryService             :63   [32m615686826245623808[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回复期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:20:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615686917345906688[0;39m 生成今日电子书快照开始
+2025-08-27 09:20:00.257 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686917345906688[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:20:00.259 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686917345906688[0;39m ==> Parameters: 
+2025-08-27 09:20:00.763 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615686917345906688[0;39m <==    Updates: 0
+2025-08-27 09:20:00.764 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615686917345906688[0;39m 生成今日电子书快照结束，耗时：758毫秒
+2025-08-27 09:20:00.765 INFO  com.matt.wiki.job.DocJob                          :30   [32m615686920533577728[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:20:00.766 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686920533577728[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:20:00.766 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686920533577728[0;39m ==> Parameters: 
+2025-08-27 09:20:01.270 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615686920533577728[0;39m <==    Updates: 1
+2025-08-27 09:20:01.271 INFO  com.matt.wiki.job.DocJob                          :33   [32m615686920533577728[0;39m 更新电子书下的文档数据结束，耗时：506毫秒
+2025-08-27 09:20:06.756 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:20:07.265 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 561949528, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=邮箱774364662@qq.com], ChatHistory [Hash = 1026087873, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=张三先生，感谢您指出信息错误。我们查到此前登记的劳动纠纷案件记录（ID:123），原地区显示为悉尼。您现在更正为墨尔本，是否需要补充或更新此案件的其他信息？当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414。], ChatHistory [Hash = 914531729, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=不对，在墨尔本], ChatHistory [Hash = 1691374493, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。], ChatHistory [Hash = 815792180, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 1269642034, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 1746975227, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 235553753, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 1041974156, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:20:23.212 INFO  com.matt.wiki.service.CategoryService             :93   [32m615686826245623808[0;39m clientProperty: {
+  "output": "张三先生，感谢补充邮箱信息！我们查到此前登记的劳动纠纷案件（ID:123），当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414，邮箱-774364662@qq.com。请问需要补充其他信息吗？",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "email": "774364662@qq.com",
+  "case_type": "劳动纠纷",
+  "area": "墨尔本",
+  "completed": false,
+  "id": 123
+}
+2025-08-27 09:20:23.213 INFO  com.matt.wiki.service.CategoryService             :41   [32m615686826245623808[0;39m -------sessionId:111, aiMessage:张三先生，感谢补充邮箱信息！我们查到此前登记的劳动纠纷案件（ID:123），当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414，邮箱-774364662@qq.com。请问需要补充其他信息吗？
+2025-08-27 09:20:23.516 DEBUG org.hibernate.SQL                                 :135  [32m615686826245623808[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:20:24.277 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615686826245623808[0;39m 返回结果: FluxJust
+2025-08-27 09:20:24.278 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615686826245623808[0;39m ------------- 结束 耗时：45993 ms -------------
+2025-08-27 09:20:39.660 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615687083671031808[0;39m ------------- 开始 -------------
+2025-08-27 09:20:39.661 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615687083671031808[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-27 09:20:39.661 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615687083671031808[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-27 09:20:39.661 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615687083671031808[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-27 09:20:39.662 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615687083671031808[0;39m 请求参数: ["没有要补充的了","111"]
+2025-08-27 09:20:39.662 INFO  com.matt.wiki.service.CategoryService             :38   [32m615687083671031808[0;39m -------sessionId:111, message:没有要补充的了
+2025-08-27 09:20:40.233 DEBUG org.hibernate.SQL                                 :135  [32m615687083671031808[0;39m 
+    insert 
+    into
+        chat_history
+        (content, created_date, role, session_id, updated_date) 
+    values
+        (?, ?, ?, ?, ?)
+2025-08-27 09:20:44.204 DEBUG org.hibernate.SQL                                 :135  [32m615687083671031808[0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:20:44.510 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m615687083671031808[0;39m ========getChatHistory[ChatHistory [Hash = 1845306011, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=没有要补充的了], ChatHistory [Hash = 1923609756, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=张三先生，感谢补充邮箱信息！我们查到此前登记的劳动纠纷案件（ID:123），当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414，邮箱-774364662@qq.com。请问需要补充其他信息吗？], ChatHistory [Hash = 603030757, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=邮箱774364662@qq.com], ChatHistory [Hash = 1710886130, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=张三先生，感谢您指出信息错误。我们查到此前登记的劳动纠纷案件记录（ID:123），原地区显示为悉尼。您现在更正为墨尔本，是否需要补充或更新此案件的其他信息？当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414。], ChatHistory [Hash = 1637290796, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=不对，在墨尔本], ChatHistory [Hash = 744036502, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。], ChatHistory [Hash = 60843860, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 914908750, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 1876889024, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 195437829, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 188512738, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:20:48.605 INFO  com.matt.wiki.service.CategoryService             :63   [32m615687083671031808[0;39m ----IntentionOutput(intention=3, output=为保护隐私，请用登记手机号或邮箱告知本人身份，并提供：①案件号或经办律师姓名 ②您要查询的具体节点（如已提交文件/开庭时间/回覆期限）。核验后我会同步最新进度或为您安排回访。)
+2025-08-27 09:21:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615687169004146688[0;39m 生成今日电子书快照开始
+2025-08-27 09:21:00.258 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615687169004146688[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:21:00.260 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615687169004146688[0;39m ==> Parameters: 
+2025-08-27 09:21:00.763 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615687169004146688[0;39m <==    Updates: 0
+2025-08-27 09:21:00.764 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615687169004146688[0;39m 生成今日电子书快照结束，耗时：759毫秒
+2025-08-27 09:21:00.765 INFO  com.matt.wiki.job.DocJob                          :30   [32m615687172191817728[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:21:00.766 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615687172191817728[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:21:00.766 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615687172191817728[0;39m ==> Parameters: 
+2025-08-27 09:21:01.269 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615687172191817728[0;39m <==    Updates: 1
+2025-08-27 09:21:01.270 INFO  com.matt.wiki.job.DocJob                          :33   [32m615687172191817728[0;39m 更新电子书下的文档数据结束，耗时：505毫秒
+2025-08-27 09:21:09.293 DEBUG org.hibernate.SQL                                 :135  [32m                  [0;39m 
+    select
+        che1_0.id,
+        che1_0.content,
+        che1_0.created_date,
+        che1_0.role,
+        che1_0.session_id,
+        che1_0.updated_date 
+    from
+        chat_history che1_0 
+    where
+        che1_0.session_id=? 
+    order by
+        che1_0.id desc 
+    limit
+        ?
+2025-08-27 09:21:09.906 INFO  com.matt.wiki.util.ChatHistoryTools               :33   [32m                  [0;39m ========getChatHistory[ChatHistory [Hash = 411544843, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=没有要补充的了], ChatHistory [Hash = 621034456, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=张三先生，感谢补充邮箱信息！我们查到此前登记的劳动纠纷案件（ID:123），当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414，邮箱-774364662@qq.com。请问需要补充其他信息吗？], ChatHistory [Hash = 1212922891, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=邮箱774364662@qq.com], ChatHistory [Hash = 1721573037, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=张三先生，感谢您指出信息错误。我们查到此前登记的劳动纠纷案件记录（ID:123），原地区显示为悉尼。您现在更正为墨尔本，是否需要补充或更新此案件的其他信息？当前登记信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414。], ChatHistory [Hash = 1129777280, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=不对，在墨尔本], ChatHistory [Hash = 1200169417, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张三先生，您的劳动纠纷案件登记已完成。登记信息如下：案件类型-劳动纠纷，地区-悉尼，手机号-15926499414。如需补充邮箱或其他信息，可随时告知。], ChatHistory [Hash = 1387751127, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=劳动纠纷，在悉尼], ChatHistory [Hash = 1548837466, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好张先生，感谢提供信息。目前尚未查询到您的登记记录，需要补充以下信息以便完成登记：1. 案件类型（如劳动纠纷/合同纠纷等）2. 案件发生地区。请问可以提供这些信息吗？], ChatHistory [Hash = 666464856, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=张三， 15926499414], ChatHistory [Hash = 691046415, id=null, createdDate=null, updatedDate=null, sessionId=null, role=1, content=您好，请您提供姓名和手机号码，以便我们查询您的案件进展。], ChatHistory [Hash = 1087947296, id=null, createdDate=null, updatedDate=null, sessionId=null, role=0, content=我的案件办的咋样了]]
+2025-08-27 09:21:21.878 INFO  com.matt.wiki.service.CategoryService             :93   [32m615687083671031808[0;39m clientProperty: {
+  "output": "张三先生，您的案件登记已确认完成，当前信息为：案件类型-劳动纠纷，地区-墨尔本，手机号-15926499414，邮箱-774364662@qq.com。我们将根据此信息跟进您的案件，感谢配合！",
+  "user_name": "张三",
+  "phone": "15926499414",
+  "email": "774364662@qq.com",
+  "case_type": "劳动纠纷",
+  "area": "墨尔本",
+  "completed": true,
+  "id": 123
+}
+2025-08-27 09:21:22.133 DEBUG org.hibernate.SQL                                 :135  [32m615687083671031808[0;39m 
+    select
+        ce1_0.id,
+        ce1_0.area,
+        ce1_0.case_type,
+        ce1_0.created_date,
+        ce1_0.email,
+        ce1_0.language,
+        ce1_0.phone,
+        ce1_0.updated_date,
+        ce1_0.urgency,
+        ce1_0.user_name 
+    from
+        clients ce1_0 
+    where
+        ce1_0.id=?
+2025-08-27 09:21:22.405 DEBUG org.hibernate.SQL                                 :135  [32m615687083671031808[0;39m 
+    select
+        ce1_0.id,
+        ce1_0.area,
+        ce1_0.case_type,
+        ce1_0.created_date,
+        ce1_0.email,
+        ce1_0.language,
+        ce1_0.phone,
+        ce1_0.updated_date,
+        ce1_0.urgency,
+        ce1_0.user_name 
+    from
+        clients ce1_0 
+    where
+        ce1_0.id=?
+2025-08-27 09:21:23.227 ERROR c.matt.wiki.controller.ControllerExceptionHandler :59   [32m615687083671031808[0;39m 系统异常：
+org.springframework.orm.ObjectOptimisticLockingFailureException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.matt.wiki.entity.ClientEntity#123]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:329)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:244)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy5/jdk.proxy5.$Proxy217.save(Unknown Source)
+	at com.matt.wiki.service.impl.AiChatServiceImpl.findClientProperties(AiChatServiceImpl.java:98)
+	at com.matt.wiki.service.impl.AiChatServiceImpl.chatStream(AiChatServiceImpl.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.matt.wiki.aop.ChatFlowAop.arount(ChatFlowAop.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:173)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.matt.wiki.service.impl.AiChatServiceImpl$$SpringCGLIB$$0.chatStream(<generated>)
+	at com.matt.wiki.controller.AiController.chatStream(AiController.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.matt.wiki.aspect.LogAspect.doAround(LogAspect.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.matt.wiki.controller.AiController$$SpringCGLIB$$0.chatStream(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.matt.wiki.entity.ClientEntity#123]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:426)
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:214)
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:152)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:136)
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:89)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:854)
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:840)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy5/jdk.proxy5.$Proxy211.merge(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy5/jdk.proxy5.$Proxy211.merge(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:656)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 92 common frames omitted
+2025-08-27 09:21:23.249 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m615687083671031808[0;39m Resolved [org.springframework.orm.ObjectOptimisticLockingFailureException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect): [com.matt.wiki.entity.ClientEntity#123]]
+2025-08-27 09:22:00.004 INFO  com.matt.wiki.job.DocJob                          :30   [32m615687420658192384[0;39m 更新电子书下的文档数据开始
+2025-08-27 09:22:00.255 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615687420658192384[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-27 09:22:00.256 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615687420658192384[0;39m ==> Parameters: 
+2025-08-27 09:22:00.759 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615687420658192384[0;39m <==    Updates: 1
+2025-08-27 09:22:00.759 INFO  com.matt.wiki.job.DocJob                          :33   [32m615687420658192384[0;39m 更新电子书下的文档数据结束，耗时：754毫秒
+2025-08-27 09:22:00.759 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615687423824891904[0;39m 生成今日电子书快照开始
+2025-08-27 09:22:00.760 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615687423824891904[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-27 09:22:00.760 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615687423824891904[0;39m ==> Parameters: 
+2025-08-27 09:22:01.356 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615687423824891904[0;39m <==    Updates: 0
+2025-08-27 09:22:01.356 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615687423824891904[0;39m 生成今日电子书快照结束，耗时：597毫秒
