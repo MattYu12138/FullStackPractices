@@ -37,8 +37,12 @@ public class AiChatServiceImpl implements AiChatService {
 //        用户意图
         IntentionOutput intention = aiIntentionAssistant.intention(userId, message);
         LOG.info("----" + intention);
+        Integer intent = intention.getIntention();
+        if (intent == null) {
+            return Flux.just(intention.getOutput());
+        }
         String output = intention.getOutput();
-        switch (intention.getIntention()){
+        switch (intent){
             case 1 :
 //                    1.预约
                 output = guestRegister(userId,message);
@@ -58,7 +62,7 @@ public class AiChatServiceImpl implements AiChatService {
             default :
                 return Flux.just(intention.getOutput());
         }
-        return Flux.just(intention.getOutput());
+        return Flux.just(output);
     }
 
     private String guestRegister(String userId, String message){
