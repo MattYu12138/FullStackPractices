@@ -32,6 +32,6 @@ public class GuestRegisterOutput {
     private String urgency;
 
     @Description("是否完成登记")
-    private String completed;
+    private Boolean completed;
 
 }

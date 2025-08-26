@@ -4,12 +4,15 @@ import com.matt.wiki.aioutput.GuestRegisterOutput;
 import com.matt.wiki.aioutput.IntentionOutput;
 import com.matt.wiki.aiservice.AiAssistant;
 import com.matt.wiki.aiservice.AiIntentionAssistant;
+import com.matt.wiki.entity.GuestRegisterEntity;
+import com.matt.wiki.repository.GuestRegisterRepository;
 import com.matt.wiki.service.AiChatService;
 import com.matt.wiki.service.CategoryService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
@@ -24,6 +27,9 @@ public class AiChatServiceImpl implements AiChatService {
 
     @Resource
     private AiIntentionAssistant aiIntentionAssistant;
+
+    @Resource
+    private GuestRegisterRepository guestRegisterRepository;
 
     @Override
     public Flux<String> chatStream(String userId, String message) {
@@ -58,6 +64,13 @@ public class AiChatServiceImpl implements AiChatService {
     private String guestRegister(String userId, String message){
         GuestRegisterOutput guestRegisterOutput = aiAssistant.guestRegister(userId,message);
         LOG.info("----" + guestRegisterOutput);
+        if(guestRegisterOutput.getCompleted()){
+//持久化层数据库
+            GuestRegisterEntity entity = new GuestRegisterEntity();
+            BeanUtils.copyProperties(guestRegisterOutput,entity);
+            guestRegisterRepository.save(entity);
+
+        }
         return guestRegisterOutput.getOutput();
     }
 }
