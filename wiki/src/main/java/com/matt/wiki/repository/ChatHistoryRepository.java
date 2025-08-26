@@ -11,5 +11,5 @@ public interface ChatHistoryRepository extends BaseRepository<ChatHistoryEntity>
      * @param sessionId
      * @return
      */
-    List<ChatHistoryEntity> findByTop20SessionIdOderByIdDesc(String sessionId);
+    List<ChatHistoryEntity> findTop20BySessionIdOrderByIdDesc(String sessionId);
 }

@@ -25,7 +25,7 @@ public class ChatHistoryTools {
 
 
         List<ChatHistory> result = new ArrayList<>();
-        List<ChatHistoryEntity> entityList = chatHistoryRepository.findByTop20SessionIdOderByIdDesc(sessionId);
+        List<ChatHistoryEntity> entityList = chatHistoryRepository.findTop20BySessionIdOrderByIdDesc(sessionId);
 
         for(ChatHistoryEntity entity: entityList){
             ChatHistory history = new ChatHistory();
