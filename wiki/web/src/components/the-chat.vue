@@ -4,10 +4,18 @@
     <div v-else class="chat-window">
       <div class="chat-header">
         <span>AI助理</span>
+        <span>
+          <a class="clear" @click="clearHistory">清空</a>
+        </span>
         <span class="close" @click="open = false">×</span>
       </div>
       <div class="chat-body">
-        <div v-for="(m, index) in messages" :key="index" class="msg" :class="m.role">
+        <div
+          v-for="(m, index) in messages"
+          :key="index"
+          class="msg"
+          :class="m.role"
+        >
           {{ m.content }}
         </div>
       </div>
@@ -20,7 +28,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, onMounted, ref, watch } from 'vue';
+import axios from 'axios';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
@@ -33,23 +42,64 @@ export default defineComponent({
     const open = ref(false);
     const text = ref('');
     const messages = ref<ChatMessage[]>([]);
+    const userIdKey = 'chatUserId';
+    const userId = ref<string>(localStorage.getItem(userIdKey) || Date.now().toString());
+
+    onMounted(() => {
+      localStorage.setItem(userIdKey, userId.value);
+    });
+
+    const loadHistory = () => {
+      axios
+        .get('/ai/chat-history', {
+          params: { userId: userId.value, page: 0, size: 20 },
+        })
+        .then((response) => {
+          const list = (response.data && response.data.content) || [];
+          messages.value = list
+            .reverse()
+            .map((item: any) => ({
+              role: item.role === '1' ? 'assistant' : 'user',
+              content: item.content,
+            }));
+        });
+    };
+
+    watch(open, (val) => {
+      if (val) {
+        loadHistory();
+      }
+    });
 
     const send = () => {
       if (!text.value) return;
-      messages.value.push({ role: 'user', content: text.value });
-
-      const reply = '你好，这是一个流式回复示例。';
-      const chars = reply.split('');
-      const idx = messages.value.push({ role: 'assistant', content: '' }) - 1;
-      let i = 0;
-      const timer = setInterval(() => {
-        messages.value[idx].content += chars[i++];
-        if (i >= chars.length) {
-          clearInterval(timer);
-        }
-      }, 50);
-
+      const message = text.value;
+      messages.value.push({ role: 'user', content: message });
       text.value = '';
+
+      axios
+        .get('/ai/chat-stream', {
+          params: { message, userId: userId.value },
+          responseType: 'text',
+        })
+        .then((response) => {
+          const reply: string = response.data;
+          const chars = reply.split('');
+          const idx = messages.value.push({ role: 'assistant', content: '' }) - 1;
+          let i = 0;
+          const timer = setInterval(() => {
+            messages.value[idx].content += chars[i++];
+            if (i >= chars.length) {
+              clearInterval(timer);
+            }
+          }, 50);
+        });
+    };
+
+    const clearHistory = () => {
+      axios.post(`/ai/clear-chat-history/${userId.value}`).then(() => {
+        messages.value = [];
+      });
     };
 
     return {
@@ -57,6 +107,7 @@ export default defineComponent({
       text,
       messages,
       send,
+      clearHistory,
     };
   },
 });
@@ -130,5 +181,10 @@ export default defineComponent({
 }
 .close {
   cursor: pointer;
+}
+.clear {
+  margin-right: 8px;
+  cursor: pointer;
+  color: #fff;
 }
 </style>
