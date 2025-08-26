@@ -3,21 +3,19 @@ package com.matt.wiki.aiservice;
 
 import com.matt.wiki.aioutput.GuestRegisterOutput;
 import com.matt.wiki.aioutput.IntentionOutput;
-import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
 import dev.langchain4j.service.spring.AiService;
 import dev.langchain4j.service.spring.AiServiceWiringMode;
-import reactor.core.publisher.Flux;
 
 @AiService(wiringMode = AiServiceWiringMode.EXPLICIT, chatModel = "qwenChatModel",
         streamingChatModel = "qwenStreamingChatModel", tools = "chatHistoryTools")
 public interface AiAssistant {
 
-    String chat(@MemoryId  String id, @UserMessage String message);
-
-    Flux<String> chatStream(@MemoryId String id, @UserMessage String message);
+//    String chat(@MemoryId  String id, @UserMessage String message);
+//
+//    Flux<String> chatStream(@MemoryId String id, @UserMessage String message);
 
     @SystemMessage(fromResource = "/prompts/guestRegister.txt")
     @UserMessage("当前sessionId:{{sessionId}}; 用户当前消息:{{message}}")

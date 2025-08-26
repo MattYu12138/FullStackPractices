@@ -22,12 +22,12 @@ public class AiController {
     @Autowired
     private AiChatService aiChatService;
 
-    @GetMapping("/chat")
-    public String chat(
-            @RequestParam(value = "message", defaultValue = "Hello") String message,
-            @RequestParam(value = "userId", defaultValue = "111") String userId) {
-        return aiAssistant.chat(userId, message);
-    }
+//    @GetMapping("/chat")
+//    public String chat(
+//            @RequestParam(value = "message", defaultValue = "Hello") String message,
+//            @RequestParam(value = "userId", defaultValue = "111") String userId) {
+//        return aiAssistant.chat(userId, message);
+//    }
 
     @GetMapping(value = "/chat-stream", produces = MediaType.TEXT_PLAIN_VALUE + ";charset=utf-8")
     public Flux<String> chatStream(
