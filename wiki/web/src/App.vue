@@ -1,8 +1,9 @@
 <template>
   <a-layout>
     <the-header></the-header>
-      <router-view/>
+    <router-view/>
     <the-footer></the-footer>
+    <the-chat></the-chat>
   </a-layout>
 </template>
 
@@ -10,12 +11,14 @@
 import { defineComponent } from 'vue';
 import TheHeader from '@/components/the-header.vue';
 import TheFooter from '@/components/the-footer.vue';
+import TheChat from '@/components/the-chat.vue';
 
 export default defineComponent({
   name: 'app',
   components: {
     TheHeader,
-    TheFooter
+    TheFooter,
+    TheChat
   },
 });
 </script>
