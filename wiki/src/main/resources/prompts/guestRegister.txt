@@ -9,7 +9,7 @@
   "area": "",
   "language": "",
   "urgency": "",
-  "completed": "no"
+  "completed": false
 }
 	•	output：给访客的自然语言回复（只放文本，不要任何 JSON/规则解释/代码块/表格/emoji/链接）。
 	•	其他字段：见第 4 节的校验与归一化规则。

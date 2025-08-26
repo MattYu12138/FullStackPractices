@@ -6912,3 +6912,577 @@ dev.langchain4j.service.output.OutputParsingException: Failed to parse "{
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1623)
 2025-08-26 10:47:20.207 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m615346475425206272[0;39m Resolved [dev.langchain4j.service.output.OutputParsingException: Failed to parse "{<EOL>  "output": "已记录：张三先生/女士，电话15926499414，关于离婚的法律咨询，位于悉尼，情况紧急。您的登记已完成。我将为您查询合适的律师与时间，并通过您提供的联系方式与您确认。",<EOL>  "UserName": "张三",<EOL>  "phone": "15926499414",<EOL>  "email": "",<EOL>  "caseType": "Family (divorce)",<EOL>  "area": "悉尼",<EOL>  "language": "zh",<EOL>  "urgency": "high",<EOL>  "completed": "yes"<EOL>}" into com.matt.wiki.aioutput.IntentionOutput]
+2025-08-26 11:35:39.268 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 99004 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-26 11:35:39.268 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-26 11:35:39.355 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 11:35:39.355 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-26 11:35:39.361 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2025-08-26 11:35:39.363 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 11:35:39.363 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 11:35:39.365 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.BaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-26 11:35:39.365 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.GuestRegisterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-26 11:35:39.365 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 1 ms. Found 0 Redis repository interfaces.
+2025-08-26 11:35:39.439 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-26 11:35:39.440 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-26 11:35:39.440 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-26 11:35:39.440 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-26 11:35:39.446 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-26 11:35:39.446 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 177 ms
+2025-08-26 11:35:39.464 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-26 11:35:39.488 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-2 - Starting...
+2025-08-26 11:35:42.485 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60b91759
+2025-08-26 11:35:42.485 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-2 - Start completed.
+2025-08-26 11:35:42.486 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-26 11:35:42.489 INFO  o.hibernate.cache.internal.RegionFactoryInitiator :50   [32m                  [0;39m HHH000026: Second-level cache disabled
+2025-08-26 11:35:42.496 INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo :87   [32m                  [0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-26 11:35:42.754 INFO  org.hibernate.orm.connections.pooling             :163  [32m                  [0;39m HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5ac37b5d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@acf84b6)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@72393c1f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6a342b71)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2becbcf9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5d706706)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@66927173) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2db6b173)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@63f3cb48) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3d65d867)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@48893f51) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@502c221a)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2d781adc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3e4d59f4)
+2025-08-26 11:35:42.755 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3f3f8adb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@eb253d4)
+2025-08-26 11:35:42.756 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@63f10624) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@37a76157)
+2025-08-26 11:35:42.793 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:59   [32m                  [0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-26 11:35:42.794 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:447  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-26 11:35:43.006 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:258  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-26 11:35:43.155 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-26 11:35:43.158 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-26 11:35:43.161 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 3.908 seconds (process running for 82.249)
+2025-08-26 11:35:43.162 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2025-08-26 11:35:43.162 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-26 11:35:43.162 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-26 11:35:53.786 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-26 11:35:53.788 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-26 11:35:53.789 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:660  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-26 11:35:53.790 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2025-08-26 11:35:54.705 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2025-08-26 11:35:55.886 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-26 11:35:55.912 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 99065 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-26 11:35:55.912 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-26 11:35:55.941 INFO  o.s.boot.devtools.restart.ChangeableUrls          :252  [32m                  [0;39m The Class-Path manifest attribute in /Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2025-08-26 11:35:55.941 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-26 11:35:55.941 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-26 11:35:56.368 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 11:35:56.369 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-26 11:35:56.442 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2025-08-26 11:35:56.451 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 11:35:56.451 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 11:35:56.458 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.BaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-26 11:35:56.458 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.GuestRegisterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-26 11:35:56.458 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2025-08-26 11:35:56.828 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-26 11:35:56.833 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-26 11:35:56.833 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-26 11:35:56.834 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-26 11:35:56.847 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-26 11:35:56.848 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 907 ms
+2025-08-26 11:35:56.885 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-26 11:35:56.962 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
+2025-08-26 11:35:59.624 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4aa26e12
+2025-08-26 11:35:59.626 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-08-26 11:35:59.656 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-26 11:35:59.688 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-26 11:35:59.706 INFO  o.hibernate.cache.internal.RegionFactoryInitiator :50   [32m                  [0;39m HHH000026: Second-level cache disabled
+2025-08-26 11:35:59.849 INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo :87   [32m                  [0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-26 11:36:00.414 INFO  org.hibernate.orm.connections.pooling             :163  [32m                  [0;39m HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4dd96b91) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2b9b8526)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fa2bdb2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@b0aef5b)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@d099848) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7acc9e7a)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@40b9f3bc) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1c15bcc7)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5d9fbcd5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@43bed652)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4c15f98a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7dd7874b)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5d8ee530) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@68b7a495)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@b8dd9a0) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4aa1fa45)
+2025-08-26 11:36:00.418 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@602c3144) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@356aa2d8)
+2025-08-26 11:36:00.797 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:59   [32m                  [0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-26 11:36:00.798 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:447  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-26 11:36:01.367 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:258  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-26 11:36:01.710 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-26 11:36:01.717 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-26 11:36:01.725 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 6.061 seconds (process running for 6.473)
+2025-08-26 11:36:01.726 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-26 11:36:01.727 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-26 11:36:07.528 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-26 11:36:07.528 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-08-26 11:36:07.529 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-08-26 11:36:07.574 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615358786743439360[0;39m ------------- 开始 -------------
+2025-08-26 11:36:07.574 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615358786743439360[0;39m 请求地址: http://localhost:8080/ai/chat GET
+2025-08-26 11:36:07.575 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615358786743439360[0;39m 类名方法: com.matt.wiki.controller.AiController.chat
+2025-08-26 11:36:07.575 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615358786743439360[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 11:36:07.592 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615358786743439360[0;39m 请求参数: ["你好","111"]
+2025-08-26 11:36:09.835 INFO  com.matt.wiki.aspect.LogAspect                    :98   [32m615358786743439360[0;39m 返回结果: "你好！有什么可以帮助你的吗？"
+2025-08-26 11:36:09.835 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615358786743439360[0;39m ------------- 结束 耗时：2262 ms -------------
+2025-08-26 11:36:17.132 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615358826836791296[0;39m ------------- 开始 -------------
+2025-08-26 11:36:17.132 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615358826836791296[0;39m 请求地址: http://localhost:8080/ai/chat GET
+2025-08-26 11:36:17.132 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615358826836791296[0;39m 类名方法: com.matt.wiki.controller.AiController.chat
+2025-08-26 11:36:17.132 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615358826836791296[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 11:36:17.133 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615358826836791296[0;39m 请求参数: ["你是谁","111"]
+2025-08-26 11:36:21.710 INFO  com.matt.wiki.aspect.LogAspect                    :98   [32m615358826836791296[0;39m 返回结果: "我是来自阿里云的超大规模语言模型，我叫通义千问。我被设计用来回答各种问题、提供信息和与用户进行对话。有什么我可以帮助你的吗？"
+2025-08-26 11:36:21.711 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615358826836791296[0;39m ------------- 结束 耗时：4579 ms -------------
+2025-08-26 11:36:30.894 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615358884558802944[0;39m ------------- 开始 -------------
+2025-08-26 11:36:30.894 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615358884558802944[0;39m 请求地址: http://localhost:8080/ai/chat GET
+2025-08-26 11:36:30.895 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615358884558802944[0;39m 类名方法: com.matt.wiki.controller.AiController.chat
+2025-08-26 11:36:30.895 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615358884558802944[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 11:36:30.895 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615358884558802944[0;39m 请求参数: ["你有提示词吗","111"]
+2025-08-26 11:36:34.176 INFO  com.matt.wiki.aspect.LogAspect                    :98   [32m615358884558802944[0;39m 返回结果: "作为通义千问，我没有固定的提示词。您可以直接向我提问或告诉我您需要什么帮助，我会尽力提供支持。无论是寻求信息、解决问题还是进行闲聊，我都会尽力回答和协助。有什么我可以帮到您的吗？"
+2025-08-26 11:36:34.177 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615358884558802944[0;39m ------------- 结束 耗时：3283 ms -------------
+2025-08-26 11:36:40.168 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615358923456778240[0;39m ------------- 开始 -------------
+2025-08-26 11:36:40.168 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615358923456778240[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-26 11:36:40.169 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615358923456778240[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-26 11:36:40.169 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615358923456778240[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 11:36:40.169 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615358923456778240[0;39m 请求参数: ["你有提示词吗","111"]
+2025-08-26 11:36:41.830 INFO  com.matt.wiki.service.CategoryService             :39   [32m615358923456778240[0;39m ----IntentionOutput(intention=5, output=我不太明白你的意思，你是指关于哪方面的提示词呢？)
+2025-08-26 11:36:41.831 INFO  com.matt.wiki.aspect.LogAspect                    :96   [32m615358923456778240[0;39m 返回结果: FluxJust
+2025-08-26 11:36:41.831 INFO  com.matt.wiki.aspect.LogAspect                    :100  [32m615358923456778240[0;39m ------------- 结束 耗时：1663 ms -------------
+2025-08-26 11:36:45.495 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615358945799835648[0;39m ------------- 开始 -------------
+2025-08-26 11:36:45.495 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615358945799835648[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-26 11:36:45.495 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615358945799835648[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-26 11:36:45.496 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615358945799835648[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 11:36:45.496 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615358945799835648[0;39m 请求参数: ["我想预约，张三，电话15926499414，邮箱：774364662@qq.com，离婚，悉尼，紧急","111"]
+2025-08-26 11:36:50.877 INFO  com.matt.wiki.service.CategoryService             :39   [32m615358945799835648[0;39m ----IntentionOutput(intention=1, output=您已成功预约，张三先生。我们已经记录了您的电话：15926499414，邮箱：774364662@qq.com。了解到您需要在悉尼处理离婚相关事务，并且情况紧急。我们会尽快与您联系并提供帮助。)
+2025-08-26 11:37:00.021 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615359006726295552[0;39m 生成今日电子书快照开始
+2025-08-26 11:37:00.320 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359006726295552[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 11:37:00.340 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359006726295552[0;39m ==> Parameters: 
+2025-08-26 11:37:00.826 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359006726295552[0;39m <==    Updates: 0
+2025-08-26 11:37:00.828 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615359006726295552[0;39m 生成今日电子书快照结束，耗时：807毫秒
+2025-08-26 11:37:00.830 INFO  com.matt.wiki.job.DocJob                          :30   [32m615359010119487488[0;39m 更新电子书下的文档数据开始
+2025-08-26 11:37:00.831 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359010119487488[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 11:37:00.831 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359010119487488[0;39m ==> Parameters: 
+2025-08-26 11:37:01.436 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359010119487488[0;39m <==    Updates: 1
+2025-08-26 11:37:01.437 INFO  com.matt.wiki.job.DocJob                          :33   [32m615359010119487488[0;39m 更新电子书下的文档数据结束，耗时：607毫秒
+2025-08-26 11:37:02.569 INFO  com.matt.wiki.service.CategoryService             :66   [32m615358945799835648[0;39m ----GuestRegisterOutput(output=已记录：张三先生，电话15926499414，邮箱774364662@qq.com，案件类型为离婚，地点在悉尼，情况紧急。您的登记已完成。, UserName=张三, phone=15926499414, email=774364662@qq.com, caseType=Family (divorce), area=悉尼, language=zh, urgency=high, completed=true)
+2025-08-26 11:37:03.204 DEBUG org.hibernate.SQL                                 :135  [32m615358945799835648[0;39m 
+    insert 
+    into
+        clients
+        (area, case_type, completed, email, language, output, phone, urgency, user_name) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-08-26 11:37:03.512 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  :145  [32m615358945799835648[0;39m SQL Error: 1054, SQLState: 42S22
+2025-08-26 11:37:03.512 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  :150  [32m615358945799835648[0;39m Unknown column 'completed' in 'field list'
+2025-08-26 11:37:04.110 ERROR c.matt.wiki.controller.ControllerExceptionHandler :59   [32m615358945799835648[0;39m 系统异常：
+org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement [Unknown column 'completed' in 'field list'] [insert into clients (area,case_type,completed,email,language,output,phone,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]; SQL [insert into clients (area,case_type,completed,email,language,output,phone,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:281)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy168.save(Unknown Source)
+	at com.matt.wiki.service.impl.AiChatServiceImpl.guestRegister(AiChatServiceImpl.java:71)
+	at com.matt.wiki.service.impl.AiChatServiceImpl.chatStream(AiChatServiceImpl.java:44)
+	at com.matt.wiki.controller.AiController.chatStream(AiController.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.matt.wiki.aspect.LogAspect.doAround(LogAspect.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.matt.wiki.controller.AiController$$SpringCGLIB$$0.chatStream(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement [Unknown column 'completed' in 'field list'] [insert into clients (area,case_type,completed,email,language,output,phone,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doDynamicInserts(InsertCoordinatorStandard.java:317)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:129)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:394)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:308)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy166.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy166.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:653)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 75 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'completed' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 123 common frames omitted
+2025-08-26 11:37:04.131 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m615358945799835648[0;39m Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement [Unknown column 'completed' in 'field list'] [insert into clients (area,case_type,completed,email,language,output,phone,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]; SQL [insert into clients (area,case_type,completed,email,language,output,phone,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]]
+2025-08-26 11:38:00.005 INFO  com.matt.wiki.job.DocJob                          :30   [32m615359258317426688[0;39m 更新电子书下的文档数据开始
+2025-08-26 11:38:00.247 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359258317426688[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 11:38:00.248 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359258317426688[0;39m ==> Parameters: 
+2025-08-26 11:38:00.765 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359258317426688[0;39m <==    Updates: 1
+2025-08-26 11:38:00.766 INFO  com.matt.wiki.job.DocJob                          :33   [32m615359258317426688[0;39m 更新电子书下的文档数据结束，耗时：760毫秒
+2025-08-26 11:38:00.767 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615359261513486336[0;39m 生成今日电子书快照开始
+2025-08-26 11:38:00.768 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359261513486336[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 11:38:00.769 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359261513486336[0;39m ==> Parameters: 
+2025-08-26 11:38:01.276 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359261513486336[0;39m <==    Updates: 0
+2025-08-26 11:38:01.277 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615359261513486336[0;39m 生成今日电子书快照结束，耗时：510毫秒
+2025-08-26 11:39:00.005 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615359509971472384[0;39m 生成今日电子书快照开始
+2025-08-26 11:39:00.248 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359509971472384[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 11:39:00.248 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359509971472384[0;39m ==> Parameters: 
+2025-08-26 11:39:00.772 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359509971472384[0;39m <==    Updates: 0
+2025-08-26 11:39:00.773 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615359509971472384[0;39m 生成今日电子书快照结束，耗时：767毫秒
+2025-08-26 11:39:00.773 INFO  com.matt.wiki.job.DocJob                          :30   [32m615359513196892160[0;39m 更新电子书下的文档数据开始
+2025-08-26 11:39:00.773 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359513196892160[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 11:39:00.774 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359513196892160[0;39m ==> Parameters: 
+2025-08-26 11:39:01.284 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359513196892160[0;39m <==    Updates: 1
+2025-08-26 11:39:01.285 INFO  com.matt.wiki.job.DocJob                          :33   [32m615359513196892160[0;39m 更新电子书下的文档数据结束，耗时：512毫秒
+2025-08-26 11:39:15.511 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :54   [32m                  [0;39m Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-26 11:39:15.513 INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown     :76   [32m                  [0;39m Graceful shutdown complete
+2025-08-26 11:39:15.523 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:660  [32m                  [0;39m Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-26 11:39:15.524 INFO  com.zaxxer.hikari.HikariDataSource                :349  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2025-08-26 11:39:15.530 INFO  com.zaxxer.hikari.HikariDataSource                :351  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2025-08-26 11:39:17.663 INFO  org.hibernate.validator.internal.util.Version     :21   [32m                  [0;39m HV000001: Hibernate Validator 8.0.2.Final
+2025-08-26 11:39:17.694 INFO  com.matt.wiki.WikiApplication                     :53   [32m                  [0;39m Starting WikiApplication using Java 20.0.1 with PID 99103 (/Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki/target/classes started by yushuzhan in /Users/yushuzhan/Documents/GitHub/FullStackPractices/wiki)
+2025-08-26 11:39:17.694 INFO  com.matt.wiki.WikiApplication                     :652  [32m                  [0;39m No active profile set, falling back to 1 default profile: "default"
+2025-08-26 11:39:17.732 INFO  o.s.boot.devtools.restart.ChangeableUrls          :252  [32m                  [0;39m The Class-Path manifest attribute in /Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/Users/yushuzhan/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2025-08-26 11:39:17.732 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-26 11:39:17.732 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :252  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-26 11:39:18.085 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 11:39:18.086 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-26 11:39:18.166 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+2025-08-26 11:39:18.176 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :294  [32m                  [0;39m Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-26 11:39:18.176 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :145  [32m                  [0;39m Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-26 11:39:18.185 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.BaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-26 11:39:18.186 INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport :327  [32m                  [0;39m Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.matt.wiki.repository.GuestRegisterRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-26 11:39:18.186 INFO  o.s.d.r.config.RepositoryConfigurationDelegate    :213  [32m                  [0;39m Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-08-26 11:39:18.775 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :111  [32m                  [0;39m Tomcat initialized with port 8080 (http)
+2025-08-26 11:39:18.780 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-26 11:39:18.781 INFO  org.apache.catalina.core.StandardService          :168  [32m                  [0;39m Starting service [Tomcat]
+2025-08-26 11:39:18.781 INFO  org.apache.catalina.core.StandardEngine           :168  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-26 11:39:18.796 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2025-08-26 11:39:18.796 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :301  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1063 ms
+2025-08-26 11:39:18.838 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :59   [32m                  [0;39m LiveReload server is running on port 35729
+2025-08-26 11:39:18.885 INFO  com.zaxxer.hikari.HikariDataSource                :109  [32m                  [0;39m HikariPool-1 - Starting...
+2025-08-26 11:39:21.498 INFO  com.zaxxer.hikari.pool.HikariPool                 :575  [32m                  [0;39m HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7dd6f03f
+2025-08-26 11:39:21.502 INFO  com.zaxxer.hikari.HikariDataSource                :122  [32m                  [0;39m HikariPool-1 - Start completed.
+2025-08-26 11:39:21.543 INFO  org.hibernate.jpa.internal.util.LogHelper         :31   [32m                  [0;39m HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-26 11:39:21.573 INFO  org.hibernate.Version                             :44   [32m                  [0;39m HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-08-26 11:39:21.588 INFO  o.hibernate.cache.internal.RegionFactoryInitiator :50   [32m                  [0;39m HHH000026: Second-level cache disabled
+2025-08-26 11:39:21.704 INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo :87   [32m                  [0;39m No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-26 11:39:22.247 INFO  org.hibernate.orm.connections.pooling             :163  [32m                  [0;39m HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-26 11:39:22.251 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@787f2745) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5feabcc)
+2025-08-26 11:39:22.251 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@155fcea2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@462d194a)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@47e94bc5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3739283f)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5cf8daa4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@72b16f38)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7f0bb5c8) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@18d12c6)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1bbad5a9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@628ba149)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@400cfd25) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@29feccc0)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@64a453cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5b1a27ff)
+2025-08-26 11:39:22.252 DEBUG o.h.type.descriptor.sql.spi.DdlTypeRegistry       :64   [32m                  [0;39m addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7cd80c6c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@231f47fb)
+2025-08-26 11:39:22.612 INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator:59   [32m                  [0;39m HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-26 11:39:22.613 INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:447  [32m                  [0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-26 11:39:23.118 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:258  [32m                  [0;39m spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-26 11:39:23.395 INFO  org.apache.coyote.http11.Http11NioProtocol        :168  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
+2025-08-26 11:39:23.400 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :243  [32m                  [0;39m Tomcat started on port 8080 (http) with context path '/'
+2025-08-26 11:39:23.406 INFO  com.matt.wiki.WikiApplication                     :59   [32m                  [0;39m Started WikiApplication in 6.01 seconds (process running for 6.351)
+2025-08-26 11:39:23.408 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m Start Successful
+2025-08-26 11:39:23.408 INFO  com.matt.wiki.WikiApplication                     :168  [32m                  [0;39m 地址:	http://127.0.0.1:8080
+2025-08-26 11:39:25.043 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :168  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-26 11:39:25.043 INFO  org.springframework.web.servlet.DispatcherServlet :532  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2025-08-26 11:39:25.044 INFO  org.springframework.web.servlet.DispatcherServlet :554  [32m                  [0;39m Completed initialization in 1 ms
+2025-08-26 11:39:25.096 INFO  com.matt.wiki.aspect.LogAspect                    :53   [32m615359615214948352[0;39m ------------- 开始 -------------
+2025-08-26 11:39:25.097 INFO  com.matt.wiki.aspect.LogAspect                    :54   [32m615359615214948352[0;39m 请求地址: http://localhost:8080/ai/chat-stream GET
+2025-08-26 11:39:25.097 INFO  com.matt.wiki.aspect.LogAspect                    :55   [32m615359615214948352[0;39m 类名方法: com.matt.wiki.controller.AiController.chatStream
+2025-08-26 11:39:25.097 INFO  com.matt.wiki.aspect.LogAspect                    :56   [32m615359615214948352[0;39m 远程地址: 0:0:0:0:0:0:0:1
+2025-08-26 11:39:25.115 INFO  com.matt.wiki.aspect.LogAspect                    :82   [32m615359615214948352[0;39m 请求参数: ["我想预约，张三，电话15926499414，邮箱：774364662@qq.com，离婚，悉尼，紧急","111"]
+2025-08-26 11:39:30.692 INFO  com.matt.wiki.service.CategoryService             :39   [32m615359615214948352[0;39m ----IntentionOutput(intention=1, output=您想预约的服务已收到，客户姓名：张三，联系电话：15926499414，邮箱地址：774364662@qq.com。您需要咨询的是关于离婚的事项，地点位于悉尼，并且情况紧急。我们将会尽快与您联系并安排相应的服务。)
+2025-08-26 11:39:38.734 INFO  com.matt.wiki.service.CategoryService             :66   [32m615359615214948352[0;39m ----GuestRegisterOutput(output=已记录：张三，联系电话15926499414，邮箱774364662@qq.com。您咨询的是关于离婚的法律问题，地点在悉尼，并且情况紧急。您的登记已完成。我将为您查询合适的律师与时间，并通过您提供的联系方式与您确认。, UserName=张三, phone=15926499414, email=774364662@qq.com, caseType=Family (divorce), area=悉尼, language=zh, urgency=high, completed=true)
+2025-08-26 11:39:39.373 DEBUG org.hibernate.SQL                                 :135  [32m615359615214948352[0;39m 
+    insert 
+    into
+        clients
+        (area, case_type, created_date, email, language, phone, updated_date, urgency, user_name) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-08-26 11:39:39.676 WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper  :145  [32m615359615214948352[0;39m SQL Error: 1048, SQLState: 23000
+2025-08-26 11:39:39.677 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  :150  [32m615359615214948352[0;39m Column 'created_date' cannot be null
+2025-08-26 11:39:40.273 ERROR c.matt.wiki.controller.ControllerExceptionHandler :59   [32m615359615214948352[0;39m 系统异常：
+org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'created_date' cannot be null] [insert into clients (area,case_type,created_date,email,language,phone,updated_date,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]; SQL [insert into clients (area,case_type,created_date,email,language,phone,updated_date,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]; constraint [null]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:294)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy4/jdk.proxy4.$Proxy165.save(Unknown Source)
+	at com.matt.wiki.service.impl.AiChatServiceImpl.guestRegister(AiChatServiceImpl.java:71)
+	at com.matt.wiki.service.impl.AiChatServiceImpl.chatStream(AiChatServiceImpl.java:44)
+	at com.matt.wiki.controller.AiController.chatStream(AiController.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at com.matt.wiki.aspect.LogAspect.doAround(LogAspect.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:642)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:632)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.matt.wiki.controller.AiController$$SpringCGLIB$$0.chatStream(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Column 'created_date' cannot be null] [insert into clients (area,case_type,created_date,email,language,phone,updated_date,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:62)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:682)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:293)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:274)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:324)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:394)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:308)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:136)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:177)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:95)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:79)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:55)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:761)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:745)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy163.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:320)
+	at jdk.proxy4/jdk.proxy4.$Proxy163.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:653)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:515)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:284)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:734)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:174)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 75 common frames omitted
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'created_date' cannot be null
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:109)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:990)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1168)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1103)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1450)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1086)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	... 123 common frames omitted
+2025-08-26 11:39:40.306 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver   :254  [32m615359615214948352[0;39m Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Column 'created_date' cannot be null] [insert into clients (area,case_type,created_date,email,language,phone,updated_date,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]; SQL [insert into clients (area,case_type,created_date,email,language,phone,updated_date,urgency,user_name) values (?,?,?,?,?,?,?,?,?)]; constraint [null]]
+2025-08-26 11:40:00.003 INFO  com.matt.wiki.job.EbookSnapshotJob                :31   [32m615359761625518080[0;39m 生成今日电子书快照开始
+2025-08-26 11:40:00.336 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359761625518080[0;39m ==>  Preparing: insert into ebook_snapshot(ebook_id, `date`, view_count, vote_count, view_increase, vote_increase) select t1.id, curdate(), 0, 0, 0, 0 from ebook t1 where not exists(select 1 from ebook_snapshot t2 where t1.id = t2.ebook_id and t2.`date` = curdate()); update ebook_snapshot t1, ebook t2 set t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.`date` = curdate() and t1.ebook_id = t2.id; update ebook_snapshot t1 left join (select ebook_id, view_count, vote_count from ebook_snapshot where `date` = date_sub(curdate(), interval 1 day)) t2 on t1.ebook_id = t2.ebook_id set t1.view_increase = (t1.view_count - ifnull(t2.view_count, 0)), t1.vote_increase = (t1.vote_count - ifnull(t2.vote_count, 0)) where t1.`date` = curdate();
+2025-08-26 11:40:00.343 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359761625518080[0;39m ==> Parameters: 
+2025-08-26 11:40:00.882 DEBUG c.m.w.mapper.EbookSnapshotMapperCust.genSnapshot  :135  [32m615359761625518080[0;39m <==    Updates: 0
+2025-08-26 11:40:00.885 INFO  com.matt.wiki.job.EbookSnapshotJob                :34   [32m615359761625518080[0;39m 生成今日电子书快照结束，耗时：881毫秒
+2025-08-26 11:40:00.886 INFO  com.matt.wiki.job.DocJob                          :30   [32m615359765329088512[0;39m 更新电子书下的文档数据开始
+2025-08-26 11:40:00.886 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359765329088512[0;39m ==>  Preparing: update ebook t1, (select ebook_id, count(1) doc_count, sum(view_count) view_count, sum(vote_count) vote_count from doc group by ebook_id) t2 set t1.doc_count = t2.doc_count, t1.view_count = t2.view_count, t1.vote_count = t2.vote_count where t1.id = t2.ebook_id
+2025-08-26 11:40:00.887 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359765329088512[0;39m ==> Parameters: 
+2025-08-26 11:40:01.373 DEBUG c.matt.wiki.mapper.DocMapperCust.updateEbookInfo  :135  [32m615359765329088512[0;39m <==    Updates: 1
+2025-08-26 11:40:01.374 INFO  com.matt.wiki.job.DocJob                          :33   [32m615359765329088512[0;39m 更新电子书下的文档数据结束，耗时：488毫秒
