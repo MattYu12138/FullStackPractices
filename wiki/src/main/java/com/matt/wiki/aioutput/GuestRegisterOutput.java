@@ -1,9 +1,11 @@
 package com.matt.wiki.aioutput;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import dev.langchain4j.model.output.structured.Description;
 import lombok.Data;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class GuestRegisterOutput {
 
@@ -32,6 +34,6 @@ public class GuestRegisterOutput {
     private String urgency;
 
     @Description("是否完成登记")
-    private Boolean completed;
+    private String completed;
 
 }
