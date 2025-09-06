@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="添加client查询功能，添加输出，实例，工具，助手">
+    <list default="true" id="78b41cbf-c7e2-40c4-b46a-27f73a601763" name="Changes" comment="更改chatHistoryRepo中deleteBySessionId的形参">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/trace.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/trace.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/prompts/client.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/prompts/client.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.5.1/spring-data-commons-3.5.1.jar!/org/springframework/data/repository/CrudRepository.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.2.8/spring-web-6.2.8.jar!/org/springframework/http/HttpStatus.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -239,8 +238,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.serve-dev" />
         <item itemvalue="npm.build-prod" />
+        <item itemvalue="npm.serve-dev" />
         <item itemvalue="HTTP Request.test | #3" />
         <item itemvalue="Database Script.all.sql" />
         <item itemvalue="HTTP Request.test | #5" />
@@ -250,8 +249,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26927.53" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.26927.53" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.28293.22" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.28293.22" />
       </set>
     </attachedChunks>
   </component>
@@ -277,23 +276,12 @@
       <workItem from="1755955304417" duration="3595000" />
       <workItem from="1756151395970" duration="4523000" />
       <workItem from="1756158409462" duration="10747000" />
-      <workItem from="1756245550715" duration="4797000" />
-    </task>
-    <task id="LOCAL-00128" summary="未登录不显示页面">
-      <option name="closed" value="true" />
-      <created>1754182439620</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1754182439620</updated>
-    </task>
-    <task id="LOCAL-00129" summary="未登录不显示页面,不允许用户绕过点击链接，不允许直接输入网址非法进入管理界面">
-      <option name="closed" value="true" />
-      <created>1754182922882</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1754182922882</updated>
+      <workItem from="1756245550715" duration="17752000" />
+      <workItem from="1756419561194" duration="7939000" />
+      <workItem from="1756625030931" duration="4830000" />
+      <workItem from="1756669312844" duration="78000" />
+      <workItem from="1757144991299" duration="74000" />
+      <workItem from="1757231734422" duration="507000" />
     </task>
     <task id="LOCAL-00130" summary="about页面现在可以在未登录的情况下显示">
       <option name="closed" value="true" />
@@ -671,7 +659,23 @@
       <option name="project" value="LOCAL" />
       <updated>1756249167304</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="更改client提示词">
+      <option name="closed" value="true" />
+      <created>1756250568239</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1756250568239</updated>
+    </task>
+    <task id="LOCAL-00178" summary="更改chatHistoryRepo中deleteBySessionId的形参">
+      <option name="closed" value="true" />
+      <created>1757145037180</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1757145037180</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,8 +736,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="集成echarts" />
-    <MESSAGE value="修改logo，未完成" />
     <MESSAGE value="加载的时候会显示加载提示，特别是第一次进入网站" />
     <MESSAGE value="富文本框现在一定会在页面内" />
     <MESSAGE value="添加application-prod.properties，在配置中可以配置VM改变读取文件" />
@@ -757,7 +759,9 @@
     <MESSAGE value="现在可以读取sql中存储的最近聊天记录" />
     <MESSAGE value="添加清除历史记录和根据id清除历史记录的功能" />
     <MESSAGE value="添加client查询功能，添加输出，实例，工具，助手" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加client查询功能，添加输出，实例，工具，助手" />
+    <MESSAGE value="更改client提示词" />
+    <MESSAGE value="更改chatHistoryRepo中deleteBySessionId的形参" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改chatHistoryRepo中deleteBySessionId的形参" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
