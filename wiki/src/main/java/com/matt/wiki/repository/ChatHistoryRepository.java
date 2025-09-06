@@ -22,11 +22,9 @@ public interface ChatHistoryRepository extends BaseRepository<ChatHistoryEntity>
     /*
      * 通过会话ID删除所有相关的聊天记录
      * 此操作标记为事务性和修改性，意味着它将在一个数据库事务中执行，以保持数据一致性
-     *
-     * @param userId 用户ID，此处应为sessionId的笔误，需要更正为sessionId以匹配方法的预期用途
      */
     @Transactional
     //表示修改数据库的操作
     @Modifying
-    void deleteBySessionId(String userId);
+    void deleteBySessionId(String sessionId);
 }
